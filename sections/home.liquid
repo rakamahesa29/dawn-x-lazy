@@ -1,0 +1,47 @@
+{{ 'section.home.css' | asset_url | stylesheet_tag }}
+
+<!-- Home Section -->
+<div class="home-section">
+  <h1>{{ section.settings.title }}</h1>
+  <p>{{ section.settings.description }}</p>
+  {% if section.settings.image != blank %}
+    <img src="{{ section.settings.image | img_url: 'master' }}" alt="{{ section.settings.title }}">
+  {% endif %}
+</div>
+
+{% schema %}
+  {
+    "name": "t:sections.home.name",
+    "class": "section",
+    "tag": "section",
+    "disabled_on": {
+    "groups": ["header", "footer"]
+    },
+    "settings": [
+      {
+        "type": "text",
+        "id": "title",
+        "default": "Welcome to Our Store",
+        "label": "Title"
+      },
+      {
+        "type": "textarea",
+        "id": "description",
+        "default": "This is the description for the Home Section. Edit it as you like.",
+        "label": "Description"
+      },
+      {
+        "type": "image_picker",
+        "id": "image",
+        "label": "Home Image"
+      }
+    ],
+    "presets": [
+      {
+        "name": "Default Home",
+        "category": "Home"
+      }
+    ]
+  }
+  {% endschema %}
+  
