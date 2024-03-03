@@ -1,22 +1,39 @@
 {
-  "name": "t:sections.footer.name",
+  "name": "Default",
   "type": "footer",
   "sections": {
     "footer": {
       "type": "footer",
+      "blocks": {
+        "menu_EmyDgM": {
+          "type": "menu",
+          "settings": {
+            "menu_title": "Shop",
+            "menu": "footer"
+          }
+        },
+        "menu_Xzb4Yf": {
+          "type": "menu",
+          "settings": {
+            "menu_title": "Shop",
+            "menu": "main-menu"
+          }
+        }
+      },
+      "block_order": [
+        "menu_EmyDgM",
+        "menu_Xzb4Yf"
+      ],
       "settings": {
-        "color_scheme": "scheme-1",
-        "newsletter_enable": true,
-        "newsletter_heading": "Subscribe to our emails",
-        "enable_follow_on_shop": true,
+        "show_logo": true,
         "show_social": true,
-        "enable_country_selector": true,
-        "enable_language_selector": true,
-        "payment_enable": true,
-        "show_policy": false,
-        "margin_top": 0,
-        "padding_top": 36,
-        "padding_bottom": 36
+        "newsletter_enable": true,
+        "footer_logo": "shopify:\/\/shop_images\/landscape-lazy-white-250px.webp",
+        "logo_alt_text": "Footer Logo",
+        "logo_url": "\/",
+        "footer_text": "Your footer text here",
+        "subscribe_text": "Upload subscribe text here",
+        "image_icon": "shopify:\/\/shop_images\/mascot-lazy-lowie.webp"
       }
     }
   },
