@@ -1,0 +1,239 @@
+{
+  "sections": {
+    "main": {
+      "type": "main-product",
+      "blocks": {
+        "vendor": {
+          "type": "text",
+          "settings": {
+            "text": "{{ product.vendor }}",
+            "text_style": "uppercase"
+          }
+        },
+        "title": {
+          "type": "title",
+          "settings": {
+          }
+        },
+        "price": {
+          "type": "price",
+          "settings": {
+          }
+        },
+        "variant_picker": {
+          "type": "variant_picker",
+          "settings": {
+            "picker_type": "button",
+            "swatch_shape": "circle"
+          }
+        },
+        "quantity_selector": {
+          "type": "quantity_selector",
+          "settings": {
+          }
+        },
+        "buy_buttons": {
+          "type": "buy_buttons",
+          "settings": {
+            "show_dynamic_checkout": true,
+            "show_gift_card_recipient": true
+          }
+        },
+        "description": {
+          "type": "description",
+          "settings": {
+          }
+        },
+        "share": {
+          "type": "share",
+          "settings": {
+            "share_label": "Share"
+          }
+        }
+      },
+      "block_order": [
+        "vendor",
+        "title",
+        "price",
+        "variant_picker",
+        "quantity_selector",
+        "buy_buttons",
+        "description",
+        "share"
+      ],
+      "settings": {
+        "enable_sticky_info": true,
+        "color_scheme": "scheme-47a0187c-b8de-4cff-b20c-5d35f422c9c0",
+        "media_size": "small",
+        "constrain_to_viewport": true,
+        "media_fit": "contain",
+        "gallery_layout": "stacked",
+        "media_position": "left",
+        "image_zoom": "lightbox",
+        "mobile_thumbnails": "hide",
+        "hide_variants": true,
+        "enable_video_looping": false,
+        "padding_top": 80,
+        "padding_bottom": 80
+      }
+    },
+    "slider_custome_jUDdzD": {
+      "type": "slider-custome",
+      "blocks": {
+        "image_pQyLta": {
+          "type": "image",
+          "settings": {
+            "image_slider_desktop": "shopify:\/\/shop_images\/bolster.webp",
+            "image_slider_mobile": "shopify:\/\/shop_images\/bolster.webp",
+            "text_slider": "LOREM IPSUM  DOLOR SIT AMET"
+          }
+        }
+      },
+      "block_order": [
+        "image_pQyLta"
+      ],
+      "settings": {
+      }
+    },
+    "related-products": {
+      "type": "related-products",
+      "settings": {
+        "heading": "You may also like",
+        "heading_size": "h2",
+        "products_to_show": 4,
+        "columns_desktop": 4,
+        "color_scheme": "scheme-1",
+        "image_ratio": "square",
+        "image_shape": "default",
+        "show_secondary_image": true,
+        "show_vendor": false,
+        "show_rating": false,
+        "columns_mobile": "2",
+        "padding_top": 36,
+        "padding_bottom": 28
+      }
+    },
+    "custome_review_qXKzhb": {
+      "type": "custome-review",
+      "blocks": {
+        "review_pH4xgN": {
+          "type": "review",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/PhysicalDevelopment.webp",
+            "user_name": "Jhondoe",
+            "star_rating": 0,
+            "review_date": "2024-01-23",
+            "text_review": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin volutpat arcu a neque efficitur, eu feugiat magna pulvinar.<\/p>"
+          }
+        },
+        "review_jzKyQc": {
+          "type": "review",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/PhysicalDevelopment.webp",
+            "user_name": "Rafli",
+            "star_rating": 0,
+            "review_date": "2024-01-23",
+            "text_review": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin volutpat arcu a neque efficitur, eu feugiat magna pulvinar.<\/p>"
+          }
+        },
+        "review_wfF4wR": {
+          "type": "review",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/communication.webp",
+            "user_name": "Rudi",
+            "star_rating": 0,
+            "review_date": "2024-01-23",
+            "text_review": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin volutpat arcu a neque efficitur, eu feugiat magna pulvinar.<\/p>"
+          }
+        }
+      },
+      "block_order": [
+        "review_pH4xgN",
+        "review_jzKyQc",
+        "review_wfF4wR"
+      ],
+      "settings": {
+        "title": "Happy Customer"
+      }
+    },
+    "slider_custome_UKTrdX": {
+      "type": "slider-custome",
+      "blocks": {
+        "image_63M9yp": {
+          "type": "image",
+          "settings": {
+            "image_slider_desktop": "shopify:\/\/shop_images\/lazy-banner.webp",
+            "image_slider_mobile": "shopify:\/\/shop_images\/lazy-banner-mobile.webp",
+            "text_slider": "LOREM IPSUM DOLOR SIT AMET"
+          }
+        },
+        "image_QaLq4W": {
+          "type": "image",
+          "settings": {
+            "image_slider_desktop": "shopify:\/\/shop_images\/bolster.webp",
+            "image_slider_mobile": "shopify:\/\/shop_images\/bolster.webp",
+            "text_slider": "IPSUM LOREM SIT AMET DOLOR"
+          }
+        }
+      },
+      "block_order": [
+        "image_63M9yp",
+        "image_QaLq4W"
+      ],
+      "settings": {
+      }
+    },
+    "support_and_guarantee_mwDhDc": {
+      "type": "support-and-guarantee",
+      "blocks": {
+        "image_d63Mxw": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/communication.webp",
+            "image_text": "Support"
+          }
+        },
+        "image_WLXi84": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Literacy.webp",
+            "image_text": "Guarantee"
+          }
+        },
+        "image_ahD8Ak": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/PhysicalDevelopment.webp",
+            "image_text": "Boboboi"
+          }
+        },
+        "image_jUwfrL": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/PersonalAndSocial.webp",
+            "image_text": "Support"
+          }
+        }
+      },
+      "block_order": [
+        "image_d63Mxw",
+        "image_WLXi84",
+        "image_ahD8Ak",
+        "image_jUwfrL"
+      ],
+      "settings": {
+        "title": "Support And Guarantee",
+        "heading_size": "h1",
+        "color_scheme": ""
+      }
+    }
+  },
+  "order": [
+    "main",
+    "slider_custome_jUDdzD",
+    "related-products",
+    "custome_review_qXKzhb",
+    "slider_custome_UKTrdX",
+    "support_and_guarantee_mwDhDc"
+  ]
+}

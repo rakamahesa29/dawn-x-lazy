@@ -2,8 +2,9 @@
   "sections": {
     "banner": {
       "type": "main-collection-banner",
+      "disabled": true,
       "settings": {
-        "show_collection_description": true,
+        "show_collection_description": false,
         "show_collection_image": false,
         "color_scheme": "scheme-1"
       }
@@ -13,7 +14,7 @@
       "settings": {
         "products_per_page": 16,
         "columns_desktop": 4,
-        "color_scheme": "scheme-1",
+        "color_scheme": "scheme-47a0187c-b8de-4cff-b20c-5d35f422c9c0",
         "image_ratio": "adapt",
         "image_shape": "default",
         "show_secondary_image": false,

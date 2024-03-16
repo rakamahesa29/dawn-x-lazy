@@ -1,5 +1,6 @@
 {
   "current": {
+    "logo": "shopify:\/\/shop_images\/logo-green-lazy.webp",
     "logo_width": 90,
     "type_header_font": "assistant_n4",
     "heading_scale": 100,
@@ -35,7 +36,7 @@
     "card_style": "standard",
     "card_image_padding": 0,
     "card_text_alignment": "left",
-    "card_color_scheme": "scheme-2",
+    "card_color_scheme": "scheme-47a0187c-b8de-4cff-b20c-5d35f422c9c0",
     "card_border_thickness": 0,
     "card_border_opacity": 10,
     "card_corner_radius": 0,
@@ -46,7 +47,7 @@
     "collection_card_style": "standard",
     "collection_card_image_padding": 0,
     "collection_card_text_alignment": "left",
-    "collection_card_color_scheme": "scheme-2",
+    "collection_card_color_scheme": "scheme-47a0187c-b8de-4cff-b20c-5d35f422c9c0",
     "collection_card_border_thickness": 0,
     "collection_card_border_opacity": 10,
     "collection_card_corner_radius": 0,
@@ -92,10 +93,10 @@
     "drawer_shadow_horizontal_offset": 0,
     "drawer_shadow_vertical_offset": 4,
     "drawer_shadow_blur": 5,
-    "badge_position": "bottom left",
-    "badge_corner_radius": 40,
-    "sale_badge_color_scheme": "scheme-4",
-    "sold_out_badge_color_scheme": "scheme-3",
+    "badge_position": "top left",
+    "badge_corner_radius": 20,
+    "sale_badge_color_scheme": "scheme-4901882a-37a4-43d2-9919-a04d2596a8f8",
+    "sold_out_badge_color_scheme": "scheme-47a0187c-b8de-4cff-b20c-5d35f422c9c0",
     "brand_headline": "",
     "brand_description": "<p><\/p>",
     "brand_image_width": 100,
@@ -188,6 +189,28 @@
           "button_label": "#334fb4",
           "secondary_button_label": "#ffffff",
           "shadow": "#121212"
+        }
+      },
+      "scheme-47a0187c-b8de-4cff-b20c-5d35f422c9c0": {
+        "settings": {
+          "background": "#ffffff",
+          "background_gradient": "",
+          "text": "#005750",
+          "button": "#005750",
+          "button_label": "#ffffff",
+          "secondary_button_label": "#005750",
+          "shadow": "#005750"
+        }
+      },
+      "scheme-4901882a-37a4-43d2-9919-a04d2596a8f8": {
+        "settings": {
+          "background": "#005750",
+          "background_gradient": "",
+          "text": "#ffffff",
+          "button": "#ffffff",
+          "button_label": "#005750",
+          "secondary_button_label": "#ffffff",
+          "shadow": "#ffffff"
         }
       }
     }

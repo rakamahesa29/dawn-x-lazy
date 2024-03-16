@@ -1,5 +1,5 @@
 {
-  "name": "Default",
+  "name": "t:sections.footer.name",
   "type": "footer",
   "sections": {
     "footer": {
@@ -31,8 +31,8 @@
         "footer_logo": "shopify:\/\/shop_images\/landscape-lazy-white-250px.webp",
         "logo_alt_text": "Footer Logo",
         "logo_url": "\/",
-        "footer_text": "Your footer text here",
-        "subscribe_text": "Upload subscribe text here",
+        "footer_text": "Lapisan kasur yang bisa disesuaikan  untuk memudahkan dalam memilih  kepadatan kasur.",
+        "subscribe_text": "get more update from lazy lowie",
         "image_icon": "shopify:\/\/shop_images\/mascot-lazy-lowie.webp"
       }
     }
