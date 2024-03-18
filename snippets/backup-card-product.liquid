@@ -38,7 +38,7 @@
   <div class="card-wrapper product-card-wrapper underline-links-hover">
     <div
       class="
-        card custome-card-product card--{{ settings.card_style }}
+        card card--{{ settings.card_style }}
         {% if card_product.featured_media %} card--media{% else %} card--text{% endif %}
         {% if settings.card_style == 'card' %} color-{{ settings.card_color_scheme }} gradient{% endif %}
         {% if image_shape and image_shape != 'default' %} card--shape{% endif %}
@@ -49,11 +49,11 @@
       style="--ratio-percent: {{ 1 | divided_by: ratio | times: 100 }}%;"
     >
       <div
-        class="card__inner {% if settings.card_style == 'standard' %}color-{{ settings.card_color_scheme }} gradient{% endif %}{% if card_product.featured_media or settings.card_style == 'standard' %} ratio{% endif %} card-custome-media"
+        class="card__inner {% if settings.card_style == 'standard' %}color-{{ settings.card_color_scheme }} gradient{% endif %}{% if card_product.featured_media or settings.card_style == 'standard' %} ratio{% endif %}"
         style="--ratio-percent: {{ 1 | divided_by: ratio | times: 100 }}%;"
       >
         {%- if card_product.featured_media -%}
-          <div class="card__media{% if image_shape and image_shape != 'default' %} shape--{{ image_shape }} color-{{ settings.card_color_scheme }} gradient{% endif %} card-custome-media">
+          <div class="card__media{% if image_shape and image_shape != 'default' %} shape--{{ image_shape }} color-{{ settings.card_color_scheme }} gradient{% endif %}">
             <div class="media media--transparent media--hover-effect">
               {% comment %}theme-check-disable ImgLazyLoading{% endcomment %}
               <img
@@ -119,7 +119,7 @@
               </a>
             </h3>
           </div>
-          <div class="card__badge card-badge-custome {{ settings.badge_position }}">
+          <div class="card__badge {{ settings.badge_position }}">
             {%- if card_product.available == false -%}
               <span
                 id="NoMediaStandardBadge-{{ section_id }}-{{ card_product.id }}"
@@ -140,34 +140,8 @@
       </div>
       <div class="card__content">
         <div class="card__information">
-          {%- assign has_size_option = false -%}
-          {%- assign size_option_index = 0 -%}
-          {%- assign displayed_sizes = '' -%}
-
-          {%- for option in card_product.options -%}
-            {%- if option contains 'Size' or option contains 'size' or option contains 'Ukuran' -%}
-              {%- assign has_size_option = true -%}
-              {%- break -%}
-            {%- endif -%}
-            {%- assign size_option_index = size_option_index | plus: 1 -%}
-          {%- endfor -%}
-
-          {%- if has_size_option -%}
-            <div class="product-size">
-              <div class="products-size-content">
-                {%- for variant in card_product.variants -%}
-                  {%- assign size = variant.options[size_option_index] -%}
-                  {%- unless displayed_sizes contains size -%}
-                    <div class="size-item">{{ size }}</div>
-                    {%- assign displayed_sizes = displayed_sizes | append: size | append: ',' -%}
-                  {%- endunless -%}
-                {%- endfor -%}
-              </div>
-            </div>
-          {%- endif -%}
-          
           <h3
-            class="card__heading{% if card_product.featured_media or settings.card_style == 'standard' %} h5{% endif %} card-heading-custome"
+            class="card__heading{% if card_product.featured_media or settings.card_style == 'standard' %} h5{% endif %}"
             {% if card_product.featured_media or settings.card_style == 'card' %}
               id="title-{{ section_id }}-{{ card_product.id }}"
             {% endif %}
@@ -330,7 +304,7 @@
             {%- endif -%}
           </div>
         {%- endif -%}
-        <div class="card__badge card-badge-custome {{ settings.badge_position }}">
+        <div class="card__badge {{ settings.badge_position }}">
           {%- if card_product.available == false -%}
             <span
               id="Badge-{{ section_id }}-{{ card_product.id }}"
@@ -368,10 +342,10 @@
       style="--ratio-percent: {{ 1 | divided_by: ratio | times: 100 }}%;"
     >
       <div
-        class="card__inner{% if settings.card_style == 'standard' %} color-{{ settings.card_color_scheme }} gradient{% endif %} ratio card-custome-media"
+        class="card__inner{% if settings.card_style == 'standard' %} color-{{ settings.card_color_scheme }} gradient{% endif %} ratio"
       >
         <div
-          class="card__media {% if image_shape and image_shape != 'default' %} shape--{{ image_shape }} color-{{ settings.card_color_scheme }} gradient{% endif %} card-custome-media"
+          class="card__media {% if image_shape and image_shape != 'default' %} shape--{{ image_shape }} color-{{ settings.card_color_scheme }} gradient{% endif %}"
         >
           <div
             class="media media--transparent"

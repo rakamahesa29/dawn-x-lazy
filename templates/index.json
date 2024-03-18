@@ -1,75 +1,194 @@
 {
   "sections": {
-    "image_banner": {
-      "type": "image-banner",
+    "slideshow_iN3pmY": {
+      "type": "slideshow",
       "blocks": {
-        "heading": {
-          "type": "heading",
+        "slide_pKaGUc": {
+          "type": "slide",
           "settings": {
-            "heading": "Browse our latest products",
-            "heading_size": "h0"
-          }
-        },
-        "button": {
-          "type": "buttons",
-          "settings": {
-            "button_label_1": "Shop all",
-            "button_link_1": "shopify:\/\/collections\/all",
-            "button_style_secondary_1": true,
-            "button_label_2": "",
-            "button_link_2": "",
-            "button_style_secondary_2": false
+            "image": "shopify:\/\/shop_images\/lazy-banner.webp",
+            "heading": "",
+            "heading_size": "h1",
+            "subheading": "",
+            "button_label": "",
+            "link": "",
+            "button_style_secondary": false,
+            "box_align": "middle-center",
+            "show_text_box": false,
+            "text_alignment": "center",
+            "image_overlay_opacity": 0,
+            "color_scheme": "scheme-47a0187c-b8de-4cff-b20c-5d35f422c9c0",
+            "text_alignment_mobile": "center"
           }
         }
       },
       "block_order": [
-        "heading",
-        "button"
+        "slide_pKaGUc"
       ],
       "settings": {
-        "image_overlay_opacity": 40,
-        "image_height": "large",
-        "desktop_content_position": "bottom-center",
+        "layout": "full_bleed",
+        "slide_height": "large",
+        "slider_visual": "counter",
+        "auto_rotate": false,
+        "change_slides_speed": 5,
+        "image_behavior": "none",
+        "show_text_below": false,
+        "accessibility_info": "Slideshow about our brand"
+      }
+    },
+    "banner_image_yXdaJV": {
+      "type": "banner-image",
+      "blocks": {
+        "image_wJdgLK": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/bolster.webp",
+            "image_link": ""
+          }
+        },
+        "image_3prJMA": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/mattress.webp",
+            "image_link": ""
+          }
+        }
+      },
+      "block_order": [
+        "image_wJdgLK",
+        "image_3prJMA"
+      ],
+      "settings": {
+        "title": "Custome Banner Image",
+        "heading_size": "h1",
+        "background_style": "primary",
+        "button_label": "Button label",
+        "button_link": "",
+        "color_scheme": ""
+      }
+    },
+    "custome_multicolumn_7rwK8x": {
+      "type": "custome-multicolumn",
+      "blocks": {
+        "column_3px96n": {
+          "type": "column",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Bantal-Premium-03.webp",
+            "title": "",
+            "text": "",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_gFfQEL": {
+          "type": "column",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Kasur-02.webp",
+            "title": "",
+            "text": "",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_My3L8B": {
+          "type": "column",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Guling-02.webp",
+            "title": "",
+            "text": "",
+            "link_label": "",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "column_3px96n",
+        "column_gFfQEL",
+        "column_My3L8B"
+      ],
+      "settings": {
+        "title": "Our Products",
+        "heading_size": "h1",
+        "image_width": "full",
+        "image_ratio": "adapt",
+        "columns_desktop": 3,
+        "column_alignment": "center",
+        "background_style": "none",
+        "button_label": "",
+        "button_link": "",
+        "color_scheme": "scheme-47a0187c-b8de-4cff-b20c-5d35f422c9c0",
+        "columns_mobile": "1",
+        "swipe_on_mobile": true,
+        "padding_top": 0,
+        "padding_bottom": 80
+      }
+    },
+    "image_banner": {
+      "type": "image-banner",
+      "settings": {
+        "image": "shopify:\/\/shop_images\/lazy-banner.webp",
+        "image_overlay_opacity": 0,
+        "image_height": "medium",
+        "desktop_content_position": "middle-center",
         "show_text_box": false,
         "desktop_content_alignment": "center",
         "color_scheme": "scheme-3",
         "image_behavior": "none",
         "mobile_content_alignment": "center",
-        "stack_images_on_mobile": false,
+        "stack_images_on_mobile": true,
         "show_text_below": false
       }
     },
-    "featured_collection": {
-      "type": "featured-collection",
+    "instagram_M3dX9V": {
+      "type": "instagram",
+      "blocks": {
+        "image_hXNCKW": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Bantal-Premium-03.webp",
+            "image_link": ""
+          }
+        },
+        "image_U6iWtF": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Kasur-02.webp",
+            "image_link": ""
+          }
+        },
+        "image_Qk8dDH": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Guling-02.webp",
+            "image_link": ""
+          }
+        },
+        "image_n9aPEL": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/bolster.webp",
+            "image_link": ""
+          }
+        }
+      },
+      "block_order": [
+        "image_hXNCKW",
+        "image_U6iWtF",
+        "image_Qk8dDH",
+        "image_n9aPEL"
+      ],
       "settings": {
-        "title": "Featured products",
-        "heading_size": "h2",
-        "description": "",
-        "show_description": false,
-        "description_style": "body",
-        "collection": "all",
-        "products_to_show": 8,
-        "columns_desktop": 4,
-        "full_width": false,
-        "show_view_all": true,
-        "view_all_style": "solid",
-        "enable_desktop_slider": false,
-        "color_scheme": "scheme-1",
-        "image_ratio": "adapt",
-        "image_shape": "default",
-        "show_secondary_image": true,
-        "show_vendor": false,
-        "show_rating": false,
-        "enable_quick_add": false,
-        "columns_mobile": "2",
-        "swipe_on_mobile": false,
-        "padding_top": 44,
-        "padding_bottom": 36
+        "title": "Instagram Gallery",
+        "heading_size": "h1",
+        "color_scheme": ""
       }
     }
   },
   "order": [
+    "slideshow_iN3pmY",
+    "banner_image_yXdaJV",
+    "custome_multicolumn_7rwK8x",
     "image_banner",
-    "featured_collection"
+    "instagram_M3dX9V"
   ]
 }

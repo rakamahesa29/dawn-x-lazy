@@ -305,6 +305,56 @@
       }
     },
     "footer": {
+      "settings": {
+        "show_logo": {
+          "label": "Show Logo"
+        },
+        "show_social": {
+          "label": "Show Social Icons"
+        },
+        "newsletter_enable": {
+          "label": "Enable Newsletter Subscription"
+        },
+        "footer_logo": {
+          "label": "Footer Logo"
+        },
+        "logo_alt_text": {
+          "label": "Footer Logo Alt Text"
+        },
+        "logo_url": {
+          "label": "Footer Logo URL"
+        },
+        "footer_text": {
+          "label": "Footer Text"
+        },
+        "subscribe_text": {
+          "label": "Subscribe Text"
+        },
+        "image_icon": {
+          "label": "Footer Image Icon",
+          "info": "Upload an image icon for the footer"
+        }
+      },
+      "blocks": {
+        "menu": {
+          "name": "Menu Block",
+          "settings": {
+            "menu_title": {
+              "label": "Menu Title"
+            },
+            "menu": {
+              "label": "Menu Links"
+            }
+          }
+        }
+      },
+      "presets": {
+        "custom_footer": {
+          "name": "Custom Footer"
+        }
+      }
+    },    
+    "footer": {
       "payment": "Payment methods"
     },
     "featured_blog": {

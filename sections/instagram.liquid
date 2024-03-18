@@ -1,0 +1,116 @@
+{{ 'custome-style.css' | asset_url | stylesheet_tag }}
+
+<section class="section-custome">
+  <div class="container">
+    <div class="row">
+      <div class="col-12">
+        <div class="title-instagram-post">
+          <h3>{{ section.settings.title }}</h3>
+          <div class="navigation-slider">
+            <div class="swiper-button-prev custom-nav-swiper"></div>
+            <div class="swiper-button-next custom-nav-swiper"></div>
+          </div>
+        </div>
+        <div class="post-content">
+          <div class="swiper igSwiper">
+            <div class="swiper-wrapper">
+              {% for block in section.blocks %}
+                <div class="swiper-slide swiper-slide-custome">
+                  <a href="{{ block.settings.image_link }}">
+                    <div class="hover-image-ig">
+                      <svg
+                        width="299"
+                        height="300"
+                        viewBox="0 0 299 300"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <rect width="299" height="300" fill="#005750" fill-opacity="0.5"/>
+                        <path d="M161.5 130H136.5C129.596 130 124 135.596 124 142.5V167.5C124 174.404 129.596 180 136.5 180H161.5C168.404 180 174 174.404 174 167.5V142.5C174 135.596 168.404 130 161.5 130Z" stroke="white" stroke-opacity="0.5" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M162.75 141.25H162.775M159 153.425C159.309 155.506 158.953 157.631 157.984 159.498C157.016 161.365 155.483 162.879 153.604 163.824C151.725 164.77 149.596 165.099 147.519 164.765C145.443 164.431 143.524 163.45 142.037 161.963C140.55 160.476 139.569 158.557 139.235 156.481C138.901 154.404 139.23 152.275 140.176 150.396C141.121 148.517 142.635 146.984 144.502 146.016C146.369 145.047 148.494 144.691 150.575 145C152.697 145.315 154.662 146.304 156.179 147.821C157.696 149.338 158.685 151.303 159 153.425Z" stroke="white" stroke-opacity="0.5" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M154 205H151.5C151.5 203.342 150.842 201.753 149.669 200.581C148.497 199.408 146.908 198.75 145.25 198.75C143.592 198.75 142.003 199.408 140.831 200.581C139.658 201.753 139 203.342 139 205H136.5C136.5 202.679 137.422 200.454 139.063 198.813C140.704 197.172 142.929 196.25 145.25 196.25C147.571 196.25 149.796 197.172 151.437 198.813C153.078 200.454 154 202.679 154 205Z" fill="white" fill-opacity="0.5"/>
+                        <path d="M160.25 213.75C159.604 213.752 158.97 213.925 158.412 214.25C158.075 213.715 157.609 213.275 157.056 212.969C156.503 212.663 155.882 212.502 155.25 212.5C154.604 212.502 153.97 212.675 153.412 213C152.958 212.284 152.274 211.744 151.472 211.467C150.671 211.19 149.8 211.193 149 211.475V205C149 204.005 148.605 203.052 147.902 202.348C147.198 201.645 146.245 201.25 145.25 201.25C144.255 201.25 143.302 201.645 142.598 202.348C141.895 203.052 141.5 204.005 141.5 205V218.875L138.712 216.975C138.073 216.499 137.297 216.245 136.5 216.25C135.756 216.248 135.029 216.468 134.41 216.88C133.791 217.293 133.309 217.88 133.025 218.568C132.741 219.255 132.668 220.011 132.815 220.741C132.961 221.47 133.322 222.139 133.85 222.662L143.85 231.788C145.266 233.055 147.1 233.754 149 233.75H155.25C157.571 233.75 159.796 232.828 161.437 231.187C163.078 229.546 164 227.321 164 225V217.5C164 216.505 163.605 215.552 162.902 214.848C162.198 214.145 161.245 213.75 160.25 213.75ZM161.5 225C161.5 226.658 160.842 228.247 159.669 229.419C158.497 230.592 156.908 231.25 155.25 231.25H149C147.736 231.265 146.51 230.821 145.55 230L135.612 220.875C135.382 220.642 135.251 220.328 135.25 220C135.25 219.768 135.315 219.54 135.437 219.343C135.559 219.145 135.733 218.986 135.941 218.882C136.149 218.778 136.381 218.734 136.612 218.755C136.843 218.776 137.064 218.861 137.25 219L144 223.625V205C144 204.668 144.132 204.351 144.366 204.116C144.601 203.882 144.918 203.75 145.25 203.75C145.581 203.75 145.899 203.882 146.134 204.116C146.368 204.351 146.5 204.668 146.5 205V218.75H149V215C149 214.668 149.132 214.351 149.366 214.116C149.601 213.882 149.918 213.75 150.25 213.75C150.581 213.75 150.899 213.882 151.134 214.116C151.368 214.351 151.5 214.668 151.5 215V218.75H154V216.25C154 215.918 154.132 215.601 154.366 215.366C154.601 215.132 154.918 215 155.25 215C155.582 215 155.899 215.132 156.134 215.366C156.368 215.601 156.5 215.918 156.5 216.25V218.75H159V217.5C159 217.168 159.132 216.851 159.366 216.616C159.601 216.382 159.918 216.25 160.25 216.25C160.582 216.25 160.899 216.382 161.134 216.616C161.368 216.851 161.5 217.168 161.5 217.5V225Z" fill="white" fill-opacity="0.5"/>
+                      </svg>
+                    </div>
+                    <div class="image-instagram">
+                      <img
+                        src="{{ block.settings.image | img_url: 'master' }}"
+                        alt="{{ block.settings.image.alt | escape }}"
+                      >
+                    </div>
+                  </a>
+                </div>
+              {% endfor %}
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Instagram Gallery",
+  "class": "section",
+  "tag": "section",
+  "settings": [
+    {
+      "type": "inline_richtext",
+      "id": "title",
+      "default": "Instagram Gallery",
+      "label": "t:sections.instagram-gallery.settings.title.label"
+    },
+    {
+      "type": "select",
+      "id": "heading_size",
+      "options": [
+        {
+          "value": "h2",
+          "label": "t:sections.all.heading_size.options__1.label"
+        },
+        {
+          "value": "h1",
+          "label": "t:sections.all.heading_size.options__2.label"
+        },
+        {
+          "value": "h0",
+          "label": "t:sections.all.heading_size.options__3.label"
+        }
+      ],
+      "default": "h1",
+      "label": "t:sections.all.heading_size.label"
+    },
+    {
+      "type": "color_scheme",
+      "id": "color_scheme",
+      "label": "t:sections.all.colors.label",
+      "default": "scheme-1"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "image",
+      "name": "Image Block",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "t:sections.instagram-gallery.blocks.image.settings.image.label"
+        },
+        {
+          "type": "url",
+          "id": "image_link",
+          "label": "t:sections.instagram-gallery.blocks.image.settings.image_link.label"
+        }
+      ]
+    }
+  ],
+  "max_blocks": 8,
+  "presets": [
+    {
+      "name": "Instagram Gallery"
+    }
+  ]
+}
+{% endschema %}
