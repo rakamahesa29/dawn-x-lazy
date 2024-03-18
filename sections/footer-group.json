@@ -28,12 +28,12 @@
         "show_logo": true,
         "show_social": true,
         "newsletter_enable": true,
-        "footer_logo": "shopify:\/\/shop_images\/landscape-lazy-white-250px.webp",
+        "footer_logo": "shopify:\/\/shop_images\/lazy-logo.webp",
         "logo_alt_text": "Footer Logo",
         "logo_url": "\/",
-        "footer_text": "Lapisan kasur yang bisa disesuaikan  untuk memudahkan dalam memilih  kepadatan kasur.",
+        "footer_text": "Lapisan kasur yang bisa disesuaikan untuk memudahkan dalam memilih kepadatan kasur.",
         "subscribe_text": "get more update from lazy lowie",
-        "image_icon": "shopify:\/\/shop_images\/mascot-lazy-lowie.webp"
+        "image_icon": "shopify:\/\/shop_images\/mascot.webp"
       }
     }
   },

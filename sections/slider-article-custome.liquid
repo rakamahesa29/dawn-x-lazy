@@ -11,7 +11,7 @@
               style="background-image: url('{{ block.settings.image_slider_desktop | img_url: 'master' }}');"
             >
               <div class="text-custome-slider">
-                <h5>{{ block.settings.text_slider }}</h5>
+                <a href="{{ block.settings.url_slider }}">{{ block.settings.text_slider }}</h5>
               </div>
             </div>
             <div
@@ -19,7 +19,7 @@
               style="background-image: url('{{ block.settings.image_slider_mobile | img_url: 'master' }}');"
             >
               <div class="text-custome-slider">
-                <h5>{{ block.settings.text_slider }}</h5>
+                <a href="{{ block.settings.url_slider }}">{{ block.settings.text_slider }}</a>
               </div>
             </div>
           </div>
@@ -32,36 +32,41 @@
 
 {% schema %}
 {
-  "name": "t:sections.slider-custome.name",
+  "name": "t:sections.slider-article-custome.name",
   "class": "section",
   "tag": "section",
   "settings": [],
   "blocks": [
     {
       "type": "image",
-      "name": "t:sections.slider-custome.blocks.image.name",
+      "name": "t:sections.slider-article-custome.blocks.image.name",
       "settings": [
         {
           "type": "image_picker",
           "id": "image_slider_desktop",
-          "label": "t:sections.slider-custome.blocks.image.settings.image_slider_desktop.label"
+          "label": "t:sections.slider-article-custome.blocks.image.settings.image_slider_desktop.label"
         },
         {
           "type": "image_picker",
           "id": "image_slider_mobile",
-          "label": "t:sections.slider-custome.blocks.image.settings.image_slider_mobile.label"
+          "label": "t:sections.slider-article-custome.blocks.image.settings.image_slider_mobile.label"
         },
         {
           "type": "text",
           "id": "text_slider",
-          "label": "t:sections.slider-custome.blocks.image.settings.text_slider.label"
+          "label": "t:sections.slider-article-custome.blocks.image.settings.text_slider.label"
+        },
+        {
+          "type": "url",
+          "id": "url_slider",
+          "label": "t:sections.slider-article-custome.blocks.image.settings.text_slider.label"
         }
       ]
     }
   ],
   "presets": [
     {
-      "name": "t:sections.slider-custome.presets.name"
+      "name": "t:sections.slider-article-custome.presets.name"
     }
   ]
 }

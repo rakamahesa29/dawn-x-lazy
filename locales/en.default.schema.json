@@ -2889,6 +2889,31 @@
       "presets": {
         "name": "Custom Slider"
       }
+    },"slider-article-custome": {
+      "name": "Custom Article Slider",
+      "blocks": {
+        "image": {
+          "name": "Image Block",
+          "settings": {
+            "image_slider_desktop": {
+              "label": "Select Image for Desktop Article"
+            },
+            "image_slider_mobile": {
+              "label": "Select Image for Mobile Article"
+            },
+            "text_slider": {
+              "label": "Text for Article"
+            },
+            "url_slider": {
+              "label": "URl for Article"
+            }
+            
+          }
+        }
+      },
+      "presets": {
+        "name": "Custom Slider"
+      }
     },
     "support-and-guarantee": {
       "name": "Support And Guarantee",
@@ -2946,7 +2971,7 @@
       }
     },
     "footer": {
-      "name": "Footer",
+      "name": "Custome Footer",
       "settings": {
         "show_logo": {
           "label": "Show Logo"

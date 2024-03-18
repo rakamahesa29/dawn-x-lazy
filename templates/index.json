@@ -28,7 +28,7 @@
       ],
       "settings": {
         "layout": "full_bleed",
-        "slide_height": "adapt_image",
+        "slide_height": "fit_image",
         "slider_visual": "counter",
         "auto_rotate": false,
         "change_slides_speed": 5,
@@ -43,12 +43,14 @@
         "image_wJdgLK": {
           "type": "image",
           "settings": {
+            "image": "shopify:\/\/shop_images\/mattress_3d.webp",
             "image_link": ""
           }
         },
         "image_3prJMA": {
           "type": "image",
           "settings": {
+            "image": "shopify:\/\/shop_images\/bolster_3d.webp",
             "image_link": ""
           }
         }
@@ -72,15 +74,17 @@
         "column_3px96n": {
           "type": "column",
           "settings": {
+            "image": "shopify:\/\/shop_images\/mattress.webp",
             "title": "",
             "text": "",
             "link_label": "",
-            "link": ""
+            "link": "shopify:\/\/products\/mattress"
           }
         },
         "column_gFfQEL": {
           "type": "column",
           "settings": {
+            "image": "shopify:\/\/shop_images\/pillow.webp",
             "title": "",
             "text": "",
             "link_label": "",
@@ -90,6 +94,7 @@
         "column_My3L8B": {
           "type": "column",
           "settings": {
+            "image": "shopify:\/\/shop_images\/bolster.webp",
             "title": "",
             "text": "",
             "link_label": "",
@@ -103,10 +108,10 @@
         "column_My3L8B"
       ],
       "settings": {
-        "title": "Our Products",
+        "title": "<strong>Produk Kami<\/strong>",
         "heading_size": "h1",
         "image_width": "full",
-        "image_ratio": "adapt",
+        "image_ratio": "square",
         "columns_desktop": 3,
         "column_alignment": "center",
         "background_style": "none",
@@ -119,19 +124,23 @@
         "padding_bottom": 80
       }
     },
-    "image_banner": {
-      "type": "image-banner",
+    "slider_article_custome_myrrxL": {
+      "type": "slider-article-custome",
+      "blocks": {
+        "image_Bna9Ue": {
+          "type": "image",
+          "settings": {
+            "image_slider_desktop": "shopify:\/\/shop_images\/header-desktop.jpg",
+            "image_slider_mobile": "shopify:\/\/shop_images\/header-mobiile.jpg",
+            "text_slider": "Mattress  For Everyone",
+            "url_slider": ""
+          }
+        }
+      },
+      "block_order": [
+        "image_Bna9Ue"
+      ],
       "settings": {
-        "image_overlay_opacity": 0,
-        "image_height": "medium",
-        "desktop_content_position": "middle-center",
-        "show_text_box": false,
-        "desktop_content_alignment": "center",
-        "color_scheme": "scheme-3",
-        "image_behavior": "none",
-        "mobile_content_alignment": "center",
-        "stack_images_on_mobile": true,
-        "show_text_below": false
       }
     },
     "instagram_M3dX9V": {
@@ -179,7 +188,7 @@
     "slideshow_iN3pmY",
     "banner_image_yXdaJV",
     "custome_multicolumn_7rwK8x",
-    "image_banner",
+    "slider_article_custome_myrrxL",
     "instagram_M3dX9V"
   ]
 }
