@@ -6,7 +6,8 @@
         "slide_pKaGUc": {
           "type": "slide",
           "settings": {
-            "image": "shopify:\/\/shop_images\/lazy-banner.webp",
+            "image": "shopify:\/\/shop_images\/header-desktop.jpg",
+            "image_mobile": "shopify:\/\/shop_images\/header-mobiile.jpg",
             "heading": "",
             "heading_size": "h1",
             "subheading": "",
@@ -27,7 +28,7 @@
       ],
       "settings": {
         "layout": "full_bleed",
-        "slide_height": "large",
+        "slide_height": "adapt_image",
         "slider_visual": "counter",
         "auto_rotate": false,
         "change_slides_speed": 5,
@@ -42,14 +43,12 @@
         "image_wJdgLK": {
           "type": "image",
           "settings": {
-            "image": "shopify:\/\/shop_images\/bolster.webp",
             "image_link": ""
           }
         },
         "image_3prJMA": {
           "type": "image",
           "settings": {
-            "image": "shopify:\/\/shop_images\/mattress.webp",
             "image_link": ""
           }
         }
@@ -73,7 +72,6 @@
         "column_3px96n": {
           "type": "column",
           "settings": {
-            "image": "shopify:\/\/shop_images\/Bantal-Premium-03.webp",
             "title": "",
             "text": "",
             "link_label": "",
@@ -83,7 +81,6 @@
         "column_gFfQEL": {
           "type": "column",
           "settings": {
-            "image": "shopify:\/\/shop_images\/Kasur-02.webp",
             "title": "",
             "text": "",
             "link_label": "",
@@ -93,7 +90,6 @@
         "column_My3L8B": {
           "type": "column",
           "settings": {
-            "image": "shopify:\/\/shop_images\/Guling-02.webp",
             "title": "",
             "text": "",
             "link_label": "",
@@ -126,7 +122,6 @@
     "image_banner": {
       "type": "image-banner",
       "settings": {
-        "image": "shopify:\/\/shop_images\/lazy-banner.webp",
         "image_overlay_opacity": 0,
         "image_height": "medium",
         "desktop_content_position": "middle-center",
@@ -145,28 +140,24 @@
         "image_hXNCKW": {
           "type": "image",
           "settings": {
-            "image": "shopify:\/\/shop_images\/Bantal-Premium-03.webp",
             "image_link": ""
           }
         },
         "image_U6iWtF": {
           "type": "image",
           "settings": {
-            "image": "shopify:\/\/shop_images\/Kasur-02.webp",
             "image_link": ""
           }
         },
         "image_Qk8dDH": {
           "type": "image",
           "settings": {
-            "image": "shopify:\/\/shop_images\/Guling-02.webp",
             "image_link": ""
           }
         },
         "image_n9aPEL": {
           "type": "image",
           "settings": {
-            "image": "shopify:\/\/shop_images\/bolster.webp",
             "image_link": ""
           }
         }

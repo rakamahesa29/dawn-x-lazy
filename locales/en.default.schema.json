@@ -3423,6 +3423,9 @@
           },
           "options__4": {
             "label": "Large"
+          },
+          "options__5": {
+            "label": "Fit Image"
           }
         },
         "slider_visual": {
@@ -3460,7 +3463,10 @@
           "name": "Slide",
           "settings": {
             "image": {
-              "label": "Image"
+              "label": "Image Desktop"
+            },
+            "image_mobile": {
+              "label": "Image Mobile"
             },
             "heading": {
               "label": "Heading"
