@@ -44,10 +44,46 @@
           "settings": {
           }
         },
-        "share": {
-          "type": "share",
+        "image_picker_yWh3ca": {
+          "type": "image_picker",
           "settings": {
-            "share_label": "Share"
+            "info_image": "shopify:\/\/shop_images\/sertif.webp"
+          }
+        },
+        "collapsible_tab_JQRXJT": {
+          "type": "collapsible_tab",
+          "settings": {
+            "heading": "3 Kenyamanan dalam 1 Kasur",
+            "icon": "none",
+            "content": "<p>The Original Adjustable Mattress menawarkan 3 pilihan kenyamanan. Kamu akan menerima Lazy Lowie dengan konfigurasi ke-2 yaitu Medium. Jika kamu suka yang lebih empuk atau lebih keras, kamu dapat dengan mudah membuka resleting penutupnya dan memutar lapisan untuk menyesuaikan dengan kebutuhan kamu.<\/p>",
+            "page": ""
+          }
+        },
+        "collapsible_tab_zHHtnC": {
+          "type": "collapsible_tab",
+          "settings": {
+            "heading": "Kualitas bahan terbaik",
+            "icon": "none",
+            "content": "<p>Kami memilih bahan terbaik tencel, Latex, Memory Foam, Medium-density foam dan High-density foam untuk menopang tubuh kamu. Meningkatkan kenyamanan maksimal punggung dan leher saat kamu tidur.<\/p>",
+            "page": ""
+          }
+        },
+        "collapsible_tab_9QUCWa": {
+          "type": "collapsible_tab",
+          "settings": {
+            "heading": "4 Lapisan di 1 Kasur",
+            "icon": "none",
+            "content": "<p>4 lapisan dengan 3 zona kenyamanan kami menjamin keselarasan tulang belakang yang optimal dan membantu mengurangi titik-titik tekanan. Baik saat kamu berbaring telentang, tengkurap atau menyamping. <\/p>",
+            "page": ""
+          }
+        },
+        "collapsible_tab_4j7yLB": {
+          "type": "collapsible_tab",
+          "settings": {
+            "heading": "Tidur Nyenyak tanpa gangguan",
+            "icon": "none",
+            "content": "<p>Permukaan Lazy Lowie memiliki daya topang yang netral, sehingga setiap gerakan dapat ditahan - sepenuhnya dibuat untuk mengisolasi gerakan, menjamin kamu akan tidur nyenyak, siapa pun yang tidur di sebelah kamu.<\/p>",
+            "page": ""
           }
         }
       },
@@ -59,14 +95,18 @@
         "quantity_selector",
         "buy_buttons",
         "description",
-        "share"
+        "image_picker_yWh3ca",
+        "collapsible_tab_JQRXJT",
+        "collapsible_tab_zHHtnC",
+        "collapsible_tab_9QUCWa",
+        "collapsible_tab_4j7yLB"
       ],
       "settings": {
         "enable_sticky_info": true,
         "color_scheme": "scheme-47a0187c-b8de-4cff-b20c-5d35f422c9c0",
-        "media_size": "small",
+        "media_size": "medium",
         "constrain_to_viewport": true,
-        "media_fit": "contain",
+        "media_fit": "cover",
         "gallery_layout": "stacked",
         "media_position": "left",
         "image_zoom": "lightbox",
@@ -83,14 +123,208 @@
         "image_pQyLta": {
           "type": "image",
           "settings": {
-            "image_slider_desktop": "shopify:\/\/shop_images\/bolster.webp",
-            "image_slider_mobile": "shopify:\/\/shop_images\/bolster.webp",
-            "text_slider": "LOREM IPSUM  DOLOR SIT AMET"
+            "image_slider_desktop": "shopify:\/\/shop_images\/mattress_for_everyone.png",
+            "image_slider_mobile": "shopify:\/\/shop_images\/zip-mattress-mobile.webp",
+            "text_slider": "Mattress For Everyone"
           }
         }
       },
       "block_order": [
         "image_pQyLta"
+      ],
+      "settings": {
+      }
+    },
+    "animation_product_jfCPFp": {
+      "type": "animation-product",
+      "blocks": {
+        "image_aqzB9m": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/0001.png"
+          }
+        },
+        "image_rtMTGc": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/0002.png"
+          }
+        },
+        "image_t3R9RX": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/0003.png"
+          }
+        },
+        "image_KWmXgQ": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/0004.png"
+          }
+        },
+        "image_kwijzb": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/0005.png"
+          }
+        },
+        "image_j8T8V6": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/0006.png"
+          }
+        },
+        "image_QGhgay": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/0007.png"
+          }
+        },
+        "image_Q6KDa8": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/0008.png"
+          }
+        },
+        "image_8eMgy3": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/0009.png"
+          }
+        },
+        "image_iVeFEz": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/0010.png"
+          }
+        },
+        "image_nfDkhX": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/0011.png"
+          }
+        },
+        "image_46BjC8": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/0012.png"
+          }
+        },
+        "image_yWkrGW": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/0013.png"
+          }
+        },
+        "image_FUdYpH": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/0014.png"
+          }
+        },
+        "image_jDLVN3": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/0015.png"
+          }
+        },
+        "text_9wgX9i": {
+          "type": "text",
+          "settings": {
+            "text_animation": "The Lazy Lowie mattress uses Tencel material which is easily removable and washable. Tencel material is famous for its softness and smooth surface. It can absorb moisture, providing comfortable sleep throughout the night.Non-allergenicTencel is also safe for those with sensitive skin."
+          }
+        },
+        "text_fdNFjK": {
+          "type": "text",
+          "settings": {
+            "text_animation": "LatexThe Lazy Lowie mattress uses 100% Belgian Latex to achieve a high level of flexibility and durability. Latex is a natural material that comes from the sap of rubber trees. Latex material is free from mites and ticks. Benefits of using Latex:Good for Spine HealthLatex will remain in the same position even if you move or the mattress load increases. Of course this is very safe for the health of your bones who have problems with back, shoulder, and neck pain while sleeping.Cool materiallatex has a hollow texture with this Latex has good air circulation."
+          }
+        },
+        "text_cQp6AA": {
+          "type": "text",
+          "settings": {
+            "text_animation": "LatexThe Lazy Lowie mattress uses 100% Belgian Latex to achieve a high level of flexibility and durability. Latex is a natural material that comes from the sap of rubber trees. Latex material is free from mites and ticks. Benefits of using Latex:Good for Spine HealthLatex will remain in the same position even if you move or the mattress load increases. Of course this is very safe for the health of your bones who have problems with back, shoulder, and neck pain while sleeping.Cool materiallatex has a hollow texture with this Latex has good air circulation."
+          }
+        }
+      },
+      "block_order": [
+        "image_aqzB9m",
+        "image_rtMTGc",
+        "image_t3R9RX",
+        "image_KWmXgQ",
+        "image_kwijzb",
+        "image_j8T8V6",
+        "image_QGhgay",
+        "image_Q6KDa8",
+        "image_8eMgy3",
+        "image_iVeFEz",
+        "image_nfDkhX",
+        "image_46BjC8",
+        "image_yWkrGW",
+        "image_FUdYpH",
+        "image_jDLVN3",
+        "text_9wgX9i",
+        "text_fdNFjK",
+        "text_cQp6AA"
+      ],
+      "settings": {
+      }
+    },
+    "slider_custome_UKTrdX": {
+      "type": "slider-custome",
+      "blocks": {
+        "image_QaLq4W": {
+          "type": "image",
+          "settings": {
+            "image_slider_desktop": "shopify:\/\/shop_images\/header-desktop.jpg",
+            "image_slider_mobile": "shopify:\/\/shop_images\/header-mobiile.jpg",
+            "text_slider": "IPSUM LOREM SIT AMET DOLOR"
+          }
+        }
+      },
+      "block_order": [
+        "image_QaLq4W"
+      ],
+      "settings": {
+      }
+    },
+    "support_and_guarantee_mwDhDc": {
+      "type": "support-and-guarantee",
+      "blocks": {
+        "image_d63Mxw": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/moon.png",
+            "image_text": "100 Night Trials"
+          }
+        },
+        "image_Ppwt7M": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/truck_png.png",
+            "image_text": "Free Shipping"
+          }
+        },
+        "image_ahD8Ak": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/guaranteed.png",
+            "image_text": "10 Years Guarantee"
+          }
+        },
+        "image_jUwfrL": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/chat.png",
+            "image_text": "Full Support"
+          }
+        }
+      },
+      "block_order": [
+        "image_d63Mxw",
+        "image_Ppwt7M",
+        "image_ahD8Ak",
+        "image_jUwfrL"
       ],
       "settings": {
       }
@@ -119,7 +353,6 @@
         "review_pH4xgN": {
           "type": "review",
           "settings": {
-            "image": "shopify:\/\/shop_images\/PhysicalDevelopment.webp",
             "user_name": "Jhondoe",
             "star_rating": 0,
             "review_date": "2024-01-23",
@@ -129,7 +362,6 @@
         "review_jzKyQc": {
           "type": "review",
           "settings": {
-            "image": "shopify:\/\/shop_images\/PhysicalDevelopment.webp",
             "user_name": "Rafli",
             "star_rating": 0,
             "review_date": "2024-01-23",
@@ -139,7 +371,6 @@
         "review_wfF4wR": {
           "type": "review",
           "settings": {
-            "image": "shopify:\/\/shop_images\/communication.webp",
             "user_name": "Rudi",
             "star_rating": 0,
             "review_date": "2024-01-23",
@@ -155,85 +386,15 @@
       "settings": {
         "title": "Happy Customer"
       }
-    },
-    "slider_custome_UKTrdX": {
-      "type": "slider-custome",
-      "blocks": {
-        "image_63M9yp": {
-          "type": "image",
-          "settings": {
-            "image_slider_desktop": "shopify:\/\/shop_images\/lazy-banner.webp",
-            "image_slider_mobile": "shopify:\/\/shop_images\/lazy-banner-mobile.webp",
-            "text_slider": "LOREM IPSUM DOLOR SIT AMET"
-          }
-        },
-        "image_QaLq4W": {
-          "type": "image",
-          "settings": {
-            "image_slider_desktop": "shopify:\/\/shop_images\/bolster.webp",
-            "image_slider_mobile": "shopify:\/\/shop_images\/bolster.webp",
-            "text_slider": "IPSUM LOREM SIT AMET DOLOR"
-          }
-        }
-      },
-      "block_order": [
-        "image_63M9yp",
-        "image_QaLq4W"
-      ],
-      "settings": {
-      }
-    },
-    "support_and_guarantee_mwDhDc": {
-      "type": "support-and-guarantee",
-      "blocks": {
-        "image_d63Mxw": {
-          "type": "image",
-          "settings": {
-            "image": "shopify:\/\/shop_images\/communication.webp",
-            "image_text": "Support"
-          }
-        },
-        "image_WLXi84": {
-          "type": "image",
-          "settings": {
-            "image": "shopify:\/\/shop_images\/Literacy.webp",
-            "image_text": "Guarantee"
-          }
-        },
-        "image_ahD8Ak": {
-          "type": "image",
-          "settings": {
-            "image": "shopify:\/\/shop_images\/PhysicalDevelopment.webp",
-            "image_text": "Boboboi"
-          }
-        },
-        "image_jUwfrL": {
-          "type": "image",
-          "settings": {
-            "image": "shopify:\/\/shop_images\/PersonalAndSocial.webp",
-            "image_text": "Support"
-          }
-        }
-      },
-      "block_order": [
-        "image_d63Mxw",
-        "image_WLXi84",
-        "image_ahD8Ak",
-        "image_jUwfrL"
-      ],
-      "settings": {
-        "title": "Support And Guarantee",
-        "heading_size": "h1",
-        "color_scheme": ""
-      }
     }
   },
   "order": [
     "main",
     "slider_custome_jUDdzD",
-    "related-products",
-    "custome_review_qXKzhb",
+    "animation_product_jfCPFp",
     "slider_custome_UKTrdX",
-    "support_and_guarantee_mwDhDc"
+    "support_and_guarantee_mwDhDc",
+    "related-products",
+    "custome_review_qXKzhb"
   ]
 }

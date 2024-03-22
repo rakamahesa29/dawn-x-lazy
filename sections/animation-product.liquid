@@ -1,70 +1,38 @@
-var igswiper = new Swiper(".igSwiper", {
-    slidesPerView: 4,
-    spaceBetween: 30,
-    navigation: {
-        nextEl: ".swiper-button-next",
-        prevEl: ".swiper-button-prev",
-      },
-      breakpoints: {
-        280: {
-          slidesPerView: 1,
-          spaceBetween: 20,
-        },
-        425: {
-          slidesPerView: 2,
-          spaceBetween: 20,
-        },
-        768: {
-          slidesPerView: 3,
-          spaceBetween: 30,
-        },
-        1024: {
-          slidesPerView: 4,
-          spaceBetween: 30,
-        },
-      },
-  });
+{{ 'gsap.min.js' | asset_url | script_tag }}
+{{ 'ScrollTrigger.min.js' | asset_url | script_tag }}
 
-  var swiperreview = new Swiper(".swiperReview", {
-    slidesPerView: 4,
-    spaceBetween: 10,
-    pagination: {
-      el: ".swiper-pagination",
-      clickable: true,
-    },
-    breakpoints: {
-      280: {
-        slidesPerView: 1,
-        spaceBetween: 20,
-      },
-      425: {
-        slidesPerView: 2,
-        spaceBetween: 20,
-      },
-      768: {
-        slidesPerView: 3,
-        spaceBetween: 30,
-      },
-      1024: {
-        slidesPerView: 4,
-        spaceBetween: 30,
-      },
-    },
-  });
+<section class="sec-scroll">
+  <div class="container">
+    <div class="row">
+      <div class="col-12">
+        <div class="scroll-container">
+          <div class="area-scroll-trigger">
+            <div id="imageContainer" class="list-image-item">
+              {% for block in section.blocks %}
+                <img src="{{ block.settings.image | img_url: 'master' }}" alt="{{ block.settings.image.alt | escape }}">
+              {% endfor %}
+            </div>
+            <div class="list-text-item" id="textContainer">
+              {% for block in section.blocks %}
+                <p class="show">{{ block.settings.text_animation }}</p>
+              {% endfor %}
+            </div>
+            <div class="progress-bar-item">
+              <div class="progress-bar"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
 
-  var swipercustomeslider = new Swiper(".customesliderSwiper", {
-    slidesPerView: 1,
-    spaceBetween: 0,
-    pagination: {
-      el: ".swiper-pagination",
-      clickable: true,
-    }
-  });
-
-  document.addEventListener("DOMContentLoaded", function () {
+{% javascript %}
+ document.addEventListener("DOMContentLoaded", function () {
     const container = document.getElementById("imageContainer");
     // Mengambil semua gambar yang di-render oleh Shopify Liquid
     const images = container.querySelectorAll('img');
+    // menetapkan jumlah variable ke javascript
   
     // Sembunyikan semua gambar kecuali yang pertama
     images.forEach((img, index) => {
@@ -131,3 +99,43 @@ var igswiper = new Swiper(".igSwiper", {
     });
   });
   
+  {% endjavascript %}
+  
+
+{% schema %}
+{
+  "name": "Animation Product",
+  "class": "section",
+  "tag": "section",
+  "settings": [],
+  "blocks": [
+    {
+      "type": "image",
+      "name": "Image Block",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "t:sections.animation-product.blocks.image.settings.image.label"
+        }
+      ]
+    },
+    {
+      "type": "text",
+      "name": "Text Animation",
+      "settings": [
+        {
+          "type": "text",
+          "id": "text_animation",
+          "label": "t:sections.animation-product.blocks.text.settings.text.label"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Animation Product"
+    }
+  ]
+}
+{% endschema %}
