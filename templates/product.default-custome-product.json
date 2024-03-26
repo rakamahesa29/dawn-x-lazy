@@ -47,7 +47,6 @@
         "image_picker_yWh3ca": {
           "type": "image_picker",
           "settings": {
-            "info_image": "shopify:\/\/shop_images\/sertif.webp"
           }
         },
         "collapsible_tab_JQRXJT": {
@@ -107,7 +106,7 @@
         "media_size": "medium",
         "constrain_to_viewport": true,
         "media_fit": "cover",
-        "gallery_layout": "stacked",
+        "gallery_layout": "thumbnail_slider",
         "media_position": "left",
         "image_zoom": "lightbox",
         "mobile_thumbnails": "hide",
@@ -123,7 +122,6 @@
         "image_pQyLta": {
           "type": "image",
           "settings": {
-            "image_slider_desktop": "shopify:\/\/shop_images\/mattress_for_everyone.png",
             "image_slider_mobile": "shopify:\/\/shop_images\/zip-mattress-mobile.webp",
             "text_slider": "Mattress For Everyone"
           }
@@ -138,134 +136,29 @@
     "animation_product_jfCPFp": {
       "type": "animation-product",
       "blocks": {
-        "image_aqzB9m": {
-          "type": "image",
-          "settings": {
-            "image": "shopify:\/\/shop_images\/0001.png"
-          }
-        },
-        "image_rtMTGc": {
-          "type": "image",
-          "settings": {
-            "image": "shopify:\/\/shop_images\/0002.png"
-          }
-        },
-        "image_t3R9RX": {
-          "type": "image",
-          "settings": {
-            "image": "shopify:\/\/shop_images\/0003.png"
-          }
-        },
-        "image_KWmXgQ": {
-          "type": "image",
-          "settings": {
-            "image": "shopify:\/\/shop_images\/0004.png"
-          }
-        },
-        "image_kwijzb": {
-          "type": "image",
-          "settings": {
-            "image": "shopify:\/\/shop_images\/0005.png"
-          }
-        },
-        "image_j8T8V6": {
-          "type": "image",
-          "settings": {
-            "image": "shopify:\/\/shop_images\/0006.png"
-          }
-        },
-        "image_QGhgay": {
-          "type": "image",
-          "settings": {
-            "image": "shopify:\/\/shop_images\/0007.png"
-          }
-        },
-        "image_Q6KDa8": {
-          "type": "image",
-          "settings": {
-            "image": "shopify:\/\/shop_images\/0008.png"
-          }
-        },
-        "image_8eMgy3": {
-          "type": "image",
-          "settings": {
-            "image": "shopify:\/\/shop_images\/0009.png"
-          }
-        },
-        "image_iVeFEz": {
-          "type": "image",
-          "settings": {
-            "image": "shopify:\/\/shop_images\/0010.png"
-          }
-        },
-        "image_nfDkhX": {
-          "type": "image",
-          "settings": {
-            "image": "shopify:\/\/shop_images\/0011.png"
-          }
-        },
-        "image_46BjC8": {
-          "type": "image",
-          "settings": {
-            "image": "shopify:\/\/shop_images\/0012.png"
-          }
-        },
-        "image_yWkrGW": {
-          "type": "image",
-          "settings": {
-            "image": "shopify:\/\/shop_images\/0013.png"
-          }
-        },
-        "image_FUdYpH": {
-          "type": "image",
-          "settings": {
-            "image": "shopify:\/\/shop_images\/0014.png"
-          }
-        },
-        "image_jDLVN3": {
-          "type": "image",
-          "settings": {
-            "image": "shopify:\/\/shop_images\/0015.png"
-          }
-        },
-        "text_9wgX9i": {
+        "text_tUbHRh": {
           "type": "text",
           "settings": {
-            "text_animation": "The Lazy Lowie mattress uses Tencel material which is easily removable and washable. Tencel material is famous for its softness and smooth surface. It can absorb moisture, providing comfortable sleep throughout the night.Non-allergenicTencel is also safe for those with sensitive skin."
+            "text_animation": "Hello world"
           }
         },
-        "text_fdNFjK": {
+        "text_VirfyR": {
           "type": "text",
           "settings": {
-            "text_animation": "LatexThe Lazy Lowie mattress uses 100% Belgian Latex to achieve a high level of flexibility and durability. Latex is a natural material that comes from the sap of rubber trees. Latex material is free from mites and ticks. Benefits of using Latex:Good for Spine HealthLatex will remain in the same position even if you move or the mattress load increases. Of course this is very safe for the health of your bones who have problems with back, shoulder, and neck pain while sleeping.Cool materiallatex has a hollow texture with this Latex has good air circulation."
+            "text_animation": "Hello People"
           }
         },
-        "text_cQp6AA": {
+        "text_Am4Xby": {
           "type": "text",
           "settings": {
-            "text_animation": "LatexThe Lazy Lowie mattress uses 100% Belgian Latex to achieve a high level of flexibility and durability. Latex is a natural material that comes from the sap of rubber trees. Latex material is free from mites and ticks. Benefits of using Latex:Good for Spine HealthLatex will remain in the same position even if you move or the mattress load increases. Of course this is very safe for the health of your bones who have problems with back, shoulder, and neck pain while sleeping.Cool materiallatex has a hollow texture with this Latex has good air circulation."
+            "text_animation": "Hello temen temen"
           }
         }
       },
       "block_order": [
-        "image_aqzB9m",
-        "image_rtMTGc",
-        "image_t3R9RX",
-        "image_KWmXgQ",
-        "image_kwijzb",
-        "image_j8T8V6",
-        "image_QGhgay",
-        "image_Q6KDa8",
-        "image_8eMgy3",
-        "image_iVeFEz",
-        "image_nfDkhX",
-        "image_46BjC8",
-        "image_yWkrGW",
-        "image_FUdYpH",
-        "image_jDLVN3",
-        "text_9wgX9i",
-        "text_fdNFjK",
-        "text_cQp6AA"
+        "text_tUbHRh",
+        "text_VirfyR",
+        "text_Am4Xby"
       ],
       "settings": {
       }
@@ -294,28 +187,24 @@
         "image_d63Mxw": {
           "type": "image",
           "settings": {
-            "image": "shopify:\/\/shop_images\/moon.png",
             "image_text": "100 Night Trials"
           }
         },
         "image_Ppwt7M": {
           "type": "image",
           "settings": {
-            "image": "shopify:\/\/shop_images\/truck_png.png",
             "image_text": "Free Shipping"
           }
         },
         "image_ahD8Ak": {
           "type": "image",
           "settings": {
-            "image": "shopify:\/\/shop_images\/guaranteed.png",
             "image_text": "10 Years Guarantee"
           }
         },
         "image_jUwfrL": {
           "type": "image",
           "settings": {
-            "image": "shopify:\/\/shop_images\/chat.png",
             "image_text": "Full Support"
           }
         }

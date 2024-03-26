@@ -476,32 +476,40 @@ details[open]>.header__menu-item {
 /* animation css */
   .sec-scroll {
     width: 100%;
-    background: #dbdbdb;
-    overflow: unset;
+    overflow: auto;
     position: relative;
   }
   .scroll-container {
-    width: 400px;
     height: 2400px;
     margin: auto;
-    display: grid;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     gap: 30px;
     overflow: visible;
     position: relative;
   }
   .area-scroll-trigger {
     position: absolute;
-    width: 400px;
+    top: 0;
+    width: 80%;
     padding-top: 60px;
     padding-bottom: 60px;
   }
   .area-scroll-trigger.object-stay {
     position: fixed;
-    top: 0px;
+    top: 0;
+    width: 70%;
+    left: 15%;
   }
   .area-scroll-trigger.object-leave {
     position: absolute;
-    bottom: 80px;
+    top: unset;
+    bottom: 100px;
+    width: 80%;
+    padding-top: 60px;
+    padding-bottom: 60px;
   }
   .list-image-item {
     position: relative;
@@ -517,13 +525,14 @@ details[open]>.header__menu-item {
   }
   .list-text-item {
     position: relative;
-    height: 60px;
+    height: 50px;
     display: flex;
     justify-content: center;
     align-items: center;
   }
   .list-text-item p {
-    font-size: 14px;
+    font-size: 16px;
+    text-align: center;
     letter-spacing: .8px;
     font-weight: 500;
     color: #3D3D3D;
@@ -533,7 +542,8 @@ details[open]>.header__menu-item {
     transition: all ease-in-out 0.3s;
   }
 
-  .active {
+  .active,
+  .show {
     opacity: 1;
     transition: all ease-in-out 0.3s;
   }
@@ -542,19 +552,23 @@ details[open]>.header__menu-item {
     transition: all ease-in-out 0.3s;
   }
   .progress-bar-item {
+    margin-top: 30px;
     position: relative;
     height: 10px;
     width: 100%;
     border-radius: 20px;
     background: #ededed;
+    transition: all ease-in-out .3s;
   }
   .progress-bar {
     width: 0%;
+    display: block !important;
     position: absolute;
     top: 0;
     height: 10px;
     border-radius: 20px;
     background-color: #005750;
+    transition: all ease-in-out .3s;
   }
 /* end animation css */
 
@@ -665,9 +679,6 @@ details[open]>.header__menu-item {
         margin-left: auto;
         margin-right: auto;
     }
-    /* .product__media-custome img {
-        border-radius: 16px !important;
-    } */
 
 }
 
@@ -769,6 +780,29 @@ details[open]>.header__menu-item {
     }
     .product__media-custome img {
         border-radius: 16px !important;
+    }
+    .list-image-item {
+        position: relative;
+        height: 42vh;
+        display: flex;
+        justify-content: center;
+      }
+      .list-image-item img {
+        width: auto;
+        height: 42vh;
+        position: absolute;
+        top: 0;
+      }
+      .area-scroll-trigger.object-stay {
+        position: fixed;
+        top: 0;
+        width: 80%;
+        left: 10%;
+        display: grid;
+        gap: 15px;
+    }
+    .progress-bar-item {
+        margin-top: 20px;
     }
 }
 
@@ -903,6 +937,27 @@ details[open]>.header__menu-item {
         font-size: 18px;
         color: #005750;
     }
+    .text-custome-slider {
+        left: 40px;
+    bottom: 40px;
+    }
+    .text-custome-slider h5 {
+        font-size: 36px;
+    }
+    .guarantee-content {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 50px;
+        max-width: 50%;
+    }
+    .list-image-item {
+        height: 50vh;
+      }
+      .list-image-item img {
+        height: 50vh;
+      }
+      .list-text-item {
+        height: 70px;
+      }
 }
 
 @media screen and (min-width: 992px) and (max-width: 1023px) {

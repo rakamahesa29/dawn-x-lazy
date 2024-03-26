@@ -43,14 +43,14 @@
         "image_wJdgLK": {
           "type": "image",
           "settings": {
-            "image": "shopify:\/\/shop_images\/mattress_3d.webp",
+            "image": "shopify:\/\/shop_images\/bolster.webp",
             "image_link": ""
           }
         },
         "image_3prJMA": {
           "type": "image",
           "settings": {
-            "image": "shopify:\/\/shop_images\/bolster_3d.webp",
+            "image": "shopify:\/\/shop_images\/mattress.webp",
             "image_link": ""
           }
         }
@@ -60,12 +60,12 @@
         "image_3prJMA"
       ],
       "settings": {
-        "title": "Custome Banner Image",
+        "title": "\"The universal language of a quiet night.\"",
         "heading_size": "h1",
         "background_style": "primary",
         "button_label": "Button label",
         "button_link": "",
-        "color_scheme": ""
+        "color_scheme": "scheme-47a0187c-b8de-4cff-b20c-5d35f422c9c0"
       }
     },
     "custome_multicolumn_7rwK8x": {
@@ -74,11 +74,11 @@
         "column_3px96n": {
           "type": "column",
           "settings": {
-            "image": "shopify:\/\/shop_images\/mattress.webp",
+            "image": "shopify:\/\/shop_images\/mattress_4061805e-e7e2-4ecc-8b20-9030cde3f5e6.webp",
             "title": "",
             "text": "",
             "link_label": "",
-            "link": "shopify:\/\/products\/mattress"
+            "link": "shopify:\/\/collections\/matterss"
           }
         },
         "column_gFfQEL": {
@@ -88,17 +88,17 @@
             "title": "",
             "text": "",
             "link_label": "",
-            "link": ""
+            "link": "shopify:\/\/collections\/pillow"
           }
         },
         "column_My3L8B": {
           "type": "column",
           "settings": {
-            "image": "shopify:\/\/shop_images\/bolster.webp",
+            "image": "shopify:\/\/shop_images\/bolster_cb8b5981-b209-40d8-a312-3163e24400e3.webp",
             "title": "",
             "text": "",
             "link_label": "",
-            "link": ""
+            "link": "shopify:\/\/collections\/bolster"
           }
         }
       },
@@ -108,7 +108,7 @@
         "column_My3L8B"
       ],
       "settings": {
-        "title": "<strong>Produk Kami<\/strong>",
+        "title": "<strong>Our Product<\/strong>",
         "heading_size": "h1",
         "image_width": "full",
         "image_ratio": "square",
@@ -117,7 +117,7 @@
         "background_style": "none",
         "button_label": "",
         "button_link": "",
-        "color_scheme": "scheme-47a0187c-b8de-4cff-b20c-5d35f422c9c0",
+        "color_scheme": "scheme-1",
         "columns_mobile": "1",
         "swipe_on_mobile": true,
         "padding_top": 0,
@@ -130,9 +130,9 @@
         "image_Bna9Ue": {
           "type": "image",
           "settings": {
-            "image_slider_desktop": "shopify:\/\/shop_images\/header-desktop.jpg",
-            "image_slider_mobile": "shopify:\/\/shop_images\/header-mobiile.jpg",
-            "text_slider": "Mattress  For Everyone",
+            "image_slider_desktop": "shopify:\/\/shop_images\/zip-mattress.webp",
+            "image_slider_mobile": "shopify:\/\/shop_images\/zip-mattress-mobile.webp",
+            "text_slider": "Kasur Untuk Semua Orang",
             "url_slider": ""
           }
         }
@@ -149,25 +149,29 @@
         "image_hXNCKW": {
           "type": "image",
           "settings": {
-            "image_link": ""
+            "image": "shopify:\/\/shop_images\/lazy-ig-1.jpg",
+            "image_link": "https:\/\/www.instagram.com\/p\/C42n79Mrl7d\/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA=="
           }
         },
         "image_U6iWtF": {
           "type": "image",
           "settings": {
-            "image_link": ""
+            "image": "shopify:\/\/shop_images\/lazy-ig-2.jpg",
+            "image_link": "https:\/\/www.instagram.com\/p\/C4umFG5tXCN\/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA=="
           }
         },
         "image_Qk8dDH": {
           "type": "image",
           "settings": {
-            "image_link": ""
+            "image": "shopify:\/\/shop_images\/lazy-ig-3.jpg",
+            "image_link": "https:\/\/www.instagram.com\/reel\/C4ch4rAtXyh\/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA=="
           }
         },
         "image_n9aPEL": {
           "type": "image",
           "settings": {
-            "image_link": ""
+            "image": "shopify:\/\/shop_images\/header-mobiile.jpg",
+            "image_link": "https:\/\/www.instagram.com\/p\/C2PLUIqJXmq\/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA=="
           }
         }
       },
@@ -178,9 +182,9 @@
         "image_n9aPEL"
       ],
       "settings": {
-        "title": "Instagram Gallery",
+        "title": "Lowie Board",
         "heading_size": "h1",
-        "color_scheme": ""
+        "color_scheme": "scheme-2"
       }
     }
   },

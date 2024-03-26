@@ -2,7 +2,7 @@
   "current": {
     "logo": "shopify:\/\/shop_images\/lazy-logo-green.webp",
     "logo_width": 90,
-    "favicon": "shopify:\/\/shop_images\/favicon.webp",
+    "favicon": "shopify:\/\/shop_images\/lazy-logo-green.webp",
     "type_header_font": "assistant_n4",
     "heading_scale": 100,
     "type_body_font": "assistant_n4",
@@ -40,7 +40,7 @@
     "card_color_scheme": "scheme-47a0187c-b8de-4cff-b20c-5d35f422c9c0",
     "card_border_thickness": 0,
     "card_border_opacity": 10,
-    "card_corner_radius": 4,
+    "card_corner_radius": 14,
     "card_shadow_opacity": 0,
     "card_shadow_horizontal_offset": 0,
     "card_shadow_vertical_offset": 4,
@@ -69,7 +69,7 @@
     "blog_card_shadow_blur": 5,
     "text_boxes_border_thickness": 0,
     "text_boxes_border_opacity": 10,
-    "text_boxes_radius": 4,
+    "text_boxes_radius": 12,
     "text_boxes_shadow_opacity": 0,
     "text_boxes_shadow_horizontal_offset": 0,
     "text_boxes_shadow_vertical_offset": 4,
@@ -95,9 +95,9 @@
     "drawer_shadow_vertical_offset": 4,
     "drawer_shadow_blur": 5,
     "badge_position": "top left",
-    "badge_corner_radius": 4,
+    "badge_corner_radius": 14,
     "sale_badge_color_scheme": "scheme-4901882a-37a4-43d2-9919-a04d2596a8f8",
-    "sold_out_badge_color_scheme": "scheme-47a0187c-b8de-4cff-b20c-5d35f422c9c0",
+    "sold_out_badge_color_scheme": "scheme-3",
     "brand_headline": "",
     "brand_description": "<p><\/p>",
     "brand_image_width": 100,
@@ -212,6 +212,28 @@
           "button_label": "#005750",
           "secondary_button_label": "#ffffff",
           "shadow": "#ffffff"
+        }
+      },
+      "scheme-334f9163-b808-4f04-9fce-7081ff4d2119": {
+        "settings": {
+          "background": "#ffffff",
+          "background_gradient": "",
+          "text": "#121212",
+          "button": "#121212",
+          "button_label": "#ffffff",
+          "secondary_button_label": "#121212",
+          "shadow": "#121212"
+        }
+      },
+      "scheme-8dc1503a-d7b1-44d0-ba46-1ea15c63b766": {
+        "settings": {
+          "background": "#ffffff",
+          "background_gradient": "",
+          "text": "#202020",
+          "button": "#005750",
+          "button_label": "#ffffff",
+          "secondary_button_label": "#005750",
+          "shadow": "#005750"
         }
       }
     }
