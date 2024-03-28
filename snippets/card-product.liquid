@@ -155,13 +155,17 @@
           {%- if has_size_option -%}
             <div class="product-size">
               <div class="products-size-content">
-                {%- for variant in card_product.variants -%}
-                  {%- assign size = variant.options[size_option_index] -%}
-                  {%- unless displayed_sizes contains size -%}
-                    <div class="size-item">{{ size }}</div>
-                    {%- assign displayed_sizes = displayed_sizes | append: size | append: ',' -%}
-                  {%- endunless -%}
-                {%- endfor -%}
+                <div class="swiper swiperProductSize">
+                  <div class="swiper-wrapper">
+                    {%- for variant in card_product.variants -%}
+                      {%- assign size = variant.options[size_option_index] -%}
+                      {%- unless displayed_sizes contains size -%}
+                        <a href="/products/{{ card_product.handle }}?variant={{ variant.id }}" class="swiper-slide size-item">{{ size }}</a>
+                        {%- assign displayed_sizes = displayed_sizes | append: size | append: ',' -%}
+                      {%- endunless -%}
+                    {%- endfor -%}
+                  </div>
+                </div>
               </div>
             </div>
           {%- endif -%}

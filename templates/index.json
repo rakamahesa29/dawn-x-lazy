@@ -43,14 +43,14 @@
         "image_wJdgLK": {
           "type": "image",
           "settings": {
-            "image": "shopify:\/\/shop_images\/bolster.webp",
+            "image": "shopify:\/\/shop_images\/mattress_3d.webp",
             "image_link": ""
           }
         },
         "image_3prJMA": {
           "type": "image",
           "settings": {
-            "image": "shopify:\/\/shop_images\/mattress.webp",
+            "image": "shopify:\/\/shop_images\/bolster_3d.webp",
             "image_link": ""
           }
         }
@@ -74,7 +74,7 @@
         "column_3px96n": {
           "type": "column",
           "settings": {
-            "image": "shopify:\/\/shop_images\/mattress_4061805e-e7e2-4ecc-8b20-9030cde3f5e6.webp",
+            "image": "shopify:\/\/shop_images\/mattress.webp",
             "title": "",
             "text": "",
             "link_label": "",
@@ -94,7 +94,7 @@
         "column_My3L8B": {
           "type": "column",
           "settings": {
-            "image": "shopify:\/\/shop_images\/bolster_cb8b5981-b209-40d8-a312-3163e24400e3.webp",
+            "image": "shopify:\/\/shop_images\/bolster.webp",
             "title": "",
             "text": "",
             "link_label": "",
@@ -130,9 +130,9 @@
         "image_Bna9Ue": {
           "type": "image",
           "settings": {
-            "image_slider_desktop": "shopify:\/\/shop_images\/zip-mattress.webp",
+            "image_slider_desktop": "shopify:\/\/shop_images\/mattress_for_everyone.png",
             "image_slider_mobile": "shopify:\/\/shop_images\/zip-mattress-mobile.webp",
-            "text_slider": "Kasur Untuk Semua Orang",
+            "text_slider": "Mattress For Everyone",
             "url_slider": ""
           }
         }

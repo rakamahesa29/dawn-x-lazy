@@ -122,6 +122,7 @@
         "image_pQyLta": {
           "type": "image",
           "settings": {
+            "image_slider_desktop": "shopify:\/\/shop_images\/mattress_for_everyone.png",
             "image_slider_mobile": "shopify:\/\/shop_images\/zip-mattress-mobile.webp",
             "text_slider": "Mattress For Everyone"
           }
@@ -139,28 +140,39 @@
         "text_tUbHRh": {
           "type": "text",
           "settings": {
-            "text_animation": "Hello world"
+            "text_animation": "Lowie mattress uses Tencel material which is easily removable and washable."
           }
         },
         "text_VirfyR": {
           "type": "text",
           "settings": {
-            "text_animation": "Hello People"
+            "text_animation": "The Lazy Lowie mattress uses 100% Belgian Latex to achieve a high level of flexibility and durability. Latex is a natural material that comes from the sap of rubber trees. Latex material is free from mites and ticks."
           }
         },
         "text_Am4Xby": {
           "type": "text",
           "settings": {
-            "text_animation": "Hello temen temen"
+            "text_animation": "Medium-density foam has better thickness and density than low-density foam."
+          }
+        },
+        "text_QtEmRt": {
+          "type": "text",
+          "settings": {
+            "text_animation": "High-density foam is usually used for those who require higher density and more durability."
           }
         }
       },
       "block_order": [
         "text_tUbHRh",
         "text_VirfyR",
-        "text_Am4Xby"
+        "text_Am4Xby",
+        "text_QtEmRt"
       ],
       "settings": {
+        "title": "Animation Products",
+        "link_title": "https:\/\/cdn.shopify.com\/s\/files\/1\/0718\/7375\/7471\/files\/",
+        "heading_size": "h1",
+        "color_scheme": ""
       }
     },
     "slider_custome_UKTrdX": {
@@ -179,6 +191,49 @@
         "image_QaLq4W"
       ],
       "settings": {
+      }
+    },
+    "accordion_product_FNhj6L": {
+      "type": "accordion-product",
+      "blocks": {
+        "text_nNGTYY": {
+          "type": "text",
+          "settings": {
+            "title": "Tencel",
+            "description": "The Lazy Lowie mattress uses Tencel material which is easily removable and washable"
+          }
+        },
+        "text_bhLeBA": {
+          "type": "text",
+          "settings": {
+            "title": "Latex",
+            "description": "The Lazy Lowie mattress uses 100% Belgian Latex to achieve a high level of flexibility and durability. Latex is a natural material that comes from the sap of rubber trees. Latex material is free from mites and ticks."
+          }
+        },
+        "text_jwDaGy": {
+          "type": "text",
+          "settings": {
+            "title": "Medium-density foam",
+            "description": "Medium-density foam has better thickness and density than low-density foam. "
+          }
+        },
+        "text_R9VW68": {
+          "type": "text",
+          "settings": {
+            "title": "High-density foams",
+            "description": "High-density foam is usually used for those who require higher density and more durability."
+          }
+        }
+      },
+      "block_order": [
+        "text_nNGTYY",
+        "text_bhLeBA",
+        "text_jwDaGy",
+        "text_R9VW68"
+      ],
+      "settings": {
+        "title": "Lazy Lowie® mattresses sport a multi-layer design which provides personalised comfort and support. The top layer is slightly softer for comfort at first touch and the bottom layer is firmer to provide better back support as you settle deeper into your sleep.",
+        "image": "shopify:\/\/shop_images\/3d-mattress.webp"
       }
     },
     "support_and_guarantee_mwDhDc": {
@@ -242,35 +297,65 @@
         "review_pH4xgN": {
           "type": "review",
           "settings": {
-            "user_name": "Jhondoe",
+            "user_name": "Customer",
             "star_rating": 0,
             "review_date": "2024-01-23",
-            "text_review": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin volutpat arcu a neque efficitur, eu feugiat magna pulvinar.<\/p>"
+            "text_review": "<p>My partner and I have bad backs. OMG! sooo happy with our Bobo mattress! we were more than impressed with the ability to turn the topper upside down for a different comfort level. <\/p>"
           }
         },
         "review_jzKyQc": {
           "type": "review",
           "settings": {
-            "user_name": "Rafli",
+            "user_name": "Customer",
             "star_rating": 0,
             "review_date": "2024-01-23",
-            "text_review": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin volutpat arcu a neque efficitur, eu feugiat magna pulvinar.<\/p>"
+            "text_review": "<p>Mattress was super easy to set it up myself. Recently I've just had alot of back problems. I feel like the mattress really supports my back when I sleep. So comfy!! No more sore back, fixed my sleepless and wake up feeling more refreshed! Best mattress I've ever owned<\/p>"
           }
         },
         "review_wfF4wR": {
           "type": "review",
           "settings": {
-            "user_name": "Rudi",
+            "user_name": "Customer",
             "star_rating": 0,
             "review_date": "2024-01-23",
-            "text_review": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin volutpat arcu a neque efficitur, eu feugiat magna pulvinar.<\/p>"
+            "text_review": "<p>Purchased this for my family. Super Fast delivery, we really like the flexibility of the mattress topper and it’s easy to removable.  I’d definitely recommend it to my family and friends. Thank you Bobo 🦧<\/p>"
+          }
+        },
+        "review_MVhh9r": {
+          "type": "review",
+          "settings": {
+            "user_name": "Customer",
+            "star_rating": 0,
+            "review_date": "2024-01-23",
+            "text_review": "<p>Such a great mattress and customer service experience through the whole process. Love it 🧡<\/p>"
+          }
+        },
+        "review_8jJTNM": {
+          "type": "review",
+          "settings": {
+            "user_name": "Customer",
+            "star_rating": 0,
+            "review_date": "2024-01-23",
+            "text_review": "<p>I Absolutely love that I get the choice of firm or medium firm with a quick unzip and flip of the comfort layer.<br\/>I hope with the years to come still feel the same amount of comfort. Wooooow very happy 10\/10 🥰🤩<\/p>"
+          }
+        },
+        "review_igjY9z": {
+          "type": "review",
+          "settings": {
+            "user_name": "Customer",
+            "star_rating": 0,
+            "review_date": "2024-01-23",
+            "text_review": "<p>I was worried about getting it because I couldn't try it, but the 100 night return police was the reason I decided to go for it. <br\/>And AMAZING this is the best mattress I’ve ever slept on. Highly  recommend it. <\/p>"
           }
         }
       },
       "block_order": [
         "review_pH4xgN",
         "review_jzKyQc",
-        "review_wfF4wR"
+        "review_wfF4wR",
+        "review_MVhh9r",
+        "review_8jJTNM",
+        "review_igjY9z"
       ],
       "settings": {
         "title": "Happy Customer"
@@ -282,6 +367,7 @@
     "slider_custome_jUDdzD",
     "animation_product_jfCPFp",
     "slider_custome_UKTrdX",
+    "accordion_product_FNhj6L",
     "support_and_guarantee_mwDhDc",
     "related-products",
     "custome_review_qXKzhb"

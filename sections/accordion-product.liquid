@@ -1,0 +1,97 @@
+<section class="section-custome">
+  <div class="container">
+    <div class="row align-items-center">
+      <div class="col-lg-6 col-md-6 col-sm-12 col-12">
+        <div class="img-accordion">
+          <img src="{{ section.settings.image | img_url: 'master' }}" alt="{{ section.settings.image.alt | escape }}">
+          {% for block in section.blocks %}
+            <div class="number pin-{{ forloop.index }}">{{ forloop.index }}</div>
+          {% endfor %}
+        </div>
+      </div>
+      <div class="col-lg-6 col-md-6 col-sm-12 col-12">
+        <div class="header-accordion">
+          <h5>{{ section.settings.title }}</h5>
+        </div>
+        <div class="accordion accordion-flush" id="accordionFlushExample">
+          {% for block in section.blocks %}
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="flush-heading{{ forloop.index }}">
+                <button
+                  class="accordion-button collapsed"
+                  type="button"
+                  data-index="{{ forloop.index }}"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#flush-collapse{{ forloop.index }}"
+                  aria-expanded="false"
+                  aria-controls="flush-collapse{{ forloop.index }}"
+                >
+                  {{ block.settings.title }}
+                </button>
+              </h2>
+              <div
+                id="flush-collapse{{ forloop.index }}"
+                class="accordion-collapse collapse"
+                aria-labelledby="flush-heading{{ forloop.index }}"
+                data-bs-parent="#accordionFlushExample"
+              >
+                <div class="accordion-body">
+                  <span class="number numb-{{ forloop.index }}">
+                    <p>{{ forloop.index }}</p>
+                  </span>
+                  {{ block.settings.description }}
+                </div>
+              </div>
+            </div>
+          {% endfor %}
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Accordion Product",
+  "class": "section",
+  "tag": "section",
+  "settings": [
+    {
+      "type": "text",
+      "id": "title",
+      "label": "t:sections.accordion-product.settings.title.label",
+      "default": "hello world"
+    },
+    {
+      "type": "image_picker",
+      "id": "image",
+      "label": "t:sections.accordion-product.settings.image.label"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "text",
+      "name": "Text Accoordion",
+      "settings": [
+        {
+          "type": "text",
+          "id": "title",
+          "label": "t:sections.accordion-product.blocks.text.settings.title.label",
+          "default": "hello world"
+        },
+        {
+          "type": "inline_richtext",
+          "id": "description",
+          "label": "t:sections.accordion-product.blocks.text.settings.description.label",
+          "default": "Lorem ipsum dolor sit amet"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Accordion Product"
+    }
+  ]
+}
+{% endschema %}

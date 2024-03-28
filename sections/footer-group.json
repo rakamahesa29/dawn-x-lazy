@@ -9,14 +9,14 @@
           "type": "menu",
           "settings": {
             "menu_title": "Contacts",
-            "menu": "contacts"
+            "menu": ""
           }
         },
         "menu_Xzb4Yf": {
           "type": "menu",
           "settings": {
             "menu_title": "Products",
-            "menu": "products"
+            "menu": ""
           }
         }
       },
@@ -28,7 +28,7 @@
         "show_logo": true,
         "show_social": true,
         "newsletter_enable": true,
-        "footer_logo": "shopify:\/\/shop_images\/lazy-logo.png",
+        "footer_logo": "shopify:\/\/shop_images\/lazy-logo.webp",
         "logo_alt_text": "Footer Logo",
         "logo_url": "\/",
         "footer_text": "Customizable mattress layers to make it easier to choose mattress density.",

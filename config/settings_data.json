@@ -95,7 +95,7 @@
     "drawer_shadow_vertical_offset": 4,
     "drawer_shadow_blur": 5,
     "badge_position": "top left",
-    "badge_corner_radius": 14,
+    "badge_corner_radius": 8,
     "sale_badge_color_scheme": "scheme-4901882a-37a4-43d2-9919-a04d2596a8f8",
     "sold_out_badge_color_scheme": "scheme-3",
     "brand_headline": "",

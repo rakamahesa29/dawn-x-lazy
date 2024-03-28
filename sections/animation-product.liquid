@@ -11,7 +11,7 @@
               {% for i in (1..150) %}
                 {% assign image_number = i | prepend: '000' | slice: -4, 4 %}
                 <img
-                  src="https://cdn.shopify.com/s/files/1/0718/7375/7471/files/{{ image_number }}.webp?v=1711419634"
+                  src="{{ section.settings.link_title }}{{ image_number }}.webp"
                   alt="Image {{ image_number }}"
                 >
               {% endfor %}
@@ -33,89 +33,51 @@
   </div>
 </section>
 
-{% javascript %}
-  document.addEventListener('DOMContentLoaded', function () {
-    const images = document.querySelectorAll('#imageContainer img');
-    images.forEach((img, index) => {
-      img.style.display = index === 0 ? '' : 'none';
-    });
-
-    const texts = document.querySelectorAll('.list-text-item p');
-    texts.forEach((text, index) => {
-      if (text.textContent.trim() !== '') {
-        text.classList.add(index === 0 ? 'show' : 'hide');
-      } else {
-        text.style.display = 'none'; // Sembunyikan paragraf kosong
-      }
-    });
-
-    const progressBar = document.querySelector('.progress-bar');
-    gsap.registerPlugin(ScrollTrigger);
-
-    ScrollTrigger.create({
-      trigger: '.scroll-container',
-      start: 'top top',
-      end: 'bottom bottom',
-      scrub: true,
-      onUpdate: (self) => {
-        const scrollProgress = self.progress;
-        const imageIndex = Math.min(Math.floor(scrollProgress * images.length), images.length - 1);
-        images.forEach((img, index) => {
-          img.style.display = index === imageIndex ? '' : 'none';
-        });
-
-        const nonEmptyTexts = Array.from(texts).filter((text) => text.textContent.trim() !== ''); // Filter hanya teks yang tidak kosong
-        let currentTextIndex = Math.floor(scrollProgress * nonEmptyTexts.length);
-        currentTextIndex = Math.min(currentTextIndex, nonEmptyTexts.length - 1);
-
-        nonEmptyTexts.forEach((text) => {
-          text.classList.remove('show');
-          text.classList.add('hide');
-        });
-
-        nonEmptyTexts[currentTextIndex].classList.add('show');
-        nonEmptyTexts[currentTextIndex].classList.remove('hide');
-
-        gsap.to(progressBar, {
-          width: `${scrollProgress * 100}%`,
-          duration: 0.1,
-        });
-      },
-    });
-
-    const areaScrollTrigger = document.querySelector('.area-scroll-trigger');
-    const scrollContainer = document.querySelector('.scroll-container');
-    const stickyHeader = document.querySelector('sticky-header');
-
-    // Menentukan tinggi sticky-header untuk menghitung posisi start ScrollTrigger
-    const stickyHeaderHeight = stickyHeader.offsetHeight;
-
-    ScrollTrigger.create({
-      trigger: scrollContainer,
-      start: () => "top+=" + stickyHeaderHeight + " bottom", // Start ketika bagian atas scrollContainer bertemu dengan bagian bawah stickyHeader
-      end: 'bottom bottom',
-      onEnter: () => areaScrollTrigger.classList.add('object-stay'),
-      onLeave: () => {
-        areaScrollTrigger.classList.add('object-leave');
-        areaScrollTrigger.classList.remove('object-stay');
-      },
-      onEnterBack: () => {
-        areaScrollTrigger.classList.remove('object-leave');
-        areaScrollTrigger.classList.add('object-stay');
-      },
-        onLeaveBack: () => areaScrollTrigger.classList.remove('object-stay'),
-        // Pilihan untuk menambahkan object-leave ketika scroll kembali ke atas, jika diperlukan
-      // areaScrollTrigger.classList.add('object-leave');
-    });
-  });
-{% endjavascript %}
-
 {% schema %}
 {
   "name": "Animation Product",
   "class": "section",
   "tag": "section",
-  "settings": [],
+  "settings": [
+    {
+      "type": "inline_richtext",
+      "id": "title",
+      "default": "Animation Products",
+      "label": "t:sections.animation-product.settings.title.label"
+    },
+    {
+      "type": "inline_richtext",
+      "id": "link_title",
+      "default": "https://cdn.shopify.com/s/files/1/0718/7375/7471/files/",
+      "label": "t:sections.animation-product.settings.link_title.label"
+    },
+    {
+      "type": "select",
+      "id": "heading_size",
+      "options": [
+        {
+          "value": "h2",
+          "label": "t:sections.all.heading_size.options__1.label"
+        },
+        {
+          "value": "h1",
+          "label": "t:sections.all.heading_size.options__2.label"
+        },
+        {
+          "value": "h0",
+          "label": "t:sections.all.heading_size.options__3.label"
+        }
+      ],
+      "default": "h1",
+      "label": "t:sections.all.heading_size.label"
+    },
+    {
+      "type": "color_scheme",
+      "id": "color_scheme",
+      "label": "t:sections.all.colors.label",
+      "default": "scheme-1"
+    }
+  ],
   "blocks": [
     {
       "type": "text",

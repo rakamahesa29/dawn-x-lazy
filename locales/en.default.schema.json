@@ -2889,7 +2889,8 @@
       "presets": {
         "name": "Custom Slider"
       }
-    },"slider-article-custome": {
+    },
+    "slider-article-custome": {
       "name": "Custom Article Slider",
       "blocks": {
         "image": {
@@ -2907,7 +2908,6 @@
             "url_slider": {
               "label": "URl for Article"
             }
-            
           }
         }
       },
@@ -2917,8 +2917,7 @@
     },
     "support-and-guarantee": {
       "name": "Support And Guarantee",
-      "settings": {
-      },
+      "settings": {},
       "blocks": {
         "image": {
           "name": "Image Block",
@@ -2965,6 +2964,42 @@
             },
             "image_link": {
               "label": "Image Link"
+            }
+          }
+        }
+      }
+    },
+    "animation-product": {
+      "settings": {
+        "title": {
+          "label": "Animation Product Title"
+        },
+        "link_title": {
+          "label": "Link Title URL",
+          "default": "https://cdn.shopify.com/s/files/1/0718/7375/7471/files/"
+        },
+        "heading_size": {
+          "label": "Heading Size",
+          "options__1": {
+            "label": "H2"
+          },
+          "options__2": {
+            "label": "H1"
+          },
+          "options__3": {
+            "label": "H0"
+          }
+        },
+        "color_scheme": {
+          "label": "Color Scheme"
+        }
+      },
+      "blocks": {
+        "text_animation": {
+          "settings": {
+            "text": {
+              "label": "Text Animation Content",
+              "default": "Hello World"
             }
           }
         }
