@@ -104,7 +104,7 @@
                 </div>
                 {%- when 'image_picker' -%}
                   {% if block.settings.info_image != blank %}
-                    <img src="{{ block.settings.info_image | img_url: '300x300' }}" alt="{{ block.settings.info_image.alt | escape }}" class="product-info-image">
+                    <img src="{{ block.settings.info_image | img_url: 'master' }}" alt="{{ block.settings.info_image.alt | escape }}" class="product-info-image">
                   {% endif %}            
               {%- when 'price' -%}
                 <div class="no-js-hidden" id="price-{{ section.id }}" role="status" {{ block.shopify_attributes }}>

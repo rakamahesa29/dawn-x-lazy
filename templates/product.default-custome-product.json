@@ -3,13 +3,6 @@
     "main": {
       "type": "main-product",
       "blocks": {
-        "vendor": {
-          "type": "text",
-          "settings": {
-            "text": "{{ product.vendor }}",
-            "text_style": "uppercase"
-          }
-        },
         "title": {
           "type": "title",
           "settings": {
@@ -47,6 +40,7 @@
         "image_picker_yWh3ca": {
           "type": "image_picker",
           "settings": {
+            "info_image": "shopify:\/\/shop_images\/sertif.webp"
           }
         },
         "collapsible_tab_JQRXJT": {
@@ -87,7 +81,6 @@
         }
       },
       "block_order": [
-        "vendor",
         "title",
         "price",
         "variant_picker",
@@ -232,7 +225,7 @@
         "text_R9VW68"
       ],
       "settings": {
-        "title": "Lazy Lowie® mattresses sport a multi-layer design which provides personalised comfort and support. The top layer is slightly softer for comfort at first touch and the bottom layer is firmer to provide better back support as you settle deeper into your sleep.",
+        "title": "Lazy Lowie® mattresses sport a multi-layer design which provides personalised comfort and support.",
         "image": "shopify:\/\/shop_images\/3d-mattress.webp"
       }
     },

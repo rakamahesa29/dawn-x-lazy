@@ -206,7 +206,7 @@ button ::after,
 }
 
 .header-custome-middle {
-    grid-template-columns: auto;
+    grid-template-columns: 25% 50% 25%;
 }
 
 .header-custome-middle .header__inline-menu {
