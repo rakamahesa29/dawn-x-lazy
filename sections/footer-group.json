@@ -8,15 +8,15 @@
         "menu_EmyDgM": {
           "type": "menu",
           "settings": {
-            "menu_title": "Contacts",
-            "menu": ""
+            "menu_title": "Kontak",
+            "menu": "contacts"
           }
         },
         "menu_Xzb4Yf": {
           "type": "menu",
           "settings": {
-            "menu_title": "Products",
-            "menu": ""
+            "menu_title": "Produk",
+            "menu": "categories"
           }
         }
       },
@@ -28,11 +28,11 @@
         "show_logo": true,
         "show_social": true,
         "newsletter_enable": true,
-        "footer_logo": "shopify:\/\/shop_images\/lazy-logo.webp",
+        "footer_logo": "shopify:\/\/shop_images\/lazy-logo.png",
         "logo_alt_text": "Footer Logo",
         "logo_url": "\/",
-        "footer_text": "Customizable mattress layers to make it easier to choose mattress density.",
-        "subscribe_text": "get more update from lazy lowie",
+        "footer_text": "Lapisan kasur yang dapat disesuaikan untuk memudahkan dalam memilih kepadatan kasur.",
+        "subscribe_text": "dapatkan update terbaru dari lazy lowie",
         "image_icon": "shopify:\/\/shop_images\/mascot.webp"
       }
     }

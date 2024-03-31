@@ -3,13 +3,6 @@
     "main": {
       "type": "main-product",
       "blocks": {
-        "vendor": {
-          "type": "text",
-          "settings": {
-            "text": "{{ product.vendor }}",
-            "text_style": "uppercase"
-          }
-        },
         "title": {
           "type": "title",
           "settings": {
@@ -23,7 +16,7 @@
         "variant_picker": {
           "type": "variant_picker",
           "settings": {
-            "picker_type": "dropdown",
+            "picker_type": "button",
             "swatch_shape": "circle"
           }
         },
@@ -44,6 +37,12 @@
           "settings": {
           }
         },
+        "image_picker_ir7nHN": {
+          "type": "image_picker",
+          "settings": {
+            "info_image": "shopify:\/\/shop_images\/sertif.webp"
+          }
+        },
         "image_picker_3bVyry": {
           "type": "image_picker",
           "settings": {
@@ -51,13 +50,13 @@
         }
       },
       "block_order": [
-        "vendor",
         "title",
         "price",
         "variant_picker",
         "quantity_selector",
         "buy_buttons",
         "description",
+        "image_picker_ir7nHN",
         "image_picker_3bVyry"
       ],
       "settings": {
@@ -65,21 +64,141 @@
         "color_scheme": "scheme-47a0187c-b8de-4cff-b20c-5d35f422c9c0",
         "media_size": "medium",
         "constrain_to_viewport": true,
-        "media_fit": "contain",
+        "media_fit": "cover",
         "gallery_layout": "stacked",
         "media_position": "left",
         "image_zoom": "lightbox",
         "mobile_thumbnails": "hide",
         "hide_variants": true,
         "enable_video_looping": false,
-        "padding_top": 36,
-        "padding_bottom": 12
+        "padding_top": 80,
+        "padding_bottom": 80
+      }
+    },
+    "slider_custome_eajzty": {
+      "type": "slider-custome",
+      "blocks": {
+        "image_4HEbYx": {
+          "type": "image",
+          "settings": {
+            "image_slider_desktop": "shopify:\/\/shop_images\/header-desktop.jpg",
+            "image_slider_mobile": "shopify:\/\/shop_images\/header-mobiile.jpg",
+            "text_slider": "Matras Untuk Semua Orang"
+          }
+        }
+      },
+      "block_order": [
+        "image_4HEbYx"
+      ],
+      "settings": {
+      }
+    },
+    "animation_product_rMWRMx": {
+      "type": "animation-product",
+      "blocks": {
+        "text_tyip7k": {
+          "type": "text",
+          "settings": {
+            "text_animation": "Kasur Asli menawarkan 3 pilihan kenyamanan. Dapatkan Lazy Lowie Kasur yang dapat disesuaikan dengan membuka ritsleting dan menyesuaikan lapisannya."
+          }
+        },
+        "text_CY3PGL": {
+          "type": "text",
+          "settings": {
+            "text_animation": "Kami memilih bahan terbaik tencel, Latex, Memory Foam, Medium-density foam dan High-density foam untuk menopang tubuh Anda. Meningkatkan kenyamanan punggung dan leher yang maksimal saat Anda tidur."
+          }
+        },
+        "text_HigXW8": {
+          "type": "text",
+          "settings": {
+            "text_animation": "4 lapisan kami dengan 3 zona kenyamanan memastikan keselarasan tulang belakang yang optimal dan membantu mengurangi titik-titik tekanan. Baik saat Anda berbaring telentang, tengkurap, maupun menyamping."
+          }
+        },
+        "text_YGjwUt": {
+          "type": "text",
+          "settings": {
+            "text_animation": "Nikmati kenyamanan optimal dan dukungan tulang belakang yang sempurna dengan 4 lapisan dan 3 zona khusus. Ideal untuk berbagai posisi tidur Anda: telentang, tengkurap, atau menyamping."
+          }
+        }
+      },
+      "block_order": [
+        "text_tyip7k",
+        "text_CY3PGL",
+        "text_HigXW8",
+        "text_YGjwUt"
+      ],
+      "settings": {
+        "title": "Animation Products",
+        "link_title": "https:\/\/cdn.shopify.com\/s\/files\/1\/0718\/7375\/7471\/files\/",
+        "heading_size": "h1",
+        "color_scheme": ""
+      }
+    },
+    "slider_custome_bxynBN": {
+      "type": "slider-custome",
+      "blocks": {
+        "image_K3HhVW": {
+          "type": "image",
+          "settings": {
+            "image_slider_desktop": "shopify:\/\/shop_images\/zip-mattress.webp",
+            "image_slider_mobile": "shopify:\/\/shop_images\/zip-mattress-mobile.webp",
+            "text_slider": ""
+          }
+        }
+      },
+      "block_order": [
+        "image_K3HhVW"
+      ],
+      "settings": {
+      }
+    },
+    "accordion_product_mG7Aee": {
+      "type": "accordion-product",
+      "blocks": {
+        "text_hCTg9m": {
+          "type": "text",
+          "settings": {
+            "title": "Tencel",
+            "description": "Kasur Lazy Lowie menggunakan bahan Tencel yang mudah dilepas dan dicuci."
+          }
+        },
+        "text_mbnAaU": {
+          "type": "text",
+          "settings": {
+            "title": "Busa dengan kepadatan sedang",
+            "description": "Busa dengan kepadatan sedang memiliki ketebalan dan kepadatan yang lebih baik daripada busa dengan kepadatan rendah."
+          }
+        },
+        "text_ExLBhF": {
+          "type": "text",
+          "settings": {
+            "title": "Busa dengan kepadatan tinggi",
+            "description": "Busa dengan kepadatan tinggi biasanya digunakan untuk mereka yang membutuhkan kepadatan yang lebih tinggi dan daya tahan yang lebih baik."
+          }
+        },
+        "text_Ng6YEe": {
+          "type": "text",
+          "settings": {
+            "title": "Latex",
+            "description": "Kasur Lazy Lowie menggunakan 100% Belgian Latex untuk mencapai tingkat fleksibilitas dan daya tahan yang tinggi. Lateks adalah bahan alami yang berasal dari getah pohon karet."
+          }
+        }
+      },
+      "block_order": [
+        "text_hCTg9m",
+        "text_mbnAaU",
+        "text_ExLBhF",
+        "text_Ng6YEe"
+      ],
+      "settings": {
+        "title": "Tidur yang sehat di setiap lapisan",
+        "image": "shopify:\/\/shop_images\/3d-mattress.webp"
       }
     },
     "related-products": {
       "type": "related-products",
       "settings": {
-        "heading": "You may also like",
+        "heading": "Produk yang mungkin kamu sukai",
         "heading_size": "h2",
         "products_to_show": 4,
         "columns_desktop": 4,
@@ -97,6 +216,10 @@
   },
   "order": [
     "main",
+    "slider_custome_eajzty",
+    "animation_product_rMWRMx",
+    "slider_custome_bxynBN",
+    "accordion_product_mG7Aee",
     "related-products"
   ]
 }

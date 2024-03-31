@@ -958,109 +958,6 @@
         "name": "Featured product"
       }
     },
-    "footer": {
-      "name": "Footer",
-      "blocks": {
-        "link_list": {
-          "name": "Menu",
-          "settings": {
-            "heading": {
-              "label": "Heading"
-            },
-            "menu": {
-              "label": "Menu",
-              "info": "Displays only top-level menu items."
-            }
-          }
-        },
-        "brand_information": {
-          "name": "Brand information",
-          "settings": {
-            "paragraph": {
-              "content": "This block will display your brand information. [Edit brand information.](/editor?context=theme&category=brand%20information)"
-            },
-            "header__1": {
-              "content": "Social media icons"
-            },
-            "show_social": {
-              "label": "Show social media icons",
-              "info": "To display your social media accounts, link them in your [theme settings](/editor?context=theme&category=social%20media)."
-            }
-          }
-        },
-        "text": {
-          "name": "Text",
-          "settings": {
-            "heading": {
-              "label": "Heading"
-            },
-            "subtext": {
-              "label": "Subtext"
-            }
-          }
-        }
-      },
-      "settings": {
-        "newsletter_enable": {
-          "label": "Show email signup"
-        },
-        "newsletter_heading": {
-          "label": "Heading"
-        },
-        "header__1": {
-          "content": "Email Signup",
-          "info": "Subscribers added automatically to your “accepted marketing” customer list. [Learn more](https://help.shopify.com/manual/customers/manage-customers)"
-        },
-        "header__2": {
-          "content": "Social media icons",
-          "info": "To display your social media accounts, link them in your [theme settings](/editor?context=theme&category=social%20media)."
-        },
-        "show_social": {
-          "label": "Show social media icons"
-        },
-        "header__3": {
-          "content": "Country/region selector"
-        },
-        "header__4": {
-          "info": "To add a country/region, go to your [market settings.](/admin/settings/markets)"
-        },
-        "enable_country_selector": {
-          "label": "Enable country/region selector"
-        },
-        "header__5": {
-          "content": "Language selector"
-        },
-        "header__6": {
-          "info": "To add a language, go to your [language settings.](/admin/settings/languages)"
-        },
-        "enable_language_selector": {
-          "label": "Enable language selector"
-        },
-        "header__7": {
-          "content": "Payment methods"
-        },
-        "payment_enable": {
-          "label": "Show payment icons"
-        },
-        "header__8": {
-          "content": "Policy links",
-          "info": "To add store policies, go to your [policy settings](/admin/settings/legal)."
-        },
-        "show_policy": {
-          "label": "Show policy links"
-        },
-        "margin_top": {
-          "label": "Top margin"
-        },
-        "header__9": {
-          "content": "Follow on Shop",
-          "info": "To allow customers to follow your store on the Shop app from your storefront, Shop Pay must be enabled. [Learn more](https://help.shopify.com/manual/online-store/themes/customizing-themes/follow-on-shop)"
-        },
-        "enable_follow_on_shop": {
-          "label": "Enable Follow on Shop"
-        }
-      }
-    },
     "header": {
       "name": "Header",
       "settings": {
@@ -2059,6 +1956,17 @@
             }
           }
         },
+        "size_image": {
+          "name": "Size Image",
+          "settings": {
+            "size_text": {
+              "label": "Size Text"
+            },
+            "size_image": {
+              "label": "Size Image"
+            }
+          }
+        },
         "inventory": {
           "name": "Inventory status",
           "settings": {
@@ -2935,6 +2843,32 @@
         "name": "Support And Guarantee"
       }
     },
+    "accordion-product": {
+      "settings": {
+        "title": {
+          "label": "Title",
+          "default": "Hello World"
+        },
+        "image": {
+          "label": "Image"
+        }
+      },
+      "blocks": {
+        "text": {
+          "name": "Text Accordion",
+          "settings": {
+            "title": {
+              "label": "Title",
+              "default": "Hello World"
+            },
+            "description": {
+              "label": "Description",
+              "default": "Lorem ipsum dolor sit amet"
+            }
+          }
+        }
+      }
+    },    
     "instagram-gallery": {
       "settings": {
         "title": {
@@ -2968,15 +2902,13 @@
           }
         }
       }
-    },
-    "animation-product": {
+    },"animation-product": {
       "settings": {
         "title": {
-          "label": "Animation Product Title"
+          "label": "Title"
         },
         "link_title": {
-          "label": "Link Title URL",
-          "default": "https://cdn.shopify.com/s/files/1/0718/7375/7471/files/"
+          "label": "Link Title"
         },
         "heading_size": {
           "label": "Heading Size",
@@ -2995,16 +2927,16 @@
         }
       },
       "blocks": {
-        "text_animation": {
+        "text": {
           "settings": {
             "text": {
-              "label": "Text Animation Content",
+              "label": "Text",
               "default": "Hello World"
             }
           }
         }
       }
-    },
+    },    
     "footer": {
       "name": "Custome Footer",
       "settings": {

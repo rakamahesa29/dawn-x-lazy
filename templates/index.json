@@ -40,27 +40,27 @@
     "banner_image_yXdaJV": {
       "type": "banner-image",
       "blocks": {
-        "image_wJdgLK": {
-          "type": "image",
-          "settings": {
-            "image": "shopify:\/\/shop_images\/mattress_3d.webp",
-            "image_link": ""
-          }
-        },
         "image_3prJMA": {
           "type": "image",
           "settings": {
-            "image": "shopify:\/\/shop_images\/bolster_3d.webp",
+            "image": "shopify:\/\/shop_images\/bolster.webp",
+            "image_link": ""
+          }
+        },
+        "image_wJdgLK": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/mattress.webp",
             "image_link": ""
           }
         }
       },
       "block_order": [
-        "image_wJdgLK",
-        "image_3prJMA"
+        "image_3prJMA",
+        "image_wJdgLK"
       ],
       "settings": {
-        "title": "\"The universal language of a quiet night.\"",
+        "title": "\"Bahasa universal malam yang tenang\"",
         "heading_size": "h1",
         "background_style": "primary",
         "button_label": "Button label",
@@ -74,7 +74,7 @@
         "column_3px96n": {
           "type": "column",
           "settings": {
-            "image": "shopify:\/\/shop_images\/mattress.webp",
+            "image": "shopify:\/\/shop_images\/IG_FEEDS_8.jpg",
             "title": "",
             "text": "",
             "link_label": "",
@@ -84,7 +84,7 @@
         "column_gFfQEL": {
           "type": "column",
           "settings": {
-            "image": "shopify:\/\/shop_images\/pillow.webp",
+            "image": "shopify:\/\/shop_images\/Bantal-Ergo-02.jpg",
             "title": "",
             "text": "",
             "link_label": "",
@@ -94,7 +94,7 @@
         "column_My3L8B": {
           "type": "column",
           "settings": {
-            "image": "shopify:\/\/shop_images\/bolster.webp",
+            "image": "shopify:\/\/shop_images\/IG_FEEDS_7.jpg",
             "title": "",
             "text": "",
             "link_label": "",
@@ -130,9 +130,9 @@
         "image_Bna9Ue": {
           "type": "image",
           "settings": {
-            "image_slider_desktop": "shopify:\/\/shop_images\/mattress_for_everyone.png",
+            "image_slider_desktop": "shopify:\/\/shop_images\/zip-mattress.webp",
             "image_slider_mobile": "shopify:\/\/shop_images\/zip-mattress-mobile.webp",
-            "text_slider": "Mattress For Everyone",
+            "text_slider": "Matras Untuk Semua Orang",
             "url_slider": ""
           }
         }
