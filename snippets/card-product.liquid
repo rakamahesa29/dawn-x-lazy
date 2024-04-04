@@ -23,7 +23,6 @@
 {{ 'component-rating.css' | asset_url | stylesheet_tag }}
 {{ 'component-volume-pricing.css' | asset_url | stylesheet_tag }}
 
-
 {%- if card_product and card_product != empty -%}
   {%- liquid
     assign ratio = 1
@@ -128,6 +127,18 @@
               >
                 {{- 'products.product.sold_out' | t -}}
               </span>
+
+              {% assign json_string = card_product.metafields.custom.secondary_label %}
+              {% assign json_string = json_string | remove_first: '["' %}
+              {% assign json_string = json_string | remove_last: '"]' %}
+              {% assign labels = json_string | split: '","' %}
+
+              {% for label in labels %}
+                <span class="badge badge--bottom-left">
+                  {{ label }}
+                </span>
+              {% endfor %}
+
             {%- elsif card_product.compare_at_price > card_product.price and card_product.available -%}
               <span
                 id="NoMediaStandardBadge-{{ section_id }}-{{ card_product.id }}"
@@ -135,42 +146,57 @@
               >
                 {{- 'products.product.on_sale' | t -}}
               </span>
+
+              {% assign json_string = card_product.metafields.custom.secondary_label %}
+              {% assign json_string = json_string | remove_first: '["' %}
+              {% assign json_string = json_string | remove_last: '"]' %}
+              {% assign labels = json_string | split: '","' %}
+
+              {% for label in labels %}
+                <span class="badge badge--bottom-left">
+                  {{ label }}
+                </span>
+              {% endfor %}
+
             {%- endif -%}
           </div>
         </div>
       </div>
       <div class="card__content">
         <div class="card__information">
-          {%- assign has_size_option = false -%}
-          {%- assign size_option_index = 0 -%}
-          {%- assign displayed_sizes = '' -%}
+          
+          {% comment %}
+              {%- assign has_size_option = false -%}
+            {%- assign size_option_index = 0 -%}
+            {%- assign displayed_sizes = '' -%}
 
-          {%- for option in card_product.options -%}
-            {%- if option contains 'Size' or option contains 'size' or option contains 'Ukuran' -%}
-              {%- assign has_size_option = true -%}
-              {%- break -%}
-            {%- endif -%}
-            {%- assign size_option_index = size_option_index | plus: 1 -%}
-          {%- endfor -%}
+            {%- for option in card_product.options -%}
+              {%- if option contains 'Size' or option contains 'size' or option contains 'Ukuran' -%}
+                {%- assign has_size_option = true -%}
+                {%- break -%}
+              {%- endif -%}
+              {%- assign size_option_index = size_option_index | plus: 1 -%}
+            {%- endfor -%}
 
-          {%- if has_size_option -%}
-            <div class="product-size">
-              <div class="products-size-content">
-                <div class="swiper swiperProductSize">
-                  <div class="swiper-wrapper">
-                    {%- for variant in card_product.variants -%}
-                      {%- assign size = variant.options[size_option_index] -%}
-                      {%- unless displayed_sizes contains size -%}
-                        <a href="/products/{{ card_product.handle }}?variant={{ variant.id }}" class="swiper-slide size-item">{{ size }}</a>
-                        {%- assign displayed_sizes = displayed_sizes | append: size | append: ',' -%}
-                      {%- endunless -%}
-                    {%- endfor -%}
+            {%- if has_size_option -%}
+              <div class="product-size">
+                <div class="products-size-content">
+                  <div class="swiper swiperProductSize">
+                    <div class="swiper-wrapper">
+                      {%- for variant in card_product.variants -%}
+                        {%- assign size = variant.options[size_option_index] -%}
+                        {%- unless displayed_sizes contains size -%}
+                          <a href="/products/{{ card_product.handle }}?variant={{ variant.id }}" class="swiper-slide size-item">{{ size }}</a>
+                          {%- assign displayed_sizes = displayed_sizes | append: size | append: ',' -%}
+                        {%- endunless -%}
+                      {%- endfor -%}
+                    </div>
                   </div>
                 </div>
               </div>
-            </div>
-          {%- endif -%}
-          
+            {%- endif -%}
+          {% endcomment %}
+
           <h3
             class="card__heading{% if card_product.featured_media or settings.card_style == 'standard' %} h5{% endif %} card-heading-custome"
             {% if card_product.featured_media or settings.card_style == 'card' %}
@@ -343,6 +369,18 @@
             >
               {{- 'products.product.sold_out' | t -}}
             </span>
+
+            {% assign json_string = card_product.metafields.custom.secondary_label %}
+            {% assign json_string = json_string | remove_first: '["' %}
+            {% assign json_string = json_string | remove_last: '"]' %}
+            {% assign labels = json_string | split: '","' %}
+
+            {% for label in labels %}
+              <span class="badge badge--bottom-left">
+                {{ label }}
+              </span>
+            {% endfor %}
+
           {%- elsif card_product.compare_at_price > card_product.price and card_product.available -%}
             <span
               id="Badge-{{ section_id }}-{{ card_product.id }}"
@@ -350,6 +388,17 @@
             >
               {{- 'products.product.on_sale' | t -}}
             </span>
+
+            {% assign json_string = card_product.metafields.custom.secondary_label %}
+            {% assign json_string = json_string | remove_first: '["' %}
+            {% assign json_string = json_string | remove_last: '"]' %}
+            {% assign labels = json_string | split: '","' %}
+
+            {% for label in labels %}
+              <span class="badge badge--bottom-left">
+                {{ label }}
+              </span>
+            {% endfor %}
           {%- endif -%}
         </div>
       </div>

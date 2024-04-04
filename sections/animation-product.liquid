@@ -19,7 +19,7 @@
             <div class="list-text-item" id="textContainer">
               {% for block in section.blocks %}
                 {% if block.settings.text_animation != blank %}
-                  <p class="{% if forloop.first %}show{% else %}hide{% endif %}">{{ block.settings.text_animation }}</p>
+                  <div class="{% if forloop.first %}show{% else %}hide{% endif %}">{{ block.settings.text_animation }}</div>
                 {% endif %}
               {% endfor %}
             </div>
@@ -80,14 +80,14 @@
   ],
   "blocks": [
     {
-      "type": "text",
+      "type": "richtext",
       "name": "Text Animation",
       "settings": [
         {
-          "type": "text",
+          "type": "richtext",
           "id": "text_animation",
-          "label": "t:sections.animation-product.blocks.text.settings.text.label",
-          "default": "hello world"
+          "label": "t:sections.animation-product.blocks.richtext.settings.richtext.label",
+          "default": "<p>Lorem ipsum dolor sit amet uawi waklonopa</p>"
         }
       ]
     }

@@ -1,0 +1,123 @@
+{{ 'custome-style.css' | asset_url | stylesheet_tag }}
+
+<section class="section-custome page-width">
+  <div class="container">
+    <div class="row">
+      <div class="col-12">
+        <div class="title-kol-post">
+          <h3>{{ section.settings.title }}</h3>
+          <div class="navigation-slider">
+            <div class="swiper-button-prev custom-nav-swiper"></div>
+            <div class="swiper-button-next custom-nav-swiper"></div>
+          </div>
+        </div>
+        <div class="post-content">
+          <div class="swiper kolSwiper">
+            <div class="swiper-wrapper">
+              {% for block in section.blocks %}
+                {% if block.type == 'image' %}
+                  <div class="swiper-slide swiper-slide-custome">
+                    <a href="{{ block.settings.image_link }}">
+                      <div class="image-kol">
+                        <img src="{{ block.settings.image | img_url: 'master' }}" alt="{{ block.settings.image.alt | escape }}">
+                      </div>
+                    </a>
+                  </div>
+                {% elsif block.type == 'video' %}
+                  <div class="swiper-slide swiper-slide-custome">
+                    <a href="{{ block.settings.video_url }}">
+                      <div class="image-kol">
+                        <video controls>
+                          <source src="{{ block.settings.video_url }}" type="video/mp4">
+                          <source src="{{ block.settings.video_url }}" type="video/ogg">
+                          Your browser does not support the video tag.
+                        </video>
+                      </div>
+                    </a>
+                  </div>
+                {% endif %}
+              {% endfor %}
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Kol Review",
+  "class": "section",
+  "tag": "section",
+  "settings": [
+    {
+      "type": "inline_richtext",
+      "id": "title",
+      "default": "Kol Review",
+      "label": "t:sections.kol-review.settings.title.label"
+    },
+    {
+      "type": "select",
+      "id": "heading_size",
+      "options": [
+        {
+          "value": "h2",
+          "label": "t:sections.all.heading_size.options__1.label"
+        },
+        {
+          "value": "h1",
+          "label": "t:sections.all.heading_size.options__2.label"
+        },
+        {
+          "value": "h0",
+          "label": "t:sections.all.heading_size.options__3.label"
+        }
+      ],
+      "default": "h1",
+      "label": "t:sections.all.heading_size.label"
+    },
+    {
+      "type": "color_scheme",
+      "id": "color_scheme",
+      "label": "t:sections.all.colors.label",
+      "default": "scheme-1"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "image",
+      "name": "Image Block",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "t:sections.kol-reviewy.blocks.image.settings.image.label"
+        },
+        {
+          "type": "url",
+          "id": "image_link",
+          "label": "t:sections.kol-reviewy.blocks.image.settings.image_link.label"
+        }
+      ]
+    },
+    {
+      "type": "video",
+      "name": "Video Block",
+      "settings": [
+        {
+          "type": "text",
+          "id": "video_url",
+          "label": "t:sections.kol-reviewy.blocks.video.settings.video_url.label",
+          "info": "t:sections.kol-reviewy.blocks.video.settings.video_url.info"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Kol Review"
+    }
+  ]
+}
+{% endschema %}

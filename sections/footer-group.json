@@ -8,7 +8,7 @@
         "menu_EmyDgM": {
           "type": "menu",
           "settings": {
-            "menu_title": "Kontak",
+            "menu_title": "Information",
             "menu": "contacts"
           }
         },
@@ -32,7 +32,8 @@
         "logo_alt_text": "Footer Logo",
         "logo_url": "\/",
         "footer_text": "Lapisan kasur yang dapat disesuaikan untuk memudahkan dalam memilih kepadatan kasur.",
-        "subscribe_text": "dapatkan update terbaru dari lazy lowie",
+        "subscribe_text": "",
+        "desc_subscribe_text": "Bergabunglah untuk penghematan yang manis, dapatkan penawaran terbaru dan lebih banyak lagi yang dikirimkan langsung ke kotak masuk Anda.",
         "image_icon": "shopify:\/\/shop_images\/mascot.webp"
       }
     }

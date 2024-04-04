@@ -13,10 +13,18 @@
           "settings": {
           }
         },
+        "size_guide_zDGRXK": {
+          "type": "size_guide",
+          "settings": {
+            "size_title": "Panduan Ukuran",
+            "size_text": "Lihat Ukuran",
+            "size_image": "shopify:\/\/shop_images\/Original_Mattress_Size.webp"
+          }
+        },
         "variant_picker": {
           "type": "variant_picker",
           "settings": {
-            "picker_type": "button",
+            "picker_type": "dropdown",
             "swatch_shape": "circle"
           }
         },
@@ -43,21 +51,56 @@
             "info_image": "shopify:\/\/shop_images\/sertif.webp"
           }
         },
-        "image_picker_3bVyry": {
-          "type": "image_picker",
+        "collapsible_tab_hDTiKC": {
+          "type": "collapsible_tab",
           "settings": {
+            "heading": "Collapsible row",
+            "icon": "check_mark",
+            "content": "",
+            "page": ""
+          }
+        },
+        "collapsible_tab_7rPaL6": {
+          "type": "collapsible_tab",
+          "settings": {
+            "heading": "Collapsible row",
+            "icon": "check_mark",
+            "content": "",
+            "page": ""
+          }
+        },
+        "collapsible_tab_gQrJUJ": {
+          "type": "collapsible_tab",
+          "settings": {
+            "heading": "Collapsible row",
+            "icon": "check_mark",
+            "content": "",
+            "page": ""
+          }
+        },
+        "collapsible_tab_fCiJfX": {
+          "type": "collapsible_tab",
+          "settings": {
+            "heading": "Collapsible row",
+            "icon": "check_mark",
+            "content": "",
+            "page": ""
           }
         }
       },
       "block_order": [
         "title",
         "price",
+        "size_guide_zDGRXK",
         "variant_picker",
         "quantity_selector",
         "buy_buttons",
         "description",
         "image_picker_ir7nHN",
-        "image_picker_3bVyry"
+        "collapsible_tab_hDTiKC",
+        "collapsible_tab_7rPaL6",
+        "collapsible_tab_gQrJUJ",
+        "collapsible_tab_fCiJfX"
       ],
       "settings": {
         "enable_sticky_info": true,
@@ -65,7 +108,7 @@
         "media_size": "medium",
         "constrain_to_viewport": true,
         "media_fit": "cover",
-        "gallery_layout": "stacked",
+        "gallery_layout": "thumbnail_slider",
         "media_position": "left",
         "image_zoom": "lightbox",
         "mobile_thumbnails": "hide",
@@ -96,36 +139,36 @@
     "animation_product_rMWRMx": {
       "type": "animation-product",
       "blocks": {
-        "text_tyip7k": {
-          "type": "text",
+        "richtext_zqUK3U": {
+          "type": "richtext",
           "settings": {
-            "text_animation": "Kasur Asli menawarkan 3 pilihan kenyamanan. Dapatkan Lazy Lowie Kasur yang dapat disesuaikan dengan membuka ritsleting dan menyesuaikan lapisannya."
+            "text_animation": "<p><strong>3 Kenyamanan dalam 1 Kasur<br\/><\/strong>The Original Adjustable Mattress menawarkan 3 pilihan kenyamanan. Anda akan mendapatkan Lazy Lowie di tingkat 'Medium.' Ingin lebih empuk atau keras? Cukup buka resleting dan sesuaikan lapisan sesuai kebutuhan Anda<\/p>"
           }
         },
-        "text_CY3PGL": {
-          "type": "text",
+        "richtext_6RfpFE": {
+          "type": "richtext",
           "settings": {
-            "text_animation": "Kami memilih bahan terbaik tencel, Latex, Memory Foam, Medium-density foam dan High-density foam untuk menopang tubuh Anda. Meningkatkan kenyamanan punggung dan leher yang maksimal saat Anda tidur."
+            "text_animation": "<p><strong>Kualitas bahan terbaik <br\/><\/strong>Kami memilih bahan terbaik tencel, Latex, Memory Foam, Medium-density foam dan High-density foam untuk menopang tubuh kamu. Meningkatkan kenyamanan maksimal punggung dan leher saat kamu tidur.<\/p>"
           }
         },
-        "text_HigXW8": {
-          "type": "text",
+        "richtext_gknnNk": {
+          "type": "richtext",
           "settings": {
-            "text_animation": "4 lapisan kami dengan 3 zona kenyamanan memastikan keselarasan tulang belakang yang optimal dan membantu mengurangi titik-titik tekanan. Baik saat Anda berbaring telentang, tengkurap, maupun menyamping."
+            "text_animation": "<p><strong>4 Lapisan di 1 Kasur <br\/><\/strong>4 lapisan dengan 3 zona kenyamanan kami menjamin keselarasan tulang belakang yang optimal dan membantu mengurangi titik-titik tekanan. Baik saat kamu berbaring telentang, tengkurap atau menyamping. <\/p>"
           }
         },
-        "text_YGjwUt": {
-          "type": "text",
+        "richtext_4CURUj": {
+          "type": "richtext",
           "settings": {
-            "text_animation": "Nikmati kenyamanan optimal dan dukungan tulang belakang yang sempurna dengan 4 lapisan dan 3 zona khusus. Ideal untuk berbagai posisi tidur Anda: telentang, tengkurap, atau menyamping."
+            "text_animation": "<p><strong>Tidur Nyenyak tanpa gangguan<br\/><\/strong>Permukaan Lazy Lowie memiliki daya topang yang netral, sehingga setiap gerakan dapat ditahan - sepenuhnya dibuat untuk mengisolasi gerakan, menjamin kamu akan tidur nyenyak, siapa pun yang tidur di sebelah kamu.<\/p>"
           }
         }
       },
       "block_order": [
-        "text_tyip7k",
-        "text_CY3PGL",
-        "text_HigXW8",
-        "text_YGjwUt"
+        "richtext_zqUK3U",
+        "richtext_6RfpFE",
+        "richtext_gknnNk",
+        "richtext_4CURUj"
       ],
       "settings": {
         "title": "Animation Products",
@@ -159,50 +202,191 @@
           "type": "text",
           "settings": {
             "title": "Tencel",
-            "description": "Kasur Lazy Lowie menggunakan bahan Tencel yang mudah dilepas dan dicuci."
-          }
-        },
-        "text_mbnAaU": {
-          "type": "text",
-          "settings": {
-            "title": "Busa dengan kepadatan sedang",
-            "description": "Busa dengan kepadatan sedang memiliki ketebalan dan kepadatan yang lebih baik daripada busa dengan kepadatan rendah."
-          }
-        },
-        "text_ExLBhF": {
-          "type": "text",
-          "settings": {
-            "title": "Busa dengan kepadatan tinggi",
-            "description": "Busa dengan kepadatan tinggi biasanya digunakan untuk mereka yang membutuhkan kepadatan yang lebih tinggi dan daya tahan yang lebih baik."
+            "description": "Kasur Lazy Lowie menggunakan material Tencel yang mudah dilepas dan dapat dicuci. Bahan tencel terkenal dengan kelembutan dan permukaan halus. Dapat menyerap kelembaban, memberikan kenyamanan tidur sepanjang malam.Tidak menyebabkan alergiTencel juga aman terhadap mereka yang memiliki kulit sensitif."
           }
         },
         "text_Ng6YEe": {
           "type": "text",
           "settings": {
             "title": "Latex",
-            "description": "Kasur Lazy Lowie menggunakan 100% Belgian Latex untuk mencapai tingkat fleksibilitas dan daya tahan yang tinggi. Lateks adalah bahan alami yang berasal dari getah pohon karet."
+            "description": "Kasur Lazy Lowie menggunakan 100% Belgian Latex untuk mendapatkan tingkat fleksibilitas dan tahan lama. Latex merupakan bahan alami yang asalnya dari getah pohon karet. Bahan latex bebas dari tungau dan kutu. Manfaat menggunakan Latex:Baik untuk Kesehatan Tulang BelakangLatex akan tetap sama posisinya walaupun kamu bergerak atau beban kasur bertambah. Tentunya ini sangat aman untuk kesehatan tulang kamu yang memiliki masalah nyeri punggung, pundak, dan leher saat tidur.Bahan sejuklatex punya tekstur berlubang dengan ini Latex memiliki sirkulasi udara dengan baik"
+          }
+        },
+        "text_M7WjQi": {
+          "type": "text",
+          "settings": {
+            "title": "Memory Foam",
+            "description": "Memory Foam membuat kasur lebih lembut dan dapat menyesuaikan tubuh. Jika kamu mengubah posisi tidur, permukaan kasur akan mengikuti sehingga tetap nyaman sepanjang malam. Baik untuk kesehatanMembantu menjaga keselarasan tulang belakang. Dapat menyesuaikan dengan lekuk tubuh, maka posisi tulang belakang juga akan netral. Penyelarasan ini akan mengurangi potensi sakit punggung atau masalah lainnya terkait postur."
+          }
+        },
+        "text_mbnAaU": {
+          "type": "text",
+          "settings": {
+            "title": "Medium-density foam",
+            "description": "Medium-density foam ini memiliki ketebalan dan kepadatan yang lebih baik dari pada jenis busa dengan density rendah."
+          }
+        },
+        "text_ExLBhF": {
+          "type": "text",
+          "settings": {
+            "title": "High-density foam",
+            "description": "High density foam biasanya digunakan untuk yang membutuhkan kepadatan yang lebih tinggi dan lebih tahan lamaBusa dengan kepadatan menengah hingga tinggi bisa membantu kamu untuk memperoleh dukungan yang tepat selama tidur. Density kasur busa yang bagus akan lebih maksimal menahan tekanan, terutama untuk kamu yang memiliki tubuh besar atau menggunakan kasur untuk lebih dari satu orang."
+          }
+        },
+        "text_WGBCYr": {
+          "type": "text",
+          "settings": {
+            "title": "Lapisan Bawah",
+            "description": "Dibangun dengan material pilihan yang dirancang untuk ketahanan maksimal, lapisan bawah ini menjamin stabilitas kasur di setiap sudut, memastikan bahwa kasur Anda tetap di tempat, bahkan melalui ribuan malam penuh kenikmatan tidur. Dengan lapisan bawah dari Lazy Lowie, kasur Anda tidak hanya menjadi tempat peristirahatan yang nyaman tapi juga investasi jangka panjang dalam kualitas tidur Anda."
           }
         }
       },
       "block_order": [
         "text_hCTg9m",
+        "text_Ng6YEe",
+        "text_M7WjQi",
         "text_mbnAaU",
         "text_ExLBhF",
-        "text_Ng6YEe"
+        "text_WGBCYr"
       ],
       "settings": {
-        "title": "Tidur yang sehat di setiap lapisan",
+        "title": "High-density foam",
         "image": "shopify:\/\/shop_images\/3d-mattress.webp"
+      }
+    },
+    "support_and_guarantee_Qa7wAC": {
+      "type": "support-and-guarantee",
+      "blocks": {
+        "image_Q6hhBV": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/moon_1.png",
+            "image_text": "Uji Coba Gratis 120 Malam di Rumah"
+          }
+        },
+        "image_rgh9zn": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/truck_1.png",
+            "image_text": "Bahan Premium & Berkelanjutan"
+          }
+        },
+        "image_ejygbe": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/guaranteed_1.png",
+            "image_text": "Tingkat Kenyamanan Tidur yang Dapat Disesuaikan"
+          }
+        },
+        "image_jCfn3T": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/chat_1.png",
+            "image_text": "Garansi 10 Tahun"
+          }
+        }
+      },
+      "block_order": [
+        "image_Q6hhBV",
+        "image_rgh9zn",
+        "image_ejygbe",
+        "image_jCfn3T"
+      ],
+      "settings": {
+        "title": "Support And Guarantee",
+        "heading_size": "h1",
+        "color_scheme": ""
+      }
+    },
+    "kol_review_mbHhqi": {
+      "type": "kol-review",
+      "blocks": {
+        "image_dDkLtQ": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/lazy-ig-3.jpg",
+            "image_link": "shopify:\/\/products\/kasur-lazy-lowie-1"
+          }
+        },
+        "video_4zG6Rf": {
+          "type": "video",
+          "settings": {
+            "video_url": "https:\/\/cdn.shopify.com\/videos\/c\/o\/v\/4bd084adbf654c0480db7c8c666bcef1.mp4"
+          }
+        }
+      },
+      "block_order": [
+        "image_dDkLtQ",
+        "video_4zG6Rf"
+      ],
+      "settings": {
+        "title": "Pengalaman Mereka dengan Lazy Lowie",
+        "heading_size": "h1",
+        "color_scheme": "scheme-4901882a-37a4-43d2-9919-a04d2596a8f8"
+      }
+    },
+    "custome_review_URkHrH": {
+      "type": "custome-review",
+      "blocks": {
+        "review_bnacL9": {
+          "type": "review",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Mascot_3.png",
+            "user_name": "A Husband And Wife",
+            "star_rating": 5,
+            "review_date": "2024-01-23",
+            "text_review": "<p>OMG! kami sangat senang dengan kasur Lazy Lowie! kami sangat terkesan dengan kemampuannya untuk membalikkan bagian atas kasur untuk tingkat kenyamanan yang berbeda.<\/p>"
+          }
+        },
+        "review_aJd6Wy": {
+          "type": "review",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Mascot_3.png",
+            "user_name": "A Single Lady",
+            "star_rating": 5,
+            "review_date": "2024-01-24",
+            "text_review": "<p>Akhir- Akhir ini saya baru saja mengalami banyak masalah punggung. Saya merasa kasur ini benar-benar menopang punggung saat tidur.<\/p>"
+          }
+        },
+        "review_gb7HMY": {
+          "type": "review",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Mascot_3.png",
+            "user_name": "A Family",
+            "star_rating": 4.5,
+            "review_date": "2024-01-26",
+            "text_review": "<p>Pengirimannya super cepat, kami sangat menyukai fleksibilitas bagian atas yang mudah dilepas pasang. Kasur Bobo memiliki pengaturan suhu yang sangat baik, membuat kami tetap sejuk dan nyaman sepanjang malam.<\/p>"
+          }
+        },
+        "review_7HQ9fA": {
+          "type": "review",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Mascot_3.png",
+            "user_name": "Customer",
+            "star_rating": 0,
+            "review_date": "2024-01-26",
+            "text_review": "<p>Kasur yang luar biasa dan pengalaman layanan pelanggan selama prosesnya. Saya menyukainya 🧡<\/p>"
+          }
+        }
+      },
+      "block_order": [
+        "review_bnacL9",
+        "review_aJd6Wy",
+        "review_gb7HMY",
+        "review_7HQ9fA"
+      ],
+      "settings": {
+        "title": "\"Dengar dari Mereka yang Sudah Beristirahat di Awan\""
       }
     },
     "related-products": {
       "type": "related-products",
       "settings": {
-        "heading": "Produk yang mungkin kamu sukai",
+        "heading": "<strong>Produk yang mungkin kamu sukai<\/strong>",
         "heading_size": "h2",
         "products_to_show": 4,
         "columns_desktop": 4,
-        "color_scheme": "scheme-1",
+        "color_scheme": "scheme-47a0187c-b8de-4cff-b20c-5d35f422c9c0",
         "image_ratio": "square",
         "image_shape": "default",
         "show_secondary_image": true,
@@ -220,6 +404,9 @@
     "animation_product_rMWRMx",
     "slider_custome_bxynBN",
     "accordion_product_mG7Aee",
+    "support_and_guarantee_Qa7wAC",
+    "kol_review_mbHhqi",
+    "custome_review_URkHrH",
     "related-products"
   ]
 }

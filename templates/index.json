@@ -108,7 +108,7 @@
         "column_My3L8B"
       ],
       "settings": {
-        "title": "<strong>Our Product<\/strong>",
+        "title": "<strong>Produk kami<\/strong>",
         "heading_size": "h1",
         "image_width": "full",
         "image_ratio": "square",
@@ -117,7 +117,7 @@
         "background_style": "none",
         "button_label": "",
         "button_link": "",
-        "color_scheme": "scheme-1",
+        "color_scheme": "scheme-47a0187c-b8de-4cff-b20c-5d35f422c9c0",
         "columns_mobile": "1",
         "swipe_on_mobile": true,
         "padding_top": 0,

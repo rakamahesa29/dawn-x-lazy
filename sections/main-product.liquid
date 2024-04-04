@@ -72,14 +72,12 @@
         {% render 'product-media-gallery', variant_images: variant_images %}
       </div>
       <div class="product__info-wrapper grid__item{% if settings.page_width > 1400 and section.settings.media_size == "small" %} product__info-wrapper--extra-padding{% endif %}{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}">
-        
         <product-info
           id="ProductInfo-{{ section.id }}"
           data-section="{{ section.id }}"
           data-url="{{ product.url }}"
           class="product__info-container{% if section.settings.enable_sticky_info %} product__column-sticky{% endif %}"
         >
-        
           {%- assign product_form_id = 'product-form-' | append: section.id -%}
 
           {%- for block in section.blocks -%}
@@ -102,22 +100,45 @@
                     </h2>
                   </a>
                 </div>
-                {%- when 'image_picker' -%}
-                  {% if block.settings.info_image != blank %}
-                    <img src="{{ block.settings.info_image | img_url: 'master' }}" alt="{{ block.settings.info_image.alt | escape }}" class="product-info-image">
-                  {% endif %}   
-                {%- when 'image_picker' -%}
-                  {% if block.settings.size_image != blank %}
+              {%- when 'image_picker' -%}
+                {% if block.settings.info_image != blank %}
+                  <img
+                    src="{{ block.settings.info_image | img_url: 'master' }}"
+                    alt="{{ block.settings.info_image.alt | escape }}"
+                    class="product-info-image"
+                  >
+                {% endif %}
+              {%- when 'size_guide' -%}
+                {% if block.settings.size_image != blank %}
+                  <div class="size-guide">
                     <div class="size-guide-icon">
+                      <p>{{ block.settings.size_title }}</p>
                       <div class="text-icon-size" id="textIconSize">
                         <p>{{ block.settings.size_text }}</p>
-                        <svg width="256" height="256" viewBox="0 0 256 256" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <svg
+                          width="256"
+                          height="256"
+                          viewBox="0 0 256 256"
+                          fill="none"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
                           <path d="M238.15 70.54L185.46 17.86C183.603 16.002 181.398 14.5281 178.971 13.5225C176.543 12.5169 173.942 11.9993 171.315 11.9993C168.688 11.9993 166.086 12.5169 163.659 13.5225C161.232 14.5281 159.027 16.002 157.17 17.86L17.85 157.17C15.992 159.027 14.518 161.232 13.5124 163.659C12.5068 166.086 11.9893 168.688 11.9893 171.315C11.9893 173.942 12.5068 176.543 13.5124 178.971C14.518 181.398 15.992 183.603 17.85 185.46L70.54 238.14C72.3973 239.998 74.6024 241.472 77.0294 242.478C79.4565 243.483 82.0579 244.001 84.685 244.001C87.3121 244.001 89.9135 243.483 92.3405 242.478C94.7676 241.472 96.9727 239.998 98.83 238.14L238.15 98.83C240.008 96.9727 241.482 94.7676 242.488 92.3405C243.493 89.9135 244.011 87.3121 244.011 84.685C244.011 82.0579 243.493 79.4565 242.488 77.0295C241.482 74.6024 240.008 72.3973 238.15 70.54ZM84.68 218.34L37.68 171.34L64 145L87.52 168.52C89.7743 170.774 92.8319 172.041 96.02 172.041C99.2081 172.041 102.266 170.774 104.52 168.52C106.774 166.266 108.041 163.208 108.041 160.02C108.041 156.832 106.774 153.774 104.52 151.52L81 128L96 113L119.51 136.52C121.764 138.774 124.822 140.041 128.01 140.041C131.198 140.041 134.256 138.774 136.51 136.52C138.764 134.266 140.031 131.208 140.031 128.02C140.031 124.832 138.764 121.774 136.51 119.52L113 96L128 81L151.52 104.52C153.774 106.774 156.832 108.041 160.02 108.041C163.208 108.041 166.266 106.774 168.52 104.52C170.774 102.266 172.041 99.2081 172.041 96.02C172.041 92.8319 170.774 89.7743 168.52 87.52L145 64L171.35 37.66L218.35 84.66L84.68 218.34Z" fill="#005750"/>
                         </svg>
                       </div>
-                      <img src="{{ block.settings.size_image | img_url: 'master' }}" alt="{{ block.settings.size_image.alt | escape }}" class="pop-up-size" id="popupSize">
                     </div>
-                  {% endif %}            
+                    <div 
+                    class="pop-up-size"
+                    id="popupSize">
+                      <div class="container-pop-up">
+                        <svg xmlns="http://www.w3.org/2000/svg" id="closePopUp" width="24" height="24" viewBox="0 0 24 24" style="fill: rgba(255, 255, 255, 1);transform: ;msFilter:;"><path d="M9.172 16.242 12 13.414l2.828 2.828 1.414-1.414L13.414 12l2.828-2.828-1.414-1.414L12 10.586 9.172 7.758 7.758 9.172 10.586 12l-2.828 2.828z"></path><path d="M12 22c5.514 0 10-4.486 10-10S17.514 2 12 2 2 6.486 2 12s4.486 10 10 10zm0-18c4.411 0 8 3.589 8 8s-3.589 8-8 8-8-3.589-8-8 3.589-8 8-8z"></path></svg>
+                        <img
+                        src="{{ block.settings.size_image | img_url: 'master' }}"
+                        alt="{{ block.settings.size_image.alt | escape }}"
+                        >
+                      </div>
+                    </div>
+                  </div>
+                {% endif %}
               {%- when 'price' -%}
                 <div class="no-js-hidden" id="price-{{ section.id }}" role="status" {{ block.shopify_attributes }}>
                   {%- render 'price',
@@ -204,7 +225,10 @@
                 </p>
               {%- when 'description' -%}
                 {%- if product.description != blank -%}
-                  <div class="product__description product-description-custome rte quick-add-hidden" {{ block.shopify_attributes }}>
+                  <div
+                    class="product__description product-description-custome rte quick-add-hidden"
+                    {{ block.shopify_attributes }}
+                  >
                     {{ product.description }}
                   </div>
                 {%- endif -%}
@@ -221,7 +245,10 @@
               {%- when 'custom_liquid' -%}
                 {{ block.settings.custom_liquid }}
               {%- when 'collapsible_tab' -%}
-                <div class="product__accordion product-accordion-custome accordion quick-add-hidden" {{ block.shopify_attributes }}>
+                <div
+                  class="product__accordion product-accordion-custome accordion quick-add-hidden"
+                  {{ block.shopify_attributes }}
+                >
                   <details id="Details-{{ block.id }}-{{ section.id }}">
                     <summary>
                       <div class="summary__title">
@@ -232,7 +259,10 @@
                       </div>
                       {% render 'icon-caret' %}
                     </summary>
-                    <div class="accordion__content accordion-content-custome rte" id="ProductAccordion-{{ block.id }}-{{ section.id }}">
+                    <div
+                      class="accordion__content accordion-content-custome rte"
+                      id="ProductAccordion-{{ block.id }}-{{ section.id }}"
+                    >
                       {{ block.settings.content }}
                       {{ block.settings.page.content }}
                     </div>
@@ -812,18 +842,23 @@
       ]
     },
     {
-      "type": "image_and_text_size",
-      "name": "t:sections.main-product.blocks.size_image.name",
+      "type": "size_guide",
+      "name": "t:sections.main-product.blocks.size_guide.name",
       "settings": [
         {
           "type": "text",
+          "id": "size_title",
+          "label": "t:sections.main-product.blocks.size_guide.settings.size_title.label"
+        },
+        {
+          "type": "text",
           "id": "size_text",
-          "label": "t:sections.main-product.blocks.size_text.settings.size_text.label"
+          "label": "t:sections.main-product.blocks.size_guide.settings.size_text.label"
         },
         {
           "type": "image_picker",
           "id": "size_image",
-          "label": "t:sections.main-product.blocks.size_image.settings.size_image.label"
+          "label": "t:sections.main-product.blocks.size_guide.settings.size_image.label"
         }
       ]
     },
