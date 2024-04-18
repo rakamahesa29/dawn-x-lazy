@@ -6,7 +6,27 @@
         "slide_pKaGUc": {
           "type": "slide",
           "settings": {
-            "image": "shopify:\/\/shop_images\/lazy-banner.webp",
+            "image": "shopify:\/\/shop_images\/LAZYLOWIE-20231223-1882-desktop.png",
+            "image_mobile": "shopify:\/\/shop_images\/LAZYLOWIE-20231223-1882-mobile_3233fcfa-32a4-4818-b87b-6ab5c5316628.png",
+            "heading": "",
+            "heading_size": "h1",
+            "subheading": "",
+            "button_label": "",
+            "link": "shopify:\/\/products\/kasur-lazy-lowie-1",
+            "button_style_secondary": false,
+            "box_align": "middle-center",
+            "show_text_box": false,
+            "text_alignment": "center",
+            "image_overlay_opacity": 0,
+            "color_scheme": "scheme-47a0187c-b8de-4cff-b20c-5d35f422c9c0",
+            "text_alignment_mobile": "center"
+          }
+        },
+        "slide_g336eE": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Lite-20240328-2380-desktop.png",
+            "image_mobile": "shopify:\/\/shop_images\/Lite-20240328-2380-mobile_7215e430-542a-409d-8d38-10427891b6f5.png",
             "heading": "",
             "heading_size": "h1",
             "subheading": "",
@@ -17,20 +37,21 @@
             "show_text_box": false,
             "text_alignment": "center",
             "image_overlay_opacity": 0,
-            "color_scheme": "scheme-47a0187c-b8de-4cff-b20c-5d35f422c9c0",
+            "color_scheme": "scheme-1",
             "text_alignment_mobile": "center"
           }
         }
       },
       "block_order": [
-        "slide_pKaGUc"
+        "slide_pKaGUc",
+        "slide_g336eE"
       ],
       "settings": {
         "layout": "full_bleed",
-        "slide_height": "large",
+        "slide_height": "fit_image",
         "slider_visual": "counter",
-        "auto_rotate": false,
-        "change_slides_speed": 5,
+        "auto_rotate": true,
+        "change_slides_speed": 3,
         "image_behavior": "none",
         "show_text_below": false,
         "accessibility_info": "Slideshow about our brand"
@@ -39,32 +60,75 @@
     "banner_image_yXdaJV": {
       "type": "banner-image",
       "blocks": {
-        "image_wJdgLK": {
-          "type": "image",
-          "settings": {
-            "image": "shopify:\/\/shop_images\/bolster.webp",
-            "image_link": ""
-          }
-        },
         "image_3prJMA": {
           "type": "image",
           "settings": {
-            "image": "shopify:\/\/shop_images\/mattress.webp",
-            "image_link": ""
+            "image": "shopify:\/\/shop_images\/Lite-20240328-3091-desktop.png",
+            "image_link": "shopify:\/\/products\/new-sample-kasur-lazy-lowie"
+          }
+        },
+        "image_wJdgLK": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/bolster-pillow.webp",
+            "image_link": "shopify:\/\/collections\/pillows-and-bolsters"
           }
         }
       },
       "block_order": [
-        "image_wJdgLK",
-        "image_3prJMA"
+        "image_3prJMA",
+        "image_wJdgLK"
       ],
       "settings": {
-        "title": "Custome Banner Image",
-        "heading_size": "h1",
-        "background_style": "primary",
-        "button_label": "Button label",
-        "button_link": "",
+        "title": "",
+        "heading_size": "h2",
+        "text_position": "position-center",
+        "color_scheme": "scheme-47a0187c-b8de-4cff-b20c-5d35f422c9c0"
+      }
+    },
+    "slider_custome_BDqhhY": {
+      "type": "slider-custome",
+      "blocks": {
+        "image_gRDbj4": {
+          "type": "image",
+          "disabled": true,
+          "settings": {
+            "text_slider": ""
+          }
+        },
+        "video_baYyEC": {
+          "type": "video",
+          "disabled": true,
+          "settings": {
+            "video_url": "https:\/\/cdn.shopify.com\/videos\/c\/o\/v\/ad12aaac07b44a3db20fbc4ab4615a4c.mp4"
+          }
+        }
+      },
+      "block_order": [
+        "image_gRDbj4",
+        "video_baYyEC"
+      ],
+      "settings": {
+        "heading_size": "h2",
         "color_scheme": ""
+      }
+    },
+    "banner_image_LMVJjB": {
+      "type": "banner-image",
+      "settings": {
+        "title": "The Adjustable Mattress",
+        "heading_size": "h1",
+        "text_position": "position-center",
+        "color_scheme": "scheme-47a0187c-b8de-4cff-b20c-5d35f422c9c0"
+      }
+    },
+    "custom_liquid_zzkrF4": {
+      "type": "custom-liquid",
+      "settings": {
+        "custom_liquid": "<style>\nvideo {\nwidth: 100%;\nheight: auto;\ndisplay: block;\nmargin: auto;\n}\n<\/style>\n<video muted autoplay playsinline loop>\n    <source src=\"https:\/\/cdn.shopify.com\/videos\/c\/o\/v\/ad12aaac07b44a3db20fbc4ab4615a4c.mp4\"\n                  type=\"video\/mp4\">\n    <source src=\"https:\/\/cdn.shopify.com\/videos\/c\/o\/v\/ad12aaac07b44a3db20fbc4ab4615a4c.mp4\"\n                  type=\"video\/mp4\">\n<\/video>",
+        "color_scheme": "",
+        "padding_top": 40,
+        "padding_bottom": 52
       }
     },
     "custome_multicolumn_7rwK8x": {
@@ -73,31 +137,31 @@
         "column_3px96n": {
           "type": "column",
           "settings": {
-            "image": "shopify:\/\/shop_images\/Bantal-Premium-03.webp",
+            "image": "shopify:\/\/shop_images\/mattress_b1bc1c78-fcb2-48cb-9211-78ecac8c84f4.webp",
             "title": "",
             "text": "",
             "link_label": "",
-            "link": ""
+            "link": "shopify:\/\/collections\/matterss"
           }
         },
         "column_gFfQEL": {
           "type": "column",
           "settings": {
-            "image": "shopify:\/\/shop_images\/Kasur-02.webp",
+            "image": "shopify:\/\/shop_images\/pillow_2b2aabfb-0711-464f-832b-ff630582e270.webp",
             "title": "",
             "text": "",
             "link_label": "",
-            "link": ""
+            "link": "shopify:\/\/collections\/pillow"
           }
         },
         "column_My3L8B": {
           "type": "column",
           "settings": {
-            "image": "shopify:\/\/shop_images\/Guling-02.webp",
+            "image": "shopify:\/\/shop_images\/IG_FEEDS_7.jpg",
             "title": "",
             "text": "",
             "link_label": "",
-            "link": ""
+            "link": "shopify:\/\/collections\/bolster"
           }
         }
       },
@@ -107,10 +171,11 @@
         "column_My3L8B"
       ],
       "settings": {
-        "title": "Our Products",
-        "heading_size": "h1",
+        "title": "<strong>Produk kami<\/strong>",
+        "heading_size": "h2",
+        "text_position": "position-center",
         "image_width": "full",
-        "image_ratio": "adapt",
+        "image_ratio": "square",
         "columns_desktop": 3,
         "column_alignment": "center",
         "background_style": "none",
@@ -119,24 +184,28 @@
         "color_scheme": "scheme-47a0187c-b8de-4cff-b20c-5d35f422c9c0",
         "columns_mobile": "1",
         "swipe_on_mobile": true,
-        "padding_top": 0,
+        "padding_top": 80,
         "padding_bottom": 80
       }
     },
-    "image_banner": {
-      "type": "image-banner",
+    "featured_blog_MAgmj3": {
+      "type": "featured-blog",
+      "custom_css": [
+        ".title-wrapper--no-top-margin {text-align: center; display: flex; justify-content: center;}"
+      ],
       "settings": {
-        "image": "shopify:\/\/shop_images\/lazy-banner.webp",
-        "image_overlay_opacity": 0,
-        "image_height": "medium",
-        "desktop_content_position": "middle-center",
-        "show_text_box": false,
-        "desktop_content_alignment": "center",
-        "color_scheme": "scheme-3",
-        "image_behavior": "none",
-        "mobile_content_alignment": "center",
-        "stack_images_on_mobile": true,
-        "show_text_below": false
+        "heading": "<strong>Lowie Board<\/strong>",
+        "heading_size": "h2",
+        "blog": "lowie-board",
+        "post_limit": 3,
+        "columns_desktop": 3,
+        "color_scheme": "scheme-47a0187c-b8de-4cff-b20c-5d35f422c9c0",
+        "show_image": true,
+        "show_date": true,
+        "show_author": false,
+        "show_view_all": true,
+        "padding_top": 40,
+        "padding_bottom": 40
       }
     },
     "instagram_M3dX9V": {
@@ -145,29 +214,29 @@
         "image_hXNCKW": {
           "type": "image",
           "settings": {
-            "image": "shopify:\/\/shop_images\/Bantal-Premium-03.webp",
-            "image_link": ""
+            "image": "shopify:\/\/shop_images\/lazy-ig-1.jpg",
+            "image_link": "https:\/\/www.instagram.com\/p\/C42n79Mrl7d\/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA=="
           }
         },
         "image_U6iWtF": {
           "type": "image",
           "settings": {
-            "image": "shopify:\/\/shop_images\/Kasur-02.webp",
-            "image_link": ""
+            "image": "shopify:\/\/shop_images\/lazy-ig-2.jpg",
+            "image_link": "https:\/\/www.instagram.com\/p\/C4umFG5tXCN\/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA=="
           }
         },
         "image_Qk8dDH": {
           "type": "image",
           "settings": {
-            "image": "shopify:\/\/shop_images\/Guling-02.webp",
-            "image_link": ""
+            "image": "shopify:\/\/shop_images\/lazy-ig-3.jpg",
+            "image_link": "https:\/\/www.instagram.com\/reel\/C4ch4rAtXyh\/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA=="
           }
         },
         "image_n9aPEL": {
           "type": "image",
           "settings": {
-            "image": "shopify:\/\/shop_images\/bolster.webp",
-            "image_link": ""
+            "image": "shopify:\/\/shop_images\/header-mobiile.jpg",
+            "image_link": "https:\/\/www.instagram.com\/p\/C2PLUIqJXmq\/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA=="
           }
         }
       },
@@ -178,17 +247,20 @@
         "image_n9aPEL"
       ],
       "settings": {
-        "title": "Instagram Gallery",
-        "heading_size": "h1",
-        "color_scheme": ""
+        "title": "<strong>Lowie Page<\/strong>",
+        "heading_size": "h2",
+        "color_scheme": "scheme-47a0187c-b8de-4cff-b20c-5d35f422c9c0"
       }
     }
   },
   "order": [
     "slideshow_iN3pmY",
     "banner_image_yXdaJV",
+    "slider_custome_BDqhhY",
+    "banner_image_LMVJjB",
+    "custom_liquid_zzkrF4",
     "custome_multicolumn_7rwK8x",
-    "image_banner",
+    "featured_blog_MAgmj3",
     "instagram_M3dX9V"
   ]
 }

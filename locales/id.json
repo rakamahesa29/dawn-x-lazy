@@ -108,7 +108,7 @@
     "product": {
       "add_to_cart": "Tambahkan ke keranjang",
       "description": "Deskripsi",
-      "on_sale": "Obral",
+      "on_sale": "SALE",
       "product_variants": "Varian produk",
       "quantity": {
         "label": "Jumlah",
@@ -128,7 +128,7 @@
         "unit_price": "Harga satuan"
       },
       "share": "Bagikan produk ini",
-      "sold_out": "Habis",
+      "sold_out": "SOLD OUT",
       "unavailable": "Tidak Tersedia",
       "vendor": "Vendor",
       "video_exit_message": "{{ title }} membuka video layar penuh di jendela yang sama.",

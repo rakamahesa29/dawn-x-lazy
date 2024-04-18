@@ -17,8 +17,8 @@
 {%- endstyle -%}
 
 {%- paginate blog.articles by 6 -%}
-  <div class="main-blog page-width section-{{ section.id }}-padding">
-    <h1 class="title--primary{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--fade-in{% endif %}">
+  <div class="main-blog page-width section-{{ section.id }}-padding color-{{ section.settings.color_scheme }}">
+    <h1 class="title--primary{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--fade-in{% endif %} {{ section.settings.text_position }}">
       {{ blog.title | escape }}
     </h1>
 
@@ -59,6 +59,32 @@
     {
       "type": "header",
       "content": "t:sections.main-blog.settings.header.content"
+    },
+    {
+      "type": "color_scheme",
+      "id": "color_scheme",
+      "label": "t:sections.all.colors.label",
+      "default": "scheme-1"
+    },
+    {
+      "type": "select",
+      "id": "text_position",
+      "options": [
+        {
+          "value": "position-right",
+          "label": "t:sections.all.text_position.options__1.label"
+        },
+        {
+          "value": "position-center",
+          "label": "t:sections.all.text_position.options__2.label"
+        },
+        {
+          "value": "position-left",
+          "label": "t:sections.all.text_position.options__3.label"
+        }
+      ],
+      "default": "position-right",
+      "label": "t:sections.all.text_position.label"
     },
     {
       "type": "select",

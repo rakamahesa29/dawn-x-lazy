@@ -1,7 +1,8 @@
 {
   "current": {
-    "logo": "shopify:\/\/shop_images\/logo-green-lazy.webp",
+    "logo": "shopify:\/\/shop_images\/lazy-logo-green.webp",
     "logo_width": 90,
+    "favicon": "shopify:\/\/shop_images\/Mascot_1.png",
     "type_header_font": "assistant_n4",
     "heading_scale": 100,
     "type_body_font": "assistant_n4",
@@ -19,9 +20,9 @@
     "buttons_shadow_horizontal_offset": 0,
     "buttons_shadow_vertical_offset": 4,
     "buttons_shadow_blur": 5,
-    "variant_pills_border_thickness": 1,
-    "variant_pills_border_opacity": 55,
-    "variant_pills_radius": 40,
+    "variant_pills_border_thickness": 2,
+    "variant_pills_border_opacity": 50,
+    "variant_pills_radius": 0,
     "variant_pills_shadow_opacity": 0,
     "variant_pills_shadow_horizontal_offset": 0,
     "variant_pills_shadow_vertical_offset": 4,
@@ -58,7 +59,7 @@
     "blog_card_style": "standard",
     "blog_card_image_padding": 0,
     "blog_card_text_alignment": "left",
-    "blog_card_color_scheme": "scheme-2",
+    "blog_card_color_scheme": "scheme-47a0187c-b8de-4cff-b20c-5d35f422c9c0",
     "blog_card_border_thickness": 0,
     "blog_card_border_opacity": 10,
     "blog_card_corner_radius": 0,
@@ -94,16 +95,16 @@
     "drawer_shadow_vertical_offset": 4,
     "drawer_shadow_blur": 5,
     "badge_position": "top left",
-    "badge_corner_radius": 20,
+    "badge_corner_radius": 0,
     "sale_badge_color_scheme": "scheme-4901882a-37a4-43d2-9919-a04d2596a8f8",
-    "sold_out_badge_color_scheme": "scheme-47a0187c-b8de-4cff-b20c-5d35f422c9c0",
+    "sold_out_badge_color_scheme": "scheme-8dc1503a-d7b1-44d0-ba46-1ea15c63b766",
     "brand_headline": "",
     "brand_description": "<p><\/p>",
     "brand_image_width": 100,
-    "social_facebook_link": "facebook",
-    "social_instagram_link": "instagram",
-    "social_youtube_link": "youtube",
-    "social_tiktok_link": "",
+    "social_facebook_link": "",
+    "social_instagram_link": "https:\/\/www.instagram.com\/lazylowie.id\/",
+    "social_youtube_link": "https:\/\/www.youtube.com\/@LazyLowie",
+    "social_tiktok_link": "https:\/\/www.tiktok.com\/@lazylowie",
     "social_twitter_link": "",
     "social_snapchat_link": "",
     "social_pinterest_link": "",
@@ -117,7 +118,12 @@
     "show_vendor": false,
     "show_cart_note": false,
     "cart_drawer_collection": "",
-    "cart_color_scheme": "scheme-1",
+    "cart_color_scheme": "scheme-47a0187c-b8de-4cff-b20c-5d35f422c9c0",
+    "checkout_logo_image": "shopify:\/\/shop_images\/lazy-logo-green.webp",
+    "checkout_logo_size": "small",
+    "checkout_accent_color": "#005750",
+    "checkout_button_color": "#005750",
+    "checkout_layout": "threepage",
     "sections": {
       "main-password-header": {
         "type": "main-password-header",
@@ -135,6 +141,41 @@
     "content_for_index": [
 
     ],
+    "blocks": {
+      "11813581335429059158": {
+        "type": "shopify:\/\/apps\/whatsapp-chat-widget\/blocks\/app-embed\/b85b5e45-9cea-417a-9b9e-0aa961ccf3ef",
+        "disabled": false,
+        "settings": {
+          "show_on_desktop": true,
+          "show_on_mobile": true,
+          "show_label_on_desktop": true,
+          "show_label_on_mobile": true,
+          "show_scroll_bar": false,
+          "show_gdpr_notice": false,
+          "use_click_to_chat": false,
+          "widget_label_text": "Need Help? Chat with us",
+          "widget_text": "Start a Conversation",
+          "description": "Hi! Click one of our member below to chat on WhatsApp",
+          "response_text": "The team typically replies in a few minutes.",
+          "gdpr_text": "Please accept our privacy policy first to start a conversation.",
+          "background_color": "#2DB742",
+          "text_color": "#ffffff",
+          "position": "right",
+          "label_width": 155,
+          "scroll_bar_height": 500,
+          "icon_size": 56,
+          "distance_left": 30,
+          "distance_right": 30,
+          "distance_bottom": 30
+        }
+      },
+      "14060646107696862457": {
+        "type": "shopify:\/\/apps\/judge-me-reviews\/blocks\/judgeme_core\/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
+        "disabled": false,
+        "settings": {
+        }
+      }
+    },
     "color_schemes": {
       "scheme-1": {
         "settings": {
@@ -211,6 +252,28 @@
           "button_label": "#005750",
           "secondary_button_label": "#ffffff",
           "shadow": "#ffffff"
+        }
+      },
+      "scheme-334f9163-b808-4f04-9fce-7081ff4d2119": {
+        "settings": {
+          "background": "#ffffff",
+          "background_gradient": "",
+          "text": "#121212",
+          "button": "#121212",
+          "button_label": "#ffffff",
+          "secondary_button_label": "#121212",
+          "shadow": "#121212"
+        }
+      },
+      "scheme-8dc1503a-d7b1-44d0-ba46-1ea15c63b766": {
+        "settings": {
+          "background": "#dd1d1d",
+          "background_gradient": "",
+          "text": "#ffffff",
+          "button": "#ffffff",
+          "button_label": "#ffffff",
+          "secondary_button_label": "#ffffff",
+          "shadow": "#ba1c1c"
         }
       }
     }

@@ -1,4 +1,4 @@
-<footer class="new-footer">
+<footer class="new-footer section-custome">
   {%- liquid
     assign has_social_icons = true
     if settings.social_facebook_link == blank and settings.social_instagram_link == blank and settings.social_youtube_link == blank and settings.social_tiktok_link == blank and settings.social_twitter_link == blank and settings.social_pinterest_link == blank and settings.social_snapchat_link == blank and settings.social_tumblr_link == blank and settings.social_vimeo_link == blank
@@ -7,7 +7,7 @@
   -%}
   <div class="container">
     <div class="row">
-      <div class="col-lg-10 col-md-8 col-sm-12 col-12">
+      <div class="col-lg-8 col-md-8 col-sm-12 col-12">
         {% if section.settings.show_logo %}
           <div class="logo-footer">
             <a href="{{ section.settings.logo_url }}">
@@ -21,10 +21,10 @@
           </div>
         {% endif %}
         <div class="text-footer-lazy-lowie">
-          {{ section.settings.footer_text }}
+          <p>{{ section.settings.footer_text }}</p>
         </div>
       </div>
-      <div class="col-lg-2 col-md-4 col-sm-12 col-12">
+      <div class="col-lg-4 col-md-4 col-sm-12 col-12">
         <div class="footer-menu-custome">
           {% for block in section.blocks %}
             <div class="menu-footer">
@@ -41,10 +41,11 @@
     </div>
     <div class="row row-medsos">
       <div class="col-lg-10 col-md-8 col-sm-12 col-12">
-        <div class="media-social-icon">
-          {%- if section.settings.show_social and has_social_icons -%}
-            {%- render 'social-icons', class: 'footer__list-social footer-media-social' -%}
-          {%- endif -%}
+        <div class="text-subscribe">
+          <p>{{ section.settings.subscribe_text }}</p>
+        </div>
+        <div class="desc-text-subscribe">
+          <p>{{ section.settings.desc_subscribe_text }}</p>
         </div>
         <div class="form-subscribe">
           {%- if section.settings.newsletter_enable -%}
@@ -112,8 +113,10 @@
             </div>
           {%- endif -%}
         </div>
-        <div class="text-subscribe">
-          {{ section.settings.subscribe_text }}
+        <div class="media-social-icon">
+          {%- if section.settings.show_social and has_social_icons -%}
+            {%- render 'social-icons', class: 'footer__list-social footer-media-social' -%}
+          {%- endif -%}
         </div>
       </div>
       <div class="col-lg-2 col-md-4 col-sm-12 col-12">
@@ -126,7 +129,7 @@
     <div class="row">
       <div class="col-12">
         <div class="year-development">
-          © {{ 'now' | date: '%Y' }}, Lazy Lowie Didukung oleh Shopify & Astacala Studio
+          <p>© Copyright {{ 'now' | date: '%Y' }}, | Lazy Lowie </p>
         </div>
       </div>
     </div>
@@ -181,6 +184,12 @@
       {
         "type": "text",
         "id": "subscribe_text",
+        "label": "t:sections.footer.settings.subscribe_text.label",
+        "default": "Upload subscribe text here"
+      },
+      {
+        "type": "inline_richtext",
+        "id": "desc_subscribe_text",
         "label": "t:sections.footer.settings.subscribe_text.label",
         "default": "Upload subscribe text here"
       },

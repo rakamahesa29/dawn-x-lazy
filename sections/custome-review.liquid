@@ -1,6 +1,4 @@
-{{ 'custome-style.css' | asset_url | stylesheet_tag }}
-
-<section class="section-custome page-width">
+<section class="section-custome page-width color-{{ section.settings.color_scheme }}">
   <div class="container">
     <div class="row">
       <div class="col-12">
@@ -21,6 +19,27 @@
 
                 <div class="swiper-slide">
                   <div class="card-review">
+                    <div class="media-card">
+                      {% if block.type == 'review_image' %}
+                        <a href="{{ block.settings.image_link }}">
+                          <div class="image-kol">
+                            <img
+                              src="{{ block.settings.image_cover | img_url: 'master' }}"
+                              alt="{{ block.settings.image_cover.alt | escape }}"
+                            >
+                          </div>
+                        </a>
+                        {% elsif block.type == 'review_video' %}
+                          <a href="{{ block.settings.video_url }}" target="_blank">
+                            <div class="image-kol">
+                              <video controls>
+                                <source src="{{ block.settings.video_url }}" type="video/mp4">
+                                Your browser does not support the video tag.
+                              </video>
+                            </div>
+                          </a>
+                        {% endif %}
+                    </div>
                     <div class="star-and-date">
                       <div class="star">
                         {% for i in (1..full_stars) %}
@@ -94,25 +113,76 @@
     {
       "type": "text",
       "id": "title",
-      "default": "t:sections.custome-review.settings.title.default",
       "label": "t:sections.custome-review.settings.title.label"
     }
   ],
   "blocks": [
     {
-      "type": "review",
-      "name": "t:sections.custome-review.blocks.review.name",
+      "type": "review_image",
+      "name": "t:sections.custome-review.blocks.review_image.name",
       "settings": [
         {
           "type": "image_picker",
-          "id": "image",
+          "id": "image_cover",
           "label": "t:sections.custome-review.blocks.review.settings.image.label"
+        },
+        {
+          "type": "image_picker",
+          "id": "image_reviewer",
+          "label": "t:sections.custome-review.blocks.image.settings.image.label"
+        },
+        {
+          "type": "url",
+          "id": "image_link",
+          "label": "t:sections.custome-review.blocks.image.settings.image_link.label"
         },
         {
           "type": "text",
           "id": "user_name",
-          "label": "t:sections.custome-review.blocks.review.settings.user_name.label",
-          "default": "t:sections.custome-review.blocks.review.settings.user_name.default"
+          "label": "t:sections.custome-review.blocks.review.settings.user_name.label"
+        },
+        {
+          "type": "range",
+          "id": "star_rating",
+          "min": 0,
+          "max": 5,
+          "step": 0.5,
+          "default": 0,
+          "label": "t:sections.custome-review.blocks.review.settings.star_rating.label"
+        },
+        {
+          "type": "text",
+          "id": "review_date",
+          "label": "t:sections.custome-review.blocks.review.settings.review_date.label",
+          "default": "2024-01-23"
+        },
+        {
+          "type": "richtext",
+          "id": "text_review",
+          "label": "t:sections.custome-review.blocks.review.settings.text_review.label",
+          "default": "<p>Lorem ipsum dolor sit amet...</p>"
+        }
+      ]
+    },
+    {
+      "type": "review_video",
+      "name": "t:sections.custome-review.blocks.review_video.name",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "image_reviewer",
+          "label": "t:sections.custome-review.blocks.review.settings.image.label"
+        },
+        {
+          "type": "text",
+          "id": "video_url",
+          "label": "t:sections.custome-review.blocks.video.settings.video_url.label",
+          "info": "t:sections.custome-review.blocks.video.settings.video_url.info"
+        },
+        {
+          "type": "text",
+          "id": "user_name",
+          "label": "t:sections.custome-review.blocks.review.settings.user_name.label"
         },
         {
           "type": "range",

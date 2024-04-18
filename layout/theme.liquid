@@ -251,14 +251,11 @@
       }
     {% endstyle %}
 
-    {{ 'base.css' | asset_url | stylesheet_tag }}
-
     {{ 'bootstrap-min.css' | asset_url | stylesheet_tag }}
 
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
-    >
+    {{ 'swiper-bundle.min.css' | asset_url | stylesheet_tag }}
+
+    {{ 'base.css' | asset_url | stylesheet_tag }}
 
     {{ 'custome-style.css' | asset_url | stylesheet_tag }}
 
@@ -302,7 +299,7 @@
 
     {% sections 'header-group' %}
 
-    <main id="MainContent" class="content-for-layout focus-none" role="main" tabindex="-1">
+    <main id="MainContent" class="content-for-layout {% if template.name != 'index' %}custome-main-content-layout{% endif %} focus-none" role="main" tabindex="-1">
       {{ content_for_layout }}
     </main>
 
@@ -359,7 +356,9 @@
       <script src="{{ 'predictive-search.js' | asset_url }}" defer="defer"></script>
     {%- endif -%}
 
-    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="{{ 'bootstrap.min.js' | asset_url }}" defer="defer"></script>
+    <script src="{{ 'popper.min.js' | asset_url }}" defer="defer"></script>
+    <script src="{{ 'swiper-bundle.min.js' | asset_url }}" defer="defer"></script>
     <script src="{{ 'custome-script.js' | asset_url }}" defer="defer"></script>
   </body>
 </html>

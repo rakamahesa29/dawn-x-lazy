@@ -8,15 +8,15 @@
         "menu_EmyDgM": {
           "type": "menu",
           "settings": {
-            "menu_title": "Shop",
-            "menu": "footer"
+            "menu_title": "Information",
+            "menu": "contacts"
           }
         },
         "menu_Xzb4Yf": {
           "type": "menu",
           "settings": {
-            "menu_title": "Shop",
-            "menu": "main-menu"
+            "menu_title": "Produk",
+            "menu": "categories"
           }
         }
       },
@@ -28,12 +28,13 @@
         "show_logo": true,
         "show_social": true,
         "newsletter_enable": true,
-        "footer_logo": "shopify:\/\/shop_images\/landscape-lazy-white-250px.webp",
+        "footer_logo": "shopify:\/\/shop_images\/lazy-logo.png",
         "logo_alt_text": "Footer Logo",
         "logo_url": "\/",
-        "footer_text": "Lapisan kasur yang bisa disesuaikan  untuk memudahkan dalam memilih  kepadatan kasur.",
-        "subscribe_text": "get more update from lazy lowie",
-        "image_icon": "shopify:\/\/shop_images\/mascot-lazy-lowie.webp"
+        "footer_text": "Lapisan kasur yang dapat disesuaikan untuk memudahkan dalam memilih kepadatan kasur.",
+        "subscribe_text": "",
+        "desc_subscribe_text": "Bergabunglah untuk penghematan yang manis, dapatkan penawaran terbaru dan lebih banyak lagi yang dikirimkan langsung ke kotak masuk Anda.",
+        "image_icon": "shopify:\/\/shop_images\/mascot.webp"
       }
     }
   },

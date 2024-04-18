@@ -1,0 +1,124 @@
+{{ 'gsap.min.js' | asset_url | script_tag }}
+{{ 'ScrollTrigger.min.js' | asset_url | script_tag }}
+
+<section class="sec-scroll color-{{ section.settings.color_scheme }}">
+  <div class="container">
+    <div class="row">
+      <div class="col-12">
+        <div class="scroll-container">
+          <div class="area-scroll-trigger">
+            <div class="title-animation {{ section.settings.text_position }}">
+              <h2 class="{{ section.settings.heading_size }}">{{ section.settings.title }}</h2>
+            </div>
+            <div id="imageContainer" class="list-image-item">
+              {% for i in (1..150) %}
+                {% assign image_number = i | prepend: '000' | slice: -4, 4 %}
+                <img
+                  src="{{ section.settings.link_title }}{{ image_number }}.webp"
+                  alt="Image {{ image_number }}"
+                >
+              {% endfor %}
+            </div>
+            <div class="list-text-item" id="textContainer">
+              {% for block in section.blocks %}
+                {% if block.settings.text_animation != blank %}
+                  <div class="{% if forloop.first %}show{% else %}hide{% endif %} h4">{{ block.settings.text_animation }}</div>
+                {% endif %}
+              {% endfor %}
+            </div>
+            <div class="progress-bar-item">
+              <div class="progress-bar"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Animation Product",
+  "class": "section",
+  "tag": "section",
+  "settings": [
+    {
+      "type": "inline_richtext",
+      "id": "title",
+      "default": "Animation Products",
+      "label": "t:sections.animation-product.settings.title.label"
+    },
+    {
+      "type": "text",
+      "id": "link_title",
+      "default": "Animation Products",
+      "label": "t:sections.animation-product.settings.link_title.label"
+    },
+    {
+      "type": "select",
+      "id": "heading_size",
+      "options": [
+        {
+          "value": "h2",
+          "label": "t:sections.all.heading_size.options__1.label"
+        },
+        {
+          "value": "h1",
+          "label": "t:sections.all.heading_size.options__2.label"
+        },
+        {
+          "value": "h0",
+          "label": "t:sections.all.heading_size.options__3.label"
+        }
+      ],
+      "default": "h1",
+      "label": "t:sections.all.heading_size.label"
+    },
+    {
+      "type": "select",
+      "id": "text_position",
+      "options": [
+        {
+          "value": "position-right",
+          "label": "t:sections.all.text_position.options__1.label"
+        },
+        {
+          "value": "position-center",
+          "label": "t:sections.all.text_position.options__2.label"
+        },
+        {
+          "value": "position-left",
+          "label": "t:sections.all.text_position.options__3.label"
+        }
+      ],
+      "default": "position-right",
+      "label": "t:sections.all.text_position.label"
+    },
+    {
+      "type": "color_scheme",
+      "id": "color_scheme",
+      "label": "t:sections.all.colors.label",
+      "default": "scheme-1"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "richtext",
+      "name": "Text Animation",
+      "settings": [
+        {
+          "type": "richtext",
+          "id": "text_animation",
+          "label": "t:sections.animation-product.blocks.richtext.settings.richtext.label",
+          "default": "<p>Lorem ipsum dolor sit amet uawi waklonopa</p>"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Animation Product"
+    }
+  ]
+}
+{% endschema %}

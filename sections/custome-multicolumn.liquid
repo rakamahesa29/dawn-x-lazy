@@ -38,7 +38,7 @@
     {% endif %}
   >
     {%- unless section.settings.title == blank -%}
-      <div class="title-wrapper-with-link title-wrapper--self-padded-mobile title-no-wrapper title-wrapper--no-top-margin">
+      <div class="title-wrapper-with-link title-wrapper--self-padded-mobile title-no-wrapper title-wrapper--no-top-margin {{ section.settings.text_position }}">
         <h2 class="title inline-richtext title-center-multicolumn {{ section.settings.heading_size }}">
           {{ section.settings.title }}
         </h2>
@@ -82,14 +82,19 @@
               style="--animation-order: {{ forloop.index }};"
             {% endif %}
           >
-            <div class="multicolumn-card content-container">
+            <div class="multicolumn-card content-container multicolumn-card-rounded">
               {%- if block.settings.image != blank -%}
                 {% if section.settings.image_ratio == 'adapt' or section.settings.image_ratio == 'circle' %}
                   {% assign spaced_image = true %}
                 {% endif %}
-                <div class="multicolumn-card__image-wrapper multicolumn-card__image-wrapper--{{ section.settings.image_width }}-width{% if section.settings.image_width != 'full' or spaced_image %} multicolumn-card-spacing{% endif %}">
-                  <div
-                    class="media media--transparent media--{{ section.settings.image_ratio }}"
+                <div class="multicolumn-card__image-wrapper multicolumn-card__image-wrapper--{{ section.settings.image_width }}-width{% if section.settings.image_width != 'full' or spaced_image %} multicolumn-card-spacing{% endif %}  multicolumn-card-rounded">
+                  <a 
+                    {% if block.settings.link == blank %}
+                      role="link" aria-disabled="true"
+                    {% else %}
+                      href="{{ block.settings.link }}"
+                    {% endif %}
+                    class="media media--transparent media--{{ section.settings.image_ratio }} multicolumn-card-rounded"
                     {% if section.settings.image_ratio == 'adapt' %}
                       style="padding-bottom: {{ 1 | divided_by: highest_ratio | times: 100 }}%;"
                     {% endif %}
@@ -122,7 +127,7 @@
                         sizes: sizes,
                         class: 'multicolumn-card__image'
                     }}
-                  </div>
+                  </a>
                 </div>
               {%- endif -%}
               <div class="multicolumn-card__info">
@@ -229,6 +234,26 @@
       ],
       "default": "h1",
       "label": "t:sections.all.heading_size.label"
+    },
+    {
+      "type": "select",
+      "id": "text_position",
+      "options": [
+        {
+          "value": "position-right",
+          "label": "t:sections.all.text_position.options__1.label"
+        },
+        {
+          "value": "position-center",
+          "label": "t:sections.all.text_position.options__2.label"
+        },
+        {
+          "value": "position-left",
+          "label": "t:sections.all.text_position.options__3.label"
+        }
+      ],
+      "default": "position-right",
+      "label": "t:sections.all.text_position.label"
     },
     {
       "type": "select",

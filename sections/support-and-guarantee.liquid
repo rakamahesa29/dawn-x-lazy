@@ -1,4 +1,4 @@
-<section class="section-custome bg-green">
+<section class="section-custome color-{{ section.settings.color_scheme }}">
   <div class="container">
     <div class="row">
       <div class="col-12">
@@ -28,7 +28,38 @@
   "class": "section",
   "tag": "section",
   "settings": [
-    
+    {
+      "type": "inline_richtext",
+      "id": "title",
+      "default": "Support And Guarantee",
+      "label": "t:sections.support-and-guarantee.settings.title.label"
+    },
+    {
+      "type": "select",
+      "id": "heading_size",
+      "options": [
+        {
+          "value": "h2",
+          "label": "t:sections.all.heading_size.options__1.label"
+        },
+        {
+          "value": "h1",
+          "label": "t:sections.all.heading_size.options__2.label"
+        },
+        {
+          "value": "h0",
+          "label": "t:sections.all.heading_size.options__3.label"
+        }
+      ],
+      "default": "h1",
+      "label": "t:sections.all.heading_size.label"
+    },
+    {
+      "type": "color_scheme",
+      "id": "color_scheme",
+      "label": "t:sections.all.colors.label",
+      "default": "scheme-1"
+    }
   ],
   "blocks": [
     {

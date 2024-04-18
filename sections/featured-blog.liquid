@@ -94,7 +94,7 @@
               <div class="article-card-wrapper card-wrapper{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}">
                 <div
                   class="
-                    card article-card card--{{ settings.blog_card_style }}
+                    card article-card article-card-custome card--{{ settings.blog_card_style }}
                     {% if settings.blog_card_style == 'card' %} color-{{ settings.blog_card_color_scheme }} gradient{% endif %}
                     {% if section.settings.show_image %} card--media{% else %} card--text{% endif %}
                   "
@@ -112,7 +112,7 @@
                       </div>
                     {%- endif -%}
                     <div class="card__content">
-                      <div class="card__information">
+                      <div class="card__information card__information_custome">
                         <h3 class="card__heading h2">
                           {{ 'sections.featured_blog.onboarding_title' | t }}
                         </h3>
@@ -123,7 +123,7 @@
                     </div>
                   </div>
                   <div class="card__content">
-                    <div class="card__information">
+                    <div class="card__information card__information_custome">
                       <h3 class="card__heading h2">
                         {{ 'sections.featured_blog.onboarding_title' | t }}
                       </h3>

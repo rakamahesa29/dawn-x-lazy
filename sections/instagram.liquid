@@ -1,11 +1,9 @@
-{{ 'custome-style.css' | asset_url | stylesheet_tag }}
-
-<section class="section-custome">
+<section class="section-custome page-width color-{{ section.settings.color_scheme }}">
   <div class="container">
     <div class="row">
       <div class="col-12">
         <div class="title-instagram-post">
-          <h3>{{ section.settings.title }}</h3>
+          <h2 class="{{ section.settings.heading_size }}">{{ section.settings.title }}</h2>
           <div class="navigation-slider">
             <div class="swiper-button-prev custom-nav-swiper"></div>
             <div class="swiper-button-next custom-nav-swiper"></div>

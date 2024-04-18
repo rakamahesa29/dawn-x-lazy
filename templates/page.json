@@ -2,6 +2,10 @@
   "sections": {
     "main": {
       "type": "main-page",
+      "custom_css": [
+        "h1 {text-align: center; justify-content: center; display: flex; color: #005750;}",
+        "p,li,span {font-size: 14px; color: #005750;}"
+      ],
       "settings": {
         "padding_top": 28,
         "padding_bottom": 28

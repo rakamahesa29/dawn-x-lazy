@@ -1,0 +1,394 @@
+<section class="section-custome color-{{ section.settings.color_scheme }}">
+  <div class="container">
+    <div class="row">
+      <div class="col-12">
+        <div class="title-page">
+          <h2 class="{{ section.settings.heading_size }}">{{ section.settings.title }}</h2>
+        </div>
+      </div>
+    </div>
+    <div class="row justify-content-center gap-8 row-card-product">
+      {% for block in section.blocks %}
+        <div class="col-lg-4 col-md-6 col-sm-12 col-12 p-4">
+          <div class="card-highlight-product">
+            <div class="title-product">
+              {{ block.settings.title_product }}
+            </div>
+
+            <div class="image-cover">
+              <img
+                src="{{ block.settings.image_product | img_url: 'master' }}"
+                alt="{{ block.settings.image_product.alt | escape }}"
+              >
+            </div>
+
+            <div class="decription-product">
+              {{ block.settings.desc_product }}
+            </div>
+
+            <div class="height">
+              <div class="title-height">
+                {{ block.settings.title_height_product }}
+              </div>
+              <div class="value-height">
+                {{ block.settings.desc_height_product }}
+              </div>
+            </div>
+
+            <div class="layer">
+              <div class="title-layer">
+                {{ block.settings.text_layer_product }}
+              </div>
+              <div class="image-layer">
+                <img
+                  src="{{ block.settings.image_layer_product | img_url: 'master' }}"
+                  alt="{{ block.settings.image_layer_product.alt | escape }}"
+                >
+              </div>
+              <div class="dec-layer">
+                {{ block.settings.desc_layer_product }}
+              </div>
+            </div>
+
+            <div class="size">
+              {{ block.settings.desc_size_product }}
+            </div>
+
+            <div class="image-certificate">
+              <img
+                src="{{ block.settings.image_certificate | img_url: 'master' }}"
+                alt="{{ block.settings.image_certificate.alt | escape }}"
+              >
+            </div>
+
+            <div class="level-layer">
+              {% assign full_rounds = block.settings.rate_rating_one | floor %}
+              {% assign half_round = block.settings.rate_rating_one | modulo: 1 %}
+              {% assign half_round = half_round | round %}
+              {% assign empty_rounds = 7 | minus: full_rounds %}
+              {% if half_round > 0 %}
+                {% assign empty_rounds = empty_rounds | minus: 1 %}
+              {% endif %}
+              <div class="title-layer">
+                {{ block.settings.desc_rating_one }}
+              </div>
+              <div class="range-layer">
+                {% for i in (1..full_rounds) %}
+                  <svg width="100" height="100" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <circle cx="50" cy="50" r="50" fill="#3D3D3D"/>
+                  </svg>
+                {% endfor %}
+                {% if half_round != 0 %}
+                  <svg width="100" height="100" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M50 50C50 77.6142 50 100 50 100C22.3858 100 0 77.6142 0 50C0 22.3858 22.3858 0 50 0C50 0 50 22.3858 50 50Z" fill="#3D3D3D"/>
+                    <circle cx="50" cy="50" r="45" stroke="#3D3D3D" stroke-width="10"/>
+                  </svg>
+                {% endif %}
+                {% for i in (1..empty_rounds) %}
+                  <svg width="100" height="100" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <circle cx="50" cy="50" r="45" stroke="#3D3D3D" stroke-width="10"/>
+                  </svg>
+                {% endfor %}
+              </div>
+            </div>
+
+            <div class="level-layer">
+              {% assign full_rounds = block.settings.rate_rating_two | floor %}
+              {% assign half_round = block.settings.rate_rating_two | modulo: 1 %}
+              {% assign half_round = half_round | round %}
+              {% assign empty_rounds = 7 | minus: full_rounds %}
+              {% if half_round > 0 %}
+                {% assign empty_rounds = empty_rounds | minus: 1 %}
+              {% endif %}
+              <div class="title-layer">
+                {{ block.settings.desc_rating_two }}
+              </div>
+              <div class="range-layer">
+                {% for i in (1..full_rounds) %}
+                  <svg width="100" height="100" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <circle cx="50" cy="50" r="50" fill="#3D3D3D"/>
+                  </svg>
+                {% endfor %}
+                {% if half_round != 0 %}
+                  <svg width="100" height="100" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M50 50C50 77.6142 50 100 50 100C22.3858 100 0 77.6142 0 50C0 22.3858 22.3858 0 50 0C50 0 50 22.3858 50 50Z" fill="#3D3D3D"/>
+                    <circle cx="50" cy="50" r="45" stroke="#3D3D3D" stroke-width="10"/>
+                  </svg>
+                {% endif %}
+                {% for i in (1..empty_rounds) %}
+                  <svg width="100" height="100" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <circle cx="50" cy="50" r="45" stroke="#3D3D3D" stroke-width="10"/>
+                  </svg>
+                {% endfor %}
+              </div>
+            </div>
+
+            <div class="level-layer">
+              {% assign full_rounds = block.settings.rate_rating_three | floor %}
+              {% assign half_round = block.settings.rate_rating_three | modulo: 1 %}
+              {% assign half_round = half_round | round %}
+              {% assign empty_rounds = 7 | minus: full_rounds %}
+              {% if half_round > 0 %}
+                {% assign empty_rounds = empty_rounds | minus: 1 %}
+              {% endif %}
+              <div class="title-layer">
+                {{ block.settings.desc_rating_three }}
+              </div>
+              <div class="range-layer">
+                {% for i in (1..full_rounds) %}
+                  <svg width="100" height="100" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <circle cx="50" cy="50" r="50" fill="#3D3D3D"/>
+                  </svg>
+                {% endfor %}
+                {% if half_round != 0 %}
+                  <svg width="100" height="100" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M50 50C50 77.6142 50 100 50 100C22.3858 100 0 77.6142 0 50C0 22.3858 22.3858 0 50 0C50 0 50 22.3858 50 50Z" fill="#3D3D3D"/>
+                    <circle cx="50" cy="50" r="45" stroke="#3D3D3D" stroke-width="10"/>
+                  </svg>
+                {% endif %}
+                {% for i in (1..empty_rounds) %}
+                  <svg width="100" height="100" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <circle cx="50" cy="50" r="45" stroke="#3D3D3D" stroke-width="10"/>
+                  </svg>
+                {% endfor %}
+              </div>
+            </div>
+
+            <div class="desc-level-layer">
+              {{ block.settings.desc_rating_all  }}
+            </div>
+
+            <div class="icon-text">
+              <img
+                src="{{ block.settings.image_icon_product | img_url: 'master' }}"
+                alt="{{ block.settings.image_icon_product.alt | escape }}"
+              >
+              {{ block.settings.text_icon_one }}
+            </div>
+            <div class="icon-text">
+              <img
+                src="{{ block.settings.image_icon_product_two | img_url: 'master' }}"
+                alt="{{ block.settings.image_icon_product_two.alt | escape }}"
+              >
+              {{ block.settings.text_icon_two}}
+            </div>
+            <div class="tagline-price">
+              {{ block.settings.tagline_price_product }}
+            </div>
+            <div class="price-product-highlight">
+              {{ block.settings.text_price_product }}
+            </div>
+            <div class="highlight-button-buy">
+              <a href="{{ block.settings.button_link }}">
+                Beli Sekarang
+              </a>
+            </div>
+          </div>
+        </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Product Highlight",
+  "class": "section",
+  "tag": "section",
+  "settings": [
+    {
+      "type": "inline_richtext",
+      "id": "title",
+      "default": "Product Highlight",
+      "label": "t:sections.product-highlight.settings.title.label"
+    },
+    {
+      "type": "select",
+      "id": "heading_size",
+      "options": [
+        {
+          "value": "h2",
+          "label": "t:sections.all.heading_size.options__1.label"
+        },
+        {
+          "value": "h1",
+          "label": "t:sections.all.heading_size.options__2.label"
+        },
+        {
+          "value": "h0",
+          "label": "t:sections.all.heading_size.options__3.label"
+        }
+      ],
+      "default": "h1",
+      "label": "t:sections.all.heading_size.label"
+    },
+    {
+      "type": "color_scheme",
+      "id": "color_scheme",
+      "label": "t:sections.all.colors.label",
+      "default": "scheme-1"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "highlight_description",
+      "name": "Hightlight Description",
+      "settings": [
+        {
+          "type": "richtext",
+          "id": "title_product",
+          "label": "t:sections.product-highlight.blocks.highlight_description.settings.title_product.label",
+          "default": "<p>lorem ipsum dolor sit amet nolei kofrika</p>"
+        },
+        {
+          "type": "image_picker",
+          "id": "image_product",
+          "label": "t:sections.product-highlight.blocks.highlight_description.settings.image_product.label"
+        },
+        {
+          "type": "richtext",
+          "id": "desc_product",
+          "label": "t:sections.product-highlight.blocks.highlight_description.settings.desc_product.label",
+          "default": "<p>lorem ipsum dolor sit amet nolei kofrika</p>"
+        },
+        {
+          "type": "richtext",
+          "id": "title_height_product",
+          "label": "t:sections.product-highlight.blocks.highlight_description.settings.title_height_product.label",
+          "default": "<p>lorem ipsum dolor sit amet nolei kofrika</p>"
+        },
+        {
+          "type": "richtext",
+          "id": "desc_height_product",
+          "label": "t:sections.product-highlight.blocks.highlight_description.settings.desc_height_product.label",
+          "default": "<p>lorem ipsum dolor sit amet nolei kofrika</p>"
+        },
+        {
+          "type": "richtext",
+          "id": "text_layer_product",
+          "label": "t:sections.product-highlight.blocks.highlight_description.settings.text_layer_product.label",
+          "default": "<p>lorem ipsum dolor sit amet nolei kofrika</p>"
+        },
+        {
+          "type": "image_picker",
+          "id": "image_layer_product",
+          "label": "t:sections.product-highlight.blocks.highlight_description.settings.image_layer_product.label"
+        },
+        {
+          "type": "richtext",
+          "id": "desc_layer_product",
+          "label": "t:sections.product-highlight.blocks.highlight_description.settings.desc_layer_product.label",
+          "default": "<p>lorem ipsum dolor sit amet nolei kofrika</p>"
+        },
+        {
+          "type": "richtext",
+          "id": "desc_size_product",
+          "label": "t:sections.product-highlight.blocks.highlight_description.settings.desc_size_product.label",
+          "default": "<p>lorem ipsum dolor sit amet nolei kofrika</p>"
+        },
+        {
+          "type": "image_picker",
+          "id": "image_certificate",
+          "label": "t:sections.product-highlight.blocks.highlight_description.settings.image_certificate.label"
+        },
+        {
+          "type": "range",
+          "id": "rate_rating_one",
+          "min": 0,
+          "max": 7,
+          "step": 0.5,
+          "default": 0,
+          "label": "t:sections.product-highlight.blocks.highlight_description.settings.rate_rating_one.label"
+        },
+        {
+          "type": "richtext",
+          "id": "desc_rating_one",
+          "label": "t:sections.product-highlight.blocks.highlight_description.settings.desc_rating_one.label",
+          "default": "<p>lorem ipsum dolor sit amet nolei kofrika</p>"
+        },
+        {
+          "type": "range",
+          "id": "rate_rating_two",
+          "min": 0,
+          "max": 7,
+          "step": 0.5,
+          "default": 0,
+          "label": "t:sections.product-highlight.blocks.highlight_description.settings.rate_rating_two.label"
+        },
+        {
+          "type": "richtext",
+          "id": "desc_rating_two",
+          "label": "t:sections.product-highlight.blocks.highlight_description.settings.desc_rating_two.label",
+          "default": "<p>lorem ipsum dolor sit amet nolei kofrika</p>"
+        },
+        {
+          "type": "range",
+          "id": "rate_rating_three",
+          "min": 0,
+          "max": 7,
+          "step": 0.5,
+          "default": 0,
+          "label": "t:sections.product-highlight.blocks.highlight_description.settings.rate_rating_three.label"
+        },
+        {
+          "type": "richtext",
+          "id": "desc_rating_three",
+          "label": "t:sections.product-highlight.blocks.highlight_description.settings.desc_rating_three.label",
+          "default": "<p>lorem ipsum dolor sit amet nolei kofrika</p>"
+        },
+        {
+          "type": "richtext",
+          "id": "desc_rating_all",
+          "label": "t:sections.product-highlight.blocks.highlight_description.settings.desc_rating_three.label",
+          "default": "<p>lorem ipsum dolor sit amet nolei kofrika</p>"
+        },
+        {
+          "type": "image_picker",
+          "id": "image_icon_product",
+          "label": "t:sections.product-highlight.blocks.highlight_description.settings.image_icon_product.label"
+        },
+        {
+          "type": "richtext",
+          "id": "text_icon_one",
+          "label": "t:sections.product-highlight.blocks.highlight_description.settings.text_icon_one.label",
+          "default": "<p>lorem ipsum dolor sit amet nolei kofrika</p>"
+        },
+        {
+          "type": "image_picker",
+          "id": "image_icon_product_two",
+          "label": "t:sections.product-highlight.blocks.highlight_description.settings.image_icon_product_two.label"
+        },
+        {
+          "type": "richtext",
+          "id": "text_icon_two",
+          "label": "t:sections.product-highlight.blocks.highlight_description.settings.text_icon_two.label",
+          "default": "<p>lorem ipsum dolor sit amet nolei kofrika</p>"
+        },
+        {
+          "type": "richtext",
+          "id": "tagline_price_product",
+          "label": "t:sections.product-highlight.blocks.highlight_description.settings.tagline_price_product.label",
+          "default": "<p>lorem ipsum dolor sit amet nolei kofrika</p>"
+        },
+        {
+          "type": "richtext",
+          "id": "text_price_product",
+          "label": "t:sections.product-highlight.blocks.highlight_description.settings.text_price_product.label",
+          "default": "<p>lorem ipsum dolor sit amet nolei kofrika</p>"
+        },
+        {
+          "type": "url",
+          "id": "button_link",
+          "label": "t:sections.product-highlight.blocks.highlight_description.settings.button_link.label"
+        }
+      ]
+    }
+  ],
+  "max_blocks": 8,
+  "presets": [
+    {
+      "name": "Product Highlight"
+    }
+  ]
+}
+{% endschema %}
