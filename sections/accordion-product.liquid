@@ -1,4 +1,4 @@
-<section class="section-custome">
+<section class="section-custome color-{{ section.settings.color_scheme }}">
   <div class="container">
     <div class="row align-items-center">
       <div class="col-lg-6 col-md-6 col-sm-12 col-12">
@@ -11,14 +11,14 @@
       </div>
       <div class="col-lg-6 col-md-6 col-sm-12 col-12">
         <div class="header-accordion">
-          <h5>{{ section.settings.title }}</h5>
+          <h2 class="{{ section.settings.heading_size }}">{{ section.settings.title }}</h2>
         </div>
         <div class="accordion accordion-flush" id="accordionFlushExample">
           {% for block in section.blocks %}
             <div class="accordion-item">
               <h2 class="accordion-header" id="flush-heading{{ forloop.index }}">
                 <button
-                  class="accordion-button collapsed"
+                  class="accordion-button collapsed h4"
                   type="button"
                   data-index="{{ forloop.index }}"
                   data-bs-toggle="collapse"
@@ -57,6 +57,32 @@
   "tag": "section",
   "settings": [
     {
+      "type": "select",
+      "id": "heading_size",
+      "options": [
+        {
+          "value": "h2",
+          "label": "t:sections.all.heading_size.options__1.label"
+        },
+        {
+          "value": "h1",
+          "label": "t:sections.all.heading_size.options__2.label"
+        },
+        {
+          "value": "h0",
+          "label": "t:sections.all.heading_size.options__3.label"
+        }
+      ],
+      "default": "h1",
+      "label": "t:sections.all.heading_size.label"
+    },
+    {
+      "type": "color_scheme",
+      "id": "color_scheme",
+      "label": "t:sections.all.colors.label",
+      "default": "scheme-1"
+    },
+    {
       "type": "text",
       "id": "title",
       "label": "t:sections.accordion-product.settings.title.label",
@@ -70,11 +96,11 @@
   ],
   "blocks": [
     {
-      "type": "text",
+      "type": "text_accordion",
       "name": "Text Accoordion",
       "settings": [
         {
-          "type": "text",
+          "type": "inline_richtext",
           "id": "title",
           "label": "t:sections.accordion-product.blocks.text.settings.title.label",
           "default": "hello world"

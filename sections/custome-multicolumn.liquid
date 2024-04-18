@@ -38,7 +38,7 @@
     {% endif %}
   >
     {%- unless section.settings.title == blank -%}
-      <div class="title-wrapper-with-link title-wrapper--self-padded-mobile title-no-wrapper title-wrapper--no-top-margin">
+      <div class="title-wrapper-with-link title-wrapper--self-padded-mobile title-no-wrapper title-wrapper--no-top-margin {{ section.settings.text_position }}">
         <h2 class="title inline-richtext title-center-multicolumn {{ section.settings.heading_size }}">
           {{ section.settings.title }}
         </h2>
@@ -234,6 +234,26 @@
       ],
       "default": "h1",
       "label": "t:sections.all.heading_size.label"
+    },
+    {
+      "type": "select",
+      "id": "text_position",
+      "options": [
+        {
+          "value": "position-right",
+          "label": "t:sections.all.text_position.options__1.label"
+        },
+        {
+          "value": "position-center",
+          "label": "t:sections.all.text_position.options__2.label"
+        },
+        {
+          "value": "position-left",
+          "label": "t:sections.all.text_position.options__3.label"
+        }
+      ],
+      "default": "position-right",
+      "label": "t:sections.all.text_position.label"
     },
     {
       "type": "select",

@@ -1,8 +1,8 @@
 document.addEventListener("DOMContentLoaded", function () {
 
-  const header = document.querySelector(".header-custome-middle");
+  const header = document.querySelector(".header-wrapper-custome");
   function checkScroll() {
-    if (window.scrollY > 84) {
+    if (window.scrollY > 80) {
       header.classList.add("scroll");
     } else {
       header.classList.remove("scroll");

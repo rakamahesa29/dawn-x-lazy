@@ -1,12 +1,15 @@
 {{ 'gsap.min.js' | asset_url | script_tag }}
 {{ 'ScrollTrigger.min.js' | asset_url | script_tag }}
 
-<section class="sec-scroll">
+<section class="sec-scroll color-{{ section.settings.color_scheme }}">
   <div class="container">
     <div class="row">
       <div class="col-12">
         <div class="scroll-container">
           <div class="area-scroll-trigger">
+            <div class="title-animation {{ section.settings.text_position }}">
+              <h2 class="{{ section.settings.heading_size }}">{{ section.settings.title }}</h2>
+            </div>
             <div id="imageContainer" class="list-image-item">
               {% for i in (1..150) %}
                 {% assign image_number = i | prepend: '000' | slice: -4, 4 %}
@@ -19,7 +22,7 @@
             <div class="list-text-item" id="textContainer">
               {% for block in section.blocks %}
                 {% if block.settings.text_animation != blank %}
-                  <div class="{% if forloop.first %}show{% else %}hide{% endif %}">{{ block.settings.text_animation }}</div>
+                  <div class="{% if forloop.first %}show{% else %}hide{% endif %} h4">{{ block.settings.text_animation }}</div>
                 {% endif %}
               {% endfor %}
             </div>
@@ -46,9 +49,9 @@
       "label": "t:sections.animation-product.settings.title.label"
     },
     {
-      "type": "inline_richtext",
+      "type": "text",
       "id": "link_title",
-      "default": "https://cdn.shopify.com/s/files/1/0718/7375/7471/files/",
+      "default": "Animation Products",
       "label": "t:sections.animation-product.settings.link_title.label"
     },
     {
@@ -70,6 +73,26 @@
       ],
       "default": "h1",
       "label": "t:sections.all.heading_size.label"
+    },
+    {
+      "type": "select",
+      "id": "text_position",
+      "options": [
+        {
+          "value": "position-right",
+          "label": "t:sections.all.text_position.options__1.label"
+        },
+        {
+          "value": "position-center",
+          "label": "t:sections.all.text_position.options__2.label"
+        },
+        {
+          "value": "position-left",
+          "label": "t:sections.all.text_position.options__3.label"
+        }
+      ],
+      "default": "position-right",
+      "label": "t:sections.all.text_position.label"
     },
     {
       "type": "color_scheme",

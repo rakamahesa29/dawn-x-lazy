@@ -154,12 +154,12 @@
           {%- if block.settings.image or block.settings.image_mobile -%}
             <picture>
               {%- if block.settings.image_mobile -%}
-                <source media="(max-width: 767px)" srcset="{{ block.settings.image_mobile | img_url: '800x' }}">
+                <source media="(max-width: 767px)" srcset="{{ block.settings.image_mobile | img_url: '1024x' }}">
               {%- endif -%}
               {%- if block.settings.image -%}
-                <source media="(min-width: 768px)" srcset="{{ block.settings.image | img_url: '1200x' }}">
+                <source media="(min-width: 768px)" srcset="{{ block.settings.image | img_url: '1920x' }}">
                 <img
-                  src="{{ block.settings.image | img_url: '1200x' }}"
+                  src="{{ block.settings.image | img_url: '1920x' }}"
                   alt=""
                   style="width: 100%;"
                   {%- if forloop.first %}
@@ -170,7 +170,7 @@
               {%- else -%}
                 <!-- Fallback when no desktop image is set, but a mobile image is -->
                 <img
-                  src="{{ block.settings.image_mobile | img_url: '800x' }}"
+                  src="{{ block.settings.image_mobile | img_url: '1024x' }}"
                   alt=""
                   style="width: 100%;"
                   loading="lazy"

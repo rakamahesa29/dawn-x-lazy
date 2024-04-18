@@ -2,158 +2,17 @@
   "sections": {
     "main": {
       "type": "main-page",
-      "disabled": true,
+      "custom_css": [
+        "h1 {text-align: center; justify-content: center; display: flex; color: #005750;}",
+        "p,li,span {font-size: 14px; color: #005750;}"
+      ],
       "settings": {
         "padding_top": 28,
         "padding_bottom": 28
       }
-    },
-    "image_with_text_PpbLE7": {
-      "type": "image-with-text",
-      "blocks": {
-        "caption_yYnkMq": {
-          "type": "caption",
-          "settings": {
-            "caption": "",
-            "text_style": "caption-with-letter-spacing",
-            "text_size": "medium"
-          }
-        },
-        "heading_nRTGw8": {
-          "type": "heading",
-          "settings": {
-            "heading": "<strong>Cara Menjadi #LazySquad<\/strong>",
-            "heading_size": "h1"
-          }
-        },
-        "text_iGtQfX": {
-          "type": "text",
-          "settings": {
-            "text": "<p>Klik langsung tombol<strong> bergabung sekarang<\/strong><\/p>",
-            "text_style": "body"
-          }
-        },
-        "button_7GNpNr": {
-          "type": "button",
-          "settings": {
-            "button_label": "Bergabung Sekarang",
-            "button_link": "https:\/\/bobo-mattress.bixgrow.com\/register",
-            "button_style_secondary": false
-          }
-        }
-      },
-      "block_order": [
-        "caption_yYnkMq",
-        "heading_nRTGw8",
-        "text_iGtQfX",
-        "button_7GNpNr"
-      ],
-      "custom_css": [
-        "p {font-size: 14px;}"
-      ],
-      "settings": {
-        "image": "shopify:\/\/shop_images\/image-one.jpg",
-        "height": "adapt",
-        "desktop_image_width": "medium",
-        "layout": "image_first",
-        "desktop_content_position": "middle",
-        "desktop_content_alignment": "left",
-        "content_layout": "no-overlap",
-        "section_color_scheme": "scheme-47a0187c-b8de-4cff-b20c-5d35f422c9c0",
-        "color_scheme": "scheme-47a0187c-b8de-4cff-b20c-5d35f422c9c0",
-        "image_behavior": "none",
-        "mobile_content_alignment": "left",
-        "padding_top": 40,
-        "padding_bottom": 40
-      }
-    },
-    "image_with_text_6RdwzA": {
-      "type": "image-with-text",
-      "blocks": {
-        "heading_zfBXAU": {
-          "type": "heading",
-          "settings": {
-            "heading": "<strong>Regestrasi mudah<\/strong>",
-            "heading_size": "h1"
-          }
-        },
-        "text_nt3Ezg": {
-          "type": "text",
-          "settings": {
-            "text": "<p>Proses pendaftaran untuk menjadi <strong>#lazysquad <\/strong>sangat mudah dan cepat.<\/p><ol><li>Isi data sesuai table petunjuk<\/li><li>Setelah itu kamu akan menerima nontifikasi email sebagai tanda telah berhasil bergabung bersama <strong>lazysquad<\/strong><\/li><\/ol>",
-            "text_style": "body"
-          }
-        }
-      },
-      "block_order": [
-        "heading_zfBXAU",
-        "text_nt3Ezg"
-      ],
-      "custom_css": [
-        "p,span,li {font-size: 14px;}"
-      ],
-      "settings": {
-        "image": "shopify:\/\/shop_images\/register-bix-grow.jpg",
-        "height": "adapt",
-        "desktop_image_width": "medium",
-        "layout": "text_first",
-        "desktop_content_position": "middle",
-        "desktop_content_alignment": "left",
-        "content_layout": "no-overlap",
-        "section_color_scheme": "scheme-4901882a-37a4-43d2-9919-a04d2596a8f8",
-        "color_scheme": "scheme-4901882a-37a4-43d2-9919-a04d2596a8f8",
-        "image_behavior": "none",
-        "mobile_content_alignment": "left",
-        "padding_top": 40,
-        "padding_bottom": 40
-      }
-    },
-    "image_with_text_Ah7hTN": {
-      "type": "image-with-text",
-      "blocks": {
-        "heading_FJJ4Jw": {
-          "type": "heading",
-          "settings": {
-            "heading": "<strong>Undang Dan Dapatkan Komisinya<\/strong>",
-            "heading_size": "h1"
-          }
-        },
-        "text_CqMFtq": {
-          "type": "text",
-          "settings": {
-            "text": "<p>Undang dan dapatkan komisi langsung sebesar 10% setelah orang lain membeli produk Lazy Lowie melalui kode atau link refferal kamu.<\/p>",
-            "text_style": "body"
-          }
-        }
-      },
-      "block_order": [
-        "heading_FJJ4Jw",
-        "text_CqMFtq"
-      ],
-      "custom_css": [
-        "p {font-size: 14px;}"
-      ],
-      "settings": {
-        "image": "shopify:\/\/shop_images\/community.jpg",
-        "height": "adapt",
-        "desktop_image_width": "medium",
-        "layout": "image_first",
-        "desktop_content_position": "top",
-        "desktop_content_alignment": "left",
-        "content_layout": "no-overlap",
-        "section_color_scheme": "scheme-47a0187c-b8de-4cff-b20c-5d35f422c9c0",
-        "color_scheme": "scheme-47a0187c-b8de-4cff-b20c-5d35f422c9c0",
-        "image_behavior": "none",
-        "mobile_content_alignment": "left",
-        "padding_top": 36,
-        "padding_bottom": 36
-      }
     }
   },
   "order": [
-    "main",
-    "image_with_text_PpbLE7",
-    "image_with_text_6RdwzA",
-    "image_with_text_Ah7hTN"
+    "main"
   ]
 }

@@ -16,6 +16,41 @@ button ::after,
     margin-bottom: 0
 }
 
+.product .price .badge, .product .price__container {
+    font-weight: 400;
+}
+
+.field__label, .customer .field label {
+    font-size: 12px;
+}
+
+.header__menu-item span {
+    font-size: 14px;
+}
+
+.number p {
+    font-size: 12px;
+}
+
+.position-left {
+    display: flex !important;
+    justify-content: start !important;
+    text-align: start;
+}
+
+.position-center {
+    display: flex !important;
+    justify-content: center !important;
+    text-align: center;
+}
+
+.position-right {
+    display: flex !important;
+    justify-content: end !important;
+    text-align: end;
+}
+
+
 .custome-header {
     background-color: transparent;
     transition: all ease-in-out .3s
@@ -54,23 +89,23 @@ button ::after,
 }
 
 .logo-footer a img {
-    max-height: 60px
+    max-height: 40px
 }
 
 .text-footer-lazy-lowie {
     max-width: 280px;
-    font-size: 14px;
+
     margin-top: 20px
 }
 
 .text-subscribe {
-    font-size: 12px;
+
     font-weight: 600;
     width: 50%;
 }
 
 .desc-text-subscribe {
-    font-size: 12px;
+
     width: 50%;
 }
 
@@ -87,7 +122,7 @@ button ::after,
 
 .list-menu-footer a {
     text-decoration: none;
-    font-size: 14px;
+
     opacity: 1;
     transition: all ease-in-out .3s;
 }
@@ -123,7 +158,7 @@ button ::after,
 .form-input-custome {
     height: 28px;
     padding: 0;
-    font-size: 12px
+
 }
 
 .form-input-custome:focus,
@@ -135,7 +170,7 @@ button ::after,
 
 .field-label-custome {
     top: 6px;
-    font-size: 12px
+
 }
 
 .custome-field-button {
@@ -148,7 +183,7 @@ button ::after,
 }
 
 .form-input-custome:focus~.field-label-custome {
-    font-size: 10px;
+    ;
     top: 4px
 }
 
@@ -157,7 +192,7 @@ button ::after,
 }
 
 .form-message-custome {
-    font-size: 12px;
+
     color: #f0f0f0
 }
 
@@ -181,7 +216,7 @@ button ::after,
 }
 
 .year-development {
-    font-size: 12px;
+
     color: #f0f0f0
 }
 
@@ -195,7 +230,8 @@ button ::after,
 
 .image-banner a img {
     max-width: 100%;
-    transition: all ease-in-out .3s
+    transition: all ease-in-out .3s;
+    aspect-ratio: 1/1;
 }
 
 .image-banner a img:hover {
@@ -209,7 +245,6 @@ button ::after,
 
 .title-banner h3 {
     text-align: center;
-    font-size: 24px;
     font-weight: 600;
     color: #005750;
 }
@@ -218,20 +253,19 @@ button ::after,
     padding-top: 84px;
 }
 
-.header-custome-middle {
-    margin: 0;
-    width: 100%;
-    max-width: 100%;
+.header-wrapper-custome {
     background: transparent;
-    position: fixed;
-    max-width: 100%;
-    grid-template-columns: auto;
+    border-bottom: none;
+}
+
+
+.header-wrapper-custome.scroll {
+    background: #FFFFFF;
     transition: all ease-in-out .3s;
 }
 
-.header-custome-middle.scroll {
-    background-color: #FFFFFF;
-    transition: all ease-in-out .3s;
+.header-custome-middle {
+    grid-template-columns: auto;
 }
 
 .header-custome-middle .header__inline-menu {
@@ -249,7 +283,6 @@ button ::after,
     width: 100%;
     height: 100%;
     object-fit: cover;
-    border-radius: 10px;
     aspect-ratio: 1 / 1
 }
 
@@ -259,7 +292,8 @@ button ::after,
     height: 100%;
     object-fit: cover;
     border-radius: 10px;
-    aspect-ratio: 3 / 4;
+    aspect-ratio: 3 / 2;
+    border-radius: 20px 20px 0px 0px;
 }
 
 .image-kol video {
@@ -268,19 +302,14 @@ button ::after,
     height: 100%;
     object-fit: cover;
     border-radius: 10px;
-    aspect-ratio: 3 / 4;
+    aspect-ratio: 3 / 2;
+    border-radius: 20px 20px 0px 0px;
 }
 
 .title-instagram-post {
     display: flex;
     align-items: center;
     justify-content: space-between
-}
-
-.title-instagram-post h3 {
-    font-size: 24px;
-    font-weight: 600;
-    color: #005750;
 }
 
 .title-kol-post {
@@ -290,13 +319,12 @@ button ::after,
 }
 
 .title-kol-post h3 {
-    font-size: 24px;
+
     font-weight: 600;
     color: #005750;
 }
 
 .title-center-multicolumn {
-    font-size: 24px !important;
     font-weight: 600;
     text-align: center
 }
@@ -310,7 +338,7 @@ button ::after,
 }
 
 .custom-nav-swiper::after {
-    font-size: 20px;
+
     color: #005750;
     font-weight: 600;
     opacity: 1
@@ -325,11 +353,6 @@ button ::after,
     gap: 30px
 }
 
-.title-no-wrapper {
-    display: flex;
-    justify-content: center !important
-}
-
 .header__active-menu-item,
 .header__menu-item:hover,
 .header__menu-item:hover span {
@@ -337,12 +360,12 @@ button ::after,
 }
 
 .header__active-menu-item {
-    font-weight: 700
+    font-weight: 600
 }
 
 .headline-footer-menu {
-    font-size: 16px;
-    font-weight: 700;
+
+    font-weight: 600;
     margin-bottom: 14px;
 }
 
@@ -392,7 +415,7 @@ button ::after,
 }
 
 .products-size-content .size-item {
-    font-size: 12px;
+
     font-weight: 500;
     padding: 14px 8px;
     border: 1px solid #005750;
@@ -414,7 +437,7 @@ button ::after,
 }
 
 .card-heading-custome {
-    font-size: 16px;
+
     font-weight: 600;
     color: #005750
 }
@@ -426,7 +449,7 @@ button ::after,
 }
 
 .card-badge-custome span {
-    font-size: 12px;
+
     font-weight: 500;
     padding: 8px 14px
 }
@@ -437,24 +460,26 @@ button ::after,
 
 .card-review {
     border-radius: 20px;
-    padding: 20px;
+    padding-bottom: 20px;
     background-color: #005750
 }
 
 .star-and-date {
     display: flex;
     justify-content: space-between;
-    align-items: center
+    align-items: center;
+    margin-top: 8px;
+    padding: 0px 20px;
 }
 
 .star-and-date .date {
-    font-size: 12px;
+
     color: #f0f0f0;
     font-weight: 500
 }
 
 .text-review p {
-    font-size: 12px;
+
     font-weight: 500;
     color: #f0f0f0;
     letter-spacing: .8px
@@ -462,7 +487,8 @@ button ::after,
 
 .text-review,
 .user-review {
-    margin-top: 15px
+    margin-top: 15px;
+    padding: 0px 20px
 }
 
 .user-review {
@@ -474,13 +500,13 @@ button ::after,
 .user-review h5 {
     font-weight: 600;
     color: #f0f0f0;
-    font-size: 14px
+
 }
 
 .user-review img {
-    max-width: 50px;
-    height: 50px;
-    border-radius: 50px
+    max-width: 40px;
+    height: 40px;
+    border-radius: 40px
 }
 
 .review-list-card {
@@ -488,7 +514,6 @@ button ::after,
 }
 
 .header-review h3 {
-    font-size: 28px;
     font-weight: 600;
     color: #005750;
     text-align: center
@@ -517,14 +542,10 @@ button ::after,
 }
 
 .text-custome-slider h5 {
-    font-size: 48px;
-    color: #f0f0f0;
     letter-spacing: .8px
 }
 
 .text-custome-slider a {
-    font-size: 48px;
-    color: #f0f0f0;
     letter-spacing: .8px;
     text-decoration: none;
     transition: all ease-in .3s
@@ -572,7 +593,7 @@ button ::after,
 }
 
 .text p {
-    font-size: 14px;
+
     color: #f0f0f0;
     font-weight: 400
 }
@@ -614,7 +635,7 @@ button ::after,
 }
 
 .product-description-custome {
-    font-size: 14px;
+
     letter-spacing: .8px
 }
 
@@ -622,9 +643,7 @@ button ::after,
     font-weight: 600
 }
 
-.accordion-content-custome p {
-    font-size: 12px
-}
+.accordion-content-custome p {}
 
 .swiper-button-next:after,
 .swiper-button-prev:after {
@@ -632,7 +651,8 @@ button ::after,
     text-transform: none !important;
     letter-spacing: 0;
     font-variant: initial;
-    line-height: 1
+    line-height: 1;
+    font-size: 14px;
 }
 
 details[open]>.header__menu-item {
@@ -666,8 +686,8 @@ details[open]>.header__menu-item {
     position: absolute;
     top: 0;
     width: 80%;
-    padding-top: 60px;
-    padding-bottom: 60px;
+    padding-top: 0px;
+    padding-bottom: 0px;
     display: grid;
     gap: 30px;
 }
@@ -689,7 +709,7 @@ details[open]>.header__menu-item {
     padding-top: 60px;
     padding-bottom: 60px;
     display: grid;
-    gap: 30px;
+    gap: 12px;
 }
 
 .list-image-item {
@@ -708,7 +728,8 @@ details[open]>.header__menu-item {
 
 .list-text-item {
     position: relative;
-    height: 90px;
+    top: -30px;
+    height: 60px;
     display: flex;
     justify-content: center;
     align-items: center
@@ -721,9 +742,18 @@ details[open]>.header__menu-item {
     transition: all ease-in-out .3s
 }
 
+.title-animation {
+    position: relative;
+    top: 100px;
+}
+
+.title-animation h2 {
+    letter-spacing: .8px;
+}
+
 .list-text-item p {
-    font-size: 16px;
     text-align: center;
+    font-size: 14px;
     letter-spacing: .8px;
     font-weight: 500;
     color: #005750;
@@ -742,6 +772,7 @@ details[open]>.header__menu-item {
 
 .progress-bar-item {
     position: relative;
+    top: -30px;
     height: 10px;
     width: 100%;
     border-radius: 20px;
@@ -761,7 +792,7 @@ details[open]>.header__menu-item {
 }
 
 .number {
-    font-size: 12px;
+
     line-height: 0;
     border: 1px solid #005750;
     background-color: #fff;
@@ -782,7 +813,7 @@ details[open]>.header__menu-item {
 
 .accordion-body {
     display: grid;
-    font-size: 14px;
+
     gap: 10px;
     color: #005750;
     align-items: self-start;
@@ -792,7 +823,7 @@ details[open]>.header__menu-item {
 .accordion-button.collapsed,
 .accordion-button:focus,
 .accordion-button {
-    font-size: 16px;
+
     font-weight: 500;
     color: #005750;
 }
@@ -803,7 +834,7 @@ details[open]>.header__menu-item {
 }
 
 .accordion-button:not(.collapsed) {
-    font-size: 16px;
+
     font-weight: 500;
     color: #005750;
     background-color: #00575030;
@@ -815,7 +846,7 @@ details[open]>.header__menu-item {
 
 .header-accordion h5 {
     font-weight: 600;
-    font-size: 28px;
+
     letter-spacing: .8px;
     line-height: normal;
     color: #005750
@@ -903,7 +934,7 @@ details[open]>.header__menu-item {
 
 .size-guide-icon p,
 .text-icon-size p {
-    font-size: 14px;
+
     font-weight: 500
 }
 
@@ -973,6 +1004,117 @@ details[open]>.header__menu-item {
     margin-top: 8px;
 }
 
+.range-layer {
+    display: flex;
+    gap: 8px;
+    justify-content: center;
+}
+
+.title-page {
+    color: #005750;
+    font-weight: 600;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+}
+
+.range-layer svg {
+    height: 12px;
+    width: 12px;
+}
+
+.card-highlight-product {
+    padding: 16px 12px;
+    border-radius: 8px;
+    background-color: #EEE7D5;
+}
+
+.title-product {
+    font-size: 18px;
+    color: #005750;
+    font-weight: 600;
+    text-align: center;
+}
+
+.row-card-product {
+    padding: 24px;
+}
+
+.image-cover img,
+.image-layer img,
+.image-certificate img,
+.icon-text img {
+    width: 100%;
+    border-radius: 8px;
+    margin: auto;
+}
+
+.height,
+.layer,
+.size,
+.image-layer,
+.dec-layer,
+.size,
+.image-certificate,
+.level-layer,
+.desc-level-layer,
+.image-cover,
+.icon-text,
+.decription-product,
+.icon-text p,
+.highlight-button-buy {
+    margin-top: 14px;
+}
+
+.title-height,
+.value-height,
+.title-layer,
+.dec-layer,
+.size,
+.image-cover,
+.icon-text,
+.decription-product,
+.desc-level-layer,
+.tagline-price,
+.price-product-highlight,
+.highlight-button-buy {
+    font-size: 14px;
+    color: #3D3D3D;
+    font-weight: 400;
+    text-align: center;
+    letter-spacing: .8px;
+}
+
+.highlight-button-buy a {
+    padding: 8px 12px;
+    border-radius: 4px;
+    background-color: #005750;
+    color: #F0F0F0;
+    text-decoration: none;
+    opacity: 1;
+}
+.card__information_custome {
+    padding-left: 20px !important;
+    padding-right: 20px !important;
+}
+
+.article-card__excerpt.rte-width {
+    color: #005750;
+}
+
+.highlight-button-buy a:hover {
+    opacity: .8;
+}
+
+.video-slider,
+.video-slider video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+
 @media screen and (min-width:280px) and (max-width:319px) {
     .row-medsos {
         margin-top: 40px
@@ -1023,17 +1165,17 @@ details[open]>.header__menu-item {
 
     .title-banner h3 {
         text-align: center;
-        font-size: 18px;
+
         font-weight: 600
     }
 
     .title-center-multicolumn {
-        font-size: 18px;
+
         font-weight: 500
     }
 
     .custom-nav-swiper::after {
-        font-size: 16px;
+
         color: #005750
     }
 
@@ -1051,9 +1193,7 @@ details[open]>.header__menu-item {
         margin-top: 20px
     }
 
-    .header-review h3 {
-        font-size: 20px
-    }
+    
 
     .background-slider-desktop {
         display: none
@@ -1073,12 +1213,11 @@ details[open]>.header__menu-item {
     }
 
     .text-custome-slider h5 {
-        font-size: 32px;
         max-width: 100%
     }
 
     .text-custome-slider a {
-        font-size: 32px;
+
         max-width: 100%
     }
 
@@ -1113,7 +1252,7 @@ details[open]>.header__menu-item {
     }
 
     .list-text-item {
-        height: 140px;
+        height: 120px;
     }
 
     .area-scroll-trigger.object-stay {
@@ -1139,12 +1278,10 @@ details[open]>.header__menu-item {
         margin-bottom: 40px
     }
 
-    .header-accordion h5 {
-        font-size: 20px
-    }
+    
 
     .number {
-        font-size: 12px;
+
         width: 20px;
         height: 20px;
     }
@@ -1158,31 +1295,31 @@ details[open]>.header__menu-item {
         left: 4%;
         top: 0;
     }
-    
+
     .pin-2 {
         position: absolute;
         left: 4%;
         top: 16%;
     }
-    
+
     .pin-3 {
         position: absolute;
         left: 4%;
         top: 28%;
     }
-    
+
     .pin-4 {
         position: absolute;
         left: 4%;
         top: 42%;
     }
-    
+
     .pin-5 {
         position: absolute;
         left: 4%;
         top: 54%;
     }
-    
+
     .pin-6 {
         position: absolute;
         left: 4%;
@@ -1202,14 +1339,23 @@ details[open]>.header__menu-item {
     }
 
     .text-subscribe {
-        font-size: 12px;
+
         font-weight: 600;
         width: 100%;
     }
-    
+
     .desc-text-subscribe {
-        font-size: 12px;
+
         width: 100%;
+    }
+
+    .card__information_custome {
+        padding-left: 16px !important;
+        padding-right: 16px !important;
+    }
+
+    .banner--fit_image:not(.banner--mobile-bottom):not(.banner--adapt) .banner__content {
+        aspect-ratio: 9/16 !important;
     }
 }
 
@@ -1263,17 +1409,17 @@ details[open]>.header__menu-item {
 
     .title-banner h3 {
         text-align: center;
-        font-size: 18px;
+
         font-weight: 600
     }
 
     .title-center-multicolumn {
-        font-size: 18px;
+
         font-weight: 500
     }
 
     .custom-nav-swiper::after {
-        font-size: 16px;
+
         color: #005750
     }
 
@@ -1289,10 +1435,6 @@ details[open]>.header__menu-item {
 
     .review-list-card {
         margin-top: 20px
-    }
-
-    .header-review h3 {
-        font-size: 20px
     }
 
     .background-slider-desktop {
@@ -1313,12 +1455,12 @@ details[open]>.header__menu-item {
     }
 
     .text-custome-slider h5 {
-        font-size: 32px;
+
         max-width: 100%
     }
 
     .text-custome-slider a {
-        font-size: 32px;
+
         max-width: 100%
     }
 
@@ -1353,7 +1495,7 @@ details[open]>.header__menu-item {
     }
 
     .list-text-item {
-        height: 140px;
+        height: 120px;
     }
 
     .area-scroll-trigger.object-stay {
@@ -1379,12 +1521,8 @@ details[open]>.header__menu-item {
         margin-bottom: 40px
     }
 
-    .header-accordion h5 {
-        font-size: 20px
-    }
-
     .number {
-        font-size: 12px;
+
         width: 20px;
         height: 20px;
     }
@@ -1398,31 +1536,31 @@ details[open]>.header__menu-item {
         left: 4%;
         top: 0;
     }
-    
+
     .pin-2 {
         position: absolute;
         left: 4%;
         top: 16%;
     }
-    
+
     .pin-3 {
         position: absolute;
         left: 4%;
         top: 28%;
     }
-    
+
     .pin-4 {
         position: absolute;
         left: 4%;
         top: 42%;
     }
-    
+
     .pin-5 {
         position: absolute;
         left: 4%;
         top: 54%;
     }
-    
+
     .pin-6 {
         position: absolute;
         left: 4%;
@@ -1442,14 +1580,23 @@ details[open]>.header__menu-item {
     }
 
     .text-subscribe {
-        font-size: 12px;
+
         font-weight: 600;
         width: 100%;
     }
-    
+
     .desc-text-subscribe {
-        font-size: 12px;
+
         width: 100%;
+    }
+
+    .card__information_custome {
+        padding-left: 16px !important;
+        padding-right: 16px !important;
+    }
+
+    .banner--fit_image:not(.banner--mobile-bottom):not(.banner--adapt) .banner__content {
+        aspect-ratio: 9/16 !important;
     }
 }
 
@@ -1503,17 +1650,17 @@ details[open]>.header__menu-item {
 
     .title-banner h3 {
         text-align: center;
-        font-size: 18px;
+
         font-weight: 600
     }
 
     .title-center-multicolumn {
-        font-size: 18px;
+
         font-weight: 500
     }
 
     .custom-nav-swiper::after {
-        font-size: 16px;
+
         color: #005750
     }
 
@@ -1531,9 +1678,7 @@ details[open]>.header__menu-item {
         margin-top: 20px
     }
 
-    .header-review h3 {
-        font-size: 20px
-    }
+    
 
     .background-slider-desktop {
         display: none
@@ -1553,12 +1698,12 @@ details[open]>.header__menu-item {
     }
 
     .text-custome-slider h5 {
-        font-size: 32px;
+
         max-width: 100%
     }
 
     .text-custome-slider a {
-        font-size: 32px;
+
         max-width: 100%
     }
 
@@ -1573,9 +1718,7 @@ details[open]>.header__menu-item {
         margin-right: auto
     }
 
-    .header-accordion h5 {
-        font-size: 24px
-    }
+    
 
     .area-scroll-trigger.object-stay {
         position: fixed;
@@ -1589,18 +1732,27 @@ details[open]>.header__menu-item {
     }
 
     .list-text-item p {
-        font-size: 14px;
+        font-size: 16px;
     }
 
     .text-subscribe {
-        font-size: 12px;
+
         font-weight: 600;
         width: 80%;
     }
-    
+
     .desc-text-subscribe {
-        font-size: 12px;
+
         width: 80%;
+    }
+
+    .card__information_custome {
+        padding-left: 16px !important;
+        padding-right: 16px !important;
+    }
+
+    .banner--fit_image:not(.banner--mobile-bottom):not(.banner--adapt) .banner__content {
+        aspect-ratio: 9/16 !important;
     }
 }
 
@@ -1627,27 +1779,23 @@ details[open]>.header__menu-item {
 
     .title-banner h3 {
         text-align: center;
-        font-size: 20px;
+
         font-weight: 600
     }
 
     .title-center-multicolumn {
-        font-size: 20px;
+
         font-weight: 500
     }
 
     .custom-nav-swiper::after {
-        font-size: 18px;
+
         color: #005750
     }
 
     .text-custome-slider {
         left: 40px;
         bottom: 40px
-    }
-
-    .text-custome-slider h5 {
-        font-size: 36px
     }
 
     .guarantee-content {
@@ -1665,8 +1813,13 @@ details[open]>.header__menu-item {
     }
 
     .list-text-item {
-        height: 90px
+        height: 70px
     }
+
+    .slideshow:not(.banner--mobile-bottom) .slideshow__text-wrapper {
+        aspect-ratio: 1/1 !important;
+    }
+
 }
 
 @media screen and (min-width:992px) and (max-width:1023px) {
@@ -1696,19 +1849,22 @@ details[open]>.header__menu-item {
 
     .title-banner h3 {
         text-align: center;
-        font-size: 20px;
+
         font-weight: 600
     }
 
     .title-center-multicolumn {
-        font-size: 20px;
         font-weight: 500
     }
 
     .custom-nav-swiper::after {
-        font-size: 18px;
         color: #005750
     }
+
+    .slideshow:not(.banner--mobile-bottom) .slideshow__text-wrapper {
+        aspect-ratio: 1/1 !important;
+    }
+
 }
 
 @media screen and (min-width:1024px) and (max-width:1199px) {
@@ -1738,17 +1894,18 @@ details[open]>.header__menu-item {
 
     .title-banner h3 {
         text-align: center;
-        font-size: 24px;
+
         font-weight: 600
     }
 
     .title-center-multicolumn {
-        font-size: 24px;
+
         font-weight: 500
     }
 
     .custom-nav-swiper::after {
-        font-size: 20px;
+
         color: #005750
     }
+
 }
