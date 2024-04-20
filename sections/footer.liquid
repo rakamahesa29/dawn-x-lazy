@@ -1,3 +1,58 @@
+<style>
+
+  @media screen and (min-width: 768px) {
+  .text-footer-lazy-lowie p {
+    font-size: 14px;
+  }
+  .desc-text-subscribe p {
+    font-size: 14px;
+  }
+
+  .list-menu-footer a {
+    font-size: 14px;
+  }
+
+  .headline-footer-menu {
+    font-size: 16px;
+  }
+
+  .year-development p {
+    font-size: 14px;
+  }
+  
+  .year-development {
+    height: 20px;
+  }
+  
+  }
+
+  @media screen and (max-width: 767px) {
+    .text-footer-lazy-lowie p {
+    font-size: 14px;
+  }
+  .desc-text-subscribe p {
+    font-size: 14px;
+  }
+
+  .list-menu-footer a {
+    font-size: 14px;
+  }
+
+  .headline-footer-menu {
+    font-size: 16px;
+  }
+
+  .year-development p {
+    font-size: 14px;
+  }
+  
+  .year-development {
+    height: 18px;
+  }
+  }
+</style>
+  
+
 <footer class="new-footer section-custome">
   {%- liquid
     assign has_social_icons = true
@@ -129,7 +184,7 @@
     <div class="row">
       <div class="col-12">
         <div class="year-development">
-          <p>© Copyright {{ 'now' | date: '%Y' }}, | Lazy Lowie </p>
+          <p>© Copyright {{ 'now' | date: '%Y' }} | Lazy Lowie </p>
         </div>
       </div>
     </div>

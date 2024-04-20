@@ -86,7 +86,9 @@
       ],
       "settings": {
         "heading_size": "h1",
-        "color_scheme": "scheme-4901882a-37a4-43d2-9919-a04d2596a8f8"
+        "color_scheme": "scheme-4901882a-37a4-43d2-9919-a04d2596a8f8",
+        "padding_top": 0,
+        "padding_bottom": 0
       }
     },
     "animation_product_DMeHYk": {
@@ -128,7 +130,29 @@
         "link_title": "https:\/\/cdn.shopify.com\/s\/files\/1\/0718\/7375\/7471\/files\/",
         "heading_size": "h1",
         "text_position": "position-center",
-        "color_scheme": "scheme-47a0187c-b8de-4cff-b20c-5d35f422c9c0"
+        "color_scheme": "scheme-47a0187c-b8de-4cff-b20c-5d35f422c9c0",
+        "padding_top": 40,
+        "padding_bottom": 40
+      }
+    },
+    "slider_custome_KGi8nw": {
+      "type": "slider-custome",
+      "blocks": {
+        "video_E9AN66": {
+          "type": "video",
+          "settings": {
+            "video_url": "https:\/\/cdn.shopify.com\/videos\/c\/o\/v\/ad12aaac07b44a3db20fbc4ab4615a4c.mp4"
+          }
+        }
+      },
+      "block_order": [
+        "video_E9AN66"
+      ],
+      "settings": {
+        "heading_size": "h1",
+        "color_scheme": "",
+        "padding_top": 0,
+        "padding_bottom": 0
       }
     },
     "accordion_product_FNhj6L": {
@@ -180,8 +204,10 @@
       "settings": {
         "heading_size": "h2",
         "color_scheme": "scheme-47a0187c-b8de-4cff-b20c-5d35f422c9c0",
-        "title": "Tidur nyenyak di setiap lapisannya",
-        "image": "shopify:\/\/shop_images\/3d-mattress.webp"
+        "title": "<strong>Membuat tidurmu nyenyak disetiap lapisannya<\/strong>",
+        "image": "shopify:\/\/shop_images\/3d-mattress.webp",
+        "padding_top": 40,
+        "padding_bottom": 40
       }
     },
     "support_and_guarantee_mwDhDc": {
@@ -225,13 +251,15 @@
       "settings": {
         "title": "Support And Guarantee",
         "heading_size": "h1",
-        "color_scheme": "scheme-4901882a-37a4-43d2-9919-a04d2596a8f8"
+        "color_scheme": "scheme-4901882a-37a4-43d2-9919-a04d2596a8f8",
+        "padding_top": 40,
+        "padding_bottom": 40
       }
     },
     "related-products": {
       "type": "related-products",
       "settings": {
-        "heading": "You may also like",
+        "heading": "<strong>Pelengkap Tidur Nyenyakmu<\/strong>",
         "heading_size": "h2",
         "products_to_show": 4,
         "columns_desktop": 4,
@@ -242,8 +270,8 @@
         "show_vendor": false,
         "show_rating": false,
         "columns_mobile": "2",
-        "padding_top": 36,
-        "padding_bottom": 28
+        "padding_top": 40,
+        "padding_bottom": 40
       }
     }
   },
@@ -251,6 +279,7 @@
     "main",
     "slider_custome_jUDdzD",
     "animation_product_DMeHYk",
+    "slider_custome_KGi8nw",
     "accordion_product_FNhj6L",
     "support_and_guarantee_mwDhDc",
     "related-products"

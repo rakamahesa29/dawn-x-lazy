@@ -1,3 +1,4 @@
+
 .blog-placeholder-svg {
   height: 100%;
 }
@@ -41,12 +42,12 @@
 }
 
 .blog__button {
-  margin-top: 3rem;
+  margin-top: 40px;
 }
 
 @media screen and (min-width: 750px) {
   .blog__button {
-    margin-top: 5rem;
+    margin-top: 40px;
   }
 }
 
