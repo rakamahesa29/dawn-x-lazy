@@ -25,24 +25,24 @@
       <div class="swiper-wrapper">
         {% for block in section.blocks %}
           {% if block.type == 'image' %}
-          <div class="swiper-slide swiper-custome-slider">
-            <div
-              class="background-slider-desktop"
-              style="background-image: url('{{ block.settings.image_slider_desktop | img_url: 'master' }}');"
-            >
-              <div class="text-custome-slider">
-                <h2 class="{{ section.settings.heading_size }}">{{ block.settings.text_slider }}</h2>
+            <div class="swiper-slide swiper-custome-slider">
+              <div
+                class="background-slider-desktop"
+                style="background-image: url('{{ block.settings.image_slider_desktop | img_url: 'master' }}');"
+              >
+                <div class="text-custome-slider">
+                  <h2 class="{{ section.settings.heading_size }}">{{ block.settings.text_slider }}</h2>
+                </div>
+              </div>
+              <div
+                class="background-slider-mobile"
+                style="background-image: url('{{ block.settings.image_slider_mobile | img_url: 'master' }}');"
+              >
+                <div class="text-custome-slider">
+                  <h2 class="{{ section.settings.heading_size }}">{{ block.settings.text_slider }}</h2>
+                </div>
               </div>
             </div>
-            <div
-              class="background-slider-mobile"
-              style="background-image: url('{{ block.settings.image_slider_mobile | img_url: 'master' }}');"
-            >
-              <div class="text-custome-slider">
-                <h2 class="{{ section.settings.heading_size }}">{{ block.settings.text_slider }}</h2>
-              </div>
-            </div>
-          </div>
           {% elsif block.type == 'video' %}
             <div class="swiper-slide swiper-custome-slider">
               <div class="video-slider">
@@ -159,3 +159,4 @@
   ]
 }
 {% endschema %}
+

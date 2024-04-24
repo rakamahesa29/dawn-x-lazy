@@ -1,7 +1,7 @@
 [
   {
     "name": "theme_info",
-    "theme_name": "Dawn",
+    "theme_name": "Lazy Lowie",
     "theme_version": "13.0.1",
     "theme_author": "Shopify",
     "theme_documentation_url": "https:\/\/help.shopify.com\/manual\/online-store\/themes",
@@ -1410,6 +1410,45 @@
         "id": "currency_code_enabled",
         "label": "t:settings_schema.currency_format.settings.currency_code_enabled.label",
         "default": true
+      }
+    ]
+  },
+  {
+    "name": "t:settings_schema.popup_card.name",
+    "settings": [
+      {
+        "type": "header",
+        "content": "t:settings_schema.popup_card.settings.content"
+      },
+      {
+        "type": "paragraph",
+        "content": "t:settings_schema.popup_card.settings.paragraph"
+      },
+      {
+        "type": "checkbox",
+        "id": "popup_card_enabled",
+        "label": "t:settings_schema.popup_card.settings.popup_card_enabled.label",
+        "default": true
+      },
+      {
+        "type": "text",
+        "id": "title_popup_card",
+        "label": "t:settings_schema.popup_card.settings.popup_card_enabled.label"
+      },
+      {
+        "type": "richtext",
+        "id": "desc_popup_card",
+        "label": "t:settings_schema.popup_card.settings.desc_popup_card.label"
+      },
+      {
+        "type": "image_picker",
+        "id": "image_popup_card",
+        "label": "t:settings_schema.popup_card.settings.image_popup_card.label"
+      },
+      {
+        "type": "text",
+        "id": "shortext_popup_card",
+        "label": "t:settings_schema.popup_card.settings.shortext_popup_card.label"
       }
     ]
   },

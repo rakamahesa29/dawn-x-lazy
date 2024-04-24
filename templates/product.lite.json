@@ -13,6 +13,11 @@
           "settings": {
           }
         },
+        "judge_me_reviews_preview_badge_hrmzrL": {
+          "type": "shopify:\/\/apps\/judge-me-reviews\/blocks\/preview_badge\/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
+          "settings": {
+          }
+        },
         "description": {
           "type": "description",
           "settings": {
@@ -47,6 +52,7 @@
       "block_order": [
         "title",
         "price",
+        "judge_me_reviews_preview_badge_hrmzrL",
         "description",
         "variant_picker",
         "quantity_selector",
@@ -75,8 +81,8 @@
         "image_pQyLta": {
           "type": "image",
           "settings": {
-            "image_slider_desktop": "shopify:\/\/shop_images\/header-home.webp",
-            "image_slider_mobile": "shopify:\/\/shop_images\/header-mobiile.jpg",
+            "image_slider_desktop": "shopify:\/\/shop_images\/Lite-20240328-2936.png",
+            "image_slider_mobile": "shopify:\/\/shop_images\/Lite-20240328-2936-squre.png",
             "text_slider": ""
           }
         }
@@ -86,7 +92,9 @@
       ],
       "settings": {
         "heading_size": "h1",
-        "color_scheme": "scheme-4901882a-37a4-43d2-9919-a04d2596a8f8"
+        "color_scheme": "scheme-47a0187c-b8de-4cff-b20c-5d35f422c9c0",
+        "padding_top": 0,
+        "padding_bottom": 0
       }
     },
     "animation_product_Ewnqt9": {
@@ -128,7 +136,29 @@
         "link_title": "https:\/\/cdn.shopify.com\/s\/files\/1\/0718\/7375\/7471\/files\/",
         "heading_size": "h1",
         "text_position": "position-center",
-        "color_scheme": "scheme-47a0187c-b8de-4cff-b20c-5d35f422c9c0"
+        "color_scheme": "scheme-47a0187c-b8de-4cff-b20c-5d35f422c9c0",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "slider_custome_ah6CGK": {
+      "type": "slider-custome",
+      "blocks": {
+        "video_Uep4RP": {
+          "type": "video",
+          "settings": {
+            "video_url": "https:\/\/cdn.shopify.com\/videos\/c\/o\/v\/365387d3503641b6a687db143fd38079.mp4"
+          }
+        }
+      },
+      "block_order": [
+        "video_Uep4RP"
+      ],
+      "settings": {
+        "heading_size": "h1",
+        "color_scheme": "",
+        "padding_top": 0,
+        "padding_bottom": 0
       }
     },
     "accordion_product_FNhj6L": {
@@ -178,10 +208,12 @@
         "text_accordion_4iDwnR"
       ],
       "settings": {
-        "heading_size": "h2",
+        "heading_size": "h1",
         "color_scheme": "scheme-47a0187c-b8de-4cff-b20c-5d35f422c9c0",
-        "title": "Tidur nyenyak di setiap lapisannya",
-        "image": "shopify:\/\/shop_images\/3d-mattress.webp"
+        "title": "Tidur nyenyak disetiap lapisannya",
+        "image": "shopify:\/\/shop_images\/3d-mattress.webp",
+        "padding_top": 60,
+        "padding_bottom": 60
       }
     },
     "support_and_guarantee_mwDhDc": {
@@ -225,7 +257,9 @@
       "settings": {
         "title": "Support And Guarantee",
         "heading_size": "h1",
-        "color_scheme": "scheme-4901882a-37a4-43d2-9919-a04d2596a8f8"
+        "color_scheme": "scheme-4901882a-37a4-43d2-9919-a04d2596a8f8",
+        "padding_top": 36,
+        "padding_bottom": 36
       }
     },
     "related-products": {
@@ -242,8 +276,24 @@
         "show_vendor": false,
         "show_rating": false,
         "columns_mobile": "2",
-        "padding_top": 36,
-        "padding_bottom": 28
+        "padding_top": 60,
+        "padding_bottom": 60
+      }
+    },
+    "17137505839b8bd27c": {
+      "type": "apps",
+      "blocks": {
+        "judge_me_reviews_review_widget_44QQ9q": {
+          "type": "shopify:\/\/apps\/judge-me-reviews\/blocks\/review_widget\/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
+          "settings": {
+          }
+        }
+      },
+      "block_order": [
+        "judge_me_reviews_review_widget_44QQ9q"
+      ],
+      "settings": {
+        "include_margins": true
       }
     }
   },
@@ -251,8 +301,10 @@
     "main",
     "slider_custome_jUDdzD",
     "animation_product_Ewnqt9",
+    "slider_custome_ah6CGK",
     "accordion_product_FNhj6L",
     "support_and_guarantee_mwDhDc",
-    "related-products"
+    "related-products",
+    "17137505839b8bd27c"
   ]
 }

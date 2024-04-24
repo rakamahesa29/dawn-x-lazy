@@ -32,6 +32,11 @@
           "settings": {
           }
         },
+        "judge_me_reviews_preview_badge_wikiDV": {
+          "type": "shopify:\/\/apps\/judge-me-reviews\/blocks\/preview_badge\/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
+          "settings": {
+          }
+        },
         "description": {
           "type": "description",
           "settings": {
@@ -68,13 +73,14 @@
         "image_picker_ir7nHN": {
           "type": "image_picker",
           "settings": {
-            "info_image": "shopify:\/\/shop_images\/sertif.webp"
+            "info_image": "shopify:\/\/shop_images\/sertif-bantal-guling.webp"
           }
         }
       },
       "block_order": [
         "title",
         "price",
+        "judge_me_reviews_preview_badge_wikiDV",
         "description",
         "size_guide_zDGRXK",
         "variant_picker",
@@ -145,6 +151,26 @@
         "padding_bottom": 0
       }
     },
+    "slider_custome_WnHDKh": {
+      "type": "slider-custome",
+      "blocks": {
+        "video_7HzwRg": {
+          "type": "video",
+          "settings": {
+            "video_url": ""
+          }
+        }
+      },
+      "block_order": [
+        "video_7HzwRg"
+      ],
+      "settings": {
+        "heading_size": "h1",
+        "color_scheme": "",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
     "17135132173f33b8d9": {
       "type": "apps",
       "blocks": {
@@ -166,6 +192,7 @@
     "related-products",
     "main",
     "image_with_text_custome_Mr4zyj",
+    "slider_custome_WnHDKh",
     "17135132173f33b8d9"
   ]
 }

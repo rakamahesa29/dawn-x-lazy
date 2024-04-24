@@ -316,6 +316,28 @@
         }
       }
     },
+    "popup_card": {
+      "name": "Popup Card",
+      "settings": {
+        "content": "Popup Card Content",
+        "paragraph": "please add 3:4 or 1:1 image, title text, description, button text, button link.",
+        "popup_card_enabled": {
+          "label": "Show Popup Card"
+        },
+        "title_popup_card": {
+          "label": "Title Popup Card"
+        },
+        "desc_popup_card": {
+          "label": "Desc Popup Card"
+        },
+        "image_popup_card": {
+          "label": "Image Popup Card"
+        },
+        "shortext_popup_card": {
+          "label": "Short Text Popup Card"
+        }
+      }
+    },
     "cart": {
       "name": "Cart",
       "settings": {
@@ -2889,94 +2911,74 @@
         }
       }
     },
-    "custome-review": {
-      "settings": {
-        "title": {
-          "label": "Review Section Title"
-        }
-      },
-      "blocks": {
-        "review_image": {
-          "settings": {
-            "image_cover": {
-              "label": "Cover Image"
-            },
-            "image_reviewer": {
-              "label": "Reviewer's Image"
-            },
-            "image_link": {
-              "label": "Image Link"
-            },
-            "user_name": {
-              "label": "User Name"
-            },
-            "star_rating": {
-              "label": "Star Rating"
-            },
-            "review_date": {
-              "label": "Review Date"
-            },
-            "text_review": {
-              "label": "Text Review"
+
+      "custome-review": {
+        "name": "Custom Review Section",
+        "settings": {
+          "title": {
+            "label": "Review Title"
+          }
+        },
+        "blocks": {
+          "review_image": {
+            "name": "Image Review Block",
+            "settings": {
+              "image_cover": {
+                "label": "Select Review Image"
+              },
+              "image_reviewer": {
+                "label": "Select Reviewer Image"
+              },
+              "image_link": {
+                "label": "Image Link"
+              },
+              "user_name": {
+                "label": "User Name"
+              },
+              "star_rating": {
+                "label": "Star Rating"
+              },
+              "review_date": {
+                "label": "Review Date",
+                "default": "2024-01-23"
+              },
+              "text_review": {
+                "label": "Text Review",
+                "default": "<p>Lorem ipsum dolor sit amet...</p>"
+              }
+            }
+          },
+          "review_video": {
+            "name": "Video Review Block",
+            "settings": {
+              "image_reviewer": {
+                "label": "Select Reviewer Image"
+              },
+              "video_url": {
+                "label": "Video URL",
+                "info": "Provide the URL of the video"
+              },
+              "user_name": {
+                "label": "User Name"
+              },
+              "star_rating": {
+                "label": "Star Rating"
+              },
+              "review_date": {
+                "label": "Review Date",
+                "default": "2024-01-23"
+              },
+              "text_review": {
+                "label": "Text Review",
+                "default": "<p>Lorem ipsum dolor sit amet...</p>"
+              }
             }
           }
         },
-        "review_video": {
-          "settings": {
-            "image_reviewer": {
-              "label": "Reviewer's Image"
-            },
-            "video_url": {
-              "label": "Reviewer's Video URL",
-              "info": "Provide a link to the video review."
-            },
-            "user_name": {
-              "label": "User Name"
-            },
-            "star_rating": {
-              "label": "Star Rating"
-            },
-            "review_date": {
-              "label": "Review Date"
-            },
-            "text_review": {
-              "label": "Text Review"
-            }
-          }
+        "presets": {
+          "name": "Custom Review Preset"
         }
-      }
-    },
-    "slider-custome": {
-      "name": "Custom Slider",
-      "blocks": {
-        "image": {
-          "name": "Image Block",
-          "settings": {
-            "image_slider_desktop": {
-              "label": "Select Image for Desktop Slider"
-            },
-            "image_slider_mobile": {
-              "label": "Select Image for Mobile Slider"
-            },
-            "text_slider": {
-              "label": "Text for Slider"
-            }
-          }
-        },
-        "video": {
-          "name": "Video Block",
-          "settings": {
-            "video_url": {
-              "label": "URL Video Slider",
-              "info": "Place your url video here"
-            }
-          }
-        }
-      },
-      "presets": {
-        "name": "Custom Slider"
-      }
-    },
+      },    
     "slider-article-custome": {
       "name": "Custom Article Slider",
       "blocks": {
@@ -3096,6 +3098,175 @@
         }
       }
     },
+      "slider-custome": {
+        "name": "Slider Custom Name",
+        "settings": {
+          "heading_size": {
+            "label": "Heading Size",
+            "options__1": {
+              "label": "H2"
+            },
+            "options__2": {
+              "label": "H1"
+            },
+            "options__3": {
+              "label": "H0"
+            }
+          },
+          "color_scheme": {
+            "label": "Color Scheme"
+          },
+          "padding": {
+            "section_padding_heading": "Section Padding",
+            "padding_top": {
+              "label": "Padding Top"
+            },
+            "padding_bottom": {
+              "label": "Padding Bottom"
+            }
+          }
+        },
+        "blocks": {
+          "image": {
+            "name": "Image Block",
+            "settings": {
+              "image_slider_desktop": {
+                "label": "Select Desktop Image"
+              },
+              "image_slider_mobile": {
+                "label": "Select Mobile Image"
+              },
+              "text_slider": {
+                "label": "Slider Text"
+              }
+            }
+          },
+          "video": {
+            "name": "Video Block",
+            "settings": {
+              "video_url": {
+                "label": "Video URL",
+                "info": "Provide the URL of the video"
+              }
+            }
+          }
+        },
+        "presets": {
+          "name": "Slider Custom Preset"
+        }
+      },    
+      "product-highlight": {
+        "settings": {
+          "title": {
+            "label": "Product Highlight"
+          },
+          "heading_size": {
+            "label": "Heading Size",
+            "options__1": {
+              "label": "H2"
+            },
+            "options__2": {
+              "label": "H1"
+            },
+            "options__3": {
+              "label": "H0"
+            }
+          },
+          "color_scheme": {
+            "label": "Color Scheme"
+          }
+        },
+        "blocks": {
+          "highlight_description": {
+            "settings": {
+              "title_product_card": {
+                "label": "Product Title"
+              },
+              "tagline_product_card": {
+                "label": "Tagline"
+              },
+              "image_product": {
+                "label": "Select Image"
+              },
+              "price_product_title": {
+                "label": "Price Title"
+              },
+              "price_product_no_disc": {
+                "label": "Price (No Discount)"
+              },
+              "price_product_disc": {
+                "label": "Price (Discount)"
+              },
+              "feature_product_card": {
+                "label": "Features"
+              },
+              "image_content_card": {
+                "label": "Content Image"
+              },
+              "desc_feature_product_card": {
+                "label": "Feature Description"
+              },
+              "size_product_card": {
+                "label": "Size"
+              },
+              "desc_size_product_card": {
+                "label": "Size Description"
+              },
+              "image_certi_card": {
+                "label": "Certification Image"
+              },
+              "title_rating_one": {
+                "label": "Rating Title One"
+              },
+              "rate_rating_one": {
+                "label": "Rating One"
+              },
+              "desc_rating_one": {
+                "label": "Rating Description One"
+              },
+              "title_rating_two": {
+                "label": "Rating Title Two"
+              },
+              "rate_rating_two": {
+                "label": "Rating Two"
+              },
+              "desc_rating_two": {
+                "label": "Rating Description Two"
+              },
+              "title_rating_three": {
+                "label": "Rating Title Three"
+              },
+              "rate_rating_three": {
+                "label": "Rating Three"
+              },
+              "desc_rating_three": {
+                "label": "Rating Description Three"
+              },
+              "desc_product_card": {
+                "label": "Product Description"
+              },
+              "image_icon_one": {
+                "label": "Icon Image One"
+              },
+              "text_icon_one": {
+                "label": "Icon Text One"
+              },
+              "image_icon_two": {
+                "label": "Icon Image Two"
+              },
+              "text_icon_two": {
+                "label": "Icon Text Two"
+              },
+              "button_text": {
+                "label": "Button Text"
+              },
+              "button_link": {
+                "label": "Button Link"
+              }
+            }
+          }
+        }
+      },   
       "animation-product": {
         "settings": {
           "title": {

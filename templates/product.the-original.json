@@ -13,6 +13,11 @@
           "settings": {
           }
         },
+        "judge_me_reviews_preview_badge_yPA3nJ": {
+          "type": "shopify:\/\/apps\/judge-me-reviews\/blocks\/preview_badge\/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
+          "settings": {
+          }
+        },
         "description": {
           "type": "description",
           "settings": {
@@ -47,6 +52,7 @@
       "block_order": [
         "title",
         "price",
+        "judge_me_reviews_preview_badge_yPA3nJ",
         "description",
         "variant_picker",
         "quantity_selector",
@@ -69,24 +75,24 @@
         "padding_bottom": 80
       }
     },
-    "slider_custome_jUDdzD": {
+    "slider_custome_4jrMpD": {
       "type": "slider-custome",
       "blocks": {
-        "image_pQyLta": {
+        "image_zkQT4q": {
           "type": "image",
           "settings": {
             "image_slider_desktop": "shopify:\/\/shop_images\/header-home.webp",
-            "image_slider_mobile": "shopify:\/\/shop_images\/header-mobiile.jpg",
+            "image_slider_mobile": "shopify:\/\/shop_images\/header-home.webp",
             "text_slider": ""
           }
         }
       },
       "block_order": [
-        "image_pQyLta"
+        "image_zkQT4q"
       ],
       "settings": {
         "heading_size": "h1",
-        "color_scheme": "scheme-4901882a-37a4-43d2-9919-a04d2596a8f8",
+        "color_scheme": "",
         "padding_top": 0,
         "padding_bottom": 0
       }
@@ -202,12 +208,12 @@
         "text_accordion_4iDwnR"
       ],
       "settings": {
-        "heading_size": "h2",
+        "heading_size": "h1",
         "color_scheme": "scheme-47a0187c-b8de-4cff-b20c-5d35f422c9c0",
-        "title": "<strong>Membuat tidurmu nyenyak disetiap lapisannya<\/strong>",
+        "title": "Tidur nyenyak disetiap lapisannya",
         "image": "shopify:\/\/shop_images\/3d-mattress.webp",
-        "padding_top": 40,
-        "padding_bottom": 40
+        "padding_top": 60,
+        "padding_bottom": 60
       }
     },
     "support_and_guarantee_mwDhDc": {
@@ -270,18 +276,35 @@
         "show_vendor": false,
         "show_rating": false,
         "columns_mobile": "2",
-        "padding_top": 40,
-        "padding_bottom": 40
+        "padding_top": 60,
+        "padding_bottom": 60
+      }
+    },
+    "1713750560574b5864": {
+      "type": "apps",
+      "blocks": {
+        "judge_me_reviews_review_widget_8BepAd": {
+          "type": "shopify:\/\/apps\/judge-me-reviews\/blocks\/review_widget\/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
+          "settings": {
+          }
+        }
+      },
+      "block_order": [
+        "judge_me_reviews_review_widget_8BepAd"
+      ],
+      "settings": {
+        "include_margins": true
       }
     }
   },
   "order": [
     "main",
-    "slider_custome_jUDdzD",
+    "slider_custome_4jrMpD",
     "animation_product_DMeHYk",
     "slider_custome_KGi8nw",
     "accordion_product_FNhj6L",
     "support_and_guarantee_mwDhDc",
-    "related-products"
+    "related-products",
+    "1713750560574b5864"
   ]
 }
