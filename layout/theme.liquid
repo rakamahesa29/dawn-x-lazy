@@ -301,7 +301,9 @@
 
     {% sections 'header-group' %}
 
-    {% render 'popup-card' %}
+    {% if template.name == 'index' %}
+      {% render 'popup-card' %}
+    {% endif %}
 
     <main id="MainContent" class="content-for-layout {% if template.name != 'index' %}custome-main-content-layout{% endif %} focus-none" role="main" tabindex="-1">
       {{ content_for_layout }}

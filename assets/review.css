@@ -1,5 +1,5 @@
 .jdgm-rev-widg {
-    padding: 80px 0px !important;
+    padding: 60px 0px !important;
 }
 .jdgm-rev-widg__title {
     font-size: 28px !important;
@@ -64,6 +64,24 @@
 .jdgm-prev-badge__text {
     font-size: 14px;
     margin-left: 8px;
+}
+.jdgm-star,
+.jdgm-media-fieldset__icon, .jdgm-picture-fieldset__delete {
+    font-family: 'JudgemeStar' !important;
+}
+.jdgm-form__title {
+    color: #005550;
+}
+.jdgm-form__fieldset:not(:last-of-type), .jdgm-form__fieldset-actions {
+    font-size: 14px;
+    color: #005550;
+}
+.jdgm-form input[type="text"], .jdgm-form input[type="email"], .jdgm-form input[type="url"], .jdgm-form textarea {
+    border: 1px solid #005550;
+    color: #005550;
+}
+.jdgm-widget .jdgm-btn.jdgm-btn {
+    font-weight: 500 !important;
 }
 @media screen and (max-width: 767px) {
     .jdgm-rev-widg {

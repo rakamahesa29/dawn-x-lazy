@@ -195,6 +195,7 @@
           "type": "image",
           "settings": {
             "image": "shopify:\/\/shop_images\/lazy-ig-1.jpg",
+            "image_icon": "shopify:\/\/shop_images\/instagram.svg",
             "image_link": "https:\/\/www.instagram.com\/p\/C42n79Mrl7d\/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA=="
           }
         },
@@ -202,6 +203,7 @@
           "type": "image",
           "settings": {
             "image": "shopify:\/\/shop_images\/lazy-ig-2.jpg",
+            "image_icon": "shopify:\/\/shop_images\/instagram.svg",
             "image_link": "https:\/\/www.instagram.com\/p\/C4umFG5tXCN\/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA=="
           }
         },
@@ -209,6 +211,7 @@
           "type": "image",
           "settings": {
             "image": "shopify:\/\/shop_images\/lazy-ig-3.jpg",
+            "image_icon": "shopify:\/\/shop_images\/instagram.svg",
             "image_link": "https:\/\/www.instagram.com\/reel\/C4ch4rAtXyh\/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA=="
           }
         },
@@ -216,6 +219,7 @@
           "type": "image",
           "settings": {
             "image": "shopify:\/\/shop_images\/header-mobiile.jpg",
+            "image_icon": "shopify:\/\/shop_images\/instagram.svg",
             "image_link": "https:\/\/www.instagram.com\/p\/C2PLUIqJXmq\/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA=="
           }
         }

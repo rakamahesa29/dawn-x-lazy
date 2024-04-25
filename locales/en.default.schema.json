@@ -2155,6 +2155,17 @@
             }
           }
         },
+        "label_product": {
+          "name": "Label Product",
+          "settings": {
+            "label_first_product": {
+              "label": "Label Text First Product"
+            },
+            "label_sec_product": {
+              "label": "Label Text Sec Product"
+            }
+          }
+        },
         "size_guide": {
           "name": "Size Guide",
           "settings": {
@@ -3090,6 +3101,9 @@
           "settings": {
             "image": {
               "label": "Select Image"
+            },
+            "image_icon": {
+              "label": "Select Image Hover"
             },
             "image_link": {
               "label": "Image Link"

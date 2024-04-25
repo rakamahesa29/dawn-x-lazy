@@ -33,6 +33,18 @@ document.addEventListener("DOMContentLoaded", function () {
         1024: { slidesPerView: 4, spaceBetween: 30 },
       },
     }),
+    new Swiper(".swiperReviewProduct", {
+      slidesPerView: 1,
+      spaceBetween: 30,
+      navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+      },
+      scrollbar: {
+        el: ".swiper-scrollbar",
+        hide: false,
+      },
+    }),
     new Swiper(".swiperReview", {
       slidesPerView: 4,
       spaceBetween: 10,
