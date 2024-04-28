@@ -1,4 +1,25 @@
-<section class="section-custome color-{{ section.settings.color_scheme }}">
+{%- style -%}
+  .section-{{ section.id }}-padding {
+    padding-top: {{ section.settings.padding_top | times: 0.75 | round: 0 }}px;
+    padding-bottom: {{ section.settings.padding_bottom | times: 0.75 | round: 0 }}px;
+  }
+
+  @media screen and (min-width: 768px) {
+    .section-{{ section.id }}-padding {
+      padding-top: {{ section.settings.padding_top }}px;
+      padding-bottom: {{ section.settings.padding_bottom }}px;
+    }
+  }
+
+  @media screen and (max-width: 767px) {
+    .section-{{ section.id }}-padding {
+      padding-top: 40px;
+      padding-bottom: 40px;
+    }
+  }
+{%- endstyle -%}
+
+<section class="section-{{ section.id }}-padding color-{{ section.settings.color_scheme }}">
   <div class="container">
     <div class="row">
       <div class="col-12">
@@ -7,60 +28,49 @@
         </div>
       </div>
     </div>
-    <div class="row justify-content-center gap-8 row-card-product">
+    <div class="row justify-content-center row-gap-5 row-card-product">
       {% for block in section.blocks %}
-        <div class="col-lg-4 col-md-6 col-sm-12 col-12 p-4">
+        <div class="col-lg-4 col-md-6 col-sm-6 col-6">
           <div class="card-highlight-product">
             <div class="title-product">
-              {{ block.settings.title_product }}
+              <h2>{{ block.settings.title_product_card }}</h2>
             </div>
-
-            <div class="image-cover">
+            <div class="tagline-product">
+              <h5>{{ block.settings.tagline_product_card }}</h5>
+            </div>
+            <a href="{{ block.settings.button_link }}" class="image-cover">
               <img
                 src="{{ block.settings.image_product | img_url: 'master' }}"
                 alt="{{ block.settings.image_product.alt | escape }}"
               >
+            </a>
+            <div class="feature-product-card">
+              {{ block.settings.desc_product_card }}
             </div>
-
-            <div class="decription-product">
-              {{ block.settings.desc_product }}
+            <div class="border-card"></div>
+            <div class="feature-product-card">
+              {{ block.settings.feature_product_card }}
             </div>
-
-            <div class="height">
-              <div class="title-height">
-                {{ block.settings.title_height_product }}
-              </div>
-              <div class="value-height">
-                {{ block.settings.desc_height_product }}
-              </div>
+            <img
+              class="image-content-card"
+              src="{{ block.settings.image_content_card | img_url: 'master' }}"
+              alt="{{ block.settings.image_content_card.alt | escape }}"
+            >
+            <div class="feature-product-card">
+              {{ block.settings.desc_feature_product_card }}
             </div>
-
-            <div class="layer">
-              <div class="title-layer">
-                {{ block.settings.text_layer_product }}
-              </div>
-              <div class="image-layer">
-                <img
-                  src="{{ block.settings.image_layer_product | img_url: 'master' }}"
-                  alt="{{ block.settings.image_layer_product.alt | escape }}"
-                >
-              </div>
-              <div class="dec-layer">
-                {{ block.settings.desc_layer_product }}
-              </div>
+            <div class="border-card"></div>
+            <div class="size-product-card">
+              <h5>{{ block.settings.size_product_card }}</h5>
+              {{ block.settings.desc_size_product_card }}
             </div>
-
-            <div class="size">
-              {{ block.settings.desc_size_product }}
-            </div>
-
-            <div class="image-certificate">
-              <img
-                src="{{ block.settings.image_certificate | img_url: 'master' }}"
-                alt="{{ block.settings.image_certificate.alt | escape }}"
-              >
-            </div>
-
+            <div class="border-card"></div>
+            <img
+              class="image-certi-card"
+              src="{{ block.settings.image_certi_card | img_url: 'master' }}"
+              alt="{{ block.settings.image_certi_card.alt | escape }}"
+            >
+            <div class="border-card"></div>
             <div class="level-layer">
               {% assign full_rounds = block.settings.rate_rating_one | floor %}
               {% assign half_round = block.settings.rate_rating_one | modulo: 1 %}
@@ -69,29 +79,35 @@
               {% if half_round > 0 %}
                 {% assign empty_rounds = empty_rounds | minus: 1 %}
               {% endif %}
-              <div class="title-layer">
-                {{ block.settings.desc_rating_one }}
+              <div class="size-product-card">
+                <h5>{{ block.settings.title_rating_one }}</h5>
               </div>
               <div class="range-layer">
                 {% for i in (1..full_rounds) %}
                   <svg width="100" height="100" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <circle cx="50" cy="50" r="50" fill="#3D3D3D"/>
+                    <circle cx="50" cy="50" r="50" fill="#00B6A7"/>
                   </svg>
                 {% endfor %}
                 {% if half_round != 0 %}
                   <svg width="100" height="100" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M50 50C50 77.6142 50 100 50 100C22.3858 100 0 77.6142 0 50C0 22.3858 22.3858 0 50 0C50 0 50 22.3858 50 50Z" fill="#3D3D3D"/>
-                    <circle cx="50" cy="50" r="45" stroke="#3D3D3D" stroke-width="10"/>
+                    <path d="M50 50C50 77.6142 50 100 50 100C22.3858 100 0 77.6142 0 50C0 22.3858 22.3858 0 50 0C50 0 50 22.3858 50 50Z" fill="#00B6A7"/>
+                    <circle cx="50" cy="50" r="45" stroke="#005750" stroke-width="10"/>
                   </svg>
                 {% endif %}
                 {% for i in (1..empty_rounds) %}
                   <svg width="100" height="100" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <circle cx="50" cy="50" r="45" stroke="#3D3D3D" stroke-width="10"/>
+                    <circle cx="50" cy="50" r="45" stroke="#005750" stroke-width="10"/>
                   </svg>
                 {% endfor %}
               </div>
+              <div class="desc-rating-layer">
+                {{ block.settings.desc_rating_one }}
+              </div>
             </div>
-
+            <div class="border-card"></div>
+            <div class="size-product-card">
+              <h5>{{ block.settings.title_rating_two }}</h5>
+            </div>
             <div class="level-layer">
               {% assign full_rounds = block.settings.rate_rating_two | floor %}
               {% assign half_round = block.settings.rate_rating_two | modulo: 1 %}
@@ -100,29 +116,32 @@
               {% if half_round > 0 %}
                 {% assign empty_rounds = empty_rounds | minus: 1 %}
               {% endif %}
-              <div class="title-layer">
-                {{ block.settings.desc_rating_two }}
-              </div>
               <div class="range-layer">
                 {% for i in (1..full_rounds) %}
                   <svg width="100" height="100" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <circle cx="50" cy="50" r="50" fill="#3D3D3D"/>
+                    <circle cx="50" cy="50" r="50" fill="#00B6A7"/>
                   </svg>
                 {% endfor %}
                 {% if half_round != 0 %}
                   <svg width="100" height="100" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M50 50C50 77.6142 50 100 50 100C22.3858 100 0 77.6142 0 50C0 22.3858 22.3858 0 50 0C50 0 50 22.3858 50 50Z" fill="#3D3D3D"/>
-                    <circle cx="50" cy="50" r="45" stroke="#3D3D3D" stroke-width="10"/>
+                    <path d="M50 50C50 77.6142 50 100 50 100C22.3858 100 0 77.6142 0 50C0 22.3858 22.3858 0 50 0C50 0 50 22.3858 50 50Z" fill="#00B6A7"/>
+                    <circle cx="50" cy="50" r="45" stroke="#005750" stroke-width="10"/>
                   </svg>
                 {% endif %}
                 {% for i in (1..empty_rounds) %}
                   <svg width="100" height="100" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <circle cx="50" cy="50" r="45" stroke="#3D3D3D" stroke-width="10"/>
+                    <circle cx="50" cy="50" r="45" stroke="#005750" stroke-width="10"/>
                   </svg>
                 {% endfor %}
               </div>
+              <div class="desc-rating-layer">
+                {{ block.settings.desc_rating_two }}
+              </div>
             </div>
-
+            <div class="border-card"></div>
+            <div class="size-product-card">
+              <h5>{{ block.settings.title_rating_three }}</h5>
+            </div>
             <div class="level-layer">
               {% assign full_rounds = block.settings.rate_rating_three | floor %}
               {% assign half_round = block.settings.rate_rating_three | modulo: 1 %}
@@ -131,56 +150,55 @@
               {% if half_round > 0 %}
                 {% assign empty_rounds = empty_rounds | minus: 1 %}
               {% endif %}
-              <div class="title-layer">
-                {{ block.settings.desc_rating_three }}
-              </div>
               <div class="range-layer">
                 {% for i in (1..full_rounds) %}
                   <svg width="100" height="100" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <circle cx="50" cy="50" r="50" fill="#3D3D3D"/>
+                    <circle cx="50" cy="50" r="50" fill="#00B6A7"/>
                   </svg>
                 {% endfor %}
                 {% if half_round != 0 %}
                   <svg width="100" height="100" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M50 50C50 77.6142 50 100 50 100C22.3858 100 0 77.6142 0 50C0 22.3858 22.3858 0 50 0C50 0 50 22.3858 50 50Z" fill="#3D3D3D"/>
-                    <circle cx="50" cy="50" r="45" stroke="#3D3D3D" stroke-width="10"/>
+                    <path d="M50 50C50 77.6142 50 100 50 100C22.3858 100 0 77.6142 0 50C0 22.3858 22.3858 0 50 0C50 0 50 22.3858 50 50Z" fill="#00B6A7"/>
+                    <circle cx="50" cy="50" r="45" stroke="#005750" stroke-width="10"/>
                   </svg>
                 {% endif %}
                 {% for i in (1..empty_rounds) %}
                   <svg width="100" height="100" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <circle cx="50" cy="50" r="45" stroke="#3D3D3D" stroke-width="10"/>
+                    <circle cx="50" cy="50" r="45" stroke="#005750" stroke-width="10"/>
                   </svg>
                 {% endfor %}
               </div>
             </div>
-
-            <div class="desc-level-layer">
-              {{ block.settings.desc_rating_all  }}
+            <div class="desc-rating-layer">
+              {{ block.settings.desc_rating_three }}
             </div>
-
-            <div class="icon-text">
-              <img
-                src="{{ block.settings.image_icon_product | img_url: 'master' }}"
-                alt="{{ block.settings.image_icon_product.alt | escape }}"
+            <div class="border-card"></div>
+            <div class="icon-content">
+              <img class="image-icon-content"
+              src="{{ block.settings.image_icon_one | img_url: 'master' }}"
+              alt="{{ block.settings.image_icon_one.alt | escape }}"
               >
-              {{ block.settings.text_icon_one }}
+              <p>{{ block.settings.text_icon_one }}</p>
             </div>
-            <div class="icon-text">
-              <img
-                src="{{ block.settings.image_icon_product_two | img_url: 'master' }}"
-                alt="{{ block.settings.image_icon_product_two.alt | escape }}"
+            <div class="border-card"></div>
+            <div class="icon-content">
+              <img class="image-icon-content"
+              src="{{ block.settings.image_icon_two | img_url: 'master' }}"
+              alt="{{ block.settings.image_icon_two.alt | escape }}"
               >
-              {{ block.settings.text_icon_two}}
+              <p>{{ block.settings.text_icon_two }}</p>
             </div>
-            <div class="tagline-price">
-              {{ block.settings.tagline_price_product }}
+            <div class="border-card"></div>
+            <div class="price-product-content">
+              <h4>{{ block.settings.price_product_title }}</h4>
+              <div class="price-product-compare">
+                <p class="no-discount">{{ block.settings.price_product_no_disc }}</p>
+                <p class="discount">{{ block.settings.price_product_disc }}</p>
+              </div>
             </div>
-            <div class="price-product-highlight">
-              {{ block.settings.text_price_product }}
-            </div>
-            <div class="highlight-button-buy">
+            <div class="button-buy-second">
               <a href="{{ block.settings.button_link }}">
-                Beli Sekarang
+                <button>{{ block.settings.button_text }}</button>
               </a>
             </div>
           </div>
@@ -227,6 +245,30 @@
       "id": "color_scheme",
       "label": "t:sections.all.colors.label",
       "default": "scheme-1"
+    },
+    {
+      "type": "header",
+      "content": "t:sections.all.padding.section_padding_heading"
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "t:sections.all.padding.padding_top",
+      "default": 36
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "t:sections.all.padding.padding_bottom",
+      "default": 36
     }
   ],
   "blocks": [
@@ -235,10 +277,16 @@
       "name": "Hightlight Description",
       "settings": [
         {
-          "type": "richtext",
-          "id": "title_product",
-          "label": "t:sections.product-highlight.blocks.highlight_description.settings.title_product.label",
-          "default": "<p>lorem ipsum dolor sit amet nolei kofrika</p>"
+          "type": "text",
+          "id": "title_product_card",
+          "label": "t:sections.product-highlight.blocks.highlight_description.settings.title_product_card.label",
+          "default": "The Title"
+        },
+        {
+          "type": "text",
+          "id": "tagline_product_card",
+          "label": "t:sections.product-highlight.blocks.highlight_description.settings.tagline_product_card.label",
+          "default": "Adjustable Mattress"
         },
         {
           "type": "image_picker",
@@ -246,50 +294,62 @@
           "label": "t:sections.product-highlight.blocks.highlight_description.settings.image_product.label"
         },
         {
-          "type": "richtext",
-          "id": "desc_product",
-          "label": "t:sections.product-highlight.blocks.highlight_description.settings.desc_product.label",
-          "default": "<p>lorem ipsum dolor sit amet nolei kofrika</p>"
+          "type": "text",
+          "id": "price_product_title",
+          "label": "t:sections.product-highlight.blocks.highlight_description.settings.price_product_title.label",
+          "default": "Price From"
+        },
+        {
+          "type": "text",
+          "id": "price_product_no_disc",
+          "label": "t:sections.product-highlight.blocks.highlight_description.settings.price_product_no_disc.label",
+          "default": "Rp. 4.950.000"
+        },
+        {
+          "type": "text",
+          "id": "price_product_disc",
+          "label": "t:sections.product-highlight.blocks.highlight_description.settings.price_product_disc.label",
+          "default": "Rp.4.400.000"
         },
         {
           "type": "richtext",
-          "id": "title_height_product",
-          "label": "t:sections.product-highlight.blocks.highlight_description.settings.title_height_product.label",
-          "default": "<p>lorem ipsum dolor sit amet nolei kofrika</p>"
-        },
-        {
-          "type": "richtext",
-          "id": "desc_height_product",
-          "label": "t:sections.product-highlight.blocks.highlight_description.settings.desc_height_product.label",
-          "default": "<p>lorem ipsum dolor sit amet nolei kofrika</p>"
-        },
-        {
-          "type": "richtext",
-          "id": "text_layer_product",
-          "label": "t:sections.product-highlight.blocks.highlight_description.settings.text_layer_product.label",
-          "default": "<p>lorem ipsum dolor sit amet nolei kofrika</p>"
+          "id": "feature_product_card",
+          "label": "t:sections.product-highlight.blocks.highlight_description.settings.feature_product_card.label",
+          "default": "<p>Features: has 4 layes with <br> a thickness of 25cm</p>"
         },
         {
           "type": "image_picker",
-          "id": "image_layer_product",
-          "label": "t:sections.product-highlight.blocks.highlight_description.settings.image_layer_product.label"
+          "id": "image_content_card",
+          "label": "t:sections.product-highlight.blocks.highlight_description.settings.image_content_card.label"
         },
         {
           "type": "richtext",
-          "id": "desc_layer_product",
-          "label": "t:sections.product-highlight.blocks.highlight_description.settings.desc_layer_product.label",
-          "default": "<p>lorem ipsum dolor sit amet nolei kofrika</p>"
+          "id": "desc_feature_product_card",
+          "label": "t:sections.product-highlight.blocks.highlight_description.settings.desc_feature_product_card.label",
+          "default": "<p>2,5 cm Latex<br>2,5 Memory Foam<br>10 cm Medium Desinty Foam<br>10 cm High Desinty Foam a thickness of 25cm</p>"
+        },
+        {
+          "type": "text",
+          "id": "size_product_card",
+          "label": "t:sections.product-highlight.blocks.highlight_description.settings.size_product_card.label",
+          "default": "Size"
         },
         {
           "type": "richtext",
-          "id": "desc_size_product",
-          "label": "t:sections.product-highlight.blocks.highlight_description.settings.desc_size_product.label",
-          "default": "<p>lorem ipsum dolor sit amet nolei kofrika</p>"
+          "id": "desc_size_product_card",
+          "label": "t:sections.product-highlight.blocks.highlight_description.settings.desc_size_product_card.label",
+          "default": "<p>Single, Single Standar, Single XL, Double, Queen</p>"
         },
         {
           "type": "image_picker",
-          "id": "image_certificate",
-          "label": "t:sections.product-highlight.blocks.highlight_description.settings.image_certificate.label"
+          "id": "image_certi_card",
+          "label": "t:sections.product-highlight.blocks.highlight_description.settings.image_certi_card.label"
+        },
+        {
+          "type": "text",
+          "id": "title_rating_one",
+          "label": "t:sections.product-highlight.blocks.highlight_description.settings.title_rating_one.label",
+          "default": "Soft"
         },
         {
           "type": "range",
@@ -307,6 +367,12 @@
           "default": "<p>lorem ipsum dolor sit amet nolei kofrika</p>"
         },
         {
+          "type": "text",
+          "id": "title_rating_two",
+          "label": "t:sections.product-highlight.blocks.highlight_description.settings.title_rating_two.label",
+          "default": "Medium"
+        },
+        {
           "type": "range",
           "id": "rate_rating_two",
           "min": 0,
@@ -320,6 +386,12 @@
           "id": "desc_rating_two",
           "label": "t:sections.product-highlight.blocks.highlight_description.settings.desc_rating_two.label",
           "default": "<p>lorem ipsum dolor sit amet nolei kofrika</p>"
+        },
+        {
+          "type": "text",
+          "id": "title_rating_three",
+          "label": "t:sections.product-highlight.blocks.highlight_description.settings.title_rating_three.label",
+          "default": "Soft"
         },
         {
           "type": "range",
@@ -338,43 +410,37 @@
         },
         {
           "type": "richtext",
-          "id": "desc_rating_all",
-          "label": "t:sections.product-highlight.blocks.highlight_description.settings.desc_rating_three.label",
-          "default": "<p>lorem ipsum dolor sit amet nolei kofrika</p>"
+          "id": "desc_product_card",
+          "label": "t:sections.product-highlight.blocks.highlight_description.settings.desc_feature_product_card.label",
+          "default": "<p>A mattress that you can freely customize according to your comfort level</p>"
         },
         {
           "type": "image_picker",
-          "id": "image_icon_product",
-          "label": "t:sections.product-highlight.blocks.highlight_description.settings.image_icon_product.label"
+          "id": "image_icon_one",
+          "label": "t:sections.product-highlight.blocks.highlight_description.settings.image_icon_one.label"
         },
         {
-          "type": "richtext",
+          "type": "text",
           "id": "text_icon_one",
           "label": "t:sections.product-highlight.blocks.highlight_description.settings.text_icon_one.label",
-          "default": "<p>lorem ipsum dolor sit amet nolei kofrika</p>"
+          "default": "120-Day Trial Period Warranty"
         },
         {
           "type": "image_picker",
-          "id": "image_icon_product_two",
-          "label": "t:sections.product-highlight.blocks.highlight_description.settings.image_icon_product_two.label"
+          "id": "image_icon_two",
+          "label": "t:sections.product-highlight.blocks.highlight_description.settings.image_icon_two.label"
         },
         {
-          "type": "richtext",
+          "type": "text",
           "id": "text_icon_two",
           "label": "t:sections.product-highlight.blocks.highlight_description.settings.text_icon_two.label",
-          "default": "<p>lorem ipsum dolor sit amet nolei kofrika</p>"
+          "default": "Up to 20 years warranty period"
         },
         {
-          "type": "richtext",
-          "id": "tagline_price_product",
-          "label": "t:sections.product-highlight.blocks.highlight_description.settings.tagline_price_product.label",
-          "default": "<p>lorem ipsum dolor sit amet nolei kofrika</p>"
-        },
-        {
-          "type": "richtext",
-          "id": "text_price_product",
-          "label": "t:sections.product-highlight.blocks.highlight_description.settings.text_price_product.label",
-          "default": "<p>lorem ipsum dolor sit amet nolei kofrika</p>"
+          "type": "text",
+          "id": "button_text",
+          "label": "t:sections.product-highlight.blocks.highlight_description.settings.button_link.label",
+          "default": "Beli Sekarang"
         },
         {
           "type": "url",

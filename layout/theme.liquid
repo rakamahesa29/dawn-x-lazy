@@ -259,6 +259,8 @@
 
     {{ 'custome-style.css' | asset_url | stylesheet_tag }}
 
+    {{ 'review.css' | asset_url | stylesheet_tag }}
+
     {%- unless settings.type_body_font.system? -%}
       <link rel="preload" as="font" href="{{ settings.type_body_font | font_url }}" type="font/woff2" crossorigin>
     {%- endunless -%}
@@ -298,6 +300,10 @@
     {%- endif -%}
 
     {% sections 'header-group' %}
+
+    {% if template.name == 'index' %}
+      {% render 'popup-card' %}
+    {% endif %}
 
     <main id="MainContent" class="content-for-layout {% if template.name != 'index' %}custome-main-content-layout{% endif %} focus-none" role="main" tabindex="-1">
       {{ content_for_layout }}

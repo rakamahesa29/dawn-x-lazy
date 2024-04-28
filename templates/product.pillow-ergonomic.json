@@ -13,6 +13,11 @@
           "settings": {
           }
         },
+        "judge_me_reviews_preview_badge_kbw6D9": {
+          "type": "shopify:\/\/apps\/judge-me-reviews\/blocks\/preview_badge\/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
+          "settings": {
+          }
+        },
         "description": {
           "type": "description",
           "settings": {
@@ -48,13 +53,14 @@
         "image_picker_ir7nHN": {
           "type": "image_picker",
           "settings": {
-            "info_image": "shopify:\/\/shop_images\/sertif.webp"
+            "info_image": "shopify:\/\/shop_images\/sertif-bantal-guling.webp"
           }
         }
       },
       "block_order": [
         "title",
         "price",
+        "judge_me_reviews_preview_badge_kbw6D9",
         "description",
         "size_guide_zDGRXK",
         "variant_picker",
@@ -145,25 +151,6 @@
         "padding_bottom": 0
       }
     },
-    "slider_custome_GVYGxq": {
-      "type": "slider-custome",
-      "blocks": {
-        "video_zeDDfK": {
-          "type": "video",
-          "disabled": true,
-          "settings": {
-            "video_url": ""
-          }
-        }
-      },
-      "block_order": [
-        "video_zeDDfK"
-      ],
-      "settings": {
-        "heading_size": "h1",
-        "color_scheme": ""
-      }
-    },
     "image_with_text_custome_Mr4zyj": {
       "type": "image-with-text-custome",
       "blocks": {
@@ -210,13 +197,50 @@
         "padding_top": 0,
         "padding_bottom": 0
       }
+    },
+    "slider_custome_GVYGxq": {
+      "type": "slider-custome",
+      "blocks": {
+        "video_zeDDfK": {
+          "type": "video",
+          "settings": {
+            "video_url": "https:\/\/cdn.shopify.com\/videos\/c\/o\/v\/ce880dbf0428489a9a0e96abaf8aa283.mp4"
+          }
+        }
+      },
+      "block_order": [
+        "video_zeDDfK"
+      ],
+      "settings": {
+        "heading_size": "h1",
+        "color_scheme": "",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "1713744314fd24f68a": {
+      "type": "apps",
+      "blocks": {
+        "judge_me_reviews_review_widget_atdDRY": {
+          "type": "shopify:\/\/apps\/judge-me-reviews\/blocks\/review_widget\/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
+          "settings": {
+          }
+        }
+      },
+      "block_order": [
+        "judge_me_reviews_review_widget_atdDRY"
+      ],
+      "settings": {
+        "include_margins": true
+      }
     }
   },
   "order": [
     "main",
     "related-products",
     "image_with_text_custome_aBKWEG",
+    "image_with_text_custome_Mr4zyj",
     "slider_custome_GVYGxq",
-    "image_with_text_custome_Mr4zyj"
+    "1713744314fd24f68a"
   ]
 }

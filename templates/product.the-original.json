@@ -13,6 +13,18 @@
           "settings": {
           }
         },
+        "text_info_LW6zH6": {
+          "type": "text_info",
+          "settings": {
+            "label_first_product": "Disc 10%",
+            "label_sec_product": "For Mattress Original"
+          }
+        },
+        "judge_me_reviews_preview_badge_yPA3nJ": {
+          "type": "shopify:\/\/apps\/judge-me-reviews\/blocks\/preview_badge\/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
+          "settings": {
+          }
+        },
         "description": {
           "type": "description",
           "settings": {
@@ -47,6 +59,8 @@
       "block_order": [
         "title",
         "price",
+        "text_info_LW6zH6",
+        "judge_me_reviews_preview_badge_yPA3nJ",
         "description",
         "variant_picker",
         "quantity_selector",
@@ -69,24 +83,26 @@
         "padding_bottom": 80
       }
     },
-    "slider_custome_jUDdzD": {
+    "slider_custome_4jrMpD": {
       "type": "slider-custome",
       "blocks": {
-        "image_pQyLta": {
+        "image_zkQT4q": {
           "type": "image",
           "settings": {
             "image_slider_desktop": "shopify:\/\/shop_images\/header-home.webp",
-            "image_slider_mobile": "shopify:\/\/shop_images\/header-mobiile.jpg",
+            "image_slider_mobile": "shopify:\/\/shop_images\/header-home.webp",
             "text_slider": ""
           }
         }
       },
       "block_order": [
-        "image_pQyLta"
+        "image_zkQT4q"
       ],
       "settings": {
         "heading_size": "h1",
-        "color_scheme": "scheme-4901882a-37a4-43d2-9919-a04d2596a8f8"
+        "color_scheme": "",
+        "padding_top": 0,
+        "padding_bottom": 0
       }
     },
     "animation_product_DMeHYk": {
@@ -128,7 +144,29 @@
         "link_title": "https:\/\/cdn.shopify.com\/s\/files\/1\/0718\/7375\/7471\/files\/",
         "heading_size": "h1",
         "text_position": "position-center",
-        "color_scheme": "scheme-47a0187c-b8de-4cff-b20c-5d35f422c9c0"
+        "color_scheme": "scheme-47a0187c-b8de-4cff-b20c-5d35f422c9c0",
+        "padding_top": 40,
+        "padding_bottom": 40
+      }
+    },
+    "slider_custome_KGi8nw": {
+      "type": "slider-custome",
+      "blocks": {
+        "video_E9AN66": {
+          "type": "video",
+          "settings": {
+            "video_url": "https:\/\/cdn.shopify.com\/videos\/c\/o\/v\/ad12aaac07b44a3db20fbc4ab4615a4c.mp4"
+          }
+        }
+      },
+      "block_order": [
+        "video_E9AN66"
+      ],
+      "settings": {
+        "heading_size": "h1",
+        "color_scheme": "",
+        "padding_top": 0,
+        "padding_bottom": 0
       }
     },
     "accordion_product_FNhj6L": {
@@ -178,10 +216,12 @@
         "text_accordion_4iDwnR"
       ],
       "settings": {
-        "heading_size": "h2",
+        "heading_size": "h1",
         "color_scheme": "scheme-47a0187c-b8de-4cff-b20c-5d35f422c9c0",
-        "title": "Tidur nyenyak di setiap lapisannya",
-        "image": "shopify:\/\/shop_images\/3d-mattress.webp"
+        "title": "Tidur nyenyak disetiap lapisannya",
+        "image": "shopify:\/\/shop_images\/3d-mattress.webp",
+        "padding_top": 60,
+        "padding_bottom": 60
       }
     },
     "support_and_guarantee_mwDhDc": {
@@ -225,13 +265,60 @@
       "settings": {
         "title": "Support And Guarantee",
         "heading_size": "h1",
-        "color_scheme": "scheme-4901882a-37a4-43d2-9919-a04d2596a8f8"
+        "color_scheme": "scheme-4901882a-37a4-43d2-9919-a04d2596a8f8",
+        "padding_top": 40,
+        "padding_bottom": 40
+      }
+    },
+    "product_review_TnfAWE": {
+      "type": "product-review",
+      "blocks": {
+        "slider_item_MTGWab": {
+          "type": "slider_item",
+          "settings": {
+            "image_slider": "shopify:\/\/shop_images\/Lite-20240328-3523.png",
+            "video_url": "",
+            "title_slider": "<h5><strong>Cloud Nine Comfort: The Ultimate Sleep Trio Reviewed<\/strong><\/h5>",
+            "description_slider": "<p>Experience unparalleled comfort with the Cloud Nine Comfort mattress, bolster, and pillow set. Designed with state-of-the-art memory foam technology and breathable fabrics, this sleep trio adapts to your body, providing support and comfort tailored to your sleeping position. The hypoallergenic materials ensure a restful night's sleep without the sniffles. Perfect for anyone looking to upgrade their sleep quality dramatically!<\/p>",
+            "name_slider": "Emily R., Verified Purchaser"
+          }
+        },
+        "slider_item_aNnGR7": {
+          "type": "slider_item",
+          "settings": {
+            "image_slider": "shopify:\/\/shop_images\/LAZYLOWIE-20231223-1040-desktop.png",
+            "video_url": "",
+            "title_slider": "<h5><strong>Dream Weaver: The Ultimate Bedding Ensemble<\/strong><\/h5>",
+            "description_slider": "<p>Dive into a sea of comfort with the Dream Weaver mattress, bolster, and pillow set. This ensemble promises to transform your bed into a haven of relaxation. The mattress features a perfect balance of firmness and cushion, supporting your body’s every curve. The specially designed bolsters and pillows enhance your comfort, making this set a must-have for luxury seekers.<\/p>",
+            "name_slider": "Jordan K., Interior Designer"
+          }
+        },
+        "slider_item_Wy7bPc": {
+          "type": "slider_item",
+          "settings": {
+            "video_url": "https:\/\/cdn.shopify.com\/videos\/c\/o\/v\/ce880dbf0428489a9a0e96abaf8aa283.mp4",
+            "title_slider": "<h5><strong>Serenity Now: Sleep Perfected with Our Mattress, Bolster, and Pillow Set<\/strong><\/h5>",
+            "description_slider": "<p>Step into a world of calm and rejuvenation each night with the Serenity Now bedding collection. Our carefully engineered mattress provides the foundation for a perfect night’s sleep, complemented by our ultra-supportive bolsters and plush pillows. Crafted with eco-friendly materials, this set not only soothes your body but also your conscience.<\/p>",
+            "name_slider": "Liam S., Eco-conscious Shopper"
+          }
+        }
+      },
+      "block_order": [
+        "slider_item_MTGWab",
+        "slider_item_aNnGR7",
+        "slider_item_Wy7bPc"
+      ],
+      "settings": {
+        "heading_size": "h1",
+        "color_scheme": "scheme-47a0187c-b8de-4cff-b20c-5d35f422c9c0",
+        "padding_top": 36,
+        "padding_bottom": 36
       }
     },
     "related-products": {
       "type": "related-products",
       "settings": {
-        "heading": "You may also like",
+        "heading": "<strong>Pelengkap Tidur Nyenyakmu<\/strong>",
         "heading_size": "h2",
         "products_to_show": 4,
         "columns_desktop": 4,
@@ -242,17 +329,36 @@
         "show_vendor": false,
         "show_rating": false,
         "columns_mobile": "2",
-        "padding_top": 36,
-        "padding_bottom": 28
+        "padding_top": 60,
+        "padding_bottom": 60
+      }
+    },
+    "1713750560574b5864": {
+      "type": "apps",
+      "blocks": {
+        "judge_me_reviews_review_widget_8BepAd": {
+          "type": "shopify:\/\/apps\/judge-me-reviews\/blocks\/review_widget\/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
+          "settings": {
+          }
+        }
+      },
+      "block_order": [
+        "judge_me_reviews_review_widget_8BepAd"
+      ],
+      "settings": {
+        "include_margins": true
       }
     }
   },
   "order": [
     "main",
-    "slider_custome_jUDdzD",
+    "slider_custome_4jrMpD",
     "animation_product_DMeHYk",
+    "slider_custome_KGi8nw",
     "accordion_product_FNhj6L",
     "support_and_guarantee_mwDhDc",
-    "related-products"
+    "product_review_TnfAWE",
+    "related-products",
+    "1713750560574b5864"
   ]
 }

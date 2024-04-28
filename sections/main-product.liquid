@@ -108,6 +108,17 @@
                     class="product-info-image"
                   >
                 {% endif %}
+                {%- when 'text_info' -%}
+                  {%- if block.settings.label_first_product != blank or block.settings.label_sec_product != blank -%}
+                      <div class="label-product">
+                          {%- if block.settings.label_first_product != blank -%}
+                              <p class="label-first-product">{{ block.settings.label_first_product }}</p>
+                          {%- endif -%}
+                          {%- if block.settings.label_sec_product != blank -%}
+                              <p class="label-second-product">{{ block.settings.label_sec_product }}</p>
+                          {%- endif -%}
+                      </div>
+                  {%- endif -%}              
               {%- when 'size_guide' -%}
                 {% if block.settings.size_image != blank %}
                   <div class="size-guide">
@@ -838,6 +849,22 @@
           "type": "image_picker",
           "id": "info_image",
           "label": "t:sections.main-product.blocks.additional_image.settings.info_image.label"
+        }
+      ]
+    },
+    {
+      "type": "text_info",
+      "name": "t:sections.main-product.blocks.label_product.name",
+      "settings": [
+        {
+          "type": "text",
+          "id": "label_first_product",
+          "label": "t:sections.main-product.blocks.label_product.settings.label_first_product.label"
+        },
+        {
+          "type": "text",
+          "id": "label_sec_product",
+          "label": "t:sections.main-product.blocks.label_product.settings.label_sec_product.label"
         }
       ]
     },

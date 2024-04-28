@@ -1,6 +1,50 @@
-<section class="section-custome color-{{ section.settings.color_scheme }}">
+{%- style -%}
+  .section-{{ section.id }}-padding {
+    padding-top: {{ section.settings.padding_top | times: 0.75 | round: 0 }}px;
+    padding-bottom: {{ section.settings.padding_bottom | times: 0.75 | round: 0 }}px;
+  }
+
+  @media screen and (min-width: 768px) {
+    .section-{{ section.id }}-padding {
+      padding-top: {{ section.settings.padding_top }}px;
+      padding-bottom: {{ section.settings.padding_bottom }}px;
+    }
+  }
+
+  @media screen and (max-width: 767px) {
+    .section-{{ section.id }}-padding {
+      padding-top: 40px;
+      padding-bottom: 40px;
+    }
+  }
+{%- endstyle -%}
+
+<style>
+  @media screen and (min-width: 768px) {
+    .accordion-button {
+      font-size: 16px;
+    }
+    .accordion-body {
+      font-size: 16px;
+    }
+  }
+
+  @media screen and (max-width: 767px) {
+    .accordion-button {
+      font-size: 18px;
+    }
+    .accordion-body {
+      font-size: 14px;
+    }
+  }
+</style>
+
+<section class="section-{{ section.id }}-padding color-{{ section.settings.color_scheme }}">
   <div class="container">
     <div class="row align-items-center">
+      <div class="header-accordion mobile">
+        <h2 class="{{ section.settings.heading_size }}">{{ section.settings.title }}</h2>
+      </div>
       <div class="col-lg-6 col-md-6 col-sm-12 col-12">
         <div class="img-accordion">
           <img src="{{ section.settings.image | img_url: 'master' }}" alt="{{ section.settings.image.alt | escape }}">
@@ -83,7 +127,7 @@
       "default": "scheme-1"
     },
     {
-      "type": "text",
+      "type": "inline_richtext",
       "id": "title",
       "label": "t:sections.accordion-product.settings.title.label",
       "default": "hello world"
@@ -92,6 +136,30 @@
       "type": "image_picker",
       "id": "image",
       "label": "t:sections.accordion-product.settings.image.label"
+    },
+    {
+      "type": "header",
+      "content": "t:sections.all.padding.section_padding_heading"
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "t:sections.all.padding.padding_top",
+      "default": 36
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "t:sections.all.padding.padding_bottom",
+      "default": 36
     }
   ],
   "blocks": [
@@ -102,13 +170,13 @@
         {
           "type": "inline_richtext",
           "id": "title",
-          "label": "t:sections.accordion-product.blocks.text.settings.title.label",
+          "label": "t:sections.accordion-product.blocks.text_accordion.settings.title.label",
           "default": "hello world"
         },
         {
           "type": "inline_richtext",
           "id": "description",
-          "label": "t:sections.accordion-product.blocks.text.settings.description.label",
+          "label": "t:sections.accordion-product.blocks.text_accordion.settings.description.label",
           "default": "Lorem ipsum dolor sit amet"
         }
       ]

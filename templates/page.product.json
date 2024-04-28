@@ -2,13 +2,196 @@
   "sections": {
     "main": {
       "type": "main-page",
+      "disabled": true,
       "settings": {
         "padding_top": 28,
         "padding_bottom": 28
       }
+    },
+    "product_highlight_iTMMUT": {
+      "type": "product-highlight",
+      "blocks": {
+        "highlight_description_Hpr6qV": {
+          "type": "highlight_description",
+          "settings": {
+            "title_product_card": "The Original",
+            "tagline_product_card": "Adjustable Mattress",
+            "image_product": "shopify:\/\/shop_images\/mattress_b1bc1c78-fcb2-48cb-9211-78ecac8c84f4.webp",
+            "price_product_title": "Harga Mulai",
+            "price_product_no_disc": "Rp. 6.500.000",
+            "price_product_disc": "Rp. 5.800.000",
+            "feature_product_card": "<p>Ketebalan : 25 cm<\/p><p>4 Lapisan<\/p>",
+            "image_content_card": "shopify:\/\/shop_images\/10004.jpg",
+            "desc_feature_product_card": "<p>2,5 cm Latex<br\/>2,5 Memory Foam<br\/>10 cm Medium Desinty Foam<br\/>10 cm High Desinty Foam<\/p>",
+            "size_product_card": "Size",
+            "desc_size_product_card": "<p>Single, Single Standar, Single XL, Double, Queen, King, Super King<\/p>",
+            "image_certi_card": "shopify:\/\/shop_images\/certificate-tencel.png",
+            "title_rating_one": "Soft",
+            "rate_rating_one": 7,
+            "desc_rating_one": "",
+            "title_rating_two": "Medium",
+            "rate_rating_two": 4.5,
+            "desc_rating_two": "",
+            "title_rating_three": "Firm",
+            "rate_rating_three": 6,
+            "desc_rating_three": "",
+            "desc_product_card": "<p>\"Kasur yang digemari dengan lapisan yang bisa disesuaikan.\"<\/p>",
+            "image_icon_one": "shopify:\/\/shop_images\/calendar.png",
+            "text_icon_one": "100-Day Trials Period Warranty",
+            "image_icon_two": "shopify:\/\/shop_images\/guarantee.png",
+            "text_icon_two": "Up to 10 years warranty period",
+            "button_text": "Beli Sekarang",
+            "button_link": "shopify:\/\/products\/kasur-lazy-lowie-1"
+          }
+        },
+        "highlight_description_C8gnMK": {
+          "type": "highlight_description",
+          "settings": {
+            "title_product_card": "The Lite",
+            "tagline_product_card": "Adjustable Mattress",
+            "image_product": "shopify:\/\/shop_images\/Lite-20240328-3091-desktop.png",
+            "price_product_title": "Harga Mulai",
+            "price_product_no_disc": "Rp. 4.950.000",
+            "price_product_disc": "Rp.4.400.000",
+            "feature_product_card": "<p>Ketebalan : 16 cm<\/p><p>4 Lapisan<\/p>",
+            "image_content_card": "shopify:\/\/shop_images\/0010.jpg",
+            "desc_feature_product_card": "<p>1 cm Latex<br\/>2,5 Memory Foam<br\/>8 cm Medium Desinty Foam<br\/>8 cm High Desinty Foam<\/p>",
+            "size_product_card": "Size",
+            "desc_size_product_card": "<p>Single, Single Standard, Single XL, Double, Queen, King, Super King<\/p>",
+            "image_certi_card": "shopify:\/\/shop_images\/certificate-tencel.png",
+            "title_rating_one": "Soft",
+            "rate_rating_one": 7,
+            "desc_rating_one": "",
+            "title_rating_two": "Medium",
+            "rate_rating_two": 4.5,
+            "desc_rating_two": "",
+            "title_rating_three": "Firm",
+            "rate_rating_three": 6,
+            "desc_rating_three": "",
+            "desc_product_card": "<p>\"Kenyamanan yang mudah didapat untuk investasimu.\"<\/p>",
+            "image_icon_one": "shopify:\/\/shop_images\/calendar.png",
+            "text_icon_one": "100-Day Trials Period Warranty",
+            "image_icon_two": "shopify:\/\/shop_images\/guarantee.png",
+            "text_icon_two": "Up to 10 years warranty period",
+            "button_text": "Beli Sekarang",
+            "button_link": "shopify:\/\/products\/new-sample-kasur-lazy-lowie"
+          }
+        }
+      },
+      "block_order": [
+        "highlight_description_Hpr6qV",
+        "highlight_description_C8gnMK"
+      ],
+      "settings": {
+        "title": "",
+        "heading_size": "h1",
+        "color_scheme": "scheme-47a0187c-b8de-4cff-b20c-5d35f422c9c0",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "support_and_guarantee_GekKEX": {
+      "type": "support-and-guarantee",
+      "blocks": {
+        "image_tYmEaN": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/night.webp",
+            "image_text": "Uji Coba Gratis 100 Malam di Rumah"
+          }
+        },
+        "image_8mmcGL": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/premium-product-new.webp",
+            "image_text": "Bahan Premium & Berkelanjutan"
+          }
+        },
+        "image_CacVTP": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/layer.webp",
+            "image_text": "Tingkat Kenyamanan Tidur yang Dapat Disesuaikan"
+          }
+        },
+        "image_MQ6di3": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/shield_traced.webp",
+            "image_text": "Garansi 10 Tahun"
+          }
+        }
+      },
+      "block_order": [
+        "image_tYmEaN",
+        "image_8mmcGL",
+        "image_CacVTP",
+        "image_MQ6di3"
+      ],
+      "settings": {
+        "title": "Support And Guarantee",
+        "heading_size": "h1",
+        "color_scheme": "scheme-4901882a-37a4-43d2-9919-a04d2596a8f8",
+        "padding_top": 40,
+        "padding_bottom": 40
+      }
+    },
+    "collapsible_content_AwcwCJ": {
+      "type": "collapsible-content",
+      "blocks": {
+        "collapsible_row_9qBKkb": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Apa itu Kasur Original dari Lazy Lowie?",
+            "icon": "none",
+            "row_content": "<p>Kasur Original dari Lazy Lowie adalah kasur premium yang menawarkan kenyamanan maksimal dengan empat lapisan kepadatan yang bisa disesuaikan untuk memenuhi kebutuhan spesifik tidur Anda. Kasur ini dirancang untuk investasi jangka panjang dalam meningkatkan kualitas tidur Anda. Dengan struktur yang inovatif, kasur ini mampu menyediakan dukungan yang optimal untuk tubuh, memastikan tidur Anda menjadi lebih nyenyak dan menyegarkan.<\/p>",
+            "page": ""
+          }
+        },
+        "collapsible_row_LMrqTx": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Bagaimana bantal dan guling Lazy Lowie mendukung kesehatan tidur?",
+            "icon": "none",
+            "row_content": "<p>Bantal dan guling Lazy Lowie dibuat dari latex berkualitas tinggi yang ideal untuk orang yang rentan terhadap alergi. Desain khusus dari produk ini memberikan dukungan penuh terhadap leher dan tulang punggung, menjaga postur tidur yang sehat. Produk ini sangat cocok untuk berbagai posisi tidur, sehingga memastikan tidur yang nyaman tanpa mempengaruhi area sensitif pada tubuh.<\/p>",
+            "page": ""
+          }
+        },
+        "collapsible_row_aM6x4R": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Apa saja keunggulan membeli produk tidur dari Lazy Lowie?",
+            "icon": "none",
+            "row_content": "<p>Produk tidur Lazy Lowie menawarkan sejumlah keunggulan yang membuatnya menjadi pilihan yang sangat baik:<\/p><ul><li><strong>Uji Coba Gratis 100 Malam:<\/strong> Kami yakin Anda akan mencintai produk kami, tetapi jika Anda merasa tidak puas, Anda bisa mengembalikannya dalam waktu 100 malam.<\/li><li><strong>Bahan Premium & Berkelanjutan:<\/strong> Semua produk kami dibuat dari bahan berkualitas tinggi dan berkelanjutan, mendukung kesehatan Anda dan planet ini.<\/li><li><strong>Tingkat Kenyamanan Tidur yang Dapat Disesuaikan:<\/strong> Kami menawarkan produk dengan tingkat kepadatan yang bisa disesuaikan untuk memenuhi preferensi tidur Anda.<\/li><li><strong>Garansi 10 Tahun:<\/strong> Produk kami didukung dengan garansi 10 tahun, menjamin kualitas dan kepuasan jangka panjang.<\/li><\/ul>",
+            "page": ""
+          }
+        }
+      },
+      "block_order": [
+        "collapsible_row_9qBKkb",
+        "collapsible_row_LMrqTx",
+        "collapsible_row_aM6x4R"
+      ],
+      "settings": {
+        "caption": "",
+        "heading": "Frequently Asked Questions",
+        "heading_size": "h1",
+        "heading_alignment": "center",
+        "layout": "none",
+        "color_scheme": "scheme-47a0187c-b8de-4cff-b20c-5d35f422c9c0",
+        "container_color_scheme": "",
+        "open_first_collapsible_row": false,
+        "image_ratio": "adapt",
+        "desktop_layout": "image_second",
+        "padding_top": 60,
+        "padding_bottom": 36
+      }
     }
   },
   "order": [
-    "main"
+    "main",
+    "product_highlight_iTMMUT",
+    "support_and_guarantee_GekKEX",
+    "collapsible_content_AwcwCJ"
   ]
 }

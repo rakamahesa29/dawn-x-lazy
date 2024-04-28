@@ -13,6 +13,11 @@
           "settings": {
           }
         },
+        "judge_me_reviews_preview_badge_YkCMNM": {
+          "type": "shopify:\/\/apps\/judge-me-reviews\/blocks\/preview_badge\/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
+          "settings": {
+          }
+        },
         "description": {
           "type": "description",
           "settings": {
@@ -48,13 +53,14 @@
         "image_picker_ir7nHN": {
           "type": "image_picker",
           "settings": {
-            "info_image": "shopify:\/\/shop_images\/sertif.webp"
+            "info_image": "shopify:\/\/shop_images\/sertif-bantal-guling.webp"
           }
         }
       },
       "block_order": [
         "title",
         "price",
+        "judge_me_reviews_preview_badge_YkCMNM",
         "description",
         "size_guide_zDGRXK",
         "variant_picker",
@@ -150,17 +156,18 @@
         "video_8AKqV7": {
           "type": "video",
           "settings": {
-            "video_url": ""
+            "video_url": "https:\/\/cdn.shopify.com\/videos\/c\/o\/v\/ce880dbf0428489a9a0e96abaf8aa283.mp4"
           }
         }
       },
       "block_order": [
         "video_8AKqV7"
       ],
-      "disabled": true,
       "settings": {
         "heading_size": "h1",
-        "color_scheme": ""
+        "color_scheme": "",
+        "padding_top": 0,
+        "padding_bottom": 16
       }
     },
     "image_with_text_custome_Mr4zyj": {
@@ -210,6 +217,22 @@
         "padding_top": 0,
         "padding_bottom": 0
       }
+    },
+    "1713744111864b9fd3": {
+      "type": "apps",
+      "blocks": {
+        "judge_me_reviews_review_widget_G4HRnF": {
+          "type": "shopify:\/\/apps\/judge-me-reviews\/blocks\/review_widget\/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
+          "settings": {
+          }
+        }
+      },
+      "block_order": [
+        "judge_me_reviews_review_widget_G4HRnF"
+      ],
+      "settings": {
+        "include_margins": true
+      }
     }
   },
   "order": [
@@ -217,6 +240,7 @@
     "related-products",
     "image_with_text_custome_aBKWEG",
     "slider_custome_VHzgDk",
-    "image_with_text_custome_Mr4zyj"
+    "image_with_text_custome_Mr4zyj",
+    "1713744111864b9fd3"
   ]
 }
