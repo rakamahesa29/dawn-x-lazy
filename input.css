@@ -1,0 +1,53 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+    @font-face {
+        font-family: PlusJakartaSans-Regular;
+        src: url("./assets/PlusJakartaSans-Regular.ttf") format('truetype');
+    }
+
+    @font-face {
+        font-family: PlusJakartaSans-Medium;
+        src: url("./assets/PlusJakartaSans-Medium.ttf") format('truetype');
+    }
+
+    @font-face {
+        font-family: PlusJakartaSans-SemiBold;
+        src: url("./assets/PlusJakartaSans-SemiBold.ttf") format('truetype');
+    }
+
+    @font-face {
+        font-family: PlusJakartaSans-Bold;
+        src: url("./assets/PlusJakartaSans-Bold.ttf") format('truetype');
+    }
+
+    @font-face {
+        font-family: Inter-Regular;
+        src: url("./assets/Inter-Regular.ttf") format('truetype');
+    }
+
+    @font-face {
+        font-family: Inter-Medium;
+        src: url("./assets/Inter-Medium.ttf") format('truetype');
+    }
+
+    @font-face {
+        font-family: Inter-SemiBold;
+        src: url("./assets/Inter-SemiBold.ttf") format('truetype');
+    }
+
+    @font-face {
+        font-family: Inter-Bold;
+        src: url("./assets/Inter-Bold.ttf") format('truetype');
+    }
+}
+
+@layer components {
+
+}
+
+@layer utilities {
+    
+}
