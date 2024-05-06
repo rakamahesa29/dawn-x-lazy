@@ -1,38 +1,29 @@
 <!doctype html>
-<html class="no-js" lang="{{ request.locale.iso_code }}">
-
-<head>
+<html class="js" lang="{{ request.locale.iso_code }}">
+  <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="theme-color" content="">
     <link rel="canonical" href="{{ canonical_url }}">
 
-    <style>
-        .splash-screen{background-color:#fffaf6;width:100vw;height:100vh;position:fixed;z-index:10000;display:flex;justify-content:center;align-items:center;overflow:hidden;}@keyframes blink{0%{opacity:1}50%{opacity:0}100%{opacity:1}}.logo svg{width:280px;height:auto;animation:blink 1.5s infinite}
-    </style>
-
-    <script>
-       document.addEventListener('DOMContentLoaded',function(){document.body.style.overflow='hidden';var splashScreen=document.getElementById('splashScreen');window.onload=function(){splashScreen.style.display='none';document.body.style.overflow=''}})
-    </script>
-
     {%- if settings.favicon != blank -%}
-    <link rel="icon" type="image/png" href="{{ settings.favicon | image_url: width: 32, height: 32 }}">
+      <link rel="icon" type="image/png" href="{{ settings.favicon | image_url: width: 32, height: 32 }}">
     {%- endif -%}
 
     {%- unless settings.type_header_font.system? and settings.type_body_font.system? -%}
-    <link rel="preconnect" href="https://fonts.shopifycdn.com" crossorigin>
+      <link rel="preconnect" href="https://fonts.shopifycdn.com" crossorigin>
     {%- endunless -%}
 
     <title>
-        {{ page_title }}
-        {%- if current_tags %} &ndash; tagged "{{ current_tags | join: ', ' }}"{% endif -%}
-        {%- if current_page != 1 %} &ndash; Page {{ current_page }}{% endif -%}
-        {%- unless page_title contains shop.name %} &ndash; {{ shop.name }}{% endunless -%}
+      {{ page_title }}
+      {%- if current_tags %} &ndash; tagged "{{ current_tags | join: ', ' }}"{% endif -%}
+      {%- if current_page != 1 %} &ndash; Page {{ current_page }}{% endif -%}
+      {%- unless page_title contains shop.name %} &ndash; {{ shop.name }}{% endunless -%}
     </title>
 
     {% if page_description %}
-    <meta name="description" content="{{ page_description | escape }}">
+      <meta name="description" content="{{ page_description | escape }}">
     {% endif %}
 
     {% render 'meta-tags' %}
@@ -41,7 +32,7 @@
     <script src="{{ 'pubsub.js' | asset_url }}" defer="defer"></script>
     <script src="{{ 'global.js' | asset_url }}" defer="defer"></script>
     {%- if settings.animations_reveal_on_scroll -%}
-    <script src="{{ 'animations.js' | asset_url }}" defer="defer"></script>
+      <script src="{{ 'animations.js' | asset_url }}" defer="defer"></script>
     {%- endif -%}
 
     {{ content_for_header }}
@@ -53,26 +44,26 @@
     %}
 
     {% style %}
-    {{ settings.type_body_font | font_face: font_display: 'swap' }}
-    {{ body_font_bold | font_face: font_display: 'swap' }}
-    {{ body_font_italic | font_face: font_display: 'swap' }}
-    {{ body_font_bold_italic | font_face: font_display: 'swap' }}
-    {{ settings.type_header_font | font_face: font_display: 'swap' }}
+      {{ settings.type_body_font | font_face: font_display: 'swap' }}
+      {{ body_font_bold | font_face: font_display: 'swap' }}
+      {{ body_font_italic | font_face: font_display: 'swap' }}
+      {{ body_font_bold_italic | font_face: font_display: 'swap' }}
+      {{ settings.type_header_font | font_face: font_display: 'swap' }}
 
-    {% for scheme in settings.color_schemes -%}
-    {% assign scheme_classes = scheme_classes | append: ', .color-' | append: scheme.id %}
-    {% if forloop.index == 1 -%}
-    :root,
-    {%- endif %}
-    .color-{{ scheme.id }} {
-    --color-background: {{ scheme.settings.background.red }},{{ scheme.settings.background.green }},{{ scheme.settings.background.blue }};
-    {% if scheme.settings.background_gradient != empty %}
-    --gradient-background: {{ scheme.settings.background_gradient }};
-    {% else %}
-    --gradient-background: {{ scheme.settings.background }};
-    {% endif %}
+      {% for scheme in settings.color_schemes -%}
+        {% assign scheme_classes = scheme_classes | append: ', .color-' | append: scheme.id %}
+        {% if forloop.index == 1 -%}
+          :root,
+        {%- endif %}
+        .color-{{ scheme.id }} {
+          --color-background: {{ scheme.settings.background.red }},{{ scheme.settings.background.green }},{{ scheme.settings.background.blue }};
+        {% if scheme.settings.background_gradient != empty %}
+          --gradient-background: {{ scheme.settings.background_gradient }};
+        {% else %}
+          --gradient-background: {{ scheme.settings.background }};
+        {% endif %}
 
-    {% liquid
+        {% liquid
           assign background_color = scheme.settings.background
           assign background_color_brightness = background_color | color_brightness
           if background_color_brightness <= 26
@@ -84,339 +75,285 @@
           endif
         %}
 
-    --color-foreground: {{ scheme.settings.text.red }},{{ scheme.settings.text.green }},{{ scheme.settings.text.blue }};
-    --color-background-contrast: {{ background_color_contrast.red }},{{ background_color_contrast.green }},{{ background_color_contrast.blue }};
-    --color-shadow: {{ scheme.settings.shadow.red }},{{ scheme.settings.shadow.green }},{{ scheme.settings.shadow.blue }};
-    --color-button: {{ scheme.settings.button.red }},{{ scheme.settings.button.green }},{{ scheme.settings.button.blue }};
-    --color-button-text: {{ scheme.settings.button_label.red }},{{ scheme.settings.button_label.green }},{{ scheme.settings.button_label.blue }};
-    --color-secondary-button: {{ scheme.settings.background.red }},{{ scheme.settings.background.green }},{{ scheme.settings.background.blue }};
-    --color-secondary-button-text: {{ scheme.settings.secondary_button_label.red }},{{ scheme.settings.secondary_button_label.green }},{{ scheme.settings.secondary_button_label.blue }};
-    --color-link: {{ scheme.settings.secondary_button_label.red }},{{ scheme.settings.secondary_button_label.green }},{{ scheme.settings.secondary_button_label.blue }};
-    --color-badge-foreground: {{ scheme.settings.text.red }},{{ scheme.settings.text.green }},{{ scheme.settings.text.blue }};
-    --color-badge-background: {{ scheme.settings.background.red }},{{ scheme.settings.background.green }},{{ scheme.settings.background.blue }};
-    --color-badge-border: {{ scheme.settings.text.red }},{{ scheme.settings.text.green }},{{ scheme.settings.text.blue }};
-    --payment-terms-background-color: rgb({{ scheme.settings.background.rgb }});
-    }
-    {% endfor %}
+        --color-foreground: {{ scheme.settings.text.red }},{{ scheme.settings.text.green }},{{ scheme.settings.text.blue }};
+        --color-background-contrast: {{ background_color_contrast.red }},{{ background_color_contrast.green }},{{ background_color_contrast.blue }};
+        --color-shadow: {{ scheme.settings.shadow.red }},{{ scheme.settings.shadow.green }},{{ scheme.settings.shadow.blue }};
+        --color-button: {{ scheme.settings.button.red }},{{ scheme.settings.button.green }},{{ scheme.settings.button.blue }};
+        --color-button-text: {{ scheme.settings.button_label.red }},{{ scheme.settings.button_label.green }},{{ scheme.settings.button_label.blue }};
+        --color-secondary-button: {{ scheme.settings.background.red }},{{ scheme.settings.background.green }},{{ scheme.settings.background.blue }};
+        --color-secondary-button-text: {{ scheme.settings.secondary_button_label.red }},{{ scheme.settings.secondary_button_label.green }},{{ scheme.settings.secondary_button_label.blue }};
+        --color-link: {{ scheme.settings.secondary_button_label.red }},{{ scheme.settings.secondary_button_label.green }},{{ scheme.settings.secondary_button_label.blue }};
+        --color-badge-foreground: {{ scheme.settings.text.red }},{{ scheme.settings.text.green }},{{ scheme.settings.text.blue }};
+        --color-badge-background: {{ scheme.settings.background.red }},{{ scheme.settings.background.green }},{{ scheme.settings.background.blue }};
+        --color-badge-border: {{ scheme.settings.text.red }},{{ scheme.settings.text.green }},{{ scheme.settings.text.blue }};
+        --payment-terms-background-color: rgb({{ scheme.settings.background.rgb }});
+      }
+      {% endfor %}
 
-    {{ scheme_classes | prepend: 'body' }} {
-    color: rgba(var(--color-foreground), 0.75);
-    background-color: rgb(var(--color-background));
-    }
+      {{ scheme_classes | prepend: 'body' }} {
+        color: rgba(var(--color-foreground), 0.75);
+        background-color: rgb(var(--color-background));
+      }
 
-    :root {
-    --font-body-family: {{ settings.type_body_font.family }}, {{ settings.type_body_font.fallback_families }};
-    --font-body-style: {{ settings.type_body_font.style }};
-    --font-body-weight: {{ settings.type_body_font.weight }};
-    --font-body-weight-bold: {{ settings.type_body_font.weight | plus: 300 | at_most: 1000 }};
+      :root {
+        --font-body-family: {{ settings.type_body_font.family }}, {{ settings.type_body_font.fallback_families }};
+        --font-body-style: {{ settings.type_body_font.style }};
+        --font-body-weight: {{ settings.type_body_font.weight }};
+        --font-body-weight-bold: {{ settings.type_body_font.weight | plus: 300 | at_most: 1000 }};
 
-    --font-heading-family: {{ settings.type_header_font.family }}, {{ settings.type_header_font.fallback_families }};
-    --font-heading-style: {{ settings.type_header_font.style }};
-    --font-heading-weight: {{ settings.type_header_font.weight }};
+        --font-heading-family: {{ settings.type_header_font.family }}, {{ settings.type_header_font.fallback_families }};
+        --font-heading-style: {{ settings.type_header_font.style }};
+        --font-heading-weight: {{ settings.type_header_font.weight }};
 
-    --font-body-scale: {{ settings.body_scale | divided_by: 100.0 }};
-    --font-heading-scale: {{ settings.heading_scale | times: 1.0 | divided_by: settings.body_scale }};
+        --font-body-scale: {{ settings.body_scale | divided_by: 100.0 }};
+        --font-heading-scale: {{ settings.heading_scale | times: 1.0 | divided_by: settings.body_scale }};
 
-    --media-padding: {{ settings.media_padding }}px;
-    --media-border-opacity: {{ settings.media_border_opacity | divided_by: 100.0 }};
-    --media-border-width: {{ settings.media_border_thickness }}px;
-    --media-radius: {{ settings.media_radius }}px;
-    --media-shadow-opacity: {{ settings.media_shadow_opacity | divided_by: 100.0 }};
-    --media-shadow-horizontal-offset: {{ settings.media_shadow_horizontal_offset }}px;
-    --media-shadow-vertical-offset: {{ settings.media_shadow_vertical_offset }}px;
-    --media-shadow-blur-radius: {{ settings.media_shadow_blur }}px;
-    --media-shadow-visible: {% if settings.media_shadow_opacity > 0 %}1{% else %}0{% endif %};
+        --media-padding: {{ settings.media_padding }}px;
+        --media-border-opacity: {{ settings.media_border_opacity | divided_by: 100.0 }};
+        --media-border-width: {{ settings.media_border_thickness }}px;
+        --media-radius: {{ settings.media_radius }}px;
+        --media-shadow-opacity: {{ settings.media_shadow_opacity | divided_by: 100.0 }};
+        --media-shadow-horizontal-offset: {{ settings.media_shadow_horizontal_offset }}px;
+        --media-shadow-vertical-offset: {{ settings.media_shadow_vertical_offset }}px;
+        --media-shadow-blur-radius: {{ settings.media_shadow_blur }}px;
+        --media-shadow-visible: {% if settings.media_shadow_opacity > 0 %}1{% else %}0{% endif %};
 
-    --page-width: {{ settings.page_width | divided_by: 10 }}rem;
-    --page-width-margin: {% if settings.page_width == '1600' %}2{% else %}0{% endif %}rem;
+        --page-width: {{ settings.page_width | divided_by: 10 }}rem;
+        --page-width-margin: {% if settings.page_width == '1600' %}2{% else %}0{% endif %}rem;
 
-    --product-card-image-padding: {{ settings.card_image_padding | divided_by: 10.0 }}rem;
-    --product-card-corner-radius: {{ settings.card_corner_radius | divided_by: 10.0 }}rem;
-    --product-card-text-alignment: {{ settings.card_text_alignment }};
-    --product-card-border-width: {{ settings.card_border_thickness | divided_by: 10.0 }}rem;
-    --product-card-border-opacity: {{ settings.card_border_opacity | divided_by: 100.0 }};
-    --product-card-shadow-opacity: {{ settings.card_shadow_opacity | divided_by: 100.0 }};
-    --product-card-shadow-visible: {% if settings.card_shadow_opacity > 0 %}1{% else %}0{% endif %};
-    --product-card-shadow-horizontal-offset: {{ settings.card_shadow_horizontal_offset | divided_by: 10.0 }}rem;
-    --product-card-shadow-vertical-offset: {{ settings.card_shadow_vertical_offset | divided_by: 10.0 }}rem;
-    --product-card-shadow-blur-radius: {{ settings.card_shadow_blur | divided_by: 10.0 }}rem;
+        --product-card-image-padding: {{ settings.card_image_padding | divided_by: 10.0 }}rem;
+        --product-card-corner-radius: {{ settings.card_corner_radius | divided_by: 10.0 }}rem;
+        --product-card-text-alignment: {{ settings.card_text_alignment }};
+        --product-card-border-width: {{ settings.card_border_thickness | divided_by: 10.0 }}rem;
+        --product-card-border-opacity: {{ settings.card_border_opacity | divided_by: 100.0 }};
+        --product-card-shadow-opacity: {{ settings.card_shadow_opacity | divided_by: 100.0 }};
+        --product-card-shadow-visible: {% if settings.card_shadow_opacity > 0 %}1{% else %}0{% endif %};
+        --product-card-shadow-horizontal-offset: {{ settings.card_shadow_horizontal_offset | divided_by: 10.0 }}rem;
+        --product-card-shadow-vertical-offset: {{ settings.card_shadow_vertical_offset | divided_by: 10.0 }}rem;
+        --product-card-shadow-blur-radius: {{ settings.card_shadow_blur | divided_by: 10.0 }}rem;
 
-    --collection-card-image-padding: {{ settings.collection_card_image_padding | divided_by: 10.0 }}rem;
-    --collection-card-corner-radius: {{ settings.collection_card_corner_radius | divided_by: 10.0 }}rem;
-    --collection-card-text-alignment: {{ settings.collection_card_text_alignment }};
-    --collection-card-border-width: {{ settings.collection_card_border_thickness | divided_by: 10.0 }}rem;
-    --collection-card-border-opacity: {{ settings.collection_card_border_opacity | divided_by: 100.0 }};
-    --collection-card-shadow-opacity: {{ settings.collection_card_shadow_opacity | divided_by: 100.0 }};
-    --collection-card-shadow-visible: {% if settings.collection_card_shadow_opacity > 0 %}1{% else %}0{% endif %};
-    --collection-card-shadow-horizontal-offset: {{ settings.collection_card_shadow_horizontal_offset | divided_by: 10.0 }}rem;
-    --collection-card-shadow-vertical-offset: {{ settings.collection_card_shadow_vertical_offset | divided_by: 10.0 }}rem;
-    --collection-card-shadow-blur-radius: {{ settings.collection_card_shadow_blur | divided_by: 10.0 }}rem;
+        --collection-card-image-padding: {{ settings.collection_card_image_padding | divided_by: 10.0 }}rem;
+        --collection-card-corner-radius: {{ settings.collection_card_corner_radius | divided_by: 10.0 }}rem;
+        --collection-card-text-alignment: {{ settings.collection_card_text_alignment }};
+        --collection-card-border-width: {{ settings.collection_card_border_thickness | divided_by: 10.0 }}rem;
+        --collection-card-border-opacity: {{ settings.collection_card_border_opacity | divided_by: 100.0 }};
+        --collection-card-shadow-opacity: {{ settings.collection_card_shadow_opacity | divided_by: 100.0 }};
+        --collection-card-shadow-visible: {% if settings.collection_card_shadow_opacity > 0 %}1{% else %}0{% endif %};
+        --collection-card-shadow-horizontal-offset: {{ settings.collection_card_shadow_horizontal_offset | divided_by: 10.0 }}rem;
+        --collection-card-shadow-vertical-offset: {{ settings.collection_card_shadow_vertical_offset | divided_by: 10.0 }}rem;
+        --collection-card-shadow-blur-radius: {{ settings.collection_card_shadow_blur | divided_by: 10.0 }}rem;
 
-    --blog-card-image-padding: {{ settings.blog_card_image_padding | divided_by: 10.0 }}rem;
-    --blog-card-corner-radius: {{ settings.blog_card_corner_radius | divided_by: 10.0 }}rem;
-    --blog-card-text-alignment: {{ settings.blog_card_text_alignment }};
-    --blog-card-border-width: {{ settings.blog_card_border_thickness | divided_by: 10.0 }}rem;
-    --blog-card-border-opacity: {{ settings.blog_card_border_opacity | divided_by: 100.0 }};
-    --blog-card-shadow-opacity: {{ settings.blog_card_shadow_opacity | divided_by: 100.0 }};
-    --blog-card-shadow-visible: {% if settings.blog_card_shadow_opacity > 0 %}1{% else %}0{% endif %};
-    --blog-card-shadow-horizontal-offset: {{ settings.blog_card_shadow_horizontal_offset | divided_by: 10.0 }}rem;
-    --blog-card-shadow-vertical-offset: {{ settings.blog_card_shadow_vertical_offset | divided_by: 10.0 }}rem;
-    --blog-card-shadow-blur-radius: {{ settings.blog_card_shadow_blur | divided_by: 10.0 }}rem;
+        --blog-card-image-padding: {{ settings.blog_card_image_padding | divided_by: 10.0 }}rem;
+        --blog-card-corner-radius: {{ settings.blog_card_corner_radius | divided_by: 10.0 }}rem;
+        --blog-card-text-alignment: {{ settings.blog_card_text_alignment }};
+        --blog-card-border-width: {{ settings.blog_card_border_thickness | divided_by: 10.0 }}rem;
+        --blog-card-border-opacity: {{ settings.blog_card_border_opacity | divided_by: 100.0 }};
+        --blog-card-shadow-opacity: {{ settings.blog_card_shadow_opacity | divided_by: 100.0 }};
+        --blog-card-shadow-visible: {% if settings.blog_card_shadow_opacity > 0 %}1{% else %}0{% endif %};
+        --blog-card-shadow-horizontal-offset: {{ settings.blog_card_shadow_horizontal_offset | divided_by: 10.0 }}rem;
+        --blog-card-shadow-vertical-offset: {{ settings.blog_card_shadow_vertical_offset | divided_by: 10.0 }}rem;
+        --blog-card-shadow-blur-radius: {{ settings.blog_card_shadow_blur | divided_by: 10.0 }}rem;
 
-    --badge-corner-radius: {{ settings.badge_corner_radius | divided_by: 10.0 }}rem;
+        --badge-corner-radius: {{ settings.badge_corner_radius | divided_by: 10.0 }}rem;
 
-    --popup-border-width: {{ settings.popup_border_thickness }}px;
-    --popup-border-opacity: {{ settings.popup_border_opacity | divided_by: 100.0 }};
-    --popup-corner-radius: {{ settings.popup_corner_radius }}px;
-    --popup-shadow-opacity: {{ settings.popup_shadow_opacity | divided_by: 100.0 }};
-    --popup-shadow-horizontal-offset: {{ settings.popup_shadow_horizontal_offset }}px;
-    --popup-shadow-vertical-offset: {{ settings.popup_shadow_vertical_offset }}px;
-    --popup-shadow-blur-radius: {{ settings.popup_shadow_blur }}px;
+        --popup-border-width: {{ settings.popup_border_thickness }}px;
+        --popup-border-opacity: {{ settings.popup_border_opacity | divided_by: 100.0 }};
+        --popup-corner-radius: {{ settings.popup_corner_radius }}px;
+        --popup-shadow-opacity: {{ settings.popup_shadow_opacity | divided_by: 100.0 }};
+        --popup-shadow-horizontal-offset: {{ settings.popup_shadow_horizontal_offset }}px;
+        --popup-shadow-vertical-offset: {{ settings.popup_shadow_vertical_offset }}px;
+        --popup-shadow-blur-radius: {{ settings.popup_shadow_blur }}px;
 
-    --drawer-border-width: {{ settings.drawer_border_thickness }}px;
-    --drawer-border-opacity: {{ settings.drawer_border_opacity | divided_by: 100.0 }};
-    --drawer-shadow-opacity: {{ settings.drawer_shadow_opacity | divided_by: 100.0 }};
-    --drawer-shadow-horizontal-offset: {{ settings.drawer_shadow_horizontal_offset }}px;
-    --drawer-shadow-vertical-offset: {{ settings.drawer_shadow_vertical_offset }}px;
-    --drawer-shadow-blur-radius: {{ settings.drawer_shadow_blur }}px;
+        --drawer-border-width: {{ settings.drawer_border_thickness }}px;
+        --drawer-border-opacity: {{ settings.drawer_border_opacity | divided_by: 100.0 }};
+        --drawer-shadow-opacity: {{ settings.drawer_shadow_opacity | divided_by: 100.0 }};
+        --drawer-shadow-horizontal-offset: {{ settings.drawer_shadow_horizontal_offset }}px;
+        --drawer-shadow-vertical-offset: {{ settings.drawer_shadow_vertical_offset }}px;
+        --drawer-shadow-blur-radius: {{ settings.drawer_shadow_blur }}px;
 
-    --spacing-sections-desktop: {{ settings.spacing_sections }}px;
-    --spacing-sections-mobile: {% if settings.spacing_sections < 24 %}{{ settings.spacing_sections }}{% else %}{{ settings.spacing_sections | times: 0.7 | round | at_least: 20 }}{% endif %}px;
+        --spacing-sections-desktop: {{ settings.spacing_sections }}px;
+        --spacing-sections-mobile: {% if settings.spacing_sections < 24 %}{{ settings.spacing_sections }}{% else %}{{ settings.spacing_sections | times: 0.7 | round | at_least: 20 }}{% endif %}px;
 
-    --grid-desktop-vertical-spacing: {{ settings.spacing_grid_vertical }}px;
-    --grid-desktop-horizontal-spacing: {{ settings.spacing_grid_horizontal }}px;
-    --grid-mobile-vertical-spacing: {{ settings.spacing_grid_vertical | divided_by: 2 }}px;
-    --grid-mobile-horizontal-spacing: {{ settings.spacing_grid_horizontal | divided_by: 2 }}px;
+        --grid-desktop-vertical-spacing: {{ settings.spacing_grid_vertical }}px;
+        --grid-desktop-horizontal-spacing: {{ settings.spacing_grid_horizontal }}px;
+        --grid-mobile-vertical-spacing: {{ settings.spacing_grid_vertical | divided_by: 2 }}px;
+        --grid-mobile-horizontal-spacing: {{ settings.spacing_grid_horizontal | divided_by: 2 }}px;
 
-    --text-boxes-border-opacity: {{ settings.text_boxes_border_opacity | divided_by: 100.0 }};
-    --text-boxes-border-width: {{ settings.text_boxes_border_thickness }}px;
-    --text-boxes-radius: {{ settings.text_boxes_radius }}px;
-    --text-boxes-shadow-opacity: {{ settings.text_boxes_shadow_opacity | divided_by: 100.0 }};
-    --text-boxes-shadow-visible: {% if settings.text_boxes_shadow_opacity > 0 %}1{% else %}0{% endif %};
-    --text-boxes-shadow-horizontal-offset: {{ settings.text_boxes_shadow_horizontal_offset }}px;
-    --text-boxes-shadow-vertical-offset: {{ settings.text_boxes_shadow_vertical_offset }}px;
-    --text-boxes-shadow-blur-radius: {{ settings.text_boxes_shadow_blur }}px;
+        --text-boxes-border-opacity: {{ settings.text_boxes_border_opacity | divided_by: 100.0 }};
+        --text-boxes-border-width: {{ settings.text_boxes_border_thickness }}px;
+        --text-boxes-radius: {{ settings.text_boxes_radius }}px;
+        --text-boxes-shadow-opacity: {{ settings.text_boxes_shadow_opacity | divided_by: 100.0 }};
+        --text-boxes-shadow-visible: {% if settings.text_boxes_shadow_opacity > 0 %}1{% else %}0{% endif %};
+        --text-boxes-shadow-horizontal-offset: {{ settings.text_boxes_shadow_horizontal_offset }}px;
+        --text-boxes-shadow-vertical-offset: {{ settings.text_boxes_shadow_vertical_offset }}px;
+        --text-boxes-shadow-blur-radius: {{ settings.text_boxes_shadow_blur }}px;
 
-    --buttons-radius: {{ settings.buttons_radius }}px;
-    --buttons-radius-outset: {% if settings.buttons_radius > 0 %}{{ settings.buttons_radius | plus: settings.buttons_border_thickness }}{% else %}0{% endif %}px;
-    --buttons-border-width: {% if settings.buttons_border_opacity > 0 %}{{ settings.buttons_border_thickness }}{% else %}0{% endif %}px;
-    --buttons-border-opacity: {{ settings.buttons_border_opacity | divided_by: 100.0 }};
-    --buttons-shadow-opacity: {{ settings.buttons_shadow_opacity | divided_by: 100.0 }};
-    --buttons-shadow-visible: {% if settings.buttons_shadow_opacity > 0 %}1{% else %}0{% endif %};
-    --buttons-shadow-horizontal-offset: {{ settings.buttons_shadow_horizontal_offset }}px;
-    --buttons-shadow-vertical-offset: {{ settings.buttons_shadow_vertical_offset }}px;
-    --buttons-shadow-blur-radius: {{ settings.buttons_shadow_blur }}px;
-    --buttons-border-offset: {% if settings.buttons_radius > 0 or settings.buttons_shadow_opacity > 0 %}0.3{% else %}0{% endif %}px;
+        --buttons-radius: {{ settings.buttons_radius }}px;
+        --buttons-radius-outset: {% if settings.buttons_radius > 0 %}{{ settings.buttons_radius | plus: settings.buttons_border_thickness }}{% else %}0{% endif %}px;
+        --buttons-border-width: {% if settings.buttons_border_opacity > 0 %}{{ settings.buttons_border_thickness }}{% else %}0{% endif %}px;
+        --buttons-border-opacity: {{ settings.buttons_border_opacity | divided_by: 100.0 }};
+        --buttons-shadow-opacity: {{ settings.buttons_shadow_opacity | divided_by: 100.0 }};
+        --buttons-shadow-visible: {% if settings.buttons_shadow_opacity > 0 %}1{% else %}0{% endif %};
+        --buttons-shadow-horizontal-offset: {{ settings.buttons_shadow_horizontal_offset }}px;
+        --buttons-shadow-vertical-offset: {{ settings.buttons_shadow_vertical_offset }}px;
+        --buttons-shadow-blur-radius: {{ settings.buttons_shadow_blur }}px;
+        --buttons-border-offset: {% if settings.buttons_radius > 0 or settings.buttons_shadow_opacity > 0 %}0.3{% else %}0{% endif %}px;
 
-    --inputs-radius: {{ settings.inputs_radius }}px;
-    --inputs-border-width: {{ settings.inputs_border_thickness }}px;
-    --inputs-border-opacity: {{ settings.inputs_border_opacity | divided_by: 100.0 }};
-    --inputs-shadow-opacity: {{ settings.inputs_shadow_opacity | divided_by: 100.0 }};
-    --inputs-shadow-horizontal-offset: {{ settings.inputs_shadow_horizontal_offset }}px;
-    --inputs-margin-offset: {% if settings.inputs_shadow_vertical_offset != 0 and settings.inputs_shadow_opacity > 0 %}{{ settings.inputs_shadow_vertical_offset | abs }}{% else %}0{% endif %}px;
-    --inputs-shadow-vertical-offset: {{ settings.inputs_shadow_vertical_offset }}px;
-    --inputs-shadow-blur-radius: {{ settings.inputs_shadow_blur }}px;
-    --inputs-radius-outset: {% if settings.inputs_radius > 0 %}{{ settings.inputs_radius | plus: settings.inputs_border_thickness }}{% else %}0{% endif %}px;
+        --inputs-radius: {{ settings.inputs_radius }}px;
+        --inputs-border-width: {{ settings.inputs_border_thickness }}px;
+        --inputs-border-opacity: {{ settings.inputs_border_opacity | divided_by: 100.0 }};
+        --inputs-shadow-opacity: {{ settings.inputs_shadow_opacity | divided_by: 100.0 }};
+        --inputs-shadow-horizontal-offset: {{ settings.inputs_shadow_horizontal_offset }}px;
+        --inputs-margin-offset: {% if settings.inputs_shadow_vertical_offset != 0 and settings.inputs_shadow_opacity > 0 %}{{ settings.inputs_shadow_vertical_offset | abs }}{% else %}0{% endif %}px;
+        --inputs-shadow-vertical-offset: {{ settings.inputs_shadow_vertical_offset }}px;
+        --inputs-shadow-blur-radius: {{ settings.inputs_shadow_blur }}px;
+        --inputs-radius-outset: {% if settings.inputs_radius > 0 %}{{ settings.inputs_radius | plus: settings.inputs_border_thickness }}{% else %}0{% endif %}px;
 
-    --variant-pills-radius: {{ settings.variant_pills_radius }}px;
-    --variant-pills-border-width: {{ settings.variant_pills_border_thickness }}px;
-    --variant-pills-border-opacity: {{ settings.variant_pills_border_opacity | divided_by: 100.0 }};
-    --variant-pills-shadow-opacity: {{ settings.variant_pills_shadow_opacity | divided_by: 100.0 }};
-    --variant-pills-shadow-horizontal-offset: {{ settings.variant_pills_shadow_horizontal_offset }}px;
-    --variant-pills-shadow-vertical-offset: {{ settings.variant_pills_shadow_vertical_offset }}px;
-    --variant-pills-shadow-blur-radius: {{ settings.variant_pills_shadow_blur }}px;
-    }
+        --variant-pills-radius: {{ settings.variant_pills_radius }}px;
+        --variant-pills-border-width: {{ settings.variant_pills_border_thickness }}px;
+        --variant-pills-border-opacity: {{ settings.variant_pills_border_opacity | divided_by: 100.0 }};
+        --variant-pills-shadow-opacity: {{ settings.variant_pills_shadow_opacity | divided_by: 100.0 }};
+        --variant-pills-shadow-horizontal-offset: {{ settings.variant_pills_shadow_horizontal_offset }}px;
+        --variant-pills-shadow-vertical-offset: {{ settings.variant_pills_shadow_vertical_offset }}px;
+        --variant-pills-shadow-blur-radius: {{ settings.variant_pills_shadow_blur }}px;
+      }
 
-    *,
-    *::before,
-    *::after {
-    box-sizing: inherit;
-    }
+      *,
+      *::before,
+      *::after {
+        box-sizing: inherit;
+      }
 
-    html {
-    box-sizing: border-box;
-    font-size: calc(var(--font-body-scale) * 62.5%);
-    height: 100%;
-    }
+      html {
+        box-sizing: border-box;
+        font-size: calc(var(--font-body-scale) * 62.5%);
+        height: 100%;
+      }
 
-    body {
-    display: grid;
-    grid-template-rows: auto auto 1fr auto;
-    grid-template-columns: 100%;
-    min-height: 100%;
-    margin: 0;
-    font-size: 1.5rem;
-    letter-spacing: 0.06rem;
-    line-height: calc(1 + 0.8 / var(--font-body-scale));
-    font-family: var(--font-body-family);
-    font-style: var(--font-body-style);
-    font-weight: var(--font-body-weight);
-    }
+      body {
+        display: grid;
+        grid-template-rows: auto auto 1fr auto;
+        grid-template-columns: 100%;
+        min-height: 100%;
+        margin: 0;
+        font-size: 1.5rem;
+        letter-spacing: 0.06rem;
+        line-height: calc(1 + 0.8 / var(--font-body-scale));
+        font-family: var(--font-body-family);
+        font-style: var(--font-body-style);
+        font-weight: var(--font-body-weight);
+      }
 
-    @media screen and (min-width: 750px) {
-    body {
-    font-size: 1.6rem;
-    }
-    }
+      @media screen and (min-width: 750px) {
+        body {
+          font-size: 1.6rem;
+        }
+      }
     {% endstyle %}
-
-    {{ 'bootstrap-min.css' | asset_url | stylesheet_tag }}
-
-    {{ 'swiper-bundle.min.css' | asset_url | stylesheet_tag }}
 
     {{ 'base.css' | asset_url | stylesheet_tag }}
 
-    {{ 'custome-style.css' | asset_url | stylesheet_tag }}
-
-    {{ 'review.css' | asset_url | stylesheet_tag }}
-
     {%- unless settings.type_body_font.system? -%}
-    <link rel="preload" as="font" href="{{ settings.type_body_font | font_url }}" type="font/woff2" crossorigin>
+      {% comment %}theme-check-disable AssetPreload{% endcomment %}
+      <link rel="preload" as="font" href="{{ settings.type_body_font | font_url }}" type="font/woff2" crossorigin>
+      {% comment %}theme-check-enable AssetPreload{% endcomment %}
     {%- endunless -%}
     {%- unless settings.type_header_font.system? -%}
-    <link rel="preload" as="font" href="{{ settings.type_header_font | font_url }}" type="font/woff2" crossorigin>
+      {% comment %}theme-check-disable AssetPreload{% endcomment %}
+      <link rel="preload" as="font" href="{{ settings.type_header_font | font_url }}" type="font/woff2" crossorigin>
+      {% comment %}theme-check-enable AssetPreload{% endcomment %}
     {%- endunless -%}
 
     {%- if localization.available_countries.size > 1 or localization.available_languages.size > 1 -%}
-    {{ 'component-localization-form.css' | asset_url | stylesheet_tag: preload: true }}
-    <script src="{{ 'localization-form.js' | asset_url }}" defer="defer"></script>
+      {{ 'component-localization-form.css' | asset_url | stylesheet_tag: preload: true }}
+      <script src="{{ 'localization-form.js' | asset_url }}" defer="defer"></script>
     {%- endif -%}
 
     {%- if settings.predictive_search_enabled -%}
-    <link rel="stylesheet" href="{{ 'component-predictive-search.css' | asset_url }}" media="print" onload="this.media='all'">
+      <link
+        rel="stylesheet"
+        href="{{ 'component-predictive-search.css' | asset_url }}"
+        media="print"
+        onload="this.media='all'"
+      >
     {%- endif -%}
 
     <script>
-        document.documentElement.className = document.documentElement.className.replace('no-js', 'js');
-        if (Shopify.designMode) {
-          document.documentElement.classList.add('shopify-design-mode');
-        }
+      if (Shopify.designMode) {
+        document.documentElement.classList.add('shopify-design-mode');
+      }
     </script>
-</head>
+  </head>
 
-<body class="gradient{% if settings.animations_hover_elements != 'none' %} animate--hover-{{ settings.animations_hover_elements }}{% endif %}">
-    <div class="splash-screen" id="splashScreen">
-        <div class="logo">
-            <svg xmlns="http://www.w3.org/2000/svg" width="320" height="126" viewBox="0 0 320 126" fill="none">
-                <g clip-path="url(#clip0_589_5800)">
-                    <path d="M51.0027 42.5154C50.8584 41.825 50.7804 41.1229 50.6088 40.4364C50.1992 38.7943 49.462 37.9245 47.6717 37.9635C46.0101 37.9752 44.9063 38.6305 44.3017 40.491C44.1379 41.0956 43.9857 41.7119 43.8336 42.3359C40.6274 39.6017 36.4968 37.9518 31.9839 37.9518C21.7764 37.9518 13.5034 46.3807 13.5034 56.7794C13.5034 67.1782 21.7764 75.6071 31.9839 75.6071C35.7986 75.6071 39.3403 74.4292 42.2851 72.4126C42.8975 73.9884 43.7049 75.5954 44.6449 77.2219C45.3353 78.6183 46.3533 79.1917 47.6795 78.9927C49.033 78.435 50.051 76.9177 50.8818 74.866C51.9817 70.6067 52.4888 65.8403 52.5668 60.7111C52.7267 54.6264 52.2548 48.5104 51.0027 42.5154ZM33.3725 64.5453C27.0459 64.5453 21.9129 59.6346 21.9129 53.5771C21.9129 47.5197 27.042 42.609 33.3725 42.609C39.6991 42.609 44.8321 47.5197 44.8321 53.5771C44.8321 59.6346 39.703 64.5453 33.3725 64.5453Z" fill="#005750" />
-                    <path d="M99.1816 74.5929C99.1621 73.9805 98.3742 73.3954 96.9115 72.8377C92.5234 71.336 87.2227 70.4701 81.1262 70.1541H68.4379C69.807 69.2531 71.1917 68.2858 72.6036 67.2249L73.7582 66.2614C74.3199 65.8441 74.8971 65.3916 75.49 64.9041L76.5977 63.89L83.8487 57.8403C85.7912 56.1124 94.384 46.9969 96.6189 43.896C96.9739 43.4631 97.2664 43.0535 97.4966 42.6674C98.3313 41.8522 98.7096 40.8381 98.5497 39.586C97.8047 37.2886 94.2631 36.0483 87.3358 36.0912L72.6972 36.6489C66.6164 37.195 61.3546 38.2637 57.029 39.9292C55.5897 40.5416 54.8213 41.154 54.8291 41.7664C54.716 43.0691 56.0149 43.7088 58.0119 44.0209C61.9904 44.918 66.4565 45.3236 71.2775 45.3743L86.1266 45.3665C80.8727 48.7248 75.9074 52.52 71.2658 56.6936L65.7037 61.6979C62.1542 64.9626 59.1079 68.2546 56.7559 71.5817C56.0344 72.4671 55.5507 73.2862 55.4376 73.9883C55.4298 74.0195 55.4142 74.0468 55.4064 74.078C55.0709 77.8108 59.3966 79.3008 66.3746 79.4412L82.8814 78.821C87.6985 78.5909 92.1451 78.0136 96.0846 76.9644C98.0699 76.5782 99.3454 75.8918 99.1816 74.5929Z" fill="#005750" />
-                    <path d="M165.911 3.292C165.802 2.23497 165.549 1.41587 165.139 0.834697C164.382 -0.230136 162.779 -0.280843 161.902 0.686478C161.348 1.29495 161.02 2.18817 160.856 3.2881C159.245 12.5596 157.74 21.675 157.74 30.6695L157.868 45.9946C157.919 52.2197 158.259 58.4449 158.976 64.6272C159.405 68.3288 159.947 71.8743 160.689 75.2365C160.938 76.6329 161.359 77.6977 161.991 78.3569C162.561 78.9537 163.489 79.098 164.183 78.6494C164.71 78.3101 165.135 77.7523 165.486 77.0385C165.744 76.512 165.927 75.9542 166.059 75.3847C166.726 72.5491 167.261 69.2688 167.705 65.6803C168.505 59.1938 168.86 52.6566 168.86 46.1194V41.1502C168.86 30.4511 168.189 19.7638 166.789 9.15834C166.508 7.03647 166.212 5.01992 165.911 3.292Z" fill="#005750" />
-                    <path d="M137.894 39.6952C137.055 37.7684 134.313 37.6982 133.342 39.5587C133.252 39.7342 133.163 39.9136 133.077 40.1048C132.765 40.7991 132.554 41.5402 132.433 42.2929C131.259 49.8092 127.043 53.3079 120.01 53.0817C113.056 53.3001 108.73 49.3216 107.185 40.8966C107.08 40.487 106.967 40.0892 106.85 39.7108C106.218 37.6592 103.417 37.3783 102.353 39.2428L102.341 39.2623C101.42 40.8849 101.354 42.6674 101.467 44.6371C101.483 44.9024 101.502 45.1676 101.526 45.4289C102.263 53.1714 107.79 59.42 115.092 61.7252C115.45 61.8383 115.72 62.1386 115.778 62.5131C116.511 67.338 117.537 74.0195 117.892 75.9971C117.958 76.3676 118.009 76.7226 118.072 77.0853C118.251 78.1696 118.844 78.8873 120.229 78.9146C121.871 78.9341 122.389 77.7172 122.694 76.2623C122.694 76.2623 124.117 68.8748 124.866 62.2205C124.909 61.8422 125.167 61.5341 125.522 61.4053C130.6 59.6072 134.867 55.8471 137.211 50.8272C138.023 49.0915 138.561 47.2934 138.783 45.425C138.966 43.389 138.666 41.4777 137.894 39.6952Z" fill="#005750" />
-                    <path d="M8.17153 3.37782C8.06231 2.32079 7.80878 1.50169 7.39923 0.920512C6.64253 -0.144321 5.03943 -0.195028 4.16182 0.772294C3.60795 1.38467 3.28031 2.27788 3.11649 3.37782C1.50559 12.6493 0 21.7647 0 30.7593L0.128716 46.0843C0.179423 52.3095 0.518765 58.5346 1.23646 64.7169C1.66551 68.4185 2.20768 71.964 2.94877 75.3262C3.1984 76.7226 3.61965 77.7875 4.25153 78.4466C4.821 79.0434 5.74932 79.1877 6.44361 78.7392C6.97017 78.3959 7.39533 77.8421 7.74637 77.1283C8.0038 76.6017 8.18713 76.0439 8.31974 75.4745C8.98673 72.6388 9.52109 69.3585 9.96575 65.7701C10.7654 59.2835 11.1203 52.7463 11.1203 46.2091V41.2282C11.1203 30.5291 10.4494 19.8418 9.04914 9.23635C8.7683 7.12229 8.47186 5.10574 8.17153 3.37782Z" fill="#005750" />
-                    <path d="M275.936 35.1941C278.136 35.1941 279.919 33.3779 279.919 31.1376C279.919 28.8972 278.136 27.0811 275.936 27.0811C273.737 27.0811 271.954 28.8972 271.954 31.1376C271.954 33.3779 273.737 35.1941 275.936 35.1941Z" fill="#005750" />
-                    <path d="M192.462 38.0376C182.254 38.0376 173.981 46.4666 173.981 56.8653C173.981 67.264 182.254 75.6929 192.462 75.6929C202.669 75.6929 210.942 67.264 210.942 56.8653C210.942 46.4666 202.669 38.0376 192.462 38.0376ZM193.854 64.6311C187.528 64.6311 182.395 59.7204 182.395 53.663C182.395 47.6055 187.524 42.6948 193.854 42.6948C200.181 42.6948 205.314 47.6055 205.314 53.663C205.314 59.7204 200.181 64.6311 193.854 64.6311Z" fill="#005750" />
-                    <path d="M318.787 62.9812C317.816 62.4351 316.567 62.8134 315.979 63.7613C314.254 66.5267 311.029 68.2585 307.44 67.8061C304.55 67.4433 302.089 65.6218 300.802 63.1216C300.572 62.6769 300.845 62.1426 301.34 62.0723C303.259 61.811 305.104 61.4873 306.828 61.066C309.157 60.5005 311.407 59.6345 313.467 58.4098C315.616 57.1304 317.383 55.6092 319.196 53.5225C319.992 52.7268 320.226 51.5215 319.766 50.4996C316.989 44.3407 310.884 40.0619 303.797 40.0619C294.093 40.0619 286.229 48.0774 286.229 57.9651C286.229 67.8529 294.097 75.8684 303.797 75.8684C310.791 75.8684 316.833 71.7027 319.657 65.6725C320.113 64.7013 319.75 63.5233 318.787 62.9812ZM303.329 52.1729C304.328 51.6619 305.455 51.3694 306.656 51.3694C308.942 51.3694 310.982 52.4225 312.32 54.0646C312.659 54.482 312.507 55.1139 312.008 55.3167C309.944 56.1553 304.862 58.1407 301.371 58.8622C300.552 59.0339 299.846 58.3006 300.006 57.4815C300.419 55.3206 301.636 53.4445 303.329 52.1729Z" fill="#005750" />
-                    <path d="M279.763 44.5631C279.466 42.8429 279.15 41.2164 278.83 39.8201C278.709 38.9269 278.417 38.2404 277.945 37.7684C277.083 36.9103 275.433 36.9454 274.513 37.7645C273.959 38.256 273.627 38.9581 273.459 39.8201C273.101 41.3959 272.746 42.9678 272.406 44.5319C270.76 52.1963 270.46 60.0012 271.626 67.7164C271.634 67.7593 271.638 67.8022 271.646 67.8451C272.063 70.5676 272.586 73.181 273.3 75.6539C273.541 76.6836 273.951 77.4637 274.559 77.9513C275.109 78.392 276.006 78.4973 276.677 78.1658C277.188 77.9161 277.598 77.5066 277.937 76.98C278.187 76.5939 278.362 76.1843 278.491 75.7631C279.139 73.6763 279.653 71.2619 280.082 68.6213C280.09 68.5745 280.098 68.5316 280.106 68.4848C281.229 61.4834 281.202 54.404 280.199 47.3909C280.051 46.3495 279.899 45.3627 279.763 44.5631Z" fill="#005750" />
-                    <path d="M318.253 19.6038C318.206 18.0592 317.972 16.5185 317.531 15.0363C317.223 13.991 316.852 13.1017 316.38 12.462C316.349 12.4191 316.337 12.3606 316.353 12.3099L317.235 9.1154C317.289 8.92037 317.141 8.72925 316.942 8.72925H313.611C313.471 8.72925 313.361 8.84236 313.361 8.97888V11.5415C313.369 11.8886 313.389 12.2514 313.447 12.6024C312.523 13.0237 311.906 13.9247 311.848 14.9427C311.782 16.1168 311.142 17.8993 310.518 18.8978C309.734 20.1538 308.782 21.359 307.678 22.5214C307.429 22.7866 307.195 23.0635 306.957 23.3405C304.948 25.7042 301.668 27.0147 297.377 27.4945C295.107 27.6349 292.868 27.5218 290.649 27.2644C289.042 27.0771 287.681 28.5164 288.016 30.1C288.02 30.1156 288.024 30.1312 288.028 30.1507C288.757 31.6914 289.982 32.9474 291.558 33.9927C291.897 34.2189 292.232 34.4452 292.564 34.6792C294.733 36.177 297.323 36.9922 300.349 37.1014C301.952 37.2184 303.598 37.0351 305.276 36.6021C308.852 35.6855 312.066 33.63 314.426 30.7865C315.405 29.6047 316.17 28.4111 316.708 27.202C316.848 26.8938 316.993 26.5857 317.141 26.2814C318.007 24.4716 318.334 22.2054 318.253 19.6038ZM314.941 20.7779C314.68 22.1469 313.393 25.3024 312.807 26.1917C312.207 27.1045 308.708 31.434 303.095 32.7797C297.482 34.1292 293.754 32.1049 292.954 31.6017C292.154 31.0947 291.604 30.4628 293.629 30.4238C295.649 30.3809 298.77 31.0986 305.592 27.3502C311.107 24.3195 312.85 19.5297 313.318 17.8057C313.451 17.3181 313.63 16.8462 313.868 16.4015L313.935 16.2806C314.091 15.9881 314.516 15.9608 314.68 16.2455C314.906 16.6316 314.964 17.0412 314.996 17.2128C315.046 17.4741 315.206 19.3893 314.941 20.7779Z" fill="#005750" />
-                    <path d="M263.864 46.4782C262.409 43.2642 260.401 41.3022 258.041 40.1204C257.023 39.9605 256.387 40.1906 255.989 40.6664C255.677 41.0448 255.56 41.548 255.63 42.0316C255.665 42.2617 255.7 42.488 255.736 42.7103C255.884 43.6464 256.079 44.5747 256.289 45.4991C256.859 48.0384 257.03 50.6595 256.695 53.3781C256.679 53.932 256.617 54.4664 256.508 54.9773C255.373 60.3366 249.616 63.3751 244.588 61.2025C244.565 61.1908 244.537 61.183 244.514 61.1713C243.566 60.8164 242.766 59.4629 242.045 58.0821C241.577 57.185 240.286 57.185 239.818 58.0821C239.096 59.4629 238.296 60.8164 237.349 61.1713C237.325 61.183 237.298 61.1947 237.275 61.2025C232.247 63.3751 226.486 60.3327 225.355 54.9773C225.245 54.4664 225.183 53.9359 225.167 53.3781C224.832 50.6595 225.004 48.0384 225.577 45.4991C225.784 44.5747 225.979 43.6464 226.131 42.7103C226.166 42.488 226.201 42.2656 226.236 42.0355C226.31 41.5519 226.189 41.0448 225.877 40.6664C225.483 40.1867 224.844 39.9605 223.826 40.1204C221.47 41.3061 219.457 43.2642 218.002 46.4782C216.068 51.0964 215.443 56.3698 217.464 62.9616C219.617 68.3092 223.065 72.003 227.855 73.9805C232.676 75.7786 237.048 75.5719 240.933 73.1731C244.818 75.5719 249.19 75.7786 254.011 73.9805C258.801 72.003 262.249 68.3092 264.402 62.9616C266.419 56.3659 265.799 51.0925 263.864 46.4782Z" fill="#005750" />
-                    <path d="M4.55972 105.192H0.195068V101.561H13.055V105.192H8.70203V119.854H4.55972V105.192Z" fill="#005750" />
-                    <path d="M23.2274 108.145C24.0231 108.145 24.7993 108.305 25.556 108.629C26.3127 108.952 26.9368 109.463 27.4282 110.162C27.9158 110.86 28.1615 111.776 28.1615 112.911V119.854H23.949V113.606C23.949 112.794 23.7657 112.182 23.4029 111.769C23.0363 111.359 22.5409 111.152 21.913 111.152C21.4956 111.152 21.1017 111.261 20.7194 111.476C20.3411 111.694 20.0329 111.999 19.7989 112.393C19.5649 112.787 19.4439 113.235 19.4439 113.742V119.854H15.2158V100.785H19.4439V110.154C19.5454 109.85 19.7755 109.541 20.1304 109.233C20.4854 108.925 20.9339 108.664 21.4761 108.457C22.0183 108.25 22.5994 108.145 23.2274 108.145Z" fill="#005750" />
-                    <path d="M34.0083 115.061C34.0356 115.466 34.1643 115.829 34.3984 116.149C34.6285 116.469 34.9483 116.714 35.354 116.89C35.7596 117.065 36.2511 117.155 36.8245 117.155C37.3588 117.155 37.8425 117.101 38.2715 116.995C38.7006 116.89 39.075 116.749 39.3949 116.578C39.7147 116.406 39.9605 116.235 40.136 116.059L41.7703 118.665C41.5285 118.914 41.2008 119.156 40.7874 119.386C40.3739 119.616 39.82 119.807 39.1375 119.96C38.4549 120.112 37.589 120.19 36.5475 120.19C35.2799 120.19 34.1604 119.956 33.1814 119.484C32.2024 119.012 31.434 118.321 30.8801 117.405C30.3263 116.492 30.0493 115.369 30.0493 114.039C30.0493 112.931 30.2911 111.932 30.7709 111.043C31.2507 110.158 31.9528 109.452 32.8772 108.929C33.8016 108.406 34.9132 108.145 36.216 108.145C37.4524 108.145 38.529 108.371 39.4378 108.824C40.3466 109.276 41.0487 109.947 41.5363 110.84C42.0277 111.733 42.2695 112.841 42.2695 114.175C42.2695 114.241 42.2695 114.386 42.2695 114.612C42.2695 114.838 42.2617 114.986 42.2422 115.061H34.0083ZM38.3184 112.857C38.3105 112.56 38.2286 112.264 38.0843 111.971C37.94 111.679 37.7138 111.433 37.4173 111.242C37.1209 111.051 36.7426 110.957 36.2823 110.957C35.8103 110.957 35.4203 111.051 35.1043 111.234C34.7884 111.418 34.5505 111.655 34.3828 111.94C34.215 112.225 34.1214 112.533 34.0902 112.853H38.3184V112.857Z" fill="#005750" />
-                    <path d="M71.2737 101.561V119.854H67.1431V109.085L67.3225 106.023L66.6165 109.53L63.539 118.388H59.4825L56.4206 109.53L55.7263 106.023L55.9057 109.085V119.854H51.7634V101.561H57.583L61.2689 113.77L61.5185 115.224L61.7682 113.77L65.4541 101.561H71.2737Z" fill="#005750" />
-                    <path d="M83.416 119.854V118.013C83.3341 118.197 83.1234 118.466 82.7841 118.817C82.4448 119.168 82.0001 119.484 81.4462 119.765C80.8924 120.045 80.2449 120.186 79.5077 120.186C78.3999 120.186 77.4287 119.917 76.5979 119.375C75.7671 118.832 75.1196 118.107 74.6594 117.198C74.1991 116.289 73.9651 115.279 73.9651 114.171C73.9651 113.064 74.1952 112.053 74.6594 111.144C75.1196 110.236 75.7671 109.506 76.5979 108.96C77.4287 108.414 78.3999 108.141 79.5077 108.141C80.2176 108.141 80.8416 108.254 81.3799 108.48C81.9143 108.707 82.3511 108.976 82.6827 109.284C83.0142 109.592 83.2443 109.877 83.377 110.138V108.477H87.5622V119.854H83.416ZM78.0918 114.175C78.0918 114.694 78.2127 115.158 78.4507 115.568C78.6925 115.977 79.0123 116.301 79.4141 116.531C79.8158 116.761 80.2605 116.878 80.7519 116.878C81.259 116.878 81.7076 116.761 82.0976 116.531C82.4838 116.301 82.7919 115.981 83.0181 115.568C83.2443 115.158 83.3575 114.694 83.3575 114.175C83.3575 113.656 83.2443 113.192 83.0181 112.783C82.7919 112.373 82.4838 112.049 82.0976 111.811C81.7076 111.577 81.2629 111.457 80.7519 111.457C80.2605 111.457 79.8158 111.574 79.4141 111.811C79.0123 112.049 78.6925 112.369 78.4507 112.783C78.2127 113.192 78.0918 113.656 78.0918 114.175Z" fill="#005750" />
-                    <path d="M89.2627 108.476H91.2012V103.808H95.3709V108.476H97.9218V111.944H95.3709V115.119C95.3709 115.591 95.4411 115.969 95.5776 116.262C95.7141 116.554 95.9715 116.699 96.3382 116.699C96.5878 116.699 96.7984 116.644 96.974 116.531C97.1495 116.422 97.2548 116.348 97.2938 116.309L98.737 119.304C98.6707 119.359 98.4717 119.46 98.1324 119.608C97.7931 119.757 97.3679 119.889 96.8491 120.01C96.3304 120.131 95.7531 120.19 95.1173 120.19C93.9823 120.19 93.0423 119.87 92.3051 119.226C91.564 118.583 91.1973 117.592 91.1973 116.254V111.944H89.2588V108.476H89.2627Z" fill="#005750" />
-                    <path d="M99.3376 108.476H101.276V103.808H105.446V108.476H107.997V111.944H105.446V115.119C105.446 115.591 105.516 115.969 105.653 116.262C105.789 116.554 106.046 116.699 106.413 116.699C106.663 116.699 106.873 116.644 107.049 116.531C107.224 116.422 107.33 116.348 107.369 116.309L108.812 119.304C108.746 119.359 108.547 119.46 108.207 119.608C107.868 119.757 107.443 119.889 106.924 120.01C106.405 120.131 105.828 120.19 105.192 120.19C104.057 120.19 103.117 119.87 102.38 119.226C101.639 118.583 101.272 117.592 101.272 116.254V111.944H99.3337V108.476H99.3376Z" fill="#005750" />
-                    <path d="M114.238 119.854H110.025V108.477H114.238V110.236H114.167C114.242 110.025 114.421 109.752 114.71 109.424C114.994 109.097 115.396 108.8 115.915 108.535C116.434 108.274 117.066 108.141 117.814 108.141C118.341 108.141 118.825 108.223 119.269 108.383C119.714 108.547 120.038 108.699 120.241 108.847L118.606 112.272C118.478 112.116 118.247 111.952 117.92 111.78C117.592 111.609 117.183 111.523 116.695 111.523C116.129 111.523 115.665 111.667 115.303 111.952C114.936 112.237 114.671 112.584 114.499 112.989C114.327 113.395 114.242 113.781 114.242 114.14V119.854H114.238Z" fill="#005750" />
-                    <path d="M124.73 115.061C124.757 115.466 124.886 115.829 125.12 116.149C125.35 116.469 125.67 116.714 126.076 116.89C126.481 117.065 126.973 117.155 127.546 117.155C128.081 117.155 128.564 117.101 128.993 116.995C129.422 116.89 129.797 116.749 130.117 116.578C130.436 116.406 130.682 116.235 130.858 116.059L132.492 118.665C132.25 118.914 131.922 119.156 131.509 119.386C131.096 119.616 130.542 119.807 129.859 119.96C129.177 120.112 128.311 120.19 127.269 120.19C126.002 120.19 124.882 119.956 123.903 119.484C122.924 119.012 122.156 118.321 121.602 117.405C121.048 116.492 120.771 115.369 120.771 114.039C120.771 112.931 121.013 111.932 121.493 111.043C121.972 110.158 122.674 109.452 123.599 108.929C124.523 108.406 125.635 108.145 126.938 108.145C128.174 108.145 129.251 108.371 130.159 108.824C131.068 109.276 131.77 109.947 132.258 110.84C132.749 111.733 132.991 112.841 132.991 114.175C132.991 114.241 132.991 114.386 132.991 114.612C132.991 114.838 132.983 114.986 132.964 115.061H124.73ZM129.04 112.857C129.032 112.56 128.95 112.264 128.806 111.971C128.662 111.679 128.435 111.433 128.139 111.242C127.843 111.051 127.464 110.957 127.004 110.957C126.532 110.957 126.142 111.051 125.826 111.234C125.51 111.418 125.272 111.655 125.104 111.94C124.937 112.225 124.843 112.533 124.812 112.853H129.04V112.857Z" fill="#005750" />
-                    <path d="M140.277 108.145C141.026 108.145 141.709 108.207 142.329 108.332C142.949 108.457 143.468 108.597 143.889 108.753C144.31 108.91 144.579 109.042 144.7 109.144L143.327 111.624C143.152 111.496 142.824 111.328 142.352 111.125C141.876 110.922 141.346 110.821 140.765 110.821C140.32 110.821 139.946 110.887 139.641 111.024C139.337 111.16 139.185 111.367 139.185 111.655C139.185 111.944 139.353 112.17 139.692 112.342C140.028 112.514 140.515 112.662 141.155 112.791C141.709 112.904 142.274 113.075 142.848 113.317C143.421 113.559 143.897 113.91 144.283 114.378C144.665 114.846 144.856 115.466 144.856 116.242C144.856 117.038 144.685 117.693 144.345 118.208C144.002 118.727 143.55 119.129 142.988 119.414C142.426 119.698 141.814 119.901 141.159 120.014C140.503 120.131 139.864 120.19 139.248 120.19C138.378 120.19 137.625 120.112 136.981 119.956C136.338 119.8 135.819 119.616 135.421 119.414C135.023 119.211 134.746 119.047 134.59 118.93L135.948 116.157C136.19 116.359 136.58 116.59 137.126 116.843C137.672 117.097 138.249 117.225 138.857 117.225C139.45 117.225 139.907 117.14 140.23 116.96C140.554 116.785 140.714 116.554 140.714 116.266C140.714 116.036 140.636 115.848 140.48 115.712C140.324 115.572 140.102 115.455 139.813 115.353C139.528 115.252 139.181 115.158 138.772 115.076C138.401 115.002 138.011 114.889 137.594 114.729C137.176 114.573 136.786 114.358 136.416 114.085C136.045 113.812 135.745 113.469 135.515 113.052C135.285 112.634 135.168 112.131 135.168 111.542C135.168 110.786 135.413 110.158 135.901 109.658C136.388 109.159 137.024 108.785 137.8 108.527C138.573 108.274 139.4 108.145 140.277 108.145Z" fill="#005750" />
-                    <path d="M152.197 108.145C152.946 108.145 153.629 108.207 154.249 108.332C154.869 108.457 155.388 108.597 155.809 108.753C156.23 108.91 156.499 109.042 156.62 109.144L155.247 111.624C155.072 111.496 154.744 111.328 154.272 111.125C153.796 110.922 153.266 110.821 152.685 110.821C152.24 110.821 151.866 110.887 151.561 111.024C151.257 111.156 151.105 111.367 151.105 111.655C151.105 111.944 151.273 112.17 151.612 112.342C151.948 112.514 152.435 112.662 153.075 112.791C153.629 112.904 154.194 113.075 154.764 113.317C155.337 113.559 155.813 113.91 156.199 114.378C156.581 114.846 156.772 115.466 156.772 116.242C156.772 117.038 156.601 117.693 156.261 118.208C155.918 118.727 155.466 119.129 154.904 119.414C154.342 119.698 153.73 119.901 153.075 120.014C152.419 120.131 151.78 120.19 151.164 120.19C150.294 120.19 149.541 120.112 148.897 119.956C148.254 119.8 147.735 119.616 147.337 119.414C146.939 119.211 146.662 119.047 146.506 118.93L147.864 116.157C148.106 116.359 148.496 116.59 149.042 116.843C149.588 117.097 150.165 117.225 150.773 117.225C151.366 117.225 151.823 117.14 152.146 116.96C152.47 116.785 152.63 116.554 152.63 116.266C152.63 116.036 152.552 115.848 152.396 115.712C152.24 115.572 152.018 115.455 151.729 115.353C151.44 115.252 151.097 115.158 150.688 115.076C150.317 115.002 149.927 114.889 149.51 114.729C149.092 114.573 148.702 114.358 148.332 114.085C147.961 113.812 147.661 113.469 147.431 113.052C147.201 112.634 147.084 112.131 147.084 111.542C147.084 110.786 147.329 110.158 147.817 109.658C148.304 109.159 148.94 108.785 149.716 108.527C150.493 108.274 151.32 108.145 152.197 108.145Z" fill="#005750" />
-                    <path d="M165.486 108.477H167.37V105.469C167.37 104.362 167.604 103.437 168.076 102.696C168.548 101.955 169.156 101.397 169.905 101.019C170.654 100.64 171.43 100.449 172.234 100.449C173.232 100.449 173.993 100.582 174.512 100.851C175.031 101.12 175.366 101.319 175.503 101.448L173.896 104.537C173.849 104.463 173.732 104.358 173.548 104.217C173.365 104.077 173.119 104.01 172.815 104.01C172.62 104.01 172.425 104.061 172.234 104.163C172.043 104.264 171.879 104.443 171.754 104.701C171.629 104.958 171.567 105.337 171.567 105.836V108.469H174.379V111.944H171.567V119.858H167.37V111.944H165.486V108.477Z" fill="#005750" />
-                    <path d="M181.938 120.19C180.69 120.19 179.582 119.932 178.619 119.421C177.652 118.91 176.895 118.2 176.345 117.299C175.795 116.398 175.522 115.365 175.522 114.202C175.522 113.04 175.795 112.003 176.345 111.09C176.895 110.181 177.652 109.459 178.619 108.933C179.582 108.406 180.69 108.141 181.938 108.141C183.186 108.141 184.286 108.406 185.238 108.933C186.19 109.459 186.935 110.177 187.469 111.09C188.004 111.999 188.273 113.036 188.273 114.202C188.273 115.369 188.004 116.398 187.469 117.299C186.935 118.2 186.19 118.906 185.238 119.421C184.286 119.936 183.183 120.19 181.938 120.19ZM181.938 116.722C182.418 116.722 182.835 116.617 183.186 116.402C183.537 116.192 183.811 115.891 184.006 115.501C184.201 115.111 184.298 114.674 184.298 114.183C184.298 113.684 184.201 113.239 184.006 112.853C183.811 112.467 183.537 112.159 183.186 111.94C182.835 111.722 182.418 111.609 181.938 111.609C181.459 111.609 181.041 111.722 180.682 111.94C180.323 112.159 180.05 112.467 179.852 112.853C179.653 113.243 179.555 113.684 179.555 114.183C179.555 114.674 179.653 115.111 179.852 115.501C180.05 115.887 180.327 116.192 180.682 116.402C181.037 116.617 181.455 116.722 181.938 116.722Z" fill="#005750" />
-                    <path d="M194.315 119.854H190.102V108.477H194.315V110.236H194.244C194.318 110.025 194.498 109.752 194.787 109.424C195.071 109.097 195.473 108.8 195.992 108.535C196.511 108.274 197.142 108.141 197.891 108.141C198.418 108.141 198.902 108.223 199.346 108.383C199.791 108.547 200.115 108.699 200.317 108.847L198.683 112.272C198.554 112.116 198.324 111.952 197.997 111.78C197.669 111.609 197.259 111.523 196.772 111.523C196.206 111.523 195.742 111.667 195.379 111.952C195.017 112.237 194.748 112.584 194.576 112.989C194.404 113.395 194.318 113.781 194.318 114.14V119.854H194.315Z" fill="#005750" />
-                    <path d="M208.781 101.561H220.463V105.192H212.908V108.921H220.393V112.443H212.908V116.227H220.463V119.858H208.781V101.561Z" fill="#005750" />
-                    <path d="M222.585 108.477H227.09L229.836 116.028L232.594 108.477H237.072L232.305 119.854H227.371L222.585 108.477Z" fill="#005750" />
-                    <path d="M242.127 115.061C242.154 115.466 242.283 115.829 242.517 116.149C242.747 116.469 243.067 116.714 243.472 116.89C243.878 117.065 244.369 117.155 244.943 117.155C245.477 117.155 245.961 117.101 246.39 116.995C246.819 116.89 247.193 116.749 247.513 116.578C247.833 116.406 248.079 116.235 248.254 116.059L249.889 118.665C249.647 118.914 249.319 119.156 248.906 119.386C248.492 119.616 247.938 119.807 247.256 119.96C246.573 120.112 245.707 120.19 244.666 120.19C243.398 120.19 242.279 119.956 241.3 119.484C240.321 119.012 239.552 118.321 238.999 117.405C238.445 116.492 238.168 115.369 238.168 114.039C238.168 112.931 238.41 111.932 238.889 111.043C239.369 110.154 240.071 109.452 240.996 108.929C241.92 108.406 243.032 108.145 244.334 108.145C245.571 108.145 246.647 108.371 247.556 108.824C248.465 109.276 249.167 109.947 249.655 110.84C250.142 111.733 250.388 112.841 250.388 114.175C250.388 114.241 250.388 114.386 250.388 114.612C250.388 114.838 250.38 114.986 250.361 115.061H242.127ZM246.437 112.857C246.429 112.56 246.347 112.264 246.203 111.971C246.058 111.679 245.832 111.433 245.536 111.242C245.239 111.051 244.861 110.957 244.401 110.957C243.929 110.957 243.539 111.051 243.223 111.234C242.907 111.418 242.669 111.655 242.501 111.94C242.333 112.225 242.236 112.533 242.209 112.853H246.437V112.857Z" fill="#005750" />
-                    <path d="M256.426 119.854H252.214V108.477H256.426V110.236H256.356C256.43 110.025 256.609 109.752 256.898 109.424C257.183 109.097 257.584 108.8 258.103 108.535C258.622 108.274 259.254 108.141 260.003 108.141C260.529 108.141 261.013 108.223 261.458 108.383C261.902 108.547 262.226 108.699 262.429 108.847L260.795 112.272C260.666 112.116 260.436 111.952 260.108 111.78C259.78 111.609 259.371 111.523 258.883 111.523C258.318 111.523 257.854 111.667 257.491 111.952C257.128 112.237 256.859 112.584 256.687 112.989C256.516 113.395 256.43 113.781 256.43 114.14V119.854H256.426Z" fill="#005750" />
-                    <path d="M269.302 116.211L272.379 108.477H276.51L268.693 125.619H264.481L267.113 119.854L262.359 108.477H266.559L269.302 116.211Z" fill="#005750" />
-                    <path d="M283.62 120.19C282.372 120.19 281.264 119.932 280.301 119.421C279.334 118.91 278.577 118.2 278.027 117.299C277.477 116.398 277.204 115.365 277.204 114.202C277.204 113.04 277.477 112.003 278.027 111.09C278.577 110.181 279.334 109.459 280.301 108.933C281.264 108.406 282.372 108.141 283.62 108.141C284.868 108.141 285.968 108.406 286.92 108.933C287.872 109.459 288.617 110.177 289.151 111.09C289.685 111.999 289.955 113.036 289.955 114.202C289.955 115.369 289.685 116.398 289.151 117.299C288.617 118.2 287.872 118.906 286.92 119.421C285.968 119.936 284.864 120.19 283.62 120.19ZM283.62 116.722C284.1 116.722 284.517 116.617 284.868 116.402C285.219 116.192 285.492 115.891 285.687 115.501C285.882 115.111 285.98 114.674 285.98 114.183C285.98 113.684 285.882 113.239 285.687 112.853C285.492 112.467 285.219 112.159 284.868 111.94C284.517 111.722 284.1 111.609 283.62 111.609C283.14 111.609 282.723 111.722 282.364 111.94C282.005 112.159 281.732 112.467 281.533 112.853C281.334 113.243 281.237 113.684 281.237 114.183C281.237 114.674 281.334 115.111 281.533 115.501C281.732 115.887 282.009 116.192 282.364 116.402C282.719 116.617 283.137 116.722 283.62 116.722Z" fill="#005750" />
-                    <path d="M299.971 108.145C300.767 108.145 301.543 108.305 302.3 108.629C303.056 108.952 303.68 109.463 304.172 110.162C304.659 110.86 304.905 111.776 304.905 112.911V119.854H300.677V113.606C300.677 112.794 300.482 112.182 300.096 111.769C299.706 111.359 299.199 111.152 298.571 111.152C298.153 111.152 297.763 111.262 297.401 111.476C297.038 111.691 296.741 111.999 296.515 112.393C296.289 112.787 296.176 113.235 296.176 113.742V119.854H291.963V108.477H296.176V110.154C296.285 109.85 296.519 109.541 296.874 109.233C297.229 108.925 297.678 108.664 298.22 108.457C298.762 108.25 299.343 108.145 299.971 108.145Z" fill="#005750" />
-                    <path d="M310.713 115.061C310.74 115.466 310.869 115.829 311.103 116.149C311.333 116.469 311.653 116.714 312.059 116.89C312.464 117.065 312.956 117.155 313.529 117.155C314.063 117.155 314.547 117.101 314.976 116.995C315.405 116.89 315.78 116.749 316.099 116.578C316.419 116.406 316.665 116.235 316.841 116.059L318.475 118.665C318.233 118.914 317.905 119.156 317.492 119.386C317.078 119.616 316.525 119.807 315.842 119.96C315.159 120.112 314.294 120.19 313.252 120.19C311.984 120.19 310.865 119.956 309.886 119.484C308.907 119.012 308.139 118.321 307.585 117.405C307.031 116.492 306.754 115.369 306.754 114.039C306.754 112.931 306.996 111.932 307.475 111.043C307.955 110.154 308.657 109.452 309.582 108.929C310.506 108.406 311.618 108.145 312.921 108.145C314.157 108.145 315.234 108.371 316.142 108.824C317.051 109.276 317.753 109.947 318.241 110.84C318.728 111.733 318.974 112.841 318.974 114.175C318.974 114.241 318.974 114.386 318.974 114.612C318.974 114.838 318.966 114.986 318.947 115.061H310.713ZM315.023 112.857C315.015 112.56 314.933 112.264 314.789 111.971C314.645 111.679 314.418 111.433 314.122 111.242C313.825 111.051 313.447 110.957 312.987 110.957C312.515 110.957 312.125 111.051 311.809 111.234C311.493 111.418 311.255 111.655 311.087 111.94C310.92 112.225 310.822 112.533 310.795 112.853H315.023V112.857Z" fill="#005750" />
-                </g>
-                <defs>
-                    <clipPath id="clip0_589_5800">
-                        <rect width="320" height="125.619" fill="white" />
-                    </clipPath>
-                </defs>
-            </svg>
-        </div>
-    </div>
-
+  <body class="gradient{% if settings.animations_hover_elements != 'none' %} animate--hover-{{ settings.animations_hover_elements }}{% endif %}">
     <a class="skip-to-content-link button visually-hidden" href="#MainContent">
-        {{ 'accessibility.skip_to_text' | t }}
+      {{ 'accessibility.skip_to_text' | t }}
     </a>
 
     {%- if settings.cart_type == 'drawer' -%}
-    {%- render 'cart-drawer' -%}
+      {%- render 'cart-drawer' -%}
     {%- endif -%}
 
     {% sections 'header-group' %}
 
-    {% if template.name == 'index' %}
-    {% render 'popup-card' %}
-    {% endif %}
-
-    <main id="MainContent" class="content-for-layout {% if template.name != 'index' %}custome-main-content-layout{% endif %} focus-none" role="main" tabindex="-1">
-        {{ content_for_layout }}
+    <main id="MainContent" class="content-for-layout focus-none" role="main" tabindex="-1">
+      {{ content_for_layout }}
     </main>
 
     {% sections 'footer-group' %}
 
     <ul hidden>
-        <li id="a11y-refresh-page-message">{{ 'accessibility.refresh_page' | t }}</li>
-        <li id="a11y-new-window-message">{{ 'accessibility.link_messages.new_window' | t }}</li>
+      <li id="a11y-refresh-page-message">{{ 'accessibility.refresh_page' | t }}</li>
+      <li id="a11y-new-window-message">{{ 'accessibility.link_messages.new_window' | t }}</li>
     </ul>
 
     <script>
-        window.shopUrl = '{{ request.origin }}';
-        window.routes = {
-          cart_add_url: '{{ routes.cart_add_url }}',
-          cart_change_url: '{{ routes.cart_change_url }}',
-          cart_update_url: '{{ routes.cart_update_url }}',
-          cart_url: '{{ routes.cart_url }}',
-          predictive_search_url: '{{ routes.predictive_search_url }}',
-        };
-        
-        window.cartStrings = {
-          error: `{{ 'sections.cart.cart_error' | t }}`,
-          quantityError: `{{ 'sections.cart.cart_quantity_error_html' | t: quantity: '[quantity]' }}`,
-        };
-        
-        window.variantStrings = {
-          addToCart: `{{ 'products.product.add_to_cart' | t }}`,
-          soldOut: `{{ 'products.product.sold_out' | t }}`,
-          unavailable: `{{ 'products.product.unavailable' | t }}`,
-          unavailable_with_option: `{{ 'products.product.value_unavailable' | t: option_value: '[value]' }}`,
-        };
-        
-        window.quickOrderListStrings = {
-          itemsAdded: `{{ 'sections.quick_order_list.items_added.other' | t: quantity: '[quantity]' }}`,
-          itemAdded: `{{ 'sections.quick_order_list.items_added.one' | t: quantity: '[quantity]' }}`,
-          itemsRemoved: `{{ 'sections.quick_order_list.items_removed.other' | t: quantity: '[quantity]' }}`,
-          itemRemoved: `{{ 'sections.quick_order_list.items_removed.one' | t: quantity: '[quantity]' }}`,
-          viewCart: `{{- 'sections.quick_order_list.view_cart' | t -}}`,
-          each: `{{- 'sections.quick_order_list.each' | t: money: '[money]' }}`,
-        };
-        
-        window.accessibilityStrings = {
-          imageAvailable: `{{ 'products.product.media.image_available' | t: index: '[index]' }}`,
-          shareSuccess: `{{ 'general.share.success_message' | t }}`,
-          pauseSlideshow: `{{ 'sections.slideshow.pause_slideshow' | t }}`,
-          playSlideshow: `{{ 'sections.slideshow.play_slideshow' | t }}`,
-          recipientFormExpanded: `{{ 'recipient.form.expanded' | t }}`,
-          recipientFormCollapsed: `{{ 'recipient.form.collapsed' | t }}`,
-          countrySelectorSearchCount: `{{ 'localization.country_results_count' | t: count: '[count]' }}`,
-        };
+      window.shopUrl = '{{ request.origin }}';
+      window.routes = {
+        cart_add_url: '{{ routes.cart_add_url }}',
+        cart_change_url: '{{ routes.cart_change_url }}',
+        cart_update_url: '{{ routes.cart_update_url }}',
+        cart_url: '{{ routes.cart_url }}',
+        predictive_search_url: '{{ routes.predictive_search_url }}',
+      };
+
+      window.cartStrings = {
+        error: `{{ 'sections.cart.cart_error' | t }}`,
+        quantityError: `{{ 'sections.cart.cart_quantity_error_html' | t: quantity: '[quantity]' }}`,
+      };
+
+      window.variantStrings = {
+        addToCart: `{{ 'products.product.add_to_cart' | t }}`,
+        soldOut: `{{ 'products.product.sold_out' | t }}`,
+        unavailable: `{{ 'products.product.unavailable' | t }}`,
+        unavailable_with_option: `{{ 'products.product.value_unavailable' | t: option_value: '[value]' }}`,
+      };
+
+      window.quickOrderListStrings = {
+        itemsAdded: `{{ 'sections.quick_order_list.items_added.other' | t: quantity: '[quantity]' }}`,
+        itemAdded: `{{ 'sections.quick_order_list.items_added.one' | t: quantity: '[quantity]' }}`,
+        itemsRemoved: `{{ 'sections.quick_order_list.items_removed.other' | t: quantity: '[quantity]' }}`,
+        itemRemoved: `{{ 'sections.quick_order_list.items_removed.one' | t: quantity: '[quantity]' }}`,
+        viewCart: `{{- 'sections.quick_order_list.view_cart' | t -}}`,
+        each: `{{- 'sections.quick_order_list.each' | t: money: '[money]' }}`,
+        min_error: `{{- 'sections.quick_order_list.min_error' | t: min: '[min]' }}`,
+        max_error: `{{- 'sections.quick_order_list.max_error' | t: max: '[max]' }}`,
+        step_error: `{{- 'sections.quick_order_list.step_error' | t: step: '[step]' }}`,
+      };
+
+      window.accessibilityStrings = {
+        imageAvailable: `{{ 'products.product.media.image_available' | t: index: '[index]' }}`,
+        shareSuccess: `{{ 'general.share.success_message' | t }}`,
+        pauseSlideshow: `{{ 'sections.slideshow.pause_slideshow' | t }}`,
+        playSlideshow: `{{ 'sections.slideshow.play_slideshow' | t }}`,
+        recipientFormExpanded: `{{ 'recipient.form.expanded' | t }}`,
+        recipientFormCollapsed: `{{ 'recipient.form.collapsed' | t }}`,
+        countrySelectorSearchCount: `{{ 'localization.country_results_count' | t: count: '[count]' }}`,
+      };
     </script>
 
     {%- if settings.predictive_search_enabled -%}
-    <script src="{{ 'predictive-search.js' | asset_url }}" defer="defer"></script>
+      <script src="{{ 'predictive-search.js' | asset_url }}" defer="defer"></script>
     {%- endif -%}
-
-    <script src="{{ 'bootstrap.min.js' | asset_url }}" defer="defer"></script>
-    <script src="{{ 'popper.min.js' | asset_url }}" defer="defer"></script>
-    <script src="{{ 'swiper-bundle.min.js' | asset_url }}" defer="defer"></script>
-    <script src="{{ 'custome-script.js' | asset_url }}" defer="defer"></script>
-</body>
-
+  </body>
 </html>

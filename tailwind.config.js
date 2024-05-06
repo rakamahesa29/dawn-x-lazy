@@ -11,10 +11,6 @@ module.exports = {
       'GreenToDark': '#D9D9D9',
       'GreenToGone': '#005750'
     },
-    fontFamily: {
-      sans: ['Graphik', 'sans-serif'],
-      serif: ['Merriweather', 'serif'],
-    },
     extend: {},
   },
   plugins: [],

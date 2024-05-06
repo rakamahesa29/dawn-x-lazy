@@ -94,7 +94,7 @@
               <div class="article-card-wrapper card-wrapper{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}">
                 <div
                   class="
-                    card article-card article-card-custome card--{{ settings.blog_card_style }}
+                    card article-card card--{{ settings.blog_card_style }}
                     {% if settings.blog_card_style == 'card' %} color-{{ settings.blog_card_color_scheme }} gradient{% endif %}
                     {% if section.settings.show_image %} card--media{% else %} card--text{% endif %}
                   "
@@ -112,7 +112,7 @@
                       </div>
                     {%- endif -%}
                     <div class="card__content">
-                      <div class="card__information card__information_custome">
+                      <div class="card__information">
                         <h3 class="card__heading h2">
                           {{ 'sections.featured_blog.onboarding_title' | t }}
                         </h3>
@@ -123,7 +123,7 @@
                     </div>
                   </div>
                   <div class="card__content">
-                    <div class="card__information card__information_custome">
+                    <div class="card__information">
                       <h3 class="card__heading h2">
                         {{ 'sections.featured_blog.onboarding_title' | t }}
                       </h3>
@@ -139,7 +139,7 @@
         {%- endif -%}
       </ul>
       {%- if posts_exceed_limit -%}
-        <div class="slider-buttons no-js-hidden{% if section.settings.post_limit < 3 %} medium-hide{% endif %}{% if section.settings.post_limit < 2 %} small-hide{% endif %}">
+        <div class="slider-buttons{% if section.settings.post_limit < 3 %} medium-hide{% endif %}{% if section.settings.post_limit < 2 %} small-hide{% endif %}">
           <button
             type="button"
             class="slider-button slider-button--prev"
