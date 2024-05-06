@@ -6,13 +6,13 @@
         "slide_pKaGUc": {
           "type": "slide",
           "settings": {
-            "image": "shopify:\/\/shop_images\/LAZYLOWIE-20231223-1882-desktop.png",
-            "image_mobile": "shopify:\/\/shop_images\/LAZYLOWIE-20231223-1882-mobile_3233fcfa-32a4-4818-b87b-6ab5c5316628.png",
+            "image": "shopify:\/\/shop_images\/Lite-20240328-3554-desktop.png",
+            "image_mobile": "shopify:\/\/shop_images\/Lite-20240328-3554-mobile.png",
             "heading": "",
             "heading_size": "h1",
             "subheading": "",
             "button_label": "",
-            "link": "shopify:\/\/products\/kasur-lazy-lowie-1",
+            "link": "shopify:\/\/products\/the-original",
             "button_style_secondary": false,
             "box_align": "middle-center",
             "show_text_box": false,
@@ -25,8 +25,8 @@
         "slide_g336eE": {
           "type": "slide",
           "settings": {
-            "image": "shopify:\/\/shop_images\/Lite-20240328-2380-desktop.png",
-            "image_mobile": "shopify:\/\/shop_images\/Lite-20240328-2380-mobile_7215e430-542a-409d-8d38-10427891b6f5.png",
+            "image": "shopify:\/\/shop_images\/Lite-20240328-2896-Desktop.png",
+            "image_mobile": "shopify:\/\/shop_images\/Lite-20240328-2896-mobile.png",
             "heading": "",
             "heading_size": "h1",
             "subheading": "",
@@ -94,8 +94,8 @@
         "heading_zw8zwC": {
           "type": "heading",
           "settings": {
-            "heading": "The Adjustable Mattress",
-            "heading_size": "h1"
+            "heading": "LAZY LOWIE FOR EVERYONE",
+            "heading_size": "h2"
           }
         }
       },
@@ -191,44 +191,64 @@
     "instagram_M3dX9V": {
       "type": "instagram",
       "blocks": {
+        "image_fJxTef": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Apasih_yang_perlu_kita_lakukan_untuk_meningkatkan_kualitas_tidur_Berikut_beberapa_tips_dari_Lazy_Lowie_untuk_kamu._beddingsolution_tidurnyenyak_kasurergonomis_kasurlatex_tidurnyenyak.jpg",
+            "image_icon": "shopify:\/\/shop_images\/instagram.svg",
+            "image_link": "https:\/\/www.instagram.com\/p\/C6dqSZ-y5du\/?img_index=1"
+          }
+        },
+        "image_8J6Pf9": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Apasih_yang_kamu_perlu_ketahui_jika_memiliki_The_Lite_Mattress_dari_Lazy_Lowie.jpg",
+            "image_icon": "shopify:\/\/shop_images\/instagram.svg",
+            "image_link": "https:\/\/www.instagram.com\/p\/C6YaUBRtBHF\/?img_index=1"
+          }
+        },
+        "image_PxQk4H": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Screenshot_2024-05-03_at_13.58.19.png",
+            "image_icon": "shopify:\/\/shop_images\/instagram.svg",
+            "image_link": "https:\/\/www.instagram.com\/p\/C6S3n4jrUzz\/"
+          }
+        },
+        "image_MAV9BM": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Bantal_Premium_Lazy_Lowie_terbuat_dari_bahan_latex_berkualitas_tinggi_serta_memberikan_kenyamanan_penuh_untuk_area_leher_dan_tulang_punggung_agar_mendapatkan_kualitas_tidur_yang_lebih.jpg",
+            "image_icon": "shopify:\/\/shop_images\/instagram.svg",
+            "image_link": ""
+          }
+        },
+        "image_LWDgHg": {
+          "type": "image",
+          "disabled": true,
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Weekend_dirumah_aja_Ini_beberapa_kegiatan_untuk_mengisi_weekend_mu._beddingsolution_kasurergonomis_kasurlatex_lazylowiemattress_indonesiaMattress_LatexDream_EcoSleep.jpg",
+            "image_icon": "shopify:\/\/shop_images\/instagram.svg",
+            "image_link": ""
+          }
+        },
         "image_hXNCKW": {
           "type": "image",
+          "disabled": true,
           "settings": {
             "image": "shopify:\/\/shop_images\/lazy-ig-1.jpg",
             "image_icon": "shopify:\/\/shop_images\/instagram.svg",
             "image_link": "https:\/\/www.instagram.com\/p\/C42n79Mrl7d\/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA=="
           }
-        },
-        "image_U6iWtF": {
-          "type": "image",
-          "settings": {
-            "image": "shopify:\/\/shop_images\/lazy-ig-2.jpg",
-            "image_icon": "shopify:\/\/shop_images\/instagram.svg",
-            "image_link": "https:\/\/www.instagram.com\/p\/C4umFG5tXCN\/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA=="
-          }
-        },
-        "image_Qk8dDH": {
-          "type": "image",
-          "settings": {
-            "image": "shopify:\/\/shop_images\/lazy-ig-3.jpg",
-            "image_icon": "shopify:\/\/shop_images\/instagram.svg",
-            "image_link": "https:\/\/www.instagram.com\/reel\/C4ch4rAtXyh\/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA=="
-          }
-        },
-        "image_n9aPEL": {
-          "type": "image",
-          "settings": {
-            "image": "shopify:\/\/shop_images\/header-mobiile.jpg",
-            "image_icon": "shopify:\/\/shop_images\/instagram.svg",
-            "image_link": "https:\/\/www.instagram.com\/p\/C2PLUIqJXmq\/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA=="
-          }
         }
       },
       "block_order": [
-        "image_hXNCKW",
-        "image_U6iWtF",
-        "image_Qk8dDH",
-        "image_n9aPEL"
+        "image_fJxTef",
+        "image_8J6Pf9",
+        "image_PxQk4H",
+        "image_MAV9BM",
+        "image_LWDgHg",
+        "image_hXNCKW"
       ],
       "settings": {
         "title": "Lowie Page",

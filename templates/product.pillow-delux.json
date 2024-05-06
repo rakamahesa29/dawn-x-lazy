@@ -109,7 +109,7 @@
         "caption_GWwT3W": {
           "type": "caption",
           "settings": {
-            "caption": "It's time to revolutionize your sleep",
+            "caption": "<p>It's time to invest your sleep<\/p>",
             "text_style": "caption-with-letter-spacing",
             "text_size": "medium"
           }
@@ -124,7 +124,7 @@
         "text_QU9KFt": {
           "type": "text",
           "settings": {
-            "text": "<p>Bantal Deluxe berisi ratusan bantal Micro Lazy Lowie yang ramah lingkungan. Bantal ini memungkinkan Anda membentuk bantal yang sempurna untuk kenyamanan yang disesuaikan.<\/p>",
+            "text": "<p>Bantal Deluxe berisi ratusan bantal Micro Lazy Lowie yang ramah lingkungan. Bantal ini memungkinkan Anda membentuk bantal yang sempurna untuk kenyamanan yang dimaksimalkan.<\/p>",
             "text_style": "body"
           }
         }
@@ -176,7 +176,7 @@
         "caption_GxJP8d": {
           "type": "caption",
           "settings": {
-            "caption": "Add a tagline",
+            "caption": "<p>Add a tagline<\/p>",
             "text_style": "caption-with-letter-spacing",
             "text_size": "medium"
           }

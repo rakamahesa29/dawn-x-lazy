@@ -109,7 +109,7 @@
         "caption_GWwT3W": {
           "type": "caption",
           "settings": {
-            "caption": "Add a tagline",
+            "caption": "<p>Add a tagline<\/p>",
             "text_style": "caption-with-letter-spacing",
             "text_size": "medium"
           }
@@ -175,19 +175,19 @@
     "image_with_text_custome_Mr4zyj": {
       "type": "image-with-text-custome",
       "blocks": {
-        "caption_GxJP8d": {
-          "type": "caption",
-          "settings": {
-            "caption": "It's time to revolutionize your sleep.",
-            "text_style": "caption-with-letter-spacing",
-            "text_size": "medium"
-          }
-        },
         "heading_ztyNYp": {
           "type": "heading",
           "settings": {
-            "heading": "<strong>TENCEL™ yang Dapat Dilepas<\/strong>",
+            "heading": "<strong>It's time to revolutionize your sleep.<\/strong>",
             "heading_size": "h1"
+          }
+        },
+        "caption_GxJP8d": {
+          "type": "caption",
+          "settings": {
+            "caption": "<h3><strong>TENCEL™ yang Dapat Dilepas<\/strong><\/h3>",
+            "text_style": "subtitle",
+            "text_size": "small"
           }
         },
         "text_NEpkMg": {
@@ -199,8 +199,8 @@
         }
       },
       "block_order": [
-        "caption_GxJP8d",
         "heading_ztyNYp",
+        "caption_GxJP8d",
         "text_NEpkMg"
       ],
       "settings": {

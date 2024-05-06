@@ -120,25 +120,26 @@
             "text_animation": "<p><strong>Kualitas bahan terbaik<\/strong><\/p><p>Kami memilih bahan terbaik tencel, Latex, Memory Foam, Medium-density foam dan High-density foam untuk menopang tubuh kamu.<\/p>"
           }
         },
+        "richtext_kDAbE6": {
+          "type": "richtext",
+          "settings": {
+            "text_animation": "<p><strong>4 Lapisan di 1 Kasur <\/strong><\/p><p>kenyamanan kami menjamin keselarasan tulang belakang yang optimal dan membantu mengurangi titik-titik tekanan. Baik saat kamu berbaring telentang, tengkurap atau menyamping.<\/p>"
+          }
+        },
         "richtext_pYTAf6": {
           "type": "richtext",
           "settings": {
             "text_animation": "<p><strong>Tidur Nyenyak tanpa gangguan<\/strong><\/p><p>Permukaan Lazy Lowie memiliki daya topang yang netral, sehingga setiap gerakan dapat ditahan, menjamin kamu akan tidur nyenyak dengan siapa pun.<\/p>"
-          }
-        },
-        "richtext_kDAbE6": {
-          "type": "richtext",
-          "settings": {
-            "text_animation": "<p><strong>Kualitas bahan terbaik<\/strong><\/p><p>Kami memilih bahan terbaik tencel, Latex, Memory Foam, Medium-density foam dan High-density foam untuk menopang tubuh kamu.<\/p>"
           }
         }
       },
       "block_order": [
         "richtext_wNPGdp",
         "richtext_URLW46",
-        "richtext_pYTAf6",
-        "richtext_kDAbE6"
+        "richtext_kDAbE6",
+        "richtext_pYTAf6"
       ],
+      "disabled": true,
       "settings": {
         "title": "<strong>Personalisasikan Kasur Anda<\/strong>",
         "link_title": "https:\/\/cdn.shopify.com\/s\/files\/1\/0718\/7375\/7471\/files\/",
@@ -176,7 +177,7 @@
           "type": "text_accordion",
           "settings": {
             "title": "Tencel",
-            "description": "Kasur Lazy Lowie menggunakan material Tencel yang mudah dilepas dan dapat dicuci. Bahan tencel terkenal dengan kelembutan dan permukaan halus. Dapat menyerap kelembaban, memberikan kenyamanan tidur sepanjang malam. Tidak menyebabkan alergiTencel juga aman terhadap mereka yang memiliki kulit sensitif."
+            "description": "Kasur Lazy Lowie menggunakan material Tencel yang mudah dilepas dan dapat dicuci. Bahan tencel terkenal dengan kelembutan dan permukaan halus. Dapat menyerap kelembaban, memberikan kenyamanan tidur sepanjang malam. Tidak menyebabkan alergi.Tencel juga aman terhadap mereka yang memiliki kulit sensitif."
           }
         },
         "text_accordion_jrBFGh": {
@@ -218,7 +219,7 @@
       "settings": {
         "heading_size": "h1",
         "color_scheme": "scheme-47a0187c-b8de-4cff-b20c-5d35f422c9c0",
-        "title": "Tidur nyenyak disetiap lapisannya",
+        "title": "Inovasi didalam LAZY LOWIE",
         "image": "shopify:\/\/shop_images\/3d-mattress.webp",
         "padding_top": 60,
         "padding_bottom": 60
@@ -245,7 +246,7 @@
           "type": "image",
           "settings": {
             "image": "shopify:\/\/shop_images\/layer.webp",
-            "image_text": "Tingkat Kenyamanan Tidur yang Dapat Disesuaikan"
+            "image_text": "Memaksimalkan tidurmu"
           }
         },
         "image_jUwfrL": {
@@ -308,6 +309,7 @@
         "slider_item_aNnGR7",
         "slider_item_Wy7bPc"
       ],
+      "disabled": true,
       "settings": {
         "heading_size": "h1",
         "color_scheme": "scheme-47a0187c-b8de-4cff-b20c-5d35f422c9c0",

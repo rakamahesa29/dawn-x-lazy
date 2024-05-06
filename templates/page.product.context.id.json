@@ -1,0 +1,36 @@
+{
+  "parent": "page.product.json",
+  "context": {
+    "market": "id"
+  },
+  "sections": {
+    "support_and_guarantee_GekKEX": {
+      "settings": {
+      },
+      "blocks": {
+        "image_CacVTP": {
+          "settings": {
+            "image_text": "Memaksimalkan tidurmu"
+          }
+        }
+      }
+    },
+    "collapsible_content_AwcwCJ": {
+      "settings": {
+      },
+      "blocks": {
+        "collapsible_row_9qBKkb": {
+          "settings": {
+            "heading": "Apa itu Kasur dari Lazy Lowie?",
+            "row_content": "<p>Kasur dari Lazy Lowie adalah kasur premium yang menawarkan sensasi maksimal dengan kualitas bahan yang terbaik untuk memenuhi kebutuhan spesifik tidur Anda. Kasur ini dirancang untuk investasi jangka panjang dalam meningkatkan kualitas tidur Anda. Dengan struktur yang inovatif, kasur ini mampu menyediakan dukungan yang optimal untuk tubuh, memastikan tidur Anda menjadi lebih nyenyak dan menyegarkan.<\/p>"
+          }
+        },
+        "collapsible_row_aM6x4R": {
+          "settings": {
+            "row_content": "<p>Produk tidur Lazy Lowie menawarkan sejumlah keunggulan yang membuatnya menjadi pilihan yang sangat baik:<\/p><ul><li><strong>Uji Coba Gratis 100 Malam:<\/strong> Kami yakin Anda akan mencintai produk kami, tetapi jika Anda merasa tidak puas, Anda bisa mengembalikannya dalam waktu 100 malam.<\/li><li><strong>Bahan Premium & Berkelanjutan:<\/strong> Semua produk kami dibuat dari bahan berkualitas tinggi dan berkelanjutan, mendukung kesehatan Anda dan planet ini.<\/li><li><strong>Kualitas Tidur yang Maksimal :<\/strong> Kami menawarkan produk dengan tingkat kualitas Latex dan bahan terbaik yang bisa memaksimalkan preferensi tidur Anda.<\/li><li><strong>Garansi 10 Tahun:<\/strong> Produk kami didukung dengan garansi 10 tahun, menjamin kualitas dan kepuasan jangka panjang.<\/li><\/ul>"
+          }
+        }
+      }
+    }
+  }
+}

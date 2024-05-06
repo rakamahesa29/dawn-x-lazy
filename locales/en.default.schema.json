@@ -2922,74 +2922,73 @@
         }
       }
     },
-
-      "custome-review": {
-        "name": "Custom Review Section",
-        "settings": {
-          "title": {
-            "label": "Review Title"
-          }
-        },
-        "blocks": {
-          "review_image": {
-            "name": "Image Review Block",
-            "settings": {
-              "image_cover": {
-                "label": "Select Review Image"
-              },
-              "image_reviewer": {
-                "label": "Select Reviewer Image"
-              },
-              "image_link": {
-                "label": "Image Link"
-              },
-              "user_name": {
-                "label": "User Name"
-              },
-              "star_rating": {
-                "label": "Star Rating"
-              },
-              "review_date": {
-                "label": "Review Date",
-                "default": "2024-01-23"
-              },
-              "text_review": {
-                "label": "Text Review",
-                "default": "<p>Lorem ipsum dolor sit amet...</p>"
-              }
-            }
-          },
-          "review_video": {
-            "name": "Video Review Block",
-            "settings": {
-              "image_reviewer": {
-                "label": "Select Reviewer Image"
-              },
-              "video_url": {
-                "label": "Video URL",
-                "info": "Provide the URL of the video"
-              },
-              "user_name": {
-                "label": "User Name"
-              },
-              "star_rating": {
-                "label": "Star Rating"
-              },
-              "review_date": {
-                "label": "Review Date",
-                "default": "2024-01-23"
-              },
-              "text_review": {
-                "label": "Text Review",
-                "default": "<p>Lorem ipsum dolor sit amet...</p>"
-              }
-            }
-          }
-        },
-        "presets": {
-          "name": "Custom Review Preset"
+    "custome-review": {
+      "name": "Custom Review Section",
+      "settings": {
+        "title": {
+          "label": "Review Title"
         }
-      },    
+      },
+      "blocks": {
+        "review_image": {
+          "name": "Image Review Block",
+          "settings": {
+            "image_cover": {
+              "label": "Select Review Image"
+            },
+            "image_reviewer": {
+              "label": "Select Reviewer Image"
+            },
+            "image_link": {
+              "label": "Image Link"
+            },
+            "user_name": {
+              "label": "User Name"
+            },
+            "star_rating": {
+              "label": "Star Rating"
+            },
+            "review_date": {
+              "label": "Review Date",
+              "default": "2024-01-23"
+            },
+            "text_review": {
+              "label": "Text Review",
+              "default": "<p>Lorem ipsum dolor sit amet...<\/p>"
+            }
+          }
+        },
+        "review_video": {
+          "name": "Video Review Block",
+          "settings": {
+            "image_reviewer": {
+              "label": "Select Reviewer Image"
+            },
+            "video_url": {
+              "label": "Video URL",
+              "info": "Provide the URL of the video"
+            },
+            "user_name": {
+              "label": "User Name"
+            },
+            "star_rating": {
+              "label": "Star Rating"
+            },
+            "review_date": {
+              "label": "Review Date",
+              "default": "2024-01-23"
+            },
+            "text_review": {
+              "label": "Text Review",
+              "default": "<p>Lorem ipsum dolor sit amet...<\/p>"
+            }
+          }
+        }
+      },
+      "presets": {
+        "name": "Custom Review Preset"
+      }
+    },
     "slider-article-custome": {
       "name": "Custom Article Slider",
       "blocks": {
@@ -3112,221 +3111,221 @@
         }
       }
     },
-      "slider-custome": {
-        "name": "Slider Custom Name",
-        "settings": {
-          "heading_size": {
-            "label": "Heading Size",
-            "options__1": {
-              "label": "H2"
-            },
-            "options__2": {
-              "label": "H1"
-            },
-            "options__3": {
-              "label": "H0"
-            }
+    "slider-custome": {
+      "name": "Slider Custom Name",
+      "settings": {
+        "heading_size": {
+          "label": "Heading Size",
+          "options__1": {
+            "label": "H2"
           },
-          "color_scheme": {
-            "label": "Color Scheme"
+          "options__2": {
+            "label": "H1"
           },
-          "padding": {
-            "section_padding_heading": "Section Padding",
-            "padding_top": {
-              "label": "Padding Top"
-            },
-            "padding_bottom": {
-              "label": "Padding Bottom"
-            }
+          "options__3": {
+            "label": "H0"
           }
         },
-        "blocks": {
-          "image": {
-            "name": "Image Block",
-            "settings": {
-              "image_slider_desktop": {
-                "label": "Select Desktop Image"
-              },
-              "image_slider_mobile": {
-                "label": "Select Mobile Image"
-              },
-              "text_slider": {
-                "label": "Slider Text"
-              }
-            }
-          },
-          "video": {
-            "name": "Video Block",
-            "settings": {
-              "video_url": {
-                "label": "Video URL",
-                "info": "Provide the URL of the video"
-              }
-            }
-          }
+        "color_scheme": {
+          "label": "Color Scheme"
         },
-        "presets": {
-          "name": "Slider Custom Preset"
+        "padding": {
+          "section_padding_heading": "Section Padding",
+          "padding_top": {
+            "label": "Padding Top"
+          },
+          "padding_bottom": {
+            "label": "Padding Bottom"
+          }
         }
-      },    
-      "product-highlight": {
-        "settings": {
-          "title": {
-            "label": "Product Highlight"
-          },
-          "heading_size": {
-            "label": "Heading Size",
-            "options__1": {
-              "label": "H2"
+      },
+      "blocks": {
+        "image": {
+          "name": "Image Block",
+          "settings": {
+            "image_slider_desktop": {
+              "label": "Select Desktop Image"
             },
-            "options__2": {
-              "label": "H1"
+            "image_slider_mobile": {
+              "label": "Select Mobile Image"
             },
-            "options__3": {
-              "label": "H0"
+            "text_slider": {
+              "label": "Slider Text"
             }
-          },
-          "color_scheme": {
-            "label": "Color Scheme"
           }
         },
-        "blocks": {
-          "highlight_description": {
-            "settings": {
-              "title_product_card": {
-                "label": "Product Title"
-              },
-              "tagline_product_card": {
-                "label": "Tagline"
-              },
-              "image_product": {
-                "label": "Select Image"
-              },
-              "price_product_title": {
-                "label": "Price Title"
-              },
-              "price_product_no_disc": {
-                "label": "Price (No Discount)"
-              },
-              "price_product_disc": {
-                "label": "Price (Discount)"
-              },
-              "feature_product_card": {
-                "label": "Features"
-              },
-              "image_content_card": {
-                "label": "Content Image"
-              },
-              "desc_feature_product_card": {
-                "label": "Feature Description"
-              },
-              "size_product_card": {
-                "label": "Size"
-              },
-              "desc_size_product_card": {
-                "label": "Size Description"
-              },
-              "image_certi_card": {
-                "label": "Certification Image"
-              },
-              "title_rating_one": {
-                "label": "Rating Title One"
-              },
-              "rate_rating_one": {
-                "label": "Rating One"
-              },
-              "desc_rating_one": {
-                "label": "Rating Description One"
-              },
-              "title_rating_two": {
-                "label": "Rating Title Two"
-              },
-              "rate_rating_two": {
-                "label": "Rating Two"
-              },
-              "desc_rating_two": {
-                "label": "Rating Description Two"
-              },
-              "title_rating_three": {
-                "label": "Rating Title Three"
-              },
-              "rate_rating_three": {
-                "label": "Rating Three"
-              },
-              "desc_rating_three": {
-                "label": "Rating Description Three"
-              },
-              "desc_product_card": {
-                "label": "Product Description"
-              },
-              "image_icon_one": {
-                "label": "Icon Image One"
-              },
-              "text_icon_one": {
-                "label": "Icon Text One"
-              },
-              "image_icon_two": {
-                "label": "Icon Image Two"
-              },
-              "text_icon_two": {
-                "label": "Icon Text Two"
-              },
-              "button_text": {
-                "label": "Button Text"
-              },
-              "button_link": {
-                "label": "Button Link"
-              }
+        "video": {
+          "name": "Video Block",
+          "settings": {
+            "video_url": {
+              "label": "Video URL",
+              "info": "Provide the URL of the video"
             }
           }
         }
-      },   
-      "animation-product": {
-        "settings": {
-          "title": {
-            "label": "Animation Products Title"
+      },
+      "presets": {
+        "name": "Slider Custom Preset"
+      }
+    },
+    "product-highlight": {
+      "settings": {
+        "title": {
+          "label": "Product Highlight"
+        },
+        "heading_size": {
+          "label": "Heading Size",
+          "options__1": {
+            "label": "H2"
           },
-          "link_title": {
-            "label": "Link Title"
+          "options__2": {
+            "label": "H1"
           },
-          "heading_size": {
-            "label": "Heading Size",
-            "options__1": {
-              "label": "H2"
-            },
-            "options__2": {
-              "label": "H1"
-            },
-            "options__3": {
-              "label": "H0"
-            }
-          },
-          "text_position": {
-            "label": "Text Position",
-            "options__1": {
-              "label": "Right"
-            },
-            "options__2": {
-              "label": "Center"
-            },
-            "options__3": {
-              "label": "Left"
-            }
-          },
-          "color_scheme": {
-            "label": "Color Scheme"
+          "options__3": {
+            "label": "H0"
           }
         },
-        "blocks": {
-          "richtext": {
-            "settings": {
-              "richtext": {
-                "label": "Text Animation"
-              }
+        "color_scheme": {
+          "label": "Color Scheme"
+        }
+      },
+      "blocks": {
+        "highlight_description": {
+          "settings": {
+            "title_product_card": {
+              "label": "Product Title"
+            },
+            "tagline_product_card": {
+              "label": "Tagline"
+            },
+            "image_product": {
+              "label": "Select Image"
+            },
+            "price_product_title": {
+              "label": "Price Title"
+            },
+            "price_product_no_disc": {
+              "label": "Price (No Discount)"
+            },
+            "price_product_disc": {
+              "label": "Price (Discount)"
+            },
+            "feature_product_card": {
+              "label": "Features"
+            },
+            "image_content_card": {
+              "label": "Content Image"
+            },
+            "desc_feature_product_card": {
+              "label": "Feature Description"
+            },
+            "size_product_card": {
+              "label": "Size"
+            },
+            "desc_size_product_card": {
+              "label": "Size Description"
+            },
+            "image_certi_card": {
+              "label": "Certification Image"
+            },
+            "title_rating_one": {
+              "label": "Rating Title One"
+            },
+            "rate_rating_one": {
+              "label": "Rating One"
+            },
+            "desc_rating_one": {
+              "label": "Rating Description One"
+            },
+            "title_rating_two": {
+              "label": "Rating Title Two"
+            },
+            "rate_rating_two": {
+              "label": "Rating Two"
+            },
+            "desc_rating_two": {
+              "label": "Rating Description Two"
+            },
+            "title_rating_three": {
+              "label": "Rating Title Three"
+            },
+            "rate_rating_three": {
+              "label": "Rating Three"
+            },
+            "desc_rating_three": {
+              "label": "Rating Description Three"
+            },
+            "desc_product_card": {
+              "label": "Product Description"
+            },
+            "image_icon_one": {
+              "label": "Icon Image One"
+            },
+            "text_icon_one": {
+              "label": "Icon Text One"
+            },
+            "image_icon_two": {
+              "label": "Icon Image Two"
+            },
+            "text_icon_two": {
+              "label": "Icon Text Two"
+            },
+            "button_text": {
+              "label": "Button Text"
+            },
+            "button_link": {
+              "label": "Button Link"
             }
           }
         }
-      },    
+      }
+    },
+    "animation-product": {
+      "settings": {
+        "title": {
+          "label": "Animation Products Title"
+        },
+        "link_title": {
+          "label": "Link Title"
+        },
+        "heading_size": {
+          "label": "Heading Size",
+          "options__1": {
+            "label": "H2"
+          },
+          "options__2": {
+            "label": "H1"
+          },
+          "options__3": {
+            "label": "H0"
+          }
+        },
+        "text_position": {
+          "label": "Text Position",
+          "options__1": {
+            "label": "Right"
+          },
+          "options__2": {
+            "label": "Center"
+          },
+          "options__3": {
+            "label": "Left"
+          }
+        },
+        "color_scheme": {
+          "label": "Color Scheme"
+        }
+      },
+      "blocks": {
+        "richtext": {
+          "settings": {
+            "richtext": {
+              "label": "Text Animation"
+            }
+          }
+        }
+      }
+    },
     "footer": {
       "name": "Custome Footer",
       "settings": {
@@ -3351,7 +3350,7 @@
         "footer_text": {
           "label": "Footer Text"
         },
-        "subscribe_text": {
+        "desc_subscribe_text": {
           "label": "Subscribe Text"
         },
         "image_icon": {

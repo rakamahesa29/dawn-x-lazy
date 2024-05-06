@@ -114,9 +114,9 @@
     "predictive_search_show_vendor": false,
     "predictive_search_show_price": false,
     "currency_code_enabled": true,
-    "title_popup_card": "💌 Dapatkan Info Promo Menarik Lainnya!",
-    "desc_popup_card": "<p>Ingin lebih banyak diskon dan tawaran eksklusif? Subscribe lazy lowie dan jadilah yang pertama mendapatkan semua penawaran terbaik kami.<\/p>",
-    "image_popup_card": "shopify:\/\/shop_images\/Lite-20240328-2936-squre.png",
+    "title_popup_card": "Jadilah yang pertama ! 🍃",
+    "desc_popup_card": "<p>Daftar untuk menjadi yang pertama mengetahui penawaran khusus dan update terbaru.<br\/><br\/>Dapatkan <strong>potongan 10%<\/strong> untuk pesanan pertama Anda.<\/p>",
+    "image_popup_card": "shopify:\/\/shop_images\/Lite-20240328-3603.png",
     "cart_type": "notification",
     "show_vendor": false,
     "show_cart_note": false,
@@ -174,6 +174,12 @@
       },
       "14060646107696862457": {
         "type": "shopify:\/\/apps\/judge-me-reviews\/blocks\/judgeme_core\/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
+        "disabled": false,
+        "settings": {
+        }
+      },
+      "pagefly-page-builder": {
+        "type": "shopify:\/\/apps\/pagefly-page-builder\/blocks\/app-embed\/83e179f7-59a0-4589-8c66-c0dddf959200",
         "disabled": false,
         "settings": {
         }

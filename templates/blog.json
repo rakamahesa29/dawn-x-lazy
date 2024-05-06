@@ -5,7 +5,7 @@
       "settings": {
         "color_scheme": "scheme-47a0187c-b8de-4cff-b20c-5d35f422c9c0",
         "text_position": "position-center",
-        "layout": "grid",
+        "layout": "collage",
         "show_image": true,
         "image_height": "medium",
         "show_date": true,

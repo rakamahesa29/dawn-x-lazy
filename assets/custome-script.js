@@ -1,4 +1,20 @@
 document.addEventListener("DOMContentLoaded", function () {
+  const textIconSize = document.getElementById("textIconSize");
+  const closePopup = document.getElementById("closePopUp");
+  const popUpSize = document.querySelector(".pop-up-size");
+  if (textIconSize && popUpSize) {
+    textIconSize.addEventListener("click", function () {
+      popUpSize.classList.add("active");
+      document.body.appendChild(popUpSize);
+      document.body.style.overflow = "hidden";
+    });
+  }
+  if (closePopup && popUpSize) {
+    closePopup.addEventListener("click", function () {
+      popUpSize.classList.remove("active");
+      document.body.style.overflow = "";
+    });
+  }
   const header = document.querySelector(".header-wrapper-custome");
   function checkScroll() {
     if (window.scrollY > 80) {
