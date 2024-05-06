@@ -74,12 +74,12 @@
                     {{ block.settings.heading }}
                   </h2>
                 {%- when 'caption' -%}
-                  <p
+                  <div
                     class="image-with-text__text image-with-text__text--caption {{ block.settings.text_style }} {{ block.settings.text_style }}--{{ block.settings.text_size }} {{ block.settings.text_style }}"
                     {{ block.shopify_attributes }}
                   >
-                    {{ block.settings.caption | escape }}
-                  </p>
+                    {{ block.settings.caption }}
+                  </div>
                 {%- when 'text' -%}
                   <div class="image-with-text__text rte {{ block.settings.text_style }}" {{ block.shopify_attributes }}>
                     {{ block.settings.text }}
@@ -363,9 +363,9 @@
         "limit": 1,
         "settings": [
           {
-            "type": "text",
+            "type": "richtext",
             "id": "caption",
-            "default": "Add a tagline",
+            "default": "<p>Add a tagline</p>",
             "label": "t:sections.image-with-text-custome.blocks.caption.settings.text.label"
           },
           {

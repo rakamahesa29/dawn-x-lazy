@@ -54,7 +54,7 @@
             {{ article.title | escape }}
           </h1>
           {%- if block.settings.blog_show_date -%}
-            <span class="circle-divider caption-with-letter-spacing" itemprop="dateCreated pubdate datePublished">
+            <span class="circle-divider circle-divider-custome caption-with-letter-spacing" itemprop="dateCreated pubdate datePublished">
               {{- article.published_at | time_tag: format: 'date' -}}
             </span>
           {%- endif -%}
@@ -67,7 +67,7 @@
 
       {%- when 'content' -%}
         <div
-          class="article-template__content page-width page-width--narrow rte{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}"
+          class="article-template__content article-template-content__custome page-width page-width--narrow rte{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}"
           itemprop="articleBody"
           {{ block.shopify_attributes }}
         >
@@ -109,7 +109,7 @@
                 <article id="{{ comment.id }}" class="article-template__comments-comment">
                   {{ comment.content }}
                   <footer class="right">
-                    <span class="circle-divider caption-with-letter-spacing">{{ comment.author }}</span>
+                    <span class="circle-divider circle-divider-custome caption-with-letter-spacing">{{ comment.author }}</span>
                   </footer>
                 </article>
               {%- endif -%}
@@ -118,7 +118,7 @@
                 <article id="{{ comment.id }}" class="article-template__comments-comment">
                   {{ comment.content }}
                   <footer class="right">
-                    <span class="circle-divider caption-with-letter-spacing">{{ comment.author }}</span
+                    <span class="circle-divider circle-divider-custome caption-with-letter-spacing">{{ comment.author }}</span
                     ><span class="caption-with-letter-spacing">
                       {{- comment.created_at | time_tag: format: 'date' -}}
                     </span>
